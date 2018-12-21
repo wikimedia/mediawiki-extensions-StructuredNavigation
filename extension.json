@@ -1,0 +1,108 @@
+{
+	"name": "StructuredNavigation",
+	"version": "1.0.0-alpha",
+	"author": [
+		"Samantha Nguyen"
+	],
+	"license-name": "GPL-2.0-or-later",
+	"url": "https://www.mediawiki.org/wiki/Extension:StructuredNavigation",
+	"descriptionmsg": "structurednavigation-desc",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"callback": "StructuredNavigation\\Hooks::onRegistrationCallback",
+	"MessagesDirs": {
+		"StructuredNavigation": [
+			"i18n",
+			"libs/i18n/mediawiki"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"StructuredNavigationNamespaces": ".i18n.namespaces.php"
+	},
+	"ServiceWiringFiles": [
+		"src/ServiceWiring.php",
+		"libs/src/MediaWiki/ServiceWiring.php"
+	],
+	"AutoloadNamespaces": {
+		"StructuredNavigation\\": "src/",
+		"StructuredNavigation\\Libs\\": "libs/src"
+	},
+	"Hooks": {
+		"GetPreferences": "StructuredNavigation\\Hooks::onGetPreferences",
+		"ParserFirstCallInit": "StructuredNavigation\\Hooks::onParserFirstCallInit",
+		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
+	},
+	"SpecialPages": {
+		"StructuredNavigation": "StructuredNavigation\\Specials\\StructuredNavigation"
+	},
+	"ContentHandlers": {
+		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
+	},
+	"ConfigRegistry": {
+		"structurednavigation": "StructuredNavigation\\Hooks::getGlobalVarConfig"
+	},
+	"config": {
+		"StructuredNavigationReservedUsername": {
+			"value": "msg:structurednavigation-reserved-username"
+		}
+	},
+	"namespaces": [
+		{
+			"id": 2940,
+			"constant": "NS_NAVIGATION",
+			"name": "Navigation",
+			"subpages": true,
+			"defaultcontentmodel": "StructuredNavigation",
+			"protection": [
+				"structured-navigation-edit",
+				"structured-navigation-create"
+			]
+		},
+		{
+			"id": 2941,
+			"constant": "NS_NAVIGATION_TALK",
+			"name": "Navigation_talk",
+			"subpages": true,
+			"content": false,
+			"defaultcontentmodel": "wikitext"
+		}
+	],
+	"DefaultUserOptions": {
+		"structurednavigation-editor": "structurednavigation-editor-code"
+	},
+	"GroupPermissions": {
+		"user": {
+			"structured-navigation-create": true,
+			"structured-navigation-edit": true
+		}
+	},
+	"AvailableRights": [
+		"structured-navigation-create",
+		"structured-navigation-edit"
+	],
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "StructuredNavigation"
+	},
+	"ResourceModules": {
+		"ext.structurednavigation.libs.ooui.toggleswitchinputwidget.styles": {
+			"styles": "libs/resources/ooui/widgets/ToggleSwitchInputWidget.less"
+		},
+		"ext.structurednavigation.ui.structurednavigation.styles": {
+			"styles": "resources/styles/ui/structurednavigation.less"
+		},
+		"ext.structurednavigation.ui.structurednavigation.separator.styles": {
+			"class": "ResourceLoaderLessVarFileModule",
+			"styles": "resources/styles/ui/separator.less",
+			"lessMessages": [
+				"structurednavigation-separator-symbol"
+			]
+		}
+	},
+	"CodeMirrorTagModes": {
+		"mw-navigation": "text/mediawiki"
+	},
+	"manifest_version": 2
+}

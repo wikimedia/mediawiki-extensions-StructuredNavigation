@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset>
+	<file>.</file>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="Generic.Files.LineLength.TooLong" />
+		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.Found" />
+		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.ReturnTypeFound" />
+		<exclude name="MediaWiki.PHP71Features.VoidReturnType.NotAllowed" />
+	</rule>
+	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
+	<arg name="extensions" value="php,php5,inc"/>
+	<arg name="encoding" value="UTF-8"/>
+</ruleset>

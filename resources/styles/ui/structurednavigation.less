@@ -1,0 +1,73 @@
+.mw-structurednav-header {
+	background: #ccf;
+	color: #222;
+	font-size: 12px;
+	padding: 0.5em;
+
+	// Needs higher specificity to override default skin styles
+	// for the h2 element
+	.mw-structurednav-header-title {
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		font-weight: 700;
+		text-align: center;
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.mw-structurednav-group-title,
+.mw-structurednav-group-content {
+	border-top: 2px solid #fdfdfd;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.mw-structurednav-group-title {
+	background: #ddf;
+	color: #222;
+	font-weight: 700;
+	text-align: right;
+	padding: 0.25em 0.5em;
+	margin: 0;
+
+	&:after {
+		content: ':';
+		padding-right: .5em;
+	}
+}
+
+.mw-structurednav-group {
+	display: table-row;
+	width: 100%;
+
+	// Both higher specificity to override default skin stlyes
+	.mw-structurednav-group-content {
+		margin: 0;
+		padding: 0;
+	}
+
+	.mw-structurednav-group-content-list {
+		list-style: none;
+		padding: .25em 0 0 .5em;
+		margin: 0;
+		display: block;
+	}
+}
+
+.mw-structurednav-group-content-item {
+	display: inline-block;
+}
+
+.mw-structurednav-navigation-container {
+	background-color: #fdfdfd;
+	border: 1px solid #ccc;
+	font-size: 12px;
+	padding: .25em;
+	margin: 1em;
+
+	dl {
+		margin: 0;
+	}
+}

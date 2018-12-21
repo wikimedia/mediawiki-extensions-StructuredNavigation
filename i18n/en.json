@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samantha Nguyen"
+		]
+	},
+	"structurednavigation-desc": "Allows creating a structured, machine-readable navigation for use on articles.",
+	"structurednavigation-title-create": "Create a structured navigation",
+	"structurednavigation-input-name-label": "Name of structured navigation",
+	"structurednavigation-input-title-link-label": "Link title (to existing page on wiki)",
+	"structurednavigation-input-title-link-placeholder": "Enter a title",
+	"structurednavigation-input-title-label-label": "Label for link title (optional)",
+	"structurednavigation-input-title-label-placeholder": "Enter a label",
+	"structurednavigation-separator-symbol": "\\",
+	"structurednavigation-reserved-username": "StructuredNavigation script"
+}

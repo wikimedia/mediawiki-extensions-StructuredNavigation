@@ -1,0 +1,134 @@
+{
+	"name": "Harry Potter figures",
+	"config": {
+		"title": {
+			"link": "Harry Potter (Theme)",
+			"label": "Harry Potter"
+		},
+		"link-2": {
+			"link": "Minifigures",
+			"label": "minifigures"
+		}
+	},
+	"groups": {
+		"Students": {
+			"content": [
+				"Cedric Diggory",
+				"Cho Chang",
+				"Dean Thomas",
+				"Draco Malfoy",
+				"Fred Weasley",
+				"George Weasley",
+				"Ginny Weasley",
+				"Gregory Goyle",
+				[
+					"Harry Potter (minifigure)",
+					"Harry Potter"
+				],
+				"Hermione Granger",
+				"Lucian Bole",
+				"Luna Lovegood",
+				"Marcus Flint",
+				"Neville Longbottom",
+				"Oliver Wood",
+				"Ron Weasley",
+				"Seamus Finnigan",
+				"Susan Bones",
+				"Viktor Krum",
+				"Vincent Crabbe"
+			]
+		},
+		"Hogwarts Staff": {
+			"content": [
+				"Argus Filch",
+				"Mad-Eye Moody",
+				"Madam Hooch",
+				"Professor Dumbledore",
+				"Professor McGonagall",
+				"Professor Snape",
+				"Professor Flitwick",
+				"Gilderoy Lockhart",
+				"Professor Slughorn",
+				"Professor Sprout",
+				"Professor Trelawney",
+				"Professor Quirrell",
+				"Professor Umbridge",
+				"Remus Lupin",
+				"Rubeus Hagrid"
+			]
+		},
+		"Death Eaters/Dark Wizards": {
+			"content": [
+				"Bellatrix Lestrange",
+				"Death Eater",
+				"Fenrir Greyback",
+				"Lord Voldemort",
+				"Lucius Malfoy",
+				"Narcissa Malfoy",
+				"Peter Pettigrew",
+				"Professor Karkaroff",
+				"Tom Riddle"
+			]
+		},
+		"Creatures/Animals": {
+			"content": [
+				"Aragog",
+				"Basilisk",
+				"Boggart",
+				"Buckbeak",
+				"Dementor",
+				"Dobby",
+				"Fawkes",
+				"Fluffy",
+				[
+					"Goblin (Harry Potter)",
+					"Goblin"
+				],
+				"Griphook",
+				"Hedwig",
+				"Hungarian Horntail",
+				"Mandrake",
+				[
+					"Mermaid (Harry Potter)",
+					"Mermaid"
+				],
+				"Mrs. Norris",
+				"Nagini",
+				"Norbert",
+				"Owl",
+				"Skeleton",
+				[
+					"Troll (Harry Potter)",
+					"Troll"
+				]
+			]
+		},
+		"Other": {
+			"content": [
+				"Arthur Weasley",
+				"Chess Queen",
+				"Ernie Prang",
+				"Ghost",
+				"Godric Gryffindor",
+				"Helga Hufflepuff",
+				"Humpbacked Witch Statue",
+				[
+					"Knight (Harry Potter)",
+					"Knight"
+				],
+				"Molly Weasley",
+				"Mr. Ollivander",
+				"Nearly Headless Nick",
+				"Rowena Ravenclaw",
+				"Salazar Slytherin",
+				"Shrunken Head",
+				"Sirius Black",
+				"Sorting Hat",
+				"Stan Shunpike",
+				"Trolley Witch",
+				"Vernon Dursley"
+			]
+		}
+	}
+}
+	
