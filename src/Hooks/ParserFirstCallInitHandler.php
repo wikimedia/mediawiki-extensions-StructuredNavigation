@@ -6,7 +6,7 @@ use JsonContent;
 use Parser;
 use ParserOutput;
 use StructuredNavigation\Constants;
-use StructuredNavigation\JsonEntity;
+use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Renderer\TableRenderer;
 use Title;
 use WikiPage;

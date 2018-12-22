@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation;
+namespace StructuredNavigation\Json;
 
 /**
  * An immutable convience wrapper around a JSON object that's been decoded

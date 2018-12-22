@@ -3,7 +3,7 @@
 namespace StructuredNavigation\Renderer;
 
 use MediaWiki\Linker\LinkRenderer;
-use StructuredNavigation\JsonEntity;
+use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Libs\MediaWiki\Html\WrapInElementTrait;
 use TitleParser;
 use TitleValue;
