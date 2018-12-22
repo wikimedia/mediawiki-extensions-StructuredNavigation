@@ -13,4 +13,11 @@ return [
 	'StructuredNavigation.Config' => function ( MediaWikiServices $services ) : Config {
 		return $services->getConfigFactory()->makeConfig( 'structurednavigation' );
 	},
+
+	'StructuredNavigation.TableRenderer' => function ( MediaWikiServices $services ) : TableRenderer {
+		return new TableRenderer(
+			$services->getLinkRenderer(),
+			$services->getTitleParser()
+		);
+	}
 ];

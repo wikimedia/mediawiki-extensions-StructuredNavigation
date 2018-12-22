@@ -5,6 +5,7 @@ namespace StructuredNavigation;
 use Config;
 use ConfigException;
 use MediaWiki\MediaWikiServices;
+use StructuredNavigation\Renderer\TableRenderer;
 use UnexpectedValueException;
 
 /**
@@ -37,4 +38,10 @@ final class Services {
 		return $this->services->getService( 'StructuredNavigation.Config' );
 	}
 
+	/**
+	 * @return TableRenderer
+	 */
+	public function getTableRenderer() : TableRenderer {
+		return $this->services->getService( 'StructuredNavigation.TableRenderer' );
+	}
 }

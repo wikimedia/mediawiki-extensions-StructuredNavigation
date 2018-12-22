@@ -5,8 +5,8 @@ namespace StructuredNavigation;
 use GlobalVarConfig;
 use MediaWiki\MediaWikiServices;
 use Parser;
+use StructuredNavigation\Services;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
-use StructuredNavigation\Renderer\TableRenderer;
 use Title;
 use User;
 
@@ -14,6 +14,9 @@ use User;
  * @license GPL-2.0-or-later
  */
 final class Hooks {
+
+	/** @var string */
+	private const PARSER_TAG = 'mw-navigation';
 
 	/**
 	 * Callback for ConfigRegistry
@@ -33,14 +36,6 @@ final class Hooks {
 	public static function onRegistrationCallback() {
 		// Must match the name used in the 'ContentHandlers' section of extension.json
 		define( 'CONTENT_MODEL_NAVIGATION', 'StructuredNavigation' );
-	}
-
-	/**
-	 * @param Title $title
-	 * @param string &$language
-	 * @param string $contentModel
-	 */
-	public static function onCodeEditorGetPageLanguage( Title $title, string &$language, string $contentModel ) {
 	}
 
 	/**
@@ -70,14 +65,11 @@ final class Hooks {
 	 * @return void
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) : void {
-		$services = MediaWikiServices::getInstance();
 		$handler = new ParserFirstCallInitHandler(
-			new TableRenderer( $services->getLinkRenderer(),
-				$services->getTitleParser()
-			)
+			Services::getInstance()->getTableRenderer()
 		);
 
-		$parser->setHook( 'mw-navigation', [ $handler, 'getParserHandler' ] );
+		$parser->setHook( self::PARSER_TAG, [ $handler, 'getParserHandler' ] );
 	}
 
 	/**
