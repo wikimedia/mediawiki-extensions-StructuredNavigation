@@ -4,9 +4,7 @@ namespace StructuredNavigation;
 
 use GlobalVarConfig;
 use Parser;
-use StructuredNavigation\Services;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
-use Title;
 use User;
 
 /**
