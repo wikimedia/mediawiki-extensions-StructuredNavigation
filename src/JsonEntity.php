@@ -6,7 +6,9 @@ namespace StructuredNavigation;
  * An immutable convience wrapper around a JSON object that's been decoded
  * into an associative array. This allows outside users not having
  * to know what the actual array key name is, you can just retrieve it
- * using these methods.
+ * using these methods. If the schema internally changes such as a rename
+ * of a key, this object would hide that implementation detail and
+ * nothing would break for outside users (probably)
  *
  * @license GPL-2.0-or-later
  */

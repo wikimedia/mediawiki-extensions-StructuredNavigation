@@ -1,9 +1,5 @@
 ## About this extension
-**StructuredNavigation** allows creating navigation templates that can be
-used on articles.
-
-  - ...are machine-readable (`.json`, a universally accepted format )
-  - ...produce a standard, semantic HTML output
+**StructuredNavigation** allows creating navigation templates that can be used on articles.
 
 ## Benefits
 Using this extension allows creating navigations that are:
@@ -20,16 +16,14 @@ then save your edit.
 2. At a separate wikitext page, add `<mw-navigation title="Dontnod Entertainment">` and press save.
 
 ## Presentation vs Content
-Navigations only contain pure content - that is, it does not contain any information on how it should be styled such
-as the header background color, font size of group title, etc. A proposed way to handle presentation details:
+Navigations only contain pure content - that is, it does not contain any information on how it should be styled such as the header background color, font size of group title, etc. A proposed way to handle presentation details:
 
 - Have the wiki of interest install the TemplateStyles extension.
 - Have the navigation of interest, e.g `<mw-navigation title="Dontnod Entertainment">`, inside a template called `[[Template:Dontnod Entertainment]]`.
 - Create a template subpage at `[[Template:Dontnod Entertainment/styles.css]]`. (Any styles the user wants to override can be done here.)
 - Include `<templatestyles src="/styles.css" />` at the top of the template
 
-Note that this extension does not actually have a hard software dependency on TemplateStyles, but should
-work extremely well with TemplateStyles.
+Note that this extension does not actually have a hard software dependency on TemplateStyles, but should work extremely well with TemplateStyles.
 
 ## TODO
   - The navigation tag should allow identifying itself through an ID selector by accepting an `id` attribute
