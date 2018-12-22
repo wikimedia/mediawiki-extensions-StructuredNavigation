@@ -35,13 +35,13 @@ final class Services {
 	 * @return Config
 	 */
 	public function getConfig() : Config {
-		return $this->services->getService( 'StructuredNavigation.Config' );
+		return $this->services->getService( Constants::SERVICE_CONFIG );
 	}
 
 	/**
 	 * @return TableRenderer
 	 */
 	public function getTableRenderer() : TableRenderer {
-		return $this->services->getService( 'StructuredNavigation.TableRenderer' );
+		return $this->services->getService( Constants::SERVICE_TABLE_RENDERER );
 	}
 }

@@ -12,9 +12,6 @@ use User;
  */
 final class Hooks {
 
-	/** @var string */
-	private const PARSER_TAG = 'mw-navigation';
-
 	/**
 	 * Callback for ConfigRegistry
 	 *
@@ -67,7 +64,7 @@ final class Hooks {
 			Services::getInstance()->getTableRenderer()
 		);
 
-		$parser->setHook( self::PARSER_TAG, [ $handler, 'getParserHandler' ] );
+		$parser->setHook( Constants::PARSER_TAG, [ $handler, 'getParserHandler' ] );
 	}
 
 	/**

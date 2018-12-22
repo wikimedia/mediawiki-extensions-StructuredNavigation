@@ -5,6 +5,7 @@ namespace StructuredNavigation\Hooks;
 use JsonContent;
 use Parser;
 use ParserOutput;
+use StructuredNavigation\Constants;
 use StructuredNavigation\JsonEntity;
 use StructuredNavigation\Renderer\TableRenderer;
 use Title;
@@ -17,9 +18,6 @@ final class ParserFirstCallInitHandler {
 
 	/** @var TableRenderer */
 	private $tableRenderer;
-
-	/** @var string */
-	private const PAGE_PROPERTY = 'structurednavigation';
 
 	/**
 	 * @param TableRenderer $tableRenderer
@@ -75,6 +73,6 @@ final class ParserFirstCallInitHandler {
 	 * @return void
 	 */
 	private function setPageProperty( ParserOutput $parserOutput, int $articleId ) : void {
-		$parserOutput->setProperty( self::PAGE_PROPERTY, $articleId );
+		$parserOutput->setProperty( Constants::PAGE_PROPERTY, $articleId );
 	}
 }
