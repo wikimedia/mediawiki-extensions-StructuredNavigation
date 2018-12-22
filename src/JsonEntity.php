@@ -12,7 +12,7 @@ namespace StructuredNavigation;
  *
  * @license GPL-2.0-or-later
  */
-class JsonEntity {
+final class JsonEntity {
 
 	/** @var array */
 	private $content;

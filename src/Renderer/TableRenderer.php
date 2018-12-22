@@ -13,7 +13,7 @@ use TitleValue;
  *
  * @license GPL-2.0-or-later
  */
-class TableRenderer {
+final class TableRenderer {
 
 	use WrapInElementTrait;
 
