@@ -18,6 +18,9 @@ final class ParserFirstCallInitHandler {
 	/** @var TableRenderer */
 	private $tableRenderer;
 
+	/** @var string */
+	private const PAGE_PROPERTY = 'structurednavigation';
+
 	/**
 	 * @param TableRenderer $tableRenderer
 	 */
@@ -57,8 +60,9 @@ final class ParserFirstCallInitHandler {
 
 	/**
 	 * @param ParserOutput $parserOutput
+	 * @return void
 	 */
-	private function loadResourceLoaderModules( ParserOutput $parserOutput ) {
+	private function loadResourceLoaderModules( ParserOutput $parserOutput ) : void {
 		$parserOutput->addModuleStyles( [
 			'ext.structurednavigation.ui.structurednavigation.styles',
 			'ext.structurednavigation.ui.structurednavigation.separator.styles'
@@ -68,8 +72,9 @@ final class ParserFirstCallInitHandler {
 	/**
 	 * @param ParserOutput $parserOutput
 	 * @param int $articleId
+	 * @return void
 	 */
-	private function setPageProperty( ParserOutput $parserOutput, int $articleId ) {
-		$parserOutput->setProperty( 'structurednavigation', $articleId );
+	private function setPageProperty( ParserOutput $parserOutput, int $articleId ) : void {
+		$parserOutput->setProperty( self::PAGE_PROPERTY, $articleId );
 	}
 }

@@ -3,7 +3,6 @@
 namespace StructuredNavigation;
 
 use GlobalVarConfig;
-use MediaWiki\MediaWikiServices;
 use Parser;
 use StructuredNavigation\Services;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
@@ -32,8 +31,9 @@ final class Hooks {
 	 * Extension registration callback
 	 *
 	 * @see http://mediawiki.org/wiki/Special:MyLanguage/Manual:Extension.json/Schema#callback
+	 * @return void
 	 */
-	public static function onRegistrationCallback() {
+	public static function onRegistrationCallback() : void {
 		// Must match the name used in the 'ContentHandlers' section of extension.json
 		define( 'CONTENT_MODEL_NAVIGATION', 'StructuredNavigation' );
 	}

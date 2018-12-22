@@ -4,6 +4,7 @@ namespace StructuredNavigation;
 
 use Config;
 use MediaWiki\MediaWikiServices;
+use StructuredNavigation\Renderer\TableRenderer;
 
 /**
  * @license GPL-2.0-or-later
@@ -19,5 +20,5 @@ return [
 			$services->getLinkRenderer(),
 			$services->getTitleParser()
 		);
-	}
+	},
 ];
