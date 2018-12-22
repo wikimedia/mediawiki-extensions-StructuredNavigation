@@ -1,5 +1,14 @@
-## About this extension
+# About this extension
 **StructuredNavigation** allows creating navigation templates that can be used on articles.
+
+## Install
+This extension was developed on the latest commit of the `REL1_32` branch of MediaWiki core; however, it should probably work just as well on a 1.31 installation. This extension requires at least PHP 7.1. To install:
+
+1. Git clone this repository locally on your wiki.
+2. Add this line to your `LocalSettings.php` file:
+```php
+wfLoadExtension( 'StructuredNavigation' );
+```
 
 ## Benefits
 Using this extension allows creating navigations that are:
