@@ -51,7 +51,16 @@
 						"content": {
 							"type": "array",
 							"items": {
-								"type": [ "string", "array" ]
+								"anyOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "array",
+										"minItems": 2,
+										"maxItems": 2
+									}
+								]
 							},
 							"uniqueItems": true,
 							"minItems": 1
