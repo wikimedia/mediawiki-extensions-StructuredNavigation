@@ -1,0 +1,74 @@
+{
+	"name": "Notifications Portal",
+	"config": {
+		"title": {
+			"label": "Notifications Portal"
+		}
+	},
+	"groups": {
+		"About": {
+			"content": [
+				"Notifications",
+				[
+					"Notifications#Future_plans_and_requests_for_feedback",
+					"Rollout and plans"
+				]
+			]
+		},
+		"Documentation": {
+			"content": [
+				[
+					"Help:Notifications/Glossary",
+					"Glossary"
+				],
+				[
+					"Help:Notifications",
+					"General documentation"
+				],
+				[
+					"Help:Notifications/Notifications types",
+					"Types of notifications"
+				],
+				[
+					"Help:Notifications/Cross-wiki",
+					"Cross-wiki notifications"
+				],
+				[
+					"Help:Notifications/Special:Notifications",
+					"Special:Notifications page"
+				]
+			]
+		},
+		"Technical": {
+			"content": [
+				[
+					"Extension:Echo",
+					"Extension"
+				],
+				[
+					"Notifications/Developer guide",
+					"Developer guide"
+				],
+				[
+					"Notifications/API",
+					"Public API"
+				]
+			]
+		},
+		"Create a new notification": {
+			"content": [
+				[
+					"Notifications/Design guide"
+				],
+				[
+					"Extension:Echo/Creating a new notification type",
+					"Create a new notification type"
+				],
+				[
+					"Help:Notifications/Create a new notification type",
+					"Document a new notification type"
+				]
+			]
+		}
+	}
+}
