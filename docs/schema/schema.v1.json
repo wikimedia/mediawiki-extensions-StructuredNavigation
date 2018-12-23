@@ -1,0 +1,49 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"config": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "object",
+					"properties": {
+						"page": {
+							"type": "string"
+						},
+						"label": {
+							"type": "string"
+						}
+					},
+					"required": [ "label" ]
+				}
+			},
+			"required": [ "title" ]
+		},
+		"groups": {
+			"type": "object",
+			"minProperties": 1,
+			"patternProperties": {
+				".*": {
+					"type": "object",
+					"properties": {
+						"content": {
+							"type": "array",
+							"items": {
+								"type": [ "string", "array" ]
+							},
+							"uniqueItems": true,
+							"minItems": 1
+						}
+					},
+					"required": [ "content" ]
+				}
+			}
+		}
+	},
+	"required": [ "name", "config", "groups" ],
+	"additionalProperties": false
+}
