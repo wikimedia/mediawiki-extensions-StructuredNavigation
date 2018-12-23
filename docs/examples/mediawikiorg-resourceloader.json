@@ -3,7 +3,7 @@
 	"name": "ResourceLoader",
 	"config": {
 		"title": {
-			"link": "ResourceLoader",
+			"page": "ResourceLoader",
 			"label": "ResourceLoader"
 		}
 	},
@@ -31,8 +31,8 @@
 					"Developing with ResourceLoader"
 				],
 				[
-				"ResourceLoader/Modules",
-				"Core modules"
+					"ResourceLoader/Modules",
+					"Core modules"
 				]
 			]
 		},

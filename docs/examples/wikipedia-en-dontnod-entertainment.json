@@ -2,7 +2,8 @@
 	"name": "Dontnod Entertainment",
 	"config": {
 		"title": {
-			"link": "Dontnod Entertainment"
+			"label": "Dontnod Entertainment",
+			"page": "Dontnod Entertainment"
 		}
 	},
 	"groups": {

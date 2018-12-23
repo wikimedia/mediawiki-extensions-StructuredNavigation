@@ -7,9 +7,27 @@
 		},
 		"config": {
 			"type": "object",
+			"additionalProperties": false,
 			"properties": {
 				"title": {
 					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"page": {
+							"type": "string"
+						},
+						"label": {
+							"type": "string"
+						},
+						"fragment": {
+							"type": "string"
+						}
+					},
+					"required": [ "label" ]
+				},
+				"title-2": {
+					"type": "object",
+					"additionalProperties": false,
 					"properties": {
 						"page": {
 							"type": "string"
@@ -17,8 +35,7 @@
 						"label": {
 							"type": "string"
 						}
-					},
-					"required": [ "label" ]
+					}	
 				}
 			},
 			"required": [ "title" ]
@@ -29,6 +46,7 @@
 			"patternProperties": {
 				".*": {
 					"type": "object",
+					"additionalProperties": false,
 					"properties": {
 						"content": {
 							"type": "array",

@@ -2,11 +2,11 @@
 	"name": "Harry Potter figures",
 	"config": {
 		"title": {
-			"link": "Harry Potter (Theme)",
+			"page": "Harry Potter (Theme)",
 			"label": "Harry Potter"
 		},
-		"link-2": {
-			"link": "Minifigures",
+		"title-2": {
+			"page": "Minifigures",
 			"label": "minifigures"
 		}
 	},
