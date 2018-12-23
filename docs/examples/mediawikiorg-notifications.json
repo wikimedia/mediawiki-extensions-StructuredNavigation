@@ -58,7 +58,8 @@
 		"Create a new notification": {
 			"content": [
 				[
-					"Notifications/Design guide"
+					"Notifications/Design guide",
+					"Design guide"
 				],
 				[
 					"Extension:Echo/Creating a new notification type",
