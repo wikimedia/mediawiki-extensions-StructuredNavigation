@@ -7,7 +7,7 @@ use Parser;
 use ParserOutput;
 use StructuredNavigation\Constants;
 use StructuredNavigation\Json\JsonEntity;
-use StructuredNavigation\Renderer\TableRenderer;
+use StructuredNavigation\Renderer\NavigationRenderer;
 use Title;
 use WikiPage;
 
@@ -16,14 +16,14 @@ use WikiPage;
  */
 final class ParserFirstCallInitHandler {
 
-	/** @var TableRenderer */
-	private $tableRenderer;
+	/** @var NavigationRenderer */
+	private $navigationRenderer;
 
 	/**
-	 * @param TableRenderer $tableRenderer
+	 * @param NavigationRenderer $navigationRenderer
 	 */
-	public function __construct( TableRenderer $tableRenderer ) {
-		$this->tableRenderer = $tableRenderer;
+	public function __construct( NavigationRenderer $navigationRenderer ) {
+		$this->navigationRenderer = $navigationRenderer;
 	}
 
 	/**
@@ -45,7 +45,7 @@ final class ParserFirstCallInitHandler {
 		$this->setPageProperty( $parserOutput, $title->getArticleID() );
 		$this->loadResourceLoaderModules( $parserOutput );
 
-		return $this->tableRenderer->render( $content );
+		return $this->navigationRenderer->render( $content );
 	}
 
 	/**

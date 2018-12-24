@@ -4,7 +4,7 @@ namespace StructuredNavigation;
 
 use Config;
 use MediaWiki\MediaWikiServices;
-use StructuredNavigation\Renderer\TableRenderer;
+use StructuredNavigation\Renderer\NavigationRenderer;
 
 /**
  * @license GPL-2.0-or-later
@@ -15,8 +15,8 @@ return [
 		return $services->getConfigFactory()->makeConfig( 'structurednavigation' );
 	},
 
-	Constants::SERVICE_TABLE_RENDERER => function ( MediaWikiServices $services ) : TableRenderer {
-		return new TableRenderer(
+	Constants::SERVICE_NAVIGATION_RENDERER => function ( MediaWikiServices $services ) : NavigationRenderer {
+		return new NavigationRenderer(
 			$services->getLinkRenderer(),
 			$services->getTitleParser()
 		);

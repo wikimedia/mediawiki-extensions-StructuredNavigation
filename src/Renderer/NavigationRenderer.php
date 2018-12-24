@@ -9,11 +9,15 @@ use TitleParser;
 use TitleValue;
 
 /**
- * Renders a structured navigation view for the desktop.
+ * Renders a structured navigation view. This by default does
+ * not load any modules on the rendering event, it simply
+ * provides a base HTML structure that's meant to be semantic
+ * and flexible. Consumers are expected to provide their own
+ * ResourceLoader modules (as of now)
  *
  * @license GPL-2.0-or-later
  */
-final class TableRenderer {
+final class NavigationRenderer {
 
 	use WrapInElementTrait;
 

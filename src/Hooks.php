@@ -61,7 +61,7 @@ final class Hooks {
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) : void {
 		$handler = new ParserFirstCallInitHandler(
-			Services::getInstance()->getTableRenderer()
+			Services::getInstance()->getNavigationRenderer()
 		);
 
 		$parser->setHook( Constants::PARSER_TAG, [ $handler, 'getParserHandler' ] );
