@@ -5,8 +5,11 @@
 			"label": "Notifications Portal"
 		}
 	},
-	"groups": {
-		"About": {
+	"groups": [
+		{
+			"title": {
+				"label": "About"
+			},
 			"content": [
 				"Notifications",
 				[
@@ -15,7 +18,10 @@
 				]
 			]
 		},
-		"Documentation": {
+		{
+			"title": {
+				"label": "Documentation"
+			},
 			"content": [
 				[
 					"Help:Notifications/Glossary",
@@ -39,7 +45,10 @@
 				]
 			]
 		},
-		"Technical": {
+		{
+			"title": {
+				"label": "Technical"
+			},
 			"content": [
 				[
 					"Extension:Echo",
@@ -55,7 +64,10 @@
 				]
 			]
 		},
-		"Create a new notification": {
+		{
+			"title": {
+				"label": "Create a new notification"
+			},
 			"content": [
 				[
 					"Notifications/Design guide",
@@ -71,5 +83,5 @@
 				]
 			]
 		}
-	}
+	]
 }

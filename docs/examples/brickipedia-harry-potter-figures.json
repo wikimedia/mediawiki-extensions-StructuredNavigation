@@ -10,8 +10,11 @@
 			"label": "minifigures"
 		}
 	},
-	"groups": {
-		"Students": {
+	"groups": [
+		{
+			"title": {
+				"label": "Students"
+			},
 			"content": [
 				"Cedric Diggory",
 				"Cho Chang",
@@ -38,7 +41,10 @@
 				"Vincent Crabbe"
 			]
 		},
-		"Hogwarts Staff": {
+		{
+			"title": {
+				"label": "Hogwarts Staff"
+			},
 			"content": [
 				"Argus Filch",
 				"Mad-Eye Moody",
@@ -57,7 +63,10 @@
 				"Rubeus Hagrid"
 			]
 		},
-		"Death Eaters/Dark Wizards": {
+		{
+			"title": {
+				"label": "Death Eaters/Dark Wizards"
+			},
 			"content": [
 				"Bellatrix Lestrange",
 				"Death Eater",
@@ -70,7 +79,10 @@
 				"Tom Riddle"
 			]
 		},
-		"Creatures/Animals": {
+		{
+			"title": {
+				"label": "Creatures/Animals"
+			},
 			"content": [
 				"Aragog",
 				"Basilisk",
@@ -103,7 +115,10 @@
 				]
 			]
 		},
-		"Other": {
+		{
+			"title": {
+				"label": "Other"
+			},
 			"content": [
 				"Arthur Weasley",
 				"Chess Queen",
@@ -129,6 +144,6 @@
 				"Vernon Dursley"
 			]
 		}
-	}
+	]
 }
 	

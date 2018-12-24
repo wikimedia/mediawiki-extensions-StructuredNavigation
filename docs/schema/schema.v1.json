@@ -1,6 +1,64 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
+
+	"definitions": {
+		"localizable-string": {
+			"$id": "#localizable-string",
+			"type": "object",
+			"patternProperties": {
+				"^[a-z]{2}-[A-Z]{2}$": {
+					"type": "string"
+				}
+			}
+		},
+		"valid-wiki-title": {
+			"$id": "#valid-wiki-title",
+			"type": "string",
+			"pattern": ".*"
+		},
+		"localizable-title": {
+			"$id": "#localizable-title",
+			"type": "object",
+			"required": [ "label" ],
+			"properties": {
+				"page": {
+					"$ref": "#valid-wiki-title"
+				},
+				"label": {
+					"anyOf": [
+						{
+							"type": "string"
+						},
+						{
+							"$ref": "#localizable-string"
+						}
+					]
+				}
+			}
+		},
+		"content-item": {
+			"$id": "#content-item",
+			"type": "array",
+			"items": {
+				"anyOf": [
+					{
+						"$ref": "#valid-wiki-title"
+					},
+					{
+						"type": "array",
+						"minItems": 2,
+						"maxItems": 2
+					}
+				]
+			},
+			"uniqueItems": true,
+			"minItems": 1
+		}
+	},
+
 	"type": "object",
+	"required": [ "name", "config", "groups" ],
+	"additionalProperties": false,
 	"properties": {
 		"name": {
 			"type": "string"
@@ -10,67 +68,30 @@
 			"additionalProperties": false,
 			"properties": {
 				"title": {
-					"type": "object",
-					"additionalProperties": false,
-					"properties": {
-						"page": {
-							"type": "string"
-						},
-						"label": {
-							"type": "string"
-						},
-						"fragment": {
-							"type": "string"
-						}
-					},
-					"required": [ "label" ]
+					"$ref": "#localizable-title"
 				},
 				"title-2": {
-					"type": "object",
-					"additionalProperties": false,
-					"properties": {
-						"page": {
-							"type": "string"
-						},
-						"label": {
-							"type": "string"
-						}
-					}	
+					"$ref": "#localizable-title"
 				}
 			},
 			"required": [ "title" ]
 		},
 		"groups": {
-			"type": "object",
+			"type": "array",
 			"minProperties": 1,
-			"patternProperties": {
-				".*": {
-					"type": "object",
-					"additionalProperties": false,
-					"properties": {
-						"content": {
-							"type": "array",
-							"items": {
-								"anyOf": [
-									{
-										"type": "string"
-									},
-									{
-										"type": "array",
-										"minItems": 2,
-										"maxItems": 2
-									}
-								]
-							},
-							"uniqueItems": true,
-							"minItems": 1
-						}
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": [ "title", "content" ],
+				"properties": {
+					"title": {
+						"$ref": "#localizable-title"
 					},
-					"required": [ "content" ]
+					"content": {
+						"$ref": "#content-item"
+					}
 				}
 			}
 		}
-	},
-	"required": [ "name", "config", "groups" ],
-	"additionalProperties": false
+	}
 }

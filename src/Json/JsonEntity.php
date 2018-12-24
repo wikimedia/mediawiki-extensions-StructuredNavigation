@@ -46,10 +46,18 @@ final class JsonEntity {
 	}
 
 	/**
-	 * @param string $group
+	 * @param array
+	 * @return string
+	 */
+	public function getGroupTitle( array $group ) : string {
+		return $group['title']['label'];
+	}
+
+	/**
+	 * @param array
 	 * @return array
 	 */
-	public function getContentForGroup( string $group ) : array {
-		return $this->getGroups()[$group]['content'];
+	public function getGroupContent( array $group ) : array {
+		return $group['content'];
 	}
 }

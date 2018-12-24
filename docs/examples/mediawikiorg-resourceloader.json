@@ -7,8 +7,11 @@
 			"label": "ResourceLoader"
 		}
 	},
-	"groups": {
-		"Documentation": {
+	"groups": [
+		{
+			"title": {
+				"label": "Documentation"
+			},
 			"content": [
 				[
 					"ResourceLoader/Features",
@@ -36,7 +39,10 @@
 				]
 			]
 		},
-		"Project information": {
+		{
+			"title": {
+				"label": "Project information"
+			},
 			"content": [
 				[
 					"ResourceLoader/status",
@@ -56,5 +62,5 @@
 				]
 			]
 		}
-	}
+	]
 }

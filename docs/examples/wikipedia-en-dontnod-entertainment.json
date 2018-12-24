@@ -6,21 +6,26 @@
 			"page": "Dontnod Entertainment"
 		}
 	},
-	"groups": {
-		"Life is Strange": {
+	"groups": [
+		{
+			"title": {
+				"label": "Life is Strange"
+			},
 			"content": [
 				"Life is Strange",
 				"The Awesome Adventures of Captain Spirit",
 				"Life is Strange 2"
 			]
 		},
-		"Other games": {
+		{
+			"title": {
+				"label": "Other games"
+			},
 			"content": [
 				"Remember Me",
 				"Vampyr",
 				"Twin Mirror"
 			]
 		}
-	}
+	]
 }
-	

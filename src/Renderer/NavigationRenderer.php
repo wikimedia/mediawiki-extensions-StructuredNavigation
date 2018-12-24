@@ -62,38 +62,42 @@ final class NavigationRenderer {
 	public function render( JsonEntity $jsonEntity ) : string {
 		return $this->doWrapInElement(
 			'nav',
-			$this->doRenderHeader( $jsonEntity->getName() ) .
-			$this->doRenderGroups( $jsonEntity->getGroups() ),
+			$this->doRenderHeader( $jsonEntity ) .
+			$this->doRenderGroups( $jsonEntity ),
 			[ $this->cssClasses['nav'] ]
 		);
 	}
 
 	/**
-	 * @param string $header
+	 * @param JsonEntity $jsonEntity
 	 * @return string
 	 */
-	private function doRenderHeader( string $header ) : string {
+	private function doRenderHeader( JsonEntity $jsonEntity ) : string {
 		return $this->doWrapInElement(
 			'header',
-			$this->doWrapInElement( 'h2', $header, [ $this->cssClasses['header-title'] ] ),
+			$this->doWrapInElement( 'h2', $jsonEntity->getName(), [ $this->cssClasses['header-title'] ] ),
 			[ $this->cssClasses['header'] ]
 		);
 	}
 
 	/**
-	 * @param array $groups
+	 * @param JsonEntity $jsonEntity
 	 * @return string
 	 */
-	private function doRenderGroups( array $groups ) : string {
+	private function doRenderGroups( JsonEntity $jsonEntity ) : string {
 		$allGroups = [];
 
-		foreach ( $groups as $group => $groupKeyValue ) {
+		foreach ( $jsonEntity->getGroups() as $group ) {
 			array_push(
 				$allGroups,
 				$this->doWrapInElement(
 					'div',
-					$this->doWrapInElement( 'dt', $group, [ $this->cssClasses['group-title'] ] ) .
-					$this->doRenderContent( $groupKeyValue['content'] ),
+					$this->doWrapInElement(
+						'dt',
+						$jsonEntity->getGroupTitle( $group ),
+						[ $this->cssClasses['group-title'] ]
+					) .
+					$this->doRenderContent( $jsonEntity->getGroupContent( $group ) ),
 					[ $this->cssClasses['group'] ]
 				)
 			);

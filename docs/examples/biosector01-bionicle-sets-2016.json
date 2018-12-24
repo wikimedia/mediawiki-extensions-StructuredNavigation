@@ -7,8 +7,11 @@
 			"label": "BIONICLE Sets of 2016"
 		}
 	},
-	"groups": {
-		"Small": {
+	"groups": [
+		{
+			"title": {
+				"label": "Small"
+			},
 			"content": [
 				[ "Set:71300", "Uxar Creature of Jungle" ],
 				[ "Set:71301", "Ketar Creature of Stone" ],
@@ -17,7 +20,10 @@
 				[ "Set:71304", "Terak Creature of Earth" ]
 			]
 		},
-		"Medium": {
+		{
+			"title": {
+				"label": "Medium"
+			},
 			"content": [
 				[ "Set:71305", "Lewa Uniter of Jungle" ],
 				[ "Set:71306", "Pohatu Uniter of Stone" ],
@@ -28,7 +34,10 @@
 				[ "Set:71315", "Quake Beast" ]
 			]
 		},
-		"Large": {
+		{
+			"title": {
+				"label": "Large"
+			},
 			"content": [
 				[ "Set:71308", "Tahu Uniter of Fire" ],
 				[ "Set:71309", "Onua Uniter of Earth" ],
@@ -37,12 +46,15 @@
 				[ "Set:71316", "Umarak the Destroyer" ]
 			]
 		},
-		"Promotional": {
+		{
+			"title": {
+				"label": "Promotional"
+			},
 			"content": [
 				[ "Set:5004409", "Accessory Pack" ],
 				[ "Set:601601", "Scorpion" ],
 				[ "Set:601602", "Ekimu's Mask" ]
 			]
 		}
-	}
+	]
 }
