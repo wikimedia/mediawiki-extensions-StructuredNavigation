@@ -30,7 +30,6 @@
 		"StructuredNavigation\\Libs\\": "libs/src"
 	},
 	"Hooks": {
-		"GetPreferences": "StructuredNavigation\\Hooks::onGetPreferences",
 		"ParserFirstCallInit": "StructuredNavigation\\Hooks::onParserFirstCallInit",
 		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
 	},

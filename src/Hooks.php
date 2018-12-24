@@ -34,27 +34,6 @@ final class Hooks {
 	}
 
 	/**
-	 * @todo This ideally wouldn't call wfMessage() here...
-	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Hooks/GetPreferences
-	 * @param User $user
-	 * @param array &$preferences
-	 * @return void
-	 */
-	public static function onGetPreferences( User $user, array &$preferences ) : void {
-		$preferences['structurednavigation-editor'] = [
-			'type' => 'radio',
-			'label-message' => 'prefs-structurednavigation-editor-label',
-			'options' => [
-				wfMessage( 'prefs-structurednavigation-editor-code' )->escaped() =>
-					'structurednavigation-editor-code',
-				wfMessage( 'prefs-structurednavigation-editor-ui' )->escaped() =>
-					'structurednavigation-editor-ui',
-			],
-			'section' => 'structurednavigation/structurednavigation-section-editor'
-		];
-	}
-
-	/**
 	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Hooks/ParserFirstCallInit
 	 * @param Parser &$parser
 	 * @return void
