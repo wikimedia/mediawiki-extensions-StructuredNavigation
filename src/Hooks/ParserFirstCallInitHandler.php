@@ -35,6 +35,11 @@ final class ParserFirstCallInitHandler {
 	public function getParserHandler( $input, array $attributes, Parser $parser ) : string {
 		// Retrieve title and get page
 		$title = Title::makeTitle( NS_NAVIGATION, $attributes['title'] );
+
+		if ( !$title->exists() ) {
+			return false;
+		}
+
 		$page = WikiPage::factory( $title );
 
 		// retrieve data for page of interest
