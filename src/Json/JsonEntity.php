@@ -46,7 +46,7 @@ final class JsonEntity {
 	}
 
 	/**
-	 * @param array
+	 * @param array $group
 	 * @return string
 	 */
 	public function getGroupTitle( array $group ) : string {
@@ -54,7 +54,7 @@ final class JsonEntity {
 	}
 
 	/**
-	 * @param array
+	 * @param array $group
 	 * @return array
 	 */
 	public function getGroupContent( array $group ) : array {

@@ -5,7 +5,6 @@ namespace StructuredNavigation;
 use GlobalVarConfig;
 use Parser;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
-use User;
 
 /**
  * @license GPL-2.0-or-later
