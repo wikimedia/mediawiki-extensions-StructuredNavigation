@@ -68,9 +68,6 @@
 			"defaultcontentmodel": "wikitext"
 		}
 	],
-	"DefaultUserOptions": {
-		"structurednavigation-editor": "structurednavigation-editor-code"
-	},
 	"GroupPermissions": {
 		"user": {
 			"structured-navigation-create": true,
