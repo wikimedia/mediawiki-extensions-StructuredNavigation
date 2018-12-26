@@ -4,13 +4,14 @@ namespace StructuredNavigation\Libs\MediaWiki\Linker;
 
 use MediaWiki\Linker\LinkRenderer;
 use Message;
-use MessageLocalizer;
 use MWNamespace;
 use TitleValue;
 
 /**
  * Renders the classic "view · talk · edit" links for navigation maps.
  *
+ * @todo Ideally we wouldn't have be using the global wfMessage() function here...
+ * @see https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/10
  * @license GPL-2.0-or-later
  * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
  */
@@ -19,31 +20,23 @@ class TemplateLinksRenderer {
 	/** @var LinkRenderer */
 	private $linkRenderer;
 
-	/** @var MessageLocalizer */
-	private $messageLocalizer;
-
 	/**
 	 * @param LinkRenderer $linkRenderer
-	 * @param MessageLocalizer $messageLocalizer
 	 */
-	public function __construct(
-		LinkRenderer $linkRenderer,
-		MessageLocalizer $messageLocalizer
-	) {
+	public function __construct( LinkRenderer $linkRenderer ) {
 		$this->linkRenderer = $linkRenderer;
-		$this->messageLocalizer = $messageLocalizer;
 	}
 
 	/**
 	 * @param int $namespace
-	 * @param Title $title
+	 * @param string $title
 	 * @param string $separatorSymbol
 	 * @return string
 	 */
-	public function getPreparedLinks( int $namespace, Title $title, string $separatorSymbol = '|' ) : string {
+	public function getPreparedLinks( int $namespace, string $title, string $separatorSymbol = '|' ) : string {
 		$preparedLinks = [];
 
-		foreach ( $this->getLinks() as $link ) {
+		foreach ( $this->getLinks( $namespace, $title ) as $link ) {
 			array_push( $preparedLinks, $link );
 		}
 
@@ -90,7 +83,7 @@ class TemplateLinksRenderer {
 	 * @return Message
 	 */
 	private function getMessage( string $messageKey ) : Message {
-		return $this->messageLocalizer->msg( "mw-templatelinks-link-{$messageKey}" );
+		return wfMessage( "mw-templatelinks-link-{$messageKey}" )->escaped();
 	}
 
 	/**
@@ -98,6 +91,6 @@ class TemplateLinksRenderer {
 	 * @return Message
 	 */
 	private function getTitleAttribute( string $messageKey ) : Message {
-		return $this->messageLocalizer->msg( "mw-templatelinks-link-{$messageKey}-title" );
+		return wfMessage( "mw-templatelinks-link-{$messageKey}-title" )->escaped();
 	}
 }
