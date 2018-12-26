@@ -3,7 +3,6 @@
 namespace StructuredNavigation\Libs\MediaWiki\Linker;
 
 use MediaWiki\Linker\LinkRenderer;
-use Message;
 use MWNamespace;
 use TitleValue;
 
@@ -80,17 +79,17 @@ class TemplateLinksRenderer {
 
 	/**
 	 * @param string $messageKey
-	 * @return Message
+	 * @return string
 	 */
-	private function getMessage( string $messageKey ) : Message {
+	private function getMessage( string $messageKey ) : string {
 		return wfMessage( "mw-templatelinks-link-{$messageKey}" )->escaped();
 	}
 
 	/**
 	 * @param string $messageKey
-	 * @return Message
+	 * @return string
 	 */
-	private function getTitleAttribute( string $messageKey ) : Message {
+	private function getTitleAttribute( string $messageKey ) : string {
 		return wfMessage( "mw-templatelinks-link-{$messageKey}-title" )->escaped();
 	}
 }
