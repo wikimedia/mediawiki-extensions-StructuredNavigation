@@ -2,9 +2,9 @@
 
 namespace StructuredNavigation\Renderer;
 
+use Html;
 use MediaWiki\Linker\LinkRenderer;
 use StructuredNavigation\Json\JsonEntity;
-use StructuredNavigation\Libs\MediaWiki\Html\WrapInElementTrait;
 use TitleParser;
 use TitleValue;
 
@@ -18,8 +18,6 @@ use TitleValue;
  * @license GPL-2.0-or-later
  */
 final class NavigationRenderer {
-
-	use WrapInElementTrait;
 
 	/** @var LinkRenderer */
 	private $linkRenderer;
@@ -64,7 +62,7 @@ final class NavigationRenderer {
 			'nav',
 			$this->doRenderHeader( $jsonEntity ) .
 			$this->doRenderGroups( $jsonEntity ),
-			[ $this->cssClasses['nav'] ]
+			[ 'class' => $this->cssClasses['nav'] ]
 		);
 	}
 
@@ -75,8 +73,12 @@ final class NavigationRenderer {
 	private function doRenderHeader( JsonEntity $jsonEntity ) : string {
 		return $this->doWrapInElement(
 			'header',
-			$this->doWrapInElement( 'h2', $jsonEntity->getName(), [ $this->cssClasses['header-title'] ] ),
-			[ $this->cssClasses['header'] ]
+			$this->doWrapInElement(
+				'h2',
+				$jsonEntity->getName(),
+				[ 'class' => $this->cssClasses['header-title'] ]
+			),
+			[ 'class' => $this->cssClasses['header'] ]
 		);
 	}
 
@@ -95,10 +97,10 @@ final class NavigationRenderer {
 					$this->doWrapInElement(
 						'dt',
 						$jsonEntity->getGroupTitle( $group ),
-						[ $this->cssClasses['group-title'] ]
+						[ 'class' => $this->cssClasses['group-title'] ]
 					) .
 					$this->doRenderContent( $jsonEntity->getGroupContent( $group ) ),
-					[ $this->cssClasses['group'] ]
+					[ 'class' => $this->cssClasses['group'] ]
 				)
 			);
 		}
@@ -134,9 +136,9 @@ final class NavigationRenderer {
 			$this->doWrapInElement(
 				'ul',
 				implode( '', $allContent ),
-				[ $this->cssClasses['group-content-list'] ]
+				[ 'class' => $this->cssClasses['group-content-list'] ]
 			),
-			[ $this->cssClasses['group-content'] ]
+			[ 'class' => $this->cssClasses['group-content'] ]
 		);
 	}
 
@@ -152,7 +154,27 @@ final class NavigationRenderer {
 				$title, $text,
 				[ 'class' => $this->cssClasses['group-content-link'] ]
 			),
-			[ $this->cssClasses['group-content-item'] ]
+			[ 'class' => $this->cssClasses['group-content-item'] ]
 		);
+	}
+
+	/**
+	 * Dumb wrapper around core's Html class, so we don't
+	 * have to worry about stuff getting auto-escaped; instead,
+	 * the consumer is allowed to deal with it themselves.
+	 *
+	 * @param string $element
+	 * @param string $content
+	 * @param array $attributes
+	 * @return string
+	 */
+	private function doWrapInElement(
+		string $element,
+		string $content,
+		array $attributes = []
+	) : string {
+		return Html::openElement( $element, $attributes ) .
+			$content .
+			Html::closeElement( $element );
 	}
 }
