@@ -5,6 +5,7 @@ namespace StructuredNavigation\Renderer;
 use Html;
 use MediaWiki\Linker\LinkRenderer;
 use StructuredNavigation\Json\JsonEntity;
+use StructuredNavigation\Libs\OOUI\Layout\UnorderedListLayout;
 use TitleParser;
 use TitleValue;
 
@@ -131,13 +132,17 @@ final class NavigationRenderer {
 			array_push( $allContent, $html );
 		}
 
+		$unorderedList = new UnorderedListLayout( [
+			'items' => $allContent,
+			'item-attributes' => [
+				'class' => $this->cssClasses['group-content-item']
+			]
+		] );
+		$unorderedList->addClasses( [ $this->cssClasses['group-content-list'] ] );
+
 		return $this->doWrapInElement(
 			'dd',
-			$this->doWrapInElement(
-				'ul',
-				implode( '', $allContent ),
-				[ 'class' => $this->cssClasses['group-content-list'] ]
-			),
+			$unorderedList,
 			[ 'class' => $this->cssClasses['group-content'] ]
 		);
 	}
@@ -148,13 +153,9 @@ final class NavigationRenderer {
 	 * @return string
 	 */
 	private function doRenderContentItem( TitleValue $title, string $text ) : string {
-		return $this->doWrapInElement(
-			'li',
-			$this->linkRenderer->makeLink(
-				$title, $text,
-				[ 'class' => $this->cssClasses['group-content-link'] ]
-			),
-			[ 'class' => $this->cssClasses['group-content-item'] ]
+		return $this->linkRenderer->makeLink(
+			$title, $text,
+			[ 'class' => $this->cssClasses['group-content-link'] ]
 		);
 	}
 

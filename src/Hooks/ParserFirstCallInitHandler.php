@@ -45,7 +45,8 @@ final class ParserFirstCallInitHandler {
 		// retrieve data for page of interest
 		$content = $this->getParsedData( $page->getContent() );
 
-		// setup ParserOutput
+		// setup OOUI and ParserOutput
+		$parser->enableOOUI();
 		$parserOutput = $parser->getOutput();
 		$this->setPageProperty( $parserOutput, $title->getArticleID() );
 		$this->loadResourceLoaderModules( $parserOutput );
