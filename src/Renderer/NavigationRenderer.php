@@ -5,7 +5,7 @@ namespace StructuredNavigation\Renderer;
 use Html;
 use MediaWiki\Linker\LinkRenderer;
 use StructuredNavigation\Json\JsonEntity;
-use StructuredNavigation\Libs\OOUI\Layout\UnorderedListLayout;
+use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
 use TitleParser;
 use TitleValue;
 
@@ -132,7 +132,7 @@ final class NavigationRenderer {
 			array_push( $allContent, $html );
 		}
 
-		$unorderedList = new UnorderedListLayout( [
+		$unorderedList = new UnorderedList( [
 			'items' => $allContent,
 			'item-attributes' => [
 				'class' => $this->cssClasses['group-content-item']

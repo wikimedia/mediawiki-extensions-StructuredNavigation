@@ -1,9 +1,9 @@
 <?php
 
-namespace StructuredNavigation\Libs\OOUI\Layout;
+namespace StructuredNavigation\Libs\OOUI\Element;
 
+use OOUI\Element;
 use OOUI\HtmlSnippet;
-use OOUI\Layout;
 use OOUI\GroupElement;
 use OOUI\Tag;
 
@@ -11,7 +11,7 @@ use OOUI\Tag;
  * @license GPL-2.0-or-later
  * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
  */
-class UnorderedListLayout extends Layout {
+class UnorderedList extends Element {
 
 	use GroupElement;
 
@@ -20,9 +20,6 @@ class UnorderedListLayout extends Layout {
 	 */
 	public function __construct( array $config = [] ) {
 		parent::__construct( $config );
-
-		// do reset
-		$this->removeClasses( [ 'oo-ui-layout' ] );
 
 		// traits
 		$this->initializeGroupElement(
