@@ -5,6 +5,7 @@ namespace StructuredNavigation\Renderer;
 use Html;
 use MediaWiki\Linker\LinkRenderer;
 use StructuredNavigation\Json\JsonEntity;
+use StructuredNavigation\Libs\OOUI\Element\DescriptionList;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
 use TitleParser;
 use TitleValue;
@@ -85,35 +86,34 @@ final class NavigationRenderer {
 
 	/**
 	 * @param JsonEntity $jsonEntity
-	 * @return string
+	 * @return DescriptionList
 	 */
-	private function doRenderGroups( JsonEntity $jsonEntity ) : string {
+	private function doRenderGroups( JsonEntity $jsonEntity ) : DescriptionList {
 		$allGroups = [];
 
 		foreach ( $jsonEntity->getGroups() as $group ) {
 			array_push(
 				$allGroups,
-				$this->doWrapInElement(
-					'div',
-					$this->doWrapInElement(
-						'dt',
-						$jsonEntity->getGroupTitle( $group ),
-						[ 'class' => $this->cssClasses['group-title'] ]
-					) .
-					$this->doRenderContent( $jsonEntity->getGroupContent( $group ) ),
-					[ 'class' => $this->cssClasses['group'] ]
-				)
+				[
+					'term' => $jsonEntity->getGroupTitle( $group ),
+					'detail' => $this->doRenderContent( $jsonEntity->getGroupContent( $group ) )
+				]
 			);
 		}
 
-		return $this->doWrapInElement( 'dl', implode( '', $allGroups ) );
+		return new DescriptionList( [
+			'items' => $allGroups,
+			'container-attributes' => [ 'class' => $this->cssClasses['group'] ],
+			'term-attributes' => [ 'class' => $this->cssClasses['group-title'] ],
+			'detail-attributes' => [ 'class' => $this->cssClasses['group-content'] ],
+		] );
 	}
 
 	/**
 	 * @param array $content
-	 * @return string
+	 * @return UnorderedList
 	 */
-	private function doRenderContent( array $content ) : string {
+	private function doRenderContent( array $content ) : UnorderedList {
 		$allContent = [];
 
 		foreach ( $content as $contentItem ) {
@@ -140,11 +140,7 @@ final class NavigationRenderer {
 		] );
 		$unorderedList->addClasses( [ $this->cssClasses['group-content-list'] ] );
 
-		return $this->doWrapInElement(
-			'dd',
-			$unorderedList,
-			[ 'class' => $this->cssClasses['group-content'] ]
-		);
+		return $unorderedList;
 	}
 
 	/**
