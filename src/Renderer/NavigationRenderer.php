@@ -4,6 +4,8 @@ namespace StructuredNavigation\Renderer;
 
 use Html;
 use MediaWiki\Linker\LinkRenderer;
+use OOUI\HtmlSnippet;
+use OOUI\Tag;
 use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Libs\OOUI\Element\DescriptionList;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
@@ -57,31 +59,30 @@ final class NavigationRenderer {
 
 	/**
 	 * @param JsonEntity $jsonEntity
-	 * @return string
+	 * @return Tag
 	 */
-	public function render( JsonEntity $jsonEntity ) : string {
-		return $this->doWrapInElement(
-			'nav',
-			$this->doRenderHeader( $jsonEntity ) .
-			$this->doRenderGroups( $jsonEntity ),
-			[ 'class' => $this->cssClasses['nav'] ]
-		);
+	public function render( JsonEntity $jsonEntity ) : Tag {
+		return ( new Tag( 'nav' ) )
+			->addClasses( [ $this->cssClasses['nav'] ] )
+			->appendContent( new HtmlSnippet(
+				$this->doRenderHeader( $jsonEntity ) .
+				$this->doRenderGroups( $jsonEntity )
+			) );
 	}
 
 	/**
 	 * @param JsonEntity $jsonEntity
-	 * @return string
+	 * @return Tag
 	 */
-	private function doRenderHeader( JsonEntity $jsonEntity ) : string {
-		return $this->doWrapInElement(
-			'header',
-			$this->doWrapInElement(
-				'h2',
-				$jsonEntity->getName(),
-				[ 'class' => $this->cssClasses['header-title'] ]
-			),
-			[ 'class' => $this->cssClasses['header'] ]
-		);
+	private function doRenderHeader( JsonEntity $jsonEntity ) : Tag {
+		return ( new Tag( 'header' ) )
+			->addClasses( [ $this->cssClasses['header'] ] )
+			->appendContent( new HtmlSnippet(
+				( new Tag( 'h2' ) )
+					->addClasses( [ $this->cssClasses['header-title'] ] )
+					->appendContent( $jsonEntity->getName() )
+					->toString()
+			) );
 	}
 
 	/**
@@ -153,25 +154,5 @@ final class NavigationRenderer {
 			$title, $text,
 			[ 'class' => $this->cssClasses['group-content-link'] ]
 		);
-	}
-
-	/**
-	 * Dumb wrapper around core's Html class, so we don't
-	 * have to worry about stuff getting auto-escaped; instead,
-	 * the consumer is allowed to deal with it themselves.
-	 *
-	 * @param string $element
-	 * @param string $content
-	 * @param array $attributes
-	 * @return string
-	 */
-	private function doWrapInElement(
-		string $element,
-		string $content,
-		array $attributes = []
-	) : string {
-		return Html::openElement( $element, $attributes ) .
-			$content .
-			Html::closeElement( $element );
 	}
 }
