@@ -2,7 +2,6 @@
 
 namespace StructuredNavigation\Renderer;
 
-use Html;
 use MediaWiki\Linker\LinkRenderer;
 use OOUI\HtmlSnippet;
 use OOUI\Tag;

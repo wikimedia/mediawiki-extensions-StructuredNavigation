@@ -19,7 +19,6 @@ class DescriptionList extends Element {
 	 * @param array $config
 	 */
 	public function __construct( array $config = [] ) {
-
 		// config initialization
 		$config = array_merge( [ 'use-div-container' => true ], $config );
 
@@ -47,7 +46,7 @@ class DescriptionList extends Element {
 			}
 
 			$this->addItems( $allItems );
-		} 
+		}
 	}
 
 	/**

@@ -30,7 +30,7 @@ class UnorderedList extends Element {
 		if ( isset( $config['items'] ) ) {
 			$allListItems = [];
 
-			foreach( $config['items'] as $item ) {
+			foreach ( $config['items'] as $item ) {
 				$listItem = $this->createListItem( $config );
 
 				array_push(
