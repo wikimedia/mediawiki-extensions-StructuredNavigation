@@ -133,15 +133,11 @@ final class NavigationRenderer {
 			array_push( $allContent, $html );
 		}
 
-		$unorderedList = new UnorderedList( [
+		return new UnorderedList( [
 			'items' => $allContent,
-			'item-attributes' => [
-				'class' => $this->cssClasses['group-content-item']
-			]
+			'item-attributes' => [ 'class' => $this->cssClasses['group-content-item'] ],
+			'classes' => [ $this->cssClasses['group-content-list'] ]
 		] );
-		$unorderedList->addClasses( [ $this->cssClasses['group-content-list'] ] );
-
-		return $unorderedList;
 	}
 
 	/**
