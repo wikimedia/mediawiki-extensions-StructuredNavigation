@@ -107,6 +107,7 @@ final class NavigationRenderer {
 			'container-attributes' => [ 'class' => $this->cssClasses['group'] ],
 			'term-attributes' => [ 'class' => $this->cssClasses['group-title'] ],
 			'detail-attributes' => [ 'class' => $this->cssClasses['group-content'] ],
+			'classes' => [ $this->cssClasses['groups'] ]
 		] );
 	}
 
