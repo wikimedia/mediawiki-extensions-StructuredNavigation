@@ -15,4 +15,5 @@ final class NavigationContent extends JsonContent {
 	public function __construct( string $text ) {
 		parent::__construct( $text, CONTENT_MODEL_NAVIGATION );
 	}
+
 }

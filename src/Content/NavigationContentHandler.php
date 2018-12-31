@@ -14,7 +14,7 @@ final class NavigationContentHandler extends JsonContentHandler {
 	 * @param string $modelId
 	 */
 	public function __construct( string $modelId = CONTENT_MODEL_NAVIGATION ) {
-		parent::__construct( $modelId, [ CONTENT_FORMAT_JSON ] );
+		parent::__construct( $modelId );
 	}
 
 	/**
