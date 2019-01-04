@@ -32,7 +32,11 @@ class TemplateLinksRenderer {
 	 * @param string $separatorSymbol
 	 * @return string
 	 */
-	public function getPreparedLinks( int $namespace, string $title, string $separatorSymbol = '|' ) : string {
+	public function getPreparedLinks(
+		int $namespace,
+		string $title,
+		string $separatorSymbol = '|'
+	) : string {
 		$preparedLinks = [];
 
 		foreach ( $this->getLinks( $namespace, $title ) as $link ) {

@@ -2,10 +2,17 @@
 <ruleset>
 	<file>.</file>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
-		<exclude name="Generic.Files.LineLength.TooLong" />
 		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.Found" />
 		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.ReturnTypeFound" />
 		<exclude name="MediaWiki.PHP71Features.VoidReturnType.NotAllowed" />
+	</rule>
+	<rule ref="Generic.Files.LineLength.TooLong">
+		<!--
+			Allow the sniff to run, but exclude the following files
+			which are considered special exceptions
+		-->
+		<exclude-pattern>*/src/ServiceWiring\.php</exclude-pattern>
+		<exclude-pattern>*/libs/src/MediaWiki/ServiceWiring\.php</exclude-pattern>
 	</rule>
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
 	<arg name="extensions" value="php,php5,inc"/>
