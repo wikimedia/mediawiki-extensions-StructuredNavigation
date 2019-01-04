@@ -33,7 +33,6 @@ final class ParserFirstCallInitHandler {
 	 * @return string
 	 */
 	public function getParserHandler( $input, array $attributes, Parser $parser ) : string {
-		// Retrieve title and get page
 		$title = Title::makeTitle( NS_NAVIGATION, $attributes['title'] );
 
 		if ( !$title->exists() ) {
@@ -41,11 +40,8 @@ final class ParserFirstCallInitHandler {
 		}
 
 		$page = WikiPage::factory( $title );
-
-		// retrieve data for page of interest
 		$content = $this->getParsedData( $page->getContent() );
 
-		// setup OOUI and ParserOutput
 		$parser->enableOOUI();
 		$parserOutput = $parser->getOutput();
 		$this->setPageProperty( $parserOutput, $title->getArticleID() );
