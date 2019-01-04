@@ -11,6 +11,9 @@ final class Constants {
 	public const CONFIG_NAME = 'structurednavigation';
 
 	/** @var string */
+	public const CONFIG_PREFIX = 'wgStructuredNavigation';
+
+	/** @var string */
 	public const PAGE_PROPERTY = 'structurednavigation';
 
 	/** @var string */

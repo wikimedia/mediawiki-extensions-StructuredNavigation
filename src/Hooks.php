@@ -18,7 +18,7 @@ final class Hooks {
 	 * @return GlobalVarConfig
 	 */
 	public static function getGlobalVarConfig() : GlobalVarConfig {
-		return new GlobalVarConfig( 'wgStructuredNavigation' );
+		return new GlobalVarConfig( Constants::CONFIG_PREFIX );
 	}
 
 	/**
