@@ -8,6 +8,9 @@ namespace StructuredNavigation;
 final class Constants {
 
 	/** @var string */
+	public const CONFIG_NAME = 'structurednavigation';
+
+	/** @var string */
 	public const PAGE_PROPERTY = 'structurednavigation';
 
 	/** @var string */

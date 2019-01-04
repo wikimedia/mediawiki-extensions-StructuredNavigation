@@ -12,7 +12,7 @@ use StructuredNavigation\Renderer\NavigationRenderer;
 
 return [
 	Constants::SERVICE_CONFIG => function ( MediaWikiServices $services ) : Config {
-		return $services->getConfigFactory()->makeConfig( 'structurednavigation' );
+		return $services->getConfigFactory()->makeConfig( Constants::CONFIG_NAME );
 	},
 
 	Constants::SERVICE_NAVIGATION_RENDERER => function ( MediaWikiServices $services ) : NavigationRenderer {
