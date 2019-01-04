@@ -19,18 +19,14 @@ class DescriptionList extends Element {
 	 * @param array $config
 	 */
 	public function __construct( array $config = [] ) {
-		// config initialization
 		$config = array_merge( [ 'use-div-container' => true ], $config );
 
-		// parent constructor
 		parent::__construct( $config );
 
-		// traits
 		$this->initializeGroupElement(
 			array_merge( $config, [ 'group' => $this ] )
 		);
 
-		// initialization
 		if ( isset( $config['items'] ) ) {
 			$allItems = [];
 

@@ -21,12 +21,10 @@ class UnorderedList extends Element {
 	public function __construct( array $config = [] ) {
 		parent::__construct( $config );
 
-		// traits
 		$this->initializeGroupElement(
 			array_merge( $config, [ 'group' => $this ] )
 		);
 
-		// initialization
 		if ( isset( $config['items'] ) ) {
 			$allListItems = [];
 
