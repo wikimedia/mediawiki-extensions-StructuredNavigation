@@ -32,7 +32,7 @@ final class ParserFirstCallInitHandler {
 	 * @param Parser $parser
 	 * @return string
 	 */
-	public function getParserHandler( $input, array $attributes, Parser $parser ) : string {
+	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) : string {
 		$title = Title::makeTitle( NS_NAVIGATION, $attributes['title'] );
 
 		if ( !$title->exists() ) {

@@ -4,6 +4,7 @@
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.Found" />
 		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.ReturnTypeFound" />
+		<exclude name="MediaWiki.PHP71Features.NullableType.NotAllowed" />
 		<exclude name="MediaWiki.PHP71Features.VoidReturnType.NotAllowed" />
 	</rule>
 	<rule ref="Generic.Files.LineLength.TooLong">
