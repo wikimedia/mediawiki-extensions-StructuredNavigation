@@ -15,6 +15,14 @@
 		<exclude-pattern>*/src/ServiceWiring\.php</exclude-pattern>
 		<exclude-pattern>*/libs/src/MediaWiki/ServiceWiring\.php</exclude-pattern>
 	</rule>
+
+	<!--
+		Explicitly enable these Generic.Metrics.* sniffs to help ensure code quality.
+		See: https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/17
+	-->
+	<rule ref="Generic.Metrics.CyclomaticComplexity"></rule>
+	<rule ref="Generic.Metrics.NestingLevel"></rule>
+
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
 	<arg name="extensions" value="php,php5,inc"/>
 	<arg name="encoding" value="UTF-8"/>
