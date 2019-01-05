@@ -23,7 +23,7 @@ before_install:
   - composer require --dev jakub-onderka/php-parallel-lint:1.0.0
   - composer require --dev jakub-onderka/php-console-highlighter:0.3.2
   - composer require --dev mediawiki/minus-x:0.3.1
-  - if [[ "$SNIFF" == "1" ]]; then composer require --dev mediawiki/mediawiki-tools-codesniffer:23.0.0 fi
+  - if [[ "$SNIFF" == "1" ]]; then composer require --dev mediawiki/mediawiki-tools-codesniffer:23.0.0; fi
   - if [[ "$SNIFF" == "1" ]]; then composer install; fi
 
 script: composer test
