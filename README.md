@@ -1,5 +1,10 @@
-# About this extension
-**StructuredNavigation** allows creating navigation templates that can be used on articles.
+# About
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![Build Status](https://travis-ci.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation.svg?branch=master)](https://travis-ci.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation)
+
+**StructuredNavigation** allows creating navigation templates that can be used on articles. 
+
+> Note: This project is currently in development phase; this project will be released as stable once all tasks under the ["Stable Release" project](https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/projects/1) have been accomplished.
 
 ## Install
 This extension was developed on the latest commit of the `REL1_32` branch of MediaWiki core; however, it should probably work just as well on a 1.31 installation. This extension requires at least PHP 7.1. To install:
@@ -33,13 +38,3 @@ Navigations only contain pure content - that is, it does not contain any informa
 - Include `<templatestyles src="/styles.css" />` at the top of the template
 
 Note that this extension does not actually have a hard software dependency on TemplateStyles, but should work extremely well with TemplateStyles.
-
-## TODO
-  - The navigation tag should allow identifying itself through an ID selector by accepting an `id` attribute
-  - Should provide a visual editor for creating structured navigations
-  - Validate JSON against a schema (currently this extension just assumes each navigation JSON is in the same format)
-  - Allow to have groups within groups (maybe?)
-  - Figure out and implement separation between presentation and content; at the end, styling structured navigations should be easily customisable
-  - Include a maintenance script and special page for mass-migrating wikitext-based navigation templates to structured navigations
-  - Include the navigation-bar/template links (view, talk, edit) in the render
-  - Allow extensions to add their own renderer for a StructuredNavigation entity (e.g MobileFrontend could provide their own version specifically designed for mobile). This could be done by providing a hook
