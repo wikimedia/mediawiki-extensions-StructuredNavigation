@@ -22,7 +22,7 @@
 		"StructuredNavigationNamespaces": ".i18n.namespaces.php"
 	},
 	"ServiceWiringFiles": [
-		"src/ServiceWiring.php",
+		"src/Services/ServiceWiring.php",
 		"libs/src/MediaWiki/ServiceWiring.php"
 	],
 	"AutoloadNamespaces": {

@@ -5,11 +5,18 @@ namespace StructuredNavigation;
 use GlobalVarConfig;
 use Parser;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
+use StructuredNavigation\Services\Services;
 
 /**
  * @license GPL-2.0-or-later
  */
 final class Hooks {
+
+	/** @var string */
+	private const CONFIG_PREFIX = 'wgStructuredNavigation';
+
+	/** @var string */
+	private const PARSER_TAG = 'mw-navigation';
 
 	/**
 	 * Callback for ConfigRegistry
@@ -18,7 +25,7 @@ final class Hooks {
 	 * @return GlobalVarConfig
 	 */
 	public static function getGlobalVarConfig() : GlobalVarConfig {
-		return new GlobalVarConfig( Constants::CONFIG_PREFIX );
+		return new GlobalVarConfig( self::CONFIG_PREFIX );
 	}
 
 	/**
@@ -42,7 +49,7 @@ final class Hooks {
 			Services::getInstance()->getNavigationRenderer()
 		);
 
-		$parser->setHook( Constants::PARSER_TAG, [ $handler, 'getParserHandler' ] );
+		$parser->setHook( self::PARSER_TAG, [ $handler, 'getParserHandler' ] );
 	}
 
 	/**

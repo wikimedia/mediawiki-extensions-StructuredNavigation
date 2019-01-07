@@ -5,7 +5,6 @@ namespace StructuredNavigation\Hooks;
 use JsonContent;
 use Parser;
 use ParserOutput;
-use StructuredNavigation\Constants;
 use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Renderer\NavigationRenderer;
 use Title;
@@ -15,6 +14,9 @@ use WikiPage;
  * @license GPL-2.0-or-later
  */
 final class ParserFirstCallInitHandler {
+
+	/** @var string */
+	private const PAGE_PROPERTY = 'structurednavigation';
 
 	/** @var NavigationRenderer */
 	private $navigationRenderer;
@@ -75,6 +77,6 @@ final class ParserFirstCallInitHandler {
 	 * @return void
 	 */
 	private function setPageProperty( ParserOutput $parserOutput, int $articleId ) : void {
-		$parserOutput->setProperty( Constants::PAGE_PROPERTY, $articleId );
+		$parserOutput->setProperty( self::PAGE_PROPERTY, $articleId );
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation;
+namespace StructuredNavigation\Services;
 
 use Config;
 use MediaWiki\MediaWikiServices;

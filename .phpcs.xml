@@ -12,7 +12,7 @@
 			Allow the sniff to run, but exclude the following files
 			which are considered special exceptions
 		-->
-		<exclude-pattern>*/src/ServiceWiring\.php</exclude-pattern>
+		<exclude-pattern>*/src/Services/ServiceWiring\.php</exclude-pattern>
 		<exclude-pattern>*/libs/src/MediaWiki/ServiceWiring\.php</exclude-pattern>
 	</rule>
 
