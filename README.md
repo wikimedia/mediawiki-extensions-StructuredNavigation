@@ -23,7 +23,7 @@ Using this extension allows creating navigations that are:
   - semantically sane: presentation details are separated from content (e.g separator symbol is auto-appended after each link using CSS - much nicer than having to manually include it after each link)
 
 ## How to Use
-You can play with an example in `/docs/examples`. Let's say you use `wikipediaen-dontnod-entertainment.json`.
+You can play with an example in `/docs/examples`. Let's say you use `wikipedia-en-dontnod-entertainment.json`.
 
 1. Create a new page at `Navigation:Dontnod Entertainment`, import the JSON into that page,
 then save your edit.
