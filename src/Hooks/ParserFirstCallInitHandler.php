@@ -3,6 +3,7 @@
 namespace StructuredNavigation\Hooks;
 
 use JsonContent;
+use OOUI\Tag;
 use Parser;
 use ParserOutput;
 use StructuredNavigation\Json\JsonEntity;
@@ -49,7 +50,33 @@ final class ParserFirstCallInitHandler {
 		$this->setPageProperty( $parserOutput, $title->getArticleID() );
 		$this->loadResourceLoaderModules( $parserOutput );
 
-		return $this->navigationRenderer->render( $content );
+		$renderedNavigation = $this->navigationRenderer->render( $content );
+		$this->setAttributes( $renderedNavigation, $title, $attributes );
+
+		return $renderedNavigation;
+	}
+
+	/**
+	 * Handles setting the attributes of a navigation container. This will
+	 * automatically assign the `data-structurednavigation-name` attribute
+	 * by default. If the `id` attribute is set by the user, it'll also
+	 * assign that as an attribute.
+	 *
+	 * @param Tag $renderedNavigation
+	 * @param Title $title
+	 * @param array $attributes
+	 * @return void
+	 */
+	private function setAttributes( Tag $renderedNavigation, Title $title, array $attributes ) : void {
+		$renderedNavigation->setAttributes( [
+			'data-structurednavigation-name' => htmlspecialchars( $title->getText(), ENT_QUOTES )
+		] );
+
+		if ( isset( $attributes['id'] ) ) {
+			$renderedNavigation->setAttributes( [
+				'id' => htmlspecialchars( $attributes['id'], ENT_QUOTES )
+			] );
+		}
 	}
 
 	/**
