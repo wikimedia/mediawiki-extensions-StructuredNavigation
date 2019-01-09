@@ -47,7 +47,7 @@ final class ParserFirstCallInitHandler {
 
 		$parser->enableOOUI();
 		$parserOutput = $parser->getOutput();
-		$this->setPageProperty( $parserOutput, $title->getArticleID() );
+		$this->setPageProperty( $parserOutput, $title );
 		$this->loadResourceLoaderModules( $parserOutput );
 
 		$renderedNavigation = $this->navigationRenderer->render( $content );
@@ -100,10 +100,10 @@ final class ParserFirstCallInitHandler {
 
 	/**
 	 * @param ParserOutput $parserOutput
-	 * @param int $articleId
+	 * @param Title $title
 	 * @return void
 	 */
-	private function setPageProperty( ParserOutput $parserOutput, int $articleId ) : void {
-		$parserOutput->setProperty( self::PAGE_PROPERTY, $articleId );
+	private function setPageProperty( ParserOutput $parserOutput, Title $title ) : void {
+		$parserOutput->setProperty( self::PAGE_PROPERTY, $title->getText() );
 	}
 }
