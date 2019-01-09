@@ -9,6 +9,8 @@ use ParserOutput;
 use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Renderer\NavigationRenderer;
 use Title;
+use TitleParser;
+use TitleValue;
 use WikiPage;
 
 /**
@@ -22,11 +24,19 @@ final class ParserFirstCallInitHandler {
 	/** @var NavigationRenderer */
 	private $navigationRenderer;
 
+	/** @var TitleParser */
+	private $titleParser;
+
 	/**
 	 * @param NavigationRenderer $navigationRenderer
+	 * @param TitleParser $titleParser
 	 */
-	public function __construct( NavigationRenderer $navigationRenderer ) {
+	public function __construct(
+		NavigationRenderer $navigationRenderer,
+		TitleParser $titleParser
+	) {
 		$this->navigationRenderer = $navigationRenderer;
+		$this->titleParser = $titleParser;
 	}
 
 	/**
@@ -36,13 +46,14 @@ final class ParserFirstCallInitHandler {
 	 * @return string
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) : string {
-		$title = Title::makeTitle( NS_NAVIGATION, $attributes['title'] );
+		$title = $this->titleParser->parseTitle( $attributes['title'], NS_NAVIGATION );
 
-		if ( !$title->exists() ) {
+		$titleFromTitleValue = Title::newFromTitleValue( $title );
+		if ( !$titleFromTitleValue->exists() ) {
 			return false;
 		}
 
-		$page = WikiPage::factory( $title );
+		$page = WikiPage::factory( $titleFromTitleValue );
 		$content = $this->getParsedData( $page->getContent() );
 
 		$parser->enableOOUI();
@@ -63,11 +74,11 @@ final class ParserFirstCallInitHandler {
 	 * assign that as an attribute.
 	 *
 	 * @param Tag $renderedNavigation
-	 * @param Title $title
+	 * @param TitleValue $title
 	 * @param array $attributes
 	 * @return void
 	 */
-	private function setAttributes( Tag $renderedNavigation, Title $title, array $attributes ) : void {
+	private function setAttributes( Tag $renderedNavigation, TitleValue $title, array $attributes ) : void {
 		$renderedNavigation->setAttributes( [
 			'data-structurednavigation-name' => htmlspecialchars( $title->getText(), ENT_QUOTES )
 		] );
@@ -100,10 +111,10 @@ final class ParserFirstCallInitHandler {
 
 	/**
 	 * @param ParserOutput $parserOutput
-	 * @param Title $title
+	 * @param TitleValue $title
 	 * @return void
 	 */
-	private function setPageProperty( ParserOutput $parserOutput, Title $title ) : void {
+	private function setPageProperty( ParserOutput $parserOutput, TitleValue $title ) : void {
 		$parserOutput->setProperty( self::PAGE_PROPERTY, $title->getText() );
 	}
 }
