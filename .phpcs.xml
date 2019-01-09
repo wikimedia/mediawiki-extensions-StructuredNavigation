@@ -7,6 +7,14 @@
 		<exclude name="MediaWiki.PHP71Features.NullableType.NotAllowed" />
 		<exclude name="MediaWiki.PHP71Features.VoidReturnType.NotAllowed" />
 	</rule>
+
+	<!--
+		Should enforce typehinting, and throw an error when the incorrect typehint
+		is being used against a parameter (checks against the PHP doc annotations)
+		@see: https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/18
+	-->
+	<rule ref="Squiz.Commenting.FunctionComment.IncorrectTypeHint"/>
+
 	<rule ref="Generic.Files.LineLength.TooLong">
 		<!--
 			Allow the sniff to run, but exclude the following files
@@ -18,7 +26,7 @@
 
 	<!--
 		Explicitly enable these Generic.Metrics.* sniffs to help ensure code quality.
-		See: https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/17
+		@see: https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/17
 	-->
 	<rule ref="Generic.Metrics.CyclomaticComplexity"></rule>
 	<rule ref="Generic.Metrics.NestingLevel"></rule>
