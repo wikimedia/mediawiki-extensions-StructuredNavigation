@@ -32,7 +32,7 @@ final class Hooks {
 	/**
 	 * Extension registration callback
 	 *
-	 * @see http://mediawiki.org/wiki/Special:MyLanguage/Manual:Extension.json/Schema#callback
+	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Extension.json/Schema#callback
 	 * @return void
 	 */
 	public static function onRegistrationCallback() : void {
