@@ -7,7 +7,7 @@
 > Note: This project is currently in development phase; this project will be released as stable once all tasks under the ["Stable Release" project](https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/projects/1) have been accomplished.
 
 ## Install
-This extension was developed on the latest commit of the `REL1_32` branch of MediaWiki core; however, it should probably work just as well on a 1.31 installation. This extension requires at least PHP 7.1. To install:
+This extension requires MediaWiki 1.32 (or greater) and PHP 7.1 (or greater). To install:
 
 1. Git clone this repository locally on your wiki.
 2. Add this line to your `LocalSettings.php` file:
