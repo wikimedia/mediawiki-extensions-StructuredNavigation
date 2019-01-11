@@ -4,7 +4,7 @@
 
 **StructuredNavigation** allows creating navigation templates that can be used on articles. 
 
-> Note: This project is currently in development phase; this project will be released as stable once all tasks under the ["Stable Release" project](https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/projects/1) have been accomplished.
+> Note: While this project is definitely functional (feel free to play with it!), do keep in mind that it's still in development phase. This project will be released as stable once all tasks under the ["Stable Release" project](https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/projects/1) have been accomplished.
 
 ## Install
 This extension requires MediaWiki 1.32 (or greater) and PHP 7.1 (or greater). To install:
