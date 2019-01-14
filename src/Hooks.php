@@ -42,10 +42,10 @@ final class Hooks {
 
 	/**
 	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Hooks/ParserFirstCallInit
-	 * @param Parser &$parser
+	 * @param Parser $parser
 	 * @return void
 	 */
-	public static function onParserFirstCallInit( Parser &$parser ) : void {
+	public static function onParserFirstCallInit( Parser $parser ) : void {
 		$handler = new ParserFirstCallInitHandler(
 			new AttributeQualifier(),
 			Services::getInstance()->getNavigationRenderer(),
