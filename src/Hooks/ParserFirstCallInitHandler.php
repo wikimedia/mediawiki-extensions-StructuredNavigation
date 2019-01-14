@@ -3,9 +3,9 @@
 namespace StructuredNavigation\Hooks;
 
 use JsonContent;
-use OOUI\Tag;
 use Parser;
 use ParserOutput;
+use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Renderer\NavigationRenderer;
 use Title;
@@ -21,6 +21,9 @@ final class ParserFirstCallInitHandler {
 	/** @var string */
 	private const PAGE_PROPERTY = 'structurednavigation';
 
+	/** @var AttributeQualifier */
+	private $attributeQualifier;
+
 	/** @var NavigationRenderer */
 	private $navigationRenderer;
 
@@ -28,13 +31,16 @@ final class ParserFirstCallInitHandler {
 	private $titleParser;
 
 	/**
+	 * @param AttributeQualifier $attributeQualifier
 	 * @param NavigationRenderer $navigationRenderer
 	 * @param TitleParser $titleParser
 	 */
 	public function __construct(
+		AttributeQualifier $attributeQualifier,
 		NavigationRenderer $navigationRenderer,
 		TitleParser $titleParser
 	) {
+		$this->attributeQualifier = $attributeQualifier;
 		$this->navigationRenderer = $navigationRenderer;
 		$this->titleParser = $titleParser;
 	}
@@ -62,32 +68,9 @@ final class ParserFirstCallInitHandler {
 		$this->loadResourceLoaderModules( $parserOutput );
 
 		$renderedNavigation = $this->navigationRenderer->render( $content );
-		$this->setAttributes( $renderedNavigation, $title, $attributes );
+		$this->attributeQualifier->setAttributes( $renderedNavigation, $title, $attributes );
 
 		return $renderedNavigation;
-	}
-
-	/**
-	 * Handles setting the attributes of a navigation container. This will
-	 * automatically assign the `data-structurednavigation-name` attribute
-	 * by default. If the `id` attribute is set by the user, it'll also
-	 * assign that as an attribute.
-	 *
-	 * @param Tag $renderedNavigation
-	 * @param TitleValue $title
-	 * @param array $attributes
-	 * @return void
-	 */
-	private function setAttributes( Tag $renderedNavigation, TitleValue $title, array $attributes ) : void {
-		$renderedNavigation->setAttributes( [
-			'data-structurednavigation-name' => htmlspecialchars( $title->getText(), ENT_QUOTES )
-		] );
-
-		if ( isset( $attributes['id'] ) ) {
-			$renderedNavigation->setAttributes( [
-				'id' => htmlspecialchars( $attributes['id'], ENT_QUOTES )
-			] );
-		}
 	}
 
 	/**

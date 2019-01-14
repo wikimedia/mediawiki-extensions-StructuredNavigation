@@ -47,6 +47,7 @@ final class Hooks {
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) : void {
 		$handler = new ParserFirstCallInitHandler(
+			new AttributeQualifier(),
 			Services::getInstance()->getNavigationRenderer(),
 			MediaWikiServices::getInstance()->getTitleParser()
 		);
