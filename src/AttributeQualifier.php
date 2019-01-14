@@ -32,7 +32,7 @@ final class AttributeQualifier {
 
 		if ( isset( $attributes['id'] ) ) {
 			$renderedNavigation->setAttributes( [
-				'id' => $this->escapeAttributeContent( $attribute['id'] )
+				'id' => $this->escapeAttributeContent( $attributes['id'] )
 			] );
 		}
 	}
