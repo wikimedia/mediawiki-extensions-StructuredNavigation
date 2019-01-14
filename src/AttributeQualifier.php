@@ -27,13 +27,21 @@ class AttributeQualifier {
 	 */
 	public function setAttributes( Tag $renderedNavigation, TitleValue $title, array $attributes ) : void {
 		$renderedNavigation->setAttributes( [
-			self::ATTR_DATA_NAME => htmlspecialchars( $title->getText(), ENT_QUOTES )
+			self::ATTR_DATA_NAME => $this->escapeAttributeContent( $title->getText() )
 		] );
 
 		if ( isset( $attributes['id'] ) ) {
 			$renderedNavigation->setAttributes( [
-				'id' => htmlspecialchars( $attributes['id'], ENT_QUOTES )
+				'id' => $this->escapeAttributeContent( $attribute['id'] )
 			] );
 		}
+	}
+
+	/**
+	 * @param string $attribute
+	 * @return string
+	 */
+	private function escapeAttributeContent( string $attribute ) : string {
+		return htmlspecialchars( $attribute, ENT_QUOTES );
 	}
 }
