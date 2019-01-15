@@ -1,10 +1,16 @@
-# About
+# StructuredNavigation - an extension for MediaWiki
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![Build Status](https://travis-ci.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation.svg?branch=master)](https://travis-ci.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation)
 
 **StructuredNavigation** allows creating navigation templates that can be used on articles. 
 
 > Note: While this project is definitely functional (feel free to play with it!), do keep in mind that it's still in development phase. This project will be released as stable once all tasks under the ["Stable Release" project](https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/projects/1) have been accomplished.
+
+## Contributing
+Are you interested in contributing? Read the [official contribution guide](.github/CONTRIBUTING.md), which covers:
+ - [How to submit an issue](.github/CONTRIBUTING.md#submitting-an-issue)
+ - [How to submit a patch](.github/CONTRIBUTING.md#submitting-a-patch)
+ - [Coding conventions](.github/CONTRIBUTING.md#coding-conventions)
 
 ## Install
 This extension requires MediaWiki 1.32 (or greater) and PHP 7.1 (or greater). To install:
@@ -23,18 +29,11 @@ Using this extension allows creating navigations that are:
   - semantically sane: presentation details are separated from content (e.g separator symbol is auto-appended after each link using CSS - much nicer than having to manually include it after each link)
 
 ## How to Use
-You can play with an example in `/docs/examples`. Let's say you use `wikipedia-en-dontnod-entertainment.json`.
+You can play with an example in `/docs/examples`. For this example, let's try using `wikipedia-en-dontnod-entertainment.json`.
 
 1. Create a new page at `Navigation:Dontnod Entertainment`, import the JSON into that page,
 then save your edit.
 2. At a separate wikitext page, add `<mw-navigation title="Dontnod Entertainment">` and press save.
 
-## Presentation vs Content
-Navigations only contain pure content - that is, it does not contain any information on how it should be styled such as the header background color, font size of group title, etc. A proposed way to handle presentation details:
-
-- Have the wiki of interest install the TemplateStyles extension.
-- Have the navigation of interest, e.g `<mw-navigation title="Dontnod Entertainment">`, inside a template called `[[Template:Dontnod Entertainment]]`.
-- Create a template subpage at `[[Template:Dontnod Entertainment/styles.css]]`. (Any styles the user wants to override can be done here.)
-- Include `<templatestyles src="/styles.css" />` at the top of the template
-
-Note that this extension does not actually have a hard software dependency on TemplateStyles, but should work extremely well with TemplateStyles.
+## License
+Licensed under [GNU General Public License v2.0](COPYING).
