@@ -6,26 +6,29 @@ matrix:
     fast_finish: true
 
     include:
-        - php: '7.1'
-          env: SNIFF=1
+        - php: 7.1
 
-        - php: '7.2'
-          env: SNIFF=1
+        - php: 7.2
+
+        - php: 7.3
 
         - php: 'nightly'
 
     allow_failures:
+        - php: 7.3
         - php: nightly
 
 before_install:
-
-  - if [[ "$SNIFF" == "1" ]]; then composer self-update; fi
-  - composer require --dev jakub-onderka/php-parallel-lint:1.0.0
-  - composer require --dev jakub-onderka/php-console-highlighter:0.3.2
-  - composer require --dev mediawiki/minus-x:0.3.1
-  - if [[ "$SNIFF" == "1" ]]; then composer require --dev mediawiki/mediawiki-codesniffer:23.0.0; fi
-  - if [[ "$SNIFF" == "1" ]]; then composer install; fi
+  - composer self-update
+  - composer install
 
 script:
   - composer test
   - composer metrics
+
+notifications:
+  email:
+    recipients:
+      - samanthanguyen1116@gmail.com
+    on_success: change
+    on_failure: always
