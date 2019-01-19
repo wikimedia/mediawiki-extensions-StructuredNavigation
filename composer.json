@@ -4,7 +4,8 @@
 		"jakub-onderka/php-console-highlighter": "0.3.2",
 		"mediawiki/minus-x": "0.3.1",
 		"mediawiki/mediawiki-codesniffer": "23.0.0",
-		"phploc/phploc": "^4.0"
+		"phploc/phploc": "^4.0",
+		"phpmetrics/phpmetrics": "^2.4"
 	},
 	"scripts": {
 		"test": [
@@ -18,7 +19,8 @@
 		],
 		"metrics": [
 			"phploc src",
-			"phploc libs/src"
+			"phploc libs/src",
+			"phpmetrics --report-html=docs/phpmetrics ."
 		]
 	}
 }
