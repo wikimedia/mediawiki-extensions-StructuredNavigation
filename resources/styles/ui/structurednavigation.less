@@ -1,13 +1,15 @@
 @import '../../../../../resources/lib/ooui/wikimedia-ui-base';
 
 @mw-structurednav-main-bg: @wmui-color-base100;
+@mw-structurednav-main-border: @border-width-base @border-style-base @wmui-color-base70;
 @mw-structurednav-text: @wmui-color-base10;
 @mw-structurednav-header-bg: #ccf;
 @mw-structurednav-group-bg: #ddf;
+@mw-structurednav-group-title-content-after: ':';
 
 .mw-structurednav-navigation-container {
 	background-color: @mw-structurednav-main-bg;
-	border: 1px solid @wmui-color-base70;
+	border: @mw-structurednav-main-border;
 	font-size: 12px;
 	padding: .25em;
 	margin: 1em auto;
@@ -52,7 +54,7 @@
 	margin: 0;
 
 	&:after {
-		content: ':';
+		content: @mw-structurednav-group-title-content-after;
 		padding-right: .5em;
 	}
 }
