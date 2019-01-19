@@ -26,4 +26,6 @@ before_install:
   - if [[ "$SNIFF" == "1" ]]; then composer require --dev mediawiki/mediawiki-codesniffer:23.0.0; fi
   - if [[ "$SNIFF" == "1" ]]; then composer install; fi
 
-script: composer test
+script:
+  - composer test
+  - composer metrics
