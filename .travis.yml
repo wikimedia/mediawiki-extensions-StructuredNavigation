@@ -13,13 +13,13 @@ matrix:
     fast_finish: true
 
     include:
-          php: 7.1
+        - php: 7.1
 
-          php: 7.2
+        - php: 7.2
 
-          php: 7.3
+        - php: 7.3
 
-          php: nightly
+        - php: nightly
 
     allow_failures:
         - php: 7.3
@@ -39,12 +39,12 @@ before_install:
 
   # do actual install
   - php maintenance/install.php
-	  --pass travis
-	  --dbtype "$DBTYPE"
-	  --dbuser "$DBUSER"
-	  --dbname travisciwiki
-	  --dbpass ""
-	  --scriptpath "/w" \
+    --pass travis
+    --dbtype "$DBTYPE"
+    --dbuser "$DBUSER"
+    --dbname travisciwiki
+    --dbpass ""
+    --scriptpath "/w" \
     -- lang "en"
 
   # include development environment settings
@@ -59,7 +59,7 @@ install:
   - cd StructuredNavigation
   - git checkout -qf $TRAVIS_COMMIT
 
-  # go back
+  # go back to the mediawiki directory
   - cd ../../
   - echo "\n\nwfLoadExtension( '$MWEXTNAME' );\n" >> ./LocalSettings.php
   - composer install
