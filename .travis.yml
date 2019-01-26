@@ -68,32 +68,14 @@ install:
   - cd ../../
   - echo "\n\nwfLoadExtension( '$MWEXTNAME' );\n" >> ./LocalSettings.php
 
-before_script:
-- export -f travis_fold
-- export -f travis_time_start
-- export -f travis_time_finish
 
 script:
   # Go back to our extension's directory because we don't want
   # to run these checks against the entirety of MediaWiki core
   - cd extensions/$MWEXTNAME
 
-  # run `composer test`
-  - > 
-      travis_fold start "composer.test.command"
-        travis_time_start
-          composer test
-        travis_time_finish
-      travis_fold end "composer.test.command"
-
-  # run `composer metrics`
-  - >
-      travis_fold start "composer.metrics.command"
-        travis_time_start
-          composer metrics
-        travis_time_finish
-      travis_fold end "composer.metrics.command"
-
+  - composer test
+  - composer metrics
 
 notifications:
   email:
