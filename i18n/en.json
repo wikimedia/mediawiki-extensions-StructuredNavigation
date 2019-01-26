@@ -6,5 +6,6 @@
 	},
 	"structurednavigation-desc": "Allows creating a structured, machine-readable navigation for use on articles.",
 	"structurednavigation-separator-symbol": "\\",
-	"structurednavigation-reserved-username": "StructuredNavigation script"
+	"structurednavigation-reserved-username": "StructuredNavigation script",
+	"navigationschema": "Navigation schema"
 }

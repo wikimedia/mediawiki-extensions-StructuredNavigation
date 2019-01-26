@@ -6,5 +6,6 @@
 	},
 	"structurednavigation-desc": "Describes the purpose of the StructuredNavigation extension",
 	"structurednavigation-separator-symbol": "Defines the symbol/character that should be used for separating each link in a navigation.",
-	"structurednavigation-reserved-username": "Defines the username that's reserved by this extension for doing automated tasks."
+	"structurednavigation-reserved-username": "Defines the username that's reserved by this extension for doing automated tasks.",
+	"navigationschema": "Title for Special:NavigationSchema"
 }

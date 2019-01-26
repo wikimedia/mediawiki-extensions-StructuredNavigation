@@ -36,6 +36,9 @@
 		"ParserFirstCallInit": "StructuredNavigation\\Hooks::onParserFirstCallInit",
 		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
 	},
+	"SpecialPages": {
+		"NavigationSchema": "StructuredNavigation\\Specials\\NavigationSchemaPage"
+	},
 	"ContentHandlers": {
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
 	},
