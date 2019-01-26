@@ -5,6 +5,7 @@ namespace StructuredNavigation\Services;
 use Config;
 use ConfigException;
 use MediaWiki\MediaWikiServices;
+use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Renderer\NavigationRenderer;
 use UnexpectedValueException;
 
@@ -49,4 +50,14 @@ final class Services {
 	public function getNavigationRenderer() : NavigationRenderer {
 		return $this->services->getService( Constants::SERVICE_NAVIGATION_RENDERER );
 	}
+
+	/**
+	 * @return ParserFirstCallInitHandler
+	 */
+	public function getParserFirstCallInitHandler() : ParserFirstCallInitHandler {
+		return $this->services->getService(
+			Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER
+		);
+	}
+
 }

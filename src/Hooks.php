@@ -2,9 +2,7 @@
 
 namespace StructuredNavigation;
 
-use MediaWiki\MediaWikiServices;
 use Parser;
-use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Services\Services;
 
 /**
@@ -21,13 +19,10 @@ final class Hooks {
 	 * @return void
 	 */
 	public static function onParserFirstCallInit( Parser $parser ) : void {
-		$handler = new ParserFirstCallInitHandler(
-			new AttributeQualifier(),
-			Services::getInstance()->getNavigationRenderer(),
-			MediaWikiServices::getInstance()->getTitleParser()
-		);
-
-		$parser->setHook( self::PARSER_TAG, [ $handler, 'getParserHandler' ] );
+		$parser->setHook( self::PARSER_TAG, [
+			Services::getInstance()->getParserFirstCallInitHandler(),
+			'getParserHandler'
+		] );
 	}
 
 	/**

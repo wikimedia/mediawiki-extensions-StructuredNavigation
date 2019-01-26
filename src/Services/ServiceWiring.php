@@ -4,6 +4,8 @@ namespace StructuredNavigation\Services;
 
 use Config;
 use MediaWiki\MediaWikiServices;
+use StructuredNavigation\AttributeQualifier;
+use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Renderer\NavigationRenderer;
 
 /**
@@ -21,4 +23,12 @@ return [
 			$services->getTitleParser()
 		);
 	},
+
+	Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER => function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
+		return new ParserFirstCallInitHandler(
+			new AttributeQualifier(),
+			$services->getService( Constants::SERVICE_NAVIGATION_RENDERER ),
+			$services->getTitleParser()
+		);
+	}
 ];
