@@ -13,6 +13,9 @@ final class Hooks {
 	/** @var string */
 	private const PARSER_TAG = 'mw-navigation';
 
+	/** @var string */
+	private const PARSER_TAG_METHOD = 'getParserHandler';
+
 	/**
 	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Hooks/ParserFirstCallInit
 	 * @param Parser $parser
@@ -21,7 +24,7 @@ final class Hooks {
 	public static function onParserFirstCallInit( Parser $parser ) : void {
 		$parser->setHook( self::PARSER_TAG, [
 			Services::getInstance()->getParserFirstCallInitHandler(),
-			'getParserHandler'
+			self::PARSER_TAG_METHOD
 		] );
 	}
 
@@ -31,9 +34,8 @@ final class Hooks {
 	 * @return void
 	 */
 	public static function onUserGetReservedNames( array &$reservedUsernames ) : void {
-		$config = Services::getInstance()->getConfig();
-
-		$reservedUsernames[] = $config->get( 'ReservedUsername' );
+		$reservedUsernames[] = Services::getInstance()->getConfig()
+			->get( 'ReservedUsername' );
 	}
 
 }
