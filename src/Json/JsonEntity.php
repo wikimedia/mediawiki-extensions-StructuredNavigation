@@ -25,17 +25,17 @@ final class JsonEntity {
 	}
 
 	/**
-	 * @return string
-	 */
-	public function getName() : string {
-		return $this->content['name'];
-	}
-
-	/**
 	 * @return array
 	 */
 	public function getConfig() : array {
 		return $this->content['config'];
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTitleLabel() : string {
+		return $this->findTitleLabel( $this->getConfig() );
 	}
 
 	/**
@@ -49,8 +49,8 @@ final class JsonEntity {
 	 * @param array $group
 	 * @return string
 	 */
-	public function getGroupTitle( array $group ) : string {
-		return $group['title']['label'];
+	public function getGroupTitleLabel( array $group ) : string {
+		return $this->findTitleLabel( $group );
 	}
 
 	/**
@@ -59,5 +59,13 @@ final class JsonEntity {
 	 */
 	public function getGroupContent( array $group ) : array {
 		return $group['content'];
+	}
+
+	/**
+	 * @param array $item
+	 * @return string
+	 */
+	private function findTitleLabel( array $item ) : string {
+		return $item['title']['label'];
 	}
 }

@@ -57,12 +57,9 @@
 	},
 
 	"type": "object",
-	"required": [ "name", "config", "groups" ],
+	"required": [ "config", "groups" ],
 	"additionalProperties": false,
 	"properties": {
-		"name": {
-			"type": "string"
-		},
 		"config": {
 			"type": "object",
 			"additionalProperties": false,

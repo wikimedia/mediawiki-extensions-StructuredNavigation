@@ -79,7 +79,7 @@ final class NavigationRenderer {
 			->appendContent( new HtmlSnippet(
 				( new Tag( 'h2' ) )
 					->addClasses( [ $this->cssClasses['header-title'] ] )
-					->appendContent( $jsonEntity->getName() )
+					->appendContent( $jsonEntity->getTitleLabel() )
 					->toString()
 			) );
 	}
@@ -95,7 +95,7 @@ final class NavigationRenderer {
 			array_push(
 				$allGroups,
 				[
-					'term' => $jsonEntity->getGroupTitle( $group ),
+					'term' => $jsonEntity->getGroupTitleLabel( $group ),
 					'detail' => $this->doRenderContent( $jsonEntity->getGroupContent( $group ) )
 				]
 			);
