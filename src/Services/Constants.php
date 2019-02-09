@@ -14,6 +14,9 @@ final class Constants {
 	public const SERVICE_CONFIG = 'StructuredNavigation.Config';
 
 	/** @var string */
+	public const SERVICE_NAVIGATION_LINK_RENDERER = 'StructuredNavigation.NavigationLinkRenderer';
+
+	/** @var string */
 	public const SERVICE_NAVIGATION_RENDERER = 'StructuredNavigation.NavigationRenderer';
 
 	/** @var string */

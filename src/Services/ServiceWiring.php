@@ -5,6 +5,7 @@ namespace StructuredNavigation\Services;
 use Config;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\AttributeQualifier;
+use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Renderer\NavigationRenderer;
 
@@ -17,10 +18,16 @@ return [
 		return $services->getConfigFactory()->makeConfig( Constants::CONFIG_NAME );
 	},
 
-	Constants::SERVICE_NAVIGATION_RENDERER => function ( MediaWikiServices $services ) : NavigationRenderer {
-		return new NavigationRenderer(
+	Constants::SERVICE_NAVIGATION_LINK_RENDERER => function ( MediaWikiServices $services ) : NavigationLinkRenderer {
+		return new NavigationLinkRenderer(
 			$services->getLinkRenderer(),
 			$services->getTitleParser()
+		);
+	},
+
+	Constants::SERVICE_NAVIGATION_RENDERER => function ( MediaWikiServices $services ) : NavigationRenderer {
+		return new NavigationRenderer(
+			$services->getService( Constants::SERVICE_NAVIGATION_LINK_RENDERER )
 		);
 	},
 

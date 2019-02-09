@@ -2,14 +2,12 @@
 
 namespace StructuredNavigation\Renderer;
 
-use MediaWiki\Linker\LinkRenderer;
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
+use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Libs\OOUI\Element\DescriptionList;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
-use TitleParser;
-use TitleValue;
 
 /**
  * Renders a structured navigation view. This by default does
@@ -22,11 +20,8 @@ use TitleValue;
  */
 final class NavigationRenderer {
 
-	/** @var LinkRenderer */
-	private $linkRenderer;
-
-	/** @var TitleParser */
-	private $titleParser;
+	/** @var NavigationLinkRenderer */
+	private $navigationLinkRenderer;
 
 	/**
 	 * @var array Conveniently keeps all CSS class keys in one place.
@@ -45,15 +40,10 @@ final class NavigationRenderer {
 	];
 
 	/**
-	 * @param LinkRenderer $linkRenderer
-	 * @param TitleParser $titleParser
+	 * @param NavigationLinkRenderer $navigationLinkRenderer
 	 */
-	public function __construct(
-		LinkRenderer $linkRenderer,
-		TitleParser $titleParser
-	) {
-		$this->linkRenderer = $linkRenderer;
-		$this->titleParser = $titleParser;
+	public function __construct( NavigationLinkRenderer $navigationLinkRenderer ) {
+		$this->navigationLinkRenderer = $navigationLinkRenderer;
 	}
 
 	/**
@@ -118,19 +108,13 @@ final class NavigationRenderer {
 		$allContent = [];
 
 		foreach ( $content as $contentItem ) {
-			$html = '';
-
-			if ( is_array( $contentItem ) ) {
-				$html = $this->doRenderContentItem(
-					$this->titleParser->parseTitle( $contentItem[0] ),
-					$contentItem[1]
-				);
-			} else {
-				$title = $this->titleParser->parseTitle( $contentItem );
-				$html = $this->doRenderContentItem( $title, $title->getText() );
-			}
-
-			array_push( $allContent, $html );
+			array_push(
+				$allContent,
+				$this->navigationLinkRenderer->getLink(
+					$contentItem,
+					[ 'class' => $this->cssClasses['group-content-link'] ]
+				)
+			);
 		}
 
 		return new UnorderedList( [
@@ -138,17 +122,5 @@ final class NavigationRenderer {
 			'item-attributes' => [ 'class' => $this->cssClasses['group-content-item'] ],
 			'classes' => [ $this->cssClasses['group-content-list'] ]
 		] );
-	}
-
-	/**
-	 * @param TitleValue $title
-	 * @param string $text
-	 * @return string
-	 */
-	private function doRenderContentItem( TitleValue $title, string $text ) : string {
-		return $this->linkRenderer->makeLink(
-			$title, $text,
-			[ 'class' => $this->cssClasses['group-content-link'] ]
-		);
 	}
 }

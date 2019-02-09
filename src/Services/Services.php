@@ -5,6 +5,7 @@ namespace StructuredNavigation\Services;
 use Config;
 use ConfigException;
 use MediaWiki\MediaWikiServices;
+use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Renderer\NavigationRenderer;
 use UnexpectedValueException;
@@ -42,6 +43,13 @@ final class Services {
 	 */
 	public function getConfig() : Config {
 		return $this->services->getService( Constants::SERVICE_CONFIG );
+	}
+
+	/**
+	 * @return NavigationLinkRenderer
+	 */
+	public function getNavigationLinkRenderer() : NavigationLinkRenderer {
+		return $this->services->getService( Constants::SERVICE_NAVIGATION_LINK_RENDERER );
 	}
 
 	/**
