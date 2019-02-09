@@ -3,6 +3,7 @@
 namespace StructuredNavigation\Hooks;
 
 use JsonContent;
+use OutputPage;
 use Parser;
 use ParserOutput;
 use StructuredNavigation\AttributeQualifier;
@@ -62,7 +63,7 @@ final class ParserFirstCallInitHandler {
 		$page = WikiPage::factory( $titleFromTitleValue );
 		$content = $this->getParsedData( $page->getContent() );
 
-		$parser->enableOOUI();
+		OutputPage::setupOOUI();
 		$parserOutput = $parser->getOutput();
 		$this->setPageProperty( $parserOutput, $title );
 		$this->loadResourceLoaderModules( $parserOutput );
