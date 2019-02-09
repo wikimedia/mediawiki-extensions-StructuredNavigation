@@ -3,11 +3,20 @@
 module.exports = function ( grunt ) {
 	var config = grunt.file.readJSON( 'extension.json' );
 
-	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
+	grunt.loadNpmTasks( 'grunt-eslint' );
+	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 	grunt.initConfig( {
+		banana: config.MessagesDirs,
+		eslint: {
+			all: [
+				'*.js',
+				'**/*.js',
+				'!{node_modules,vendor,docs}/**'
+			]
+		},
 		jsonlint: {
 			all: [
 				'**/*.json',
@@ -16,7 +25,6 @@ module.exports = function ( grunt ) {
 				'!extensions/**'
 			]
 		},
-		banana: config.MessagesDirs,
 		stylelint: {
 			all: [
 				'**/*.css',
@@ -24,9 +32,9 @@ module.exports = function ( grunt ) {
 				'!node_modules/**',
 				'!vendor/**',
 			]
-		}
+		},
 	} );
 
-	grunt.registerTask( 'test', [ 'jsonlint', 'banana', 'stylelint' ] );
+	grunt.registerTask( 'test', [ 'banana', 'eslint', 'jsonlint', 'stylelint' ] );
 	grunt.registerTask( 'default', 'test' );
 };

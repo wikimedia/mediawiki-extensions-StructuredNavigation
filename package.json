@@ -4,8 +4,10 @@
 		"test": "grunt test"
 	},
 	"devDependencies": {
+		"eslint-config-wikimedia": "0.10.1",
 		"grunt": "1.0.3",
 		"grunt-banana-checker": "0.5.0",
+		"grunt-eslint": "21.0.0",
 		"grunt-jsonlint": "1.1.0",
 		"grunt-stylelint": "0.10.1",
 		"stylelint-config-wikimedia": "0.5.0"
