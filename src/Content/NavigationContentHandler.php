@@ -29,8 +29,22 @@ final class NavigationContentHandler extends JsonContentHandler {
 	 */
 	public function makeEmptyContent() : NavigationContent {
 		return new NavigationContent(
-			FormatJson::encode( [ 'name' => '', 'groups' => '' ], "\t" )
+			FormatJson::encode( $this->getPlaceholderContent(), "\t" )
 		);
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getPlaceholderContent() : array {
+		return [
+			'config' => [
+				'title' => [
+					'label' => ''
+				]
+			],
+			'groups' => []
+		];
 	}
 
 }
