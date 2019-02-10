@@ -27,14 +27,14 @@ return [
 
 	Constants::SERVICE_NAVIGATION_RENDERER => function ( MediaWikiServices $services ) : NavigationRenderer {
 		return new NavigationRenderer(
-			$services->getService( Constants::SERVICE_NAVIGATION_LINK_RENDERER )
+			( new Services( $services ) )->getNavigationLinkRenderer()
 		);
 	},
 
 	Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER => function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
 		return new ParserFirstCallInitHandler(
 			new AttributeQualifier(),
-			$services->getService( Constants::SERVICE_NAVIGATION_RENDERER ),
+			( new Services( $services ) )->getNavigationRenderer(),
 			$services->getTitleParser()
 		);
 	}
