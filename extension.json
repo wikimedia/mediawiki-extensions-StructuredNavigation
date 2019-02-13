@@ -33,6 +33,7 @@
 		"StructuredNavigation\\Libs\\": "libs/src"
 	},
 	"Hooks": {
+		"BeforeDisplayNoArticleText": "StructuredNavigation\\Hooks::onBeforeDisplayNoArticleText",
 		"ParserFirstCallInit": "StructuredNavigation\\Hooks::onParserFirstCallInit",
 		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
 	},
@@ -98,6 +99,9 @@
 			"lessMessages": [
 				"structurednavigation-separator-symbol"
 			]
+		},
+		"ext.structurednavigation.view.emptystate.styles": {
+			"styles": "resources/styles/view/EmptyStateView.less"
 		}
 	},
 	"CodeMirrorTagModes": {
