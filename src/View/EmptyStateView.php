@@ -11,7 +11,7 @@ use Title;
 /**
  * @license GPL-2.0-or-later
  */
-class EmptyStateView {
+final class EmptyStateView {
 
 	/** @var string */
 	private const MESSAGE_TITLE = 'structurednavigation-view-emptystate-title';
