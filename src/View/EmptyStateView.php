@@ -110,7 +110,8 @@ class EmptyStateView {
 	 * @return ButtonWidget
 	 */
 	private function getAction() : ButtonWidget {
-		return new ButtonWidget( [ 'label' => $this->messageLocalizer->msg( self::MESSAGE_BUTTON_LABEL )->plain(),
+		return new ButtonWidget( [
+			'label' => $this->messageLocalizer->msg( self::MESSAGE_BUTTON_LABEL )->plain(),
 			'href' => $this->title->getFullURL( [ 'action' => 'edit', 'redlink' => '1' ] ),
 			'flags' => [ 'primary', 'progressive' ],
 			'classes' => [ self::CSS_CLASS['view-action'] ]

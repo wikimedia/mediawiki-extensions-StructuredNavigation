@@ -23,10 +23,8 @@ final class NavigationRenderer {
 	/** @var NavigationLinkRenderer */
 	private $navigationLinkRenderer;
 
-	/**
-	 * @var array Conveniently keeps all CSS class keys in one place.
-	 */
-	private $cssClasses = [
+	/** @var array */
+	private const CSS_CLASS = [
 		'groups' => 'mw-structurednav-groups-container',
 		'group' => 'mw-structurednav-group',
 		'group-title' => 'mw-structurednav-group-title',
@@ -52,7 +50,7 @@ final class NavigationRenderer {
 	 */
 	public function render( JsonEntity $jsonEntity ) : Tag {
 		return ( new Tag( 'nav' ) )
-			->addClasses( [ $this->cssClasses['nav'] ] )
+			->addClasses( [ self::CSS_CLASS['nav'] ] )
 			->appendContent( new HtmlSnippet(
 				$this->doRenderHeader( $jsonEntity ) .
 				$this->doRenderGroups( $jsonEntity )
@@ -65,10 +63,10 @@ final class NavigationRenderer {
 	 */
 	private function doRenderHeader( JsonEntity $jsonEntity ) : Tag {
 		return ( new Tag( 'header' ) )
-			->addClasses( [ $this->cssClasses['header'] ] )
+			->addClasses( [ self::CSS_CLASS['header'] ] )
 			->appendContent( new HtmlSnippet(
 				( new Tag( 'h2' ) )
-					->addClasses( [ $this->cssClasses['header-title'] ] )
+					->addClasses( [ self::CSS_CLASS['header-title'] ] )
 					->appendContent( $jsonEntity->getTitleLabel() )
 					->toString()
 			) );
@@ -93,10 +91,10 @@ final class NavigationRenderer {
 
 		return new DescriptionList( [
 			'items' => $allGroups,
-			'container-attributes' => [ 'class' => $this->cssClasses['group'] ],
-			'term-attributes' => [ 'class' => $this->cssClasses['group-title'] ],
-			'detail-attributes' => [ 'class' => $this->cssClasses['group-content'] ],
-			'classes' => [ $this->cssClasses['groups'] ]
+			'container-attributes' => [ 'class' => self::CSS_CLASS['group'] ],
+			'term-attributes' => [ 'class' => self::CSS_CLASS['group-title'] ],
+			'detail-attributes' => [ 'class' => self::CSS_CLASS['group-content'] ],
+			'classes' => [ self::CSS_CLASS['groups'] ]
 		] );
 	}
 
@@ -112,15 +110,15 @@ final class NavigationRenderer {
 				$allContent,
 				$this->navigationLinkRenderer->getLink(
 					$contentItem,
-					[ 'class' => $this->cssClasses['group-content-link'] ]
+					[ 'class' => self::CSS_CLASS['group-content-link'] ]
 				)
 			);
 		}
 
 		return new UnorderedList( [
 			'items' => $allContent,
-			'item-attributes' => [ 'class' => $this->cssClasses['group-content-item'] ],
-			'classes' => [ $this->cssClasses['group-content-list'] ]
+			'item-attributes' => [ 'class' => self::CSS_CLASS['group-content-item'] ],
+			'classes' => [ self::CSS_CLASS['group-content-list'] ]
 		] );
 	}
 }
