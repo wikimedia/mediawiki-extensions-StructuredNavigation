@@ -22,11 +22,15 @@ matrix:
         - name: "PHP 7.3, MediaWiki 1.32"
           php: 7.3
 
+        - name: "PHP 7.4 (snapshot), MediaWiki 1.32"
+          php: 7.4snapshot
+
         - name: "PHP nightly build, MediaWiki 1.32"
           php: nightly
 
     allow_failures:
         - php: 7.3
+        - php: 7.4snapshot
         - php: nightly
 
 before_install:
