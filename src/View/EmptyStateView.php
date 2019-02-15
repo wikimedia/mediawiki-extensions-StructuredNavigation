@@ -80,7 +80,9 @@ final class EmptyStateView {
 			->addClasses( [ self::CSS_CLASS['view-illustration'] ] )
 			->setAttributes( [
 				'src' => "{$this->extensionAssetsPath}/StructuredNavigation/resources/"
-					. "images/illustration-grayscale.png"
+					. "images/illustration-grayscale.png",
+				'role' => 'presentation',
+				'alt' => ''
 			] );
 	}
 
