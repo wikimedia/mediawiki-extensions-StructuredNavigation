@@ -3,9 +3,8 @@
 namespace StructuredNavigation\Libs\OOUI\Element;
 
 use OOUI\Element;
-use OOUI\HtmlSnippet;
 use OOUI\GroupElement;
-use OOUI\Tag;
+use StructuredNavigation\Libs\OOUI\DescriptionListItem;
 
 /**
  * @license GPL-2.0-or-later
@@ -14,6 +13,9 @@ use OOUI\Tag;
 class DescriptionList extends Element {
 
 	use GroupElement;
+
+	/** @var string HTML element representing a description list */
+	private const ELEMENT_DESCRIPTION_LIST = 'dl';
 
 	/**
 	 * @param array $config
@@ -30,14 +32,13 @@ class DescriptionList extends Element {
 		if ( isset( $config['items'] ) ) {
 			$allItems = [];
 
+			$descriptionListItem = new DescriptionListItem();
 			foreach ( $config['items'] as $item ) {
 				array_push(
 					$allItems,
-					$this->createPairedTermDescription(
-						$config,
-						$item['term'],
-						$item['detail']
-					)
+					$descriptionListItem->getItem(
+						$config, $item['term'], $item['detail']
+ )
 				);
 			}
 
@@ -49,55 +50,7 @@ class DescriptionList extends Element {
 	 * @return string
 	 */
 	public function getTagName() : string {
-		return 'dl';
+		return self::ELEMENT_DESCRIPTION_LIST;
 	}
 
-	/**
-	 * @param array $config
-	 * @param string $termContent
-	 * @param string $detailContent
-	 * @return Tag|HtmlSnippet
-	 */
-	private function createPairedTermDescription(
-		array $config = [],
-		string $termContent,
-		string $detailContent
-	) {
-		$term = new Tag( 'dt' );
-		$detail = new Tag( 'dd' );
-
-		if (
-			isset( $config['term-attributes'] ) &&
-			is_array( $config['term-attributes'] )
-		) {
-			$term->setAttributes( $config['term-attributes'] );
-		}
-
-		if (
-			isset( $config['detail-attributes'] ) &&
-			is_array( $config['detail-attributes'] )
-		) {
-			$detail->setAttributes( $config['detail-attributes'] );
-		}
-
-		$htmlPair = new HtmlSnippet(
-			$term->appendContent( new HtmlSnippet( $termContent ) ) .
-			$detail->appendContent( new HtmlSnippet( $detailContent ) )
-		);
-
-		if ( $config['use-div-container'] === true ) {
-			$divContainer = new Tag( 'div' );
-			if (
-				isset( $config['container-attributes'] ) &&
-				is_array( $config['container-attributes'] )
-			) {
-				$divContainer->setAttributes( $config['container-attributes'] );
-			}
-
-			return $divContainer->appendContent( $htmlPair );
-
-		} else {
-			return $htmlPair;
-		}
-	}
 }
