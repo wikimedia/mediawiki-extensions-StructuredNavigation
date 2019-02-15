@@ -17,20 +17,18 @@
 	"callback": "StructuredNavigation\\ExtensionCallback::onRegistrationCallback",
 	"MessagesDirs": {
 		"StructuredNavigation": [
-			"i18n",
-			"libs/i18n/mediawiki"
+			"i18n"
 		]
 	},
 	"ExtensionMessagesFiles": {
 		"StructuredNavigationNamespaces": ".i18n.namespaces.php"
 	},
 	"ServiceWiringFiles": [
-		"src/Services/ServiceWiring.php",
-		"libs/src/MediaWiki/ServiceWiring.php"
+		"src/Services/ServiceWiring.php"
 	],
 	"AutoloadNamespaces": {
 		"StructuredNavigation\\": "src/",
-		"StructuredNavigation\\Libs\\": "libs/src"
+		"StructuredNavigation\\Libs\\": "libs/src/"
 	},
 	"Hooks": {
 		"BeforeDisplayNoArticleText": "StructuredNavigation\\Hooks::onBeforeDisplayNoArticleText",
@@ -87,9 +85,6 @@
 		"remoteExtPath": "StructuredNavigation"
 	},
 	"ResourceModules": {
-		"ext.structurednavigation.libs.ooui.toggleswitchinputwidget.styles": {
-			"styles": "libs/resources/ooui/widgets/ToggleSwitchInputWidget.less"
-		},
 		"ext.structurednavigation.ui.structurednavigation.styles": {
 			"styles": "resources/styles/ui/structurednavigation.less"
 		},
