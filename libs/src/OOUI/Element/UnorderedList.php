@@ -15,6 +15,12 @@ class UnorderedList extends Element {
 
 	use GroupElement;
 
+	/** @var string HTML element representing an unordered list */
+	private const ELEMENT_UNORDERED_LIST = 'ul';
+
+	/** @var string HTML element representing an item in an unordered list */
+	private const ELEMENT_UNORDERED_LIST_ITEM = 'li';
+
 	/**
 	 * @param array $config
 	 */
@@ -30,7 +36,6 @@ class UnorderedList extends Element {
 
 			foreach ( $config['items'] as $item ) {
 				$listItem = $this->createListItem( $config );
-
 				array_push(
 					$allListItems,
 					$listItem->appendContent( new HtmlSnippet( $item ) )
@@ -45,7 +50,7 @@ class UnorderedList extends Element {
 	 * @return string
 	 */
 	public function getTagName() : string {
-		return 'ul';
+		return self::ELEMENT_UNORDERED_LIST;
 	}
 
 	/**
@@ -53,7 +58,7 @@ class UnorderedList extends Element {
 	 * @return Tag
 	 */
 	private function createListItem( array $config = [] ) : Tag {
-		$listItem = new Tag( 'li' );
+		$listItem = new Tag( self::ELEMENT_UNORDERED_LIST_ITEM );
 
 		if (
 			isset( $config['item-attributes'] ) &&
