@@ -4,8 +4,8 @@ namespace StructuredNavigation;
 
 use Article;
 use Parser;
+use StructuredNavigation\Hooks\BeforeDisplayNoArticleTextHandler;
 use StructuredNavigation\Services\Services;
-use StructuredNavigation\View\EmptyStateView;
 
 /**
  * @license GPL-2.0-or-later
@@ -24,26 +24,7 @@ final class Hooks {
 	 * @return bool
 	 */
 	public static function onBeforeDisplayNoArticleText( Article $article ) : bool {
-		if ( $article->getPage()->getContentModel() !== CONTENT_MODEL_NAVIGATION ) {
-			return true;
-		}
-
-		$context = $article->getContext();
-		$output = $context->getOutput();
-
-		$output->enableOOUI();
-		$output->addModuleStyles(
-			'ext.structurednavigation.view.emptystate.styles'
-		);
-		$output->addHTML(
-			( new EmptyStateView(
-				$context->getConfig()->get( 'ExtensionAssetsPath' ),
-				$context,
-				$article->getTitle()
-			) )->getView()
-		);
-
-		return false;
+		return ( new BeforeDisplayNoArticleTextHandler( $article ) )->getHandler();
 	}
 
 	/**
