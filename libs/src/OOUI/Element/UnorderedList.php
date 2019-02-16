@@ -8,6 +8,8 @@ use OOUI\GroupElement;
 use OOUI\Tag;
 
 /**
+ * Generates HTML for making unordered lists.
+ *
  * @license GPL-2.0-or-later
  * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
  */
@@ -23,6 +25,7 @@ class UnorderedList extends Element {
 
 	/**
 	 * @param array $config
+	 * 	array $config['item-attributes'] Attributes to apply to the <li> instances
 	 */
 	public function __construct( array $config = [] ) {
 		parent::__construct( $config );

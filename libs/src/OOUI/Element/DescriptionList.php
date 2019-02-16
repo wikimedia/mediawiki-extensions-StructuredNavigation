@@ -7,6 +7,8 @@ use OOUI\GroupElement;
 use StructuredNavigation\Libs\OOUI\DescriptionListItem;
 
 /**
+ * Generates HTML for making description lists.
+ *
  * @license GPL-2.0-or-later
  * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
  */
@@ -19,6 +21,10 @@ class DescriptionList extends Element {
 
 	/**
 	 * @param array $config
+	 * 	bool $config['use-div-container'] Whether or not to contain ALL items in a <div>
+	 * 	array $config['term-attributes'] HTML attributes to apply to ALL <dt> instances
+	 * 	array $config['detail-attributes'] HTML Attributes to apply to ALL <dd> instances
+	 * 	array $config['container-attributes'] HTML attributes to apply to ALL <div> container instances
 	 */
 	public function __construct( array $config = [] ) {
 		$config = array_merge( [ 'use-div-container' => true ], $config );
@@ -36,9 +42,7 @@ class DescriptionList extends Element {
 			foreach ( $config['items'] as $item ) {
 				array_push(
 					$allItems,
-					$descriptionListItem->getItem(
-						$config, $item['term'], $item['detail']
- )
+					$descriptionListItem->getItem( $config, $item['term'], $item['detail'] )
 				);
 			}
 
