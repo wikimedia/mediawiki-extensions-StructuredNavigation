@@ -7,6 +7,7 @@ use MediaWiki\MediaWikiServices;
 use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
+use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Renderer\NavigationRenderer;
 
 /**
@@ -34,6 +35,7 @@ return [
 	Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER => function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
 		return new ParserFirstCallInitHandler(
 			new AttributeQualifier(),
+			new JsonEntityFactory(),
 			( new Services( $services ) )->getNavigationRenderer(),
 			$services->getTitleParser()
 		);

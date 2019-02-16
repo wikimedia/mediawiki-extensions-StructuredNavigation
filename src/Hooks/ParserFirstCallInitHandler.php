@@ -2,17 +2,15 @@
 
 namespace StructuredNavigation\Hooks;
 
-use JsonContent;
 use OutputPage;
 use Parser;
 use ParserOutput;
 use StructuredNavigation\AttributeQualifier;
-use StructuredNavigation\Json\JsonEntity;
+use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Renderer\NavigationRenderer;
 use Title;
 use TitleParser;
 use TitleValue;
-use WikiPage;
 
 /**
  * @license GPL-2.0-or-later
@@ -25,6 +23,9 @@ final class ParserFirstCallInitHandler {
 	/** @var AttributeQualifier */
 	private $attributeQualifier;
 
+	/** @var JsonEntityFactory */
+	private $jsonEntityFactory;
+
 	/** @var NavigationRenderer */
 	private $navigationRenderer;
 
@@ -33,15 +34,18 @@ final class ParserFirstCallInitHandler {
 
 	/**
 	 * @param AttributeQualifier $attributeQualifier
+	 * @param JsonEntityFactory $jsonEntityFactory
 	 * @param NavigationRenderer $navigationRenderer
 	 * @param TitleParser $titleParser
 	 */
 	public function __construct(
 		AttributeQualifier $attributeQualifier,
+		JsonEntityFactory $jsonEntityFactory,
 		NavigationRenderer $navigationRenderer,
 		TitleParser $titleParser
 	) {
 		$this->attributeQualifier = $attributeQualifier;
+		$this->jsonEntityFactory = $jsonEntityFactory;
 		$this->navigationRenderer = $navigationRenderer;
 		$this->titleParser = $titleParser;
 	}
@@ -60,8 +64,7 @@ final class ParserFirstCallInitHandler {
 			return false;
 		}
 
-		$page = WikiPage::factory( $titleFromTitleValue );
-		$content = $this->getParsedData( $page->getContent() );
+		$content = $this->jsonEntityFactory->newFromTitle( $titleFromTitleValue );
 
 		OutputPage::setupOOUI();
 		$parserOutput = $parser->getOutput();
@@ -72,14 +75,6 @@ final class ParserFirstCallInitHandler {
 		$this->attributeQualifier->setAttributes( $renderedNavigation, $title, $attributes );
 
 		return $renderedNavigation;
-	}
-
-	/**
-	 * @param JsonContent $content
-	 * @return JsonEntity
-	 */
-	private function getParsedData( JsonContent $content ) : JsonEntity {
-		return new JsonEntity( $content->getJsonData() );
 	}
 
 	/**
