@@ -11,7 +11,7 @@ use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Renderer\NavigationRenderer;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 
 return [

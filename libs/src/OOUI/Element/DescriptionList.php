@@ -9,7 +9,7 @@ use StructuredNavigation\Libs\OOUI\DescriptionListItem;
 /**
  * Generates HTML for making description lists.
  *
- * @license GPL-2.0-or-later
+ * @license MIT
  * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
  */
 class DescriptionList extends Element {

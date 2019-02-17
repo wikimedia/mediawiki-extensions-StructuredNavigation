@@ -3,7 +3,7 @@
 namespace StructuredNavigation\Services;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class Constants {
 

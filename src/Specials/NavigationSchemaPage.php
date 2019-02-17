@@ -6,7 +6,7 @@ use OOUI\Tag;
 use SpecialPage;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 class NavigationSchemaPage extends SpecialPage {
 

@@ -10,7 +10,7 @@ namespace StructuredNavigation\Json;
  * of a key, this object would hide that implementation detail and
  * nothing would break for outside users (probably)
  *
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class JsonEntity {
 

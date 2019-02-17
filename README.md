@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-	<a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">
-		<img src="https://img.shields.io/badge/License-GPL%20v2-blue.svg" alt="License: GPL v2">
+	<a href="https://opensource.org/licenses/MIT">
+		<img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License: MIT">
 	</a>
 	<a href="https://travis-ci.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation">
 		<img src="https://travis-ci.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation.svg?branch=master" alt="Build Status">
@@ -52,4 +52,4 @@ Using this extension allows creating navigations that are:
   - semantically sane: presentation details are separated from content (e.g separator symbol is auto-appended after each link using CSS - much nicer than having to manually include it after each link)
 
 ## License
-Licensed under [GNU General Public License v2.0](COPYING).
+Licensed under the [MIT license](COPYING).

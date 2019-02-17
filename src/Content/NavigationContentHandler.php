@@ -6,7 +6,7 @@ use FormatJson;
 use JsonContentHandler;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class NavigationContentHandler extends JsonContentHandler {
 

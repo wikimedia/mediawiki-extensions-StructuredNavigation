@@ -6,7 +6,7 @@ use MediaWiki\Linker\LinkRenderer;
 use TitleParser;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class NavigationLinkRenderer {
 

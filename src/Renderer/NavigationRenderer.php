@@ -16,7 +16,7 @@ use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
  * and flexible. Consumers are expected to provide their own
  * ResourceLoader modules (as of now)
  *
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class NavigationRenderer {
 

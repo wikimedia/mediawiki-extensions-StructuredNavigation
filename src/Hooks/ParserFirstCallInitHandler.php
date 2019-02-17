@@ -13,7 +13,7 @@ use TitleParser;
 use TitleValue;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class ParserFirstCallInitHandler {
 

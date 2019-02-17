@@ -9,7 +9,7 @@ use OOUI\Tag;
 use Title;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class EmptyStateView {
 

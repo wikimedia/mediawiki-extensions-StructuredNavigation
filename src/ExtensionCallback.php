@@ -5,7 +5,7 @@ namespace StructuredNavigation;
 use GlobalVarConfig;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 class ExtensionCallback {
 

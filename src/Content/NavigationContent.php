@@ -5,7 +5,7 @@ namespace StructuredNavigation\Content;
 use JsonContent;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class NavigationContent extends JsonContent {
 

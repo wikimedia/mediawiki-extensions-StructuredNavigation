@@ -6,7 +6,7 @@ use Article;
 use StructuredNavigation\View\EmptyStateView;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 class BeforeDisplayNoArticleTextHandler {
 

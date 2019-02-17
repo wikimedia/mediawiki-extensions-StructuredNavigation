@@ -8,7 +8,7 @@ use StructuredNavigation\Hooks\BeforeDisplayNoArticleTextHandler;
 use StructuredNavigation\Services\Services;
 
 /**
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class Hooks {
 

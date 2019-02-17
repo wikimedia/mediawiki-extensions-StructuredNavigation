@@ -4,7 +4,7 @@
 	"author": [
 		"Samantha Nguyen"
 	],
-	"license-name": "GPL-2.0-or-later",
+	"license-name": "MIT",
 	"url": "https://www.mediawiki.org/wiki/Extension:StructuredNavigation",
 	"descriptionmsg": "structurednavigation-desc",
 	"type": "parserhook",

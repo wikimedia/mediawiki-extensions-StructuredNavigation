@@ -8,7 +8,7 @@ use TitleValue;
 /**
  * Handles the setting of attributes for a structured navigation.
  *
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class AttributeQualifier {
 

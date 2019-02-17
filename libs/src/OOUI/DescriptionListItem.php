@@ -10,7 +10,7 @@ use OOUI\Tag;
  * contain a <dt> paired with a <dd>, and an option to have this inside
  * a <div> container (uses a container by default).
  *
- * @license GPL-2.0-or-later
+ * @license MIT
  * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
  */
 class DescriptionListItem {

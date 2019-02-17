@@ -16,7 +16,7 @@ use UnexpectedValueException;
  * the consumer to not have to know the unique service key of the specific
  * service, they can just call a method for what they want.
  *
- * @license GPL-2.0-or-later
+ * @license MIT
  */
 final class Services {
 
