@@ -16,13 +16,7 @@
 	<rule ref="Squiz.Commenting.FunctionComment.IncorrectTypeHint"/>
 
 	<rule ref="Generic.Files.LineLength">
-		<!--
-			Allow the sniff to run, but exclude the following files
-			which are considered special exceptions
-		-->
 		<exclude-pattern>*/src/Services/ServiceWiring\.php</exclude-pattern>
-		<exclude-pattern>*/libs/src/MediaWiki/ServiceWiring\.php</exclude-pattern>
-
 		<properties>
 			<!-- inherited line limit from MediaWiki is 100; make it at least 120 -->
 			<property name="lineLimit" value="120" />
