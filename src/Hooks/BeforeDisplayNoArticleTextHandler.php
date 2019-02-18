@@ -3,15 +3,18 @@
 namespace StructuredNavigation\Hooks;
 
 use Article;
-use StructuredNavigation\View\EmptyStateView;
+use StructuredNavigation\View\NonExistentView;
 
 /**
  * @license MIT
  */
 class BeforeDisplayNoArticleTextHandler {
 
-	/** @var string */
-	private const RESOURCELOADER_MODULE = 'ext.structurednavigation.view.emptystate.styles';
+	/** @var array */
+	private const RESOURCELOADER_MODULES = [
+		'ext.structurednavigation.libs.view.emptystate.styles',
+		'ext.structurednavigation.view.nonexistent.styles',
+	];
 
 	/** @var Article */
 	private $article;
@@ -44,9 +47,9 @@ class BeforeDisplayNoArticleTextHandler {
 		$output = $context->getOutput();
 
 		$output->enableOOUI();
-		$output->addModuleStyles( self::RESOURCELOADER_MODULE );
+		$output->addModuleStyles( self::RESOURCELOADER_MODULES );
 		$output->addHTML(
-			( new EmptyStateView(
+			( new NonExistentView(
 				$context->getConfig()->get( 'ExtensionAssetsPath' ),
 				$context,
 				$this->article->getTitle()
