@@ -7,7 +7,7 @@ use Parser;
 use ParserOutput;
 use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\Json\JsonEntityFactory;
-use StructuredNavigation\Renderer\NavigationRenderer;
+use StructuredNavigation\View\NavigationView;
 use Title;
 use TitleParser;
 use TitleValue;
@@ -26,8 +26,8 @@ final class ParserFirstCallInitHandler {
 	/** @var JsonEntityFactory */
 	private $jsonEntityFactory;
 
-	/** @var NavigationRenderer */
-	private $navigationRenderer;
+	/** @var NavigationView */
+	private $navigationView;
 
 	/** @var TitleParser */
 	private $titleParser;
@@ -35,18 +35,18 @@ final class ParserFirstCallInitHandler {
 	/**
 	 * @param AttributeQualifier $attributeQualifier
 	 * @param JsonEntityFactory $jsonEntityFactory
-	 * @param NavigationRenderer $navigationRenderer
+	 * @param NavigationView $navigationView
 	 * @param TitleParser $titleParser
 	 */
 	public function __construct(
 		AttributeQualifier $attributeQualifier,
 		JsonEntityFactory $jsonEntityFactory,
-		NavigationRenderer $navigationRenderer,
+		NavigationView $navigationView,
 		TitleParser $titleParser
 	) {
 		$this->attributeQualifier = $attributeQualifier;
 		$this->jsonEntityFactory = $jsonEntityFactory;
-		$this->navigationRenderer = $navigationRenderer;
+		$this->navigationView = $navigationView;
 		$this->titleParser = $titleParser;
 	}
 
@@ -71,7 +71,7 @@ final class ParserFirstCallInitHandler {
 		$this->setPageProperty( $parserOutput, $title );
 		$this->loadResourceLoaderModules( $parserOutput );
 
-		$renderedNavigation = $this->navigationRenderer->render( $content );
+		$renderedNavigation = $this->navigationView->render( $content );
 		$this->attributeQualifier->setAttributes( $renderedNavigation, $title, $attributes );
 
 		return $renderedNavigation;

@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Renderer;
+namespace StructuredNavigation\View;
 
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
@@ -18,7 +18,7 @@ use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
  *
  * @license MIT
  */
-final class NavigationRenderer {
+final class NavigationView {
 
 	/** @var NavigationLinkRenderer */
 	private $navigationLinkRenderer;

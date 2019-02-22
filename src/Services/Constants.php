@@ -17,7 +17,7 @@ final class Constants {
 	public const SERVICE_NAVIGATION_LINK_RENDERER = 'StructuredNavigation.NavigationLinkRenderer';
 
 	/** @var string */
-	public const SERVICE_NAVIGATION_RENDERER = 'StructuredNavigation.NavigationRenderer';
+	public const SERVICE_NAVIGATION_VIEW = 'StructuredNavigation.NavigationView';
 
 	/** @var string */
 	public const SERVICE_PARSERFIRSTCALLINIT_HANDLER = 'StructuredNavigation.ParserFirstCallInitHandler';

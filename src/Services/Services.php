@@ -7,7 +7,7 @@ use ConfigException;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
-use StructuredNavigation\Renderer\NavigationRenderer;
+use StructuredNavigation\View\NavigationView;
 use UnexpectedValueException;
 
 /**
@@ -53,10 +53,10 @@ final class Services {
 	}
 
 	/**
-	 * @return NavigationRenderer
+	 * @return NavigationView
 	 */
-	public function getNavigationRenderer() : NavigationRenderer {
-		return $this->services->getService( Constants::SERVICE_NAVIGATION_RENDERER );
+	public function getNavigationView() : NavigationView {
+		return $this->services->getService( Constants::SERVICE_NAVIGATION_VIEW );
 	}
 
 	/**
