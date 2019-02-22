@@ -29,23 +29,20 @@ final class NavigationLinkRenderer {
 	}
 
 	/**
-	 * @param array|string $contentTitle
+	 * @param string|array $contentTitle
 	 * @param array $attributes
 	 * @return string
 	 */
 	public function getLink( $contentTitle, array $attributes = [] ) : string {
-		$context = [];
-
 		if ( is_array( $contentTitle ) ) {
-			$context = [ 'title' => $contentTitle[0], 'label' => $contentTitle[1] ];
+			$parsedTitle = $this->titleParser->parseTitle( $contentTitle[0] );
+			$label = $contentTitle[1];
 		} else {
-			$title = $this->titleParser->parseTitle( $contentTitle );
-			$context = [ 'title' => $title, 'label' => $title->getText() ];
+			$parsedTitle = $this->titleParser->parseTitle( $contentTitle );
+			$label = $parsedTitle->getText();
 		}
 
-		return $this->linkRenderer->makeLink(
-			$context['title'], $context['label'], $attributes
-		);
+		return $this->linkRenderer->makeLink( $parsedTitle, $label, $attributes );
 	}
 
 }
