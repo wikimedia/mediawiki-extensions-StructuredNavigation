@@ -78,15 +78,13 @@ final class NavigationView {
 	 */
 	private function doRenderGroups( JsonEntity $jsonEntity ) : DescriptionList {
 		$allGroups = [];
+		$groups = $jsonEntity->getGroups();
 
-		foreach ( $jsonEntity->getGroups() as $group ) {
-			array_push(
-				$allGroups,
-				[
-					'term' => $jsonEntity->getGroupTitleLabel( $group ),
-					'detail' => $this->doRenderContent( $jsonEntity->getGroupContent( $group ) )
-				]
-			);
+		foreach ( $groups as $group ) {
+			$allGroups[] = [
+				'term' => $jsonEntity->getGroupTitleLabel( $group ),
+				'detail' => $this->doRenderContent( $jsonEntity->getGroupContent( $group ) )
+			];
 		}
 
 		return new DescriptionList( [
@@ -106,12 +104,9 @@ final class NavigationView {
 		$allContent = [];
 
 		foreach ( $content as $contentItem ) {
-			array_push(
-				$allContent,
-				$this->navigationLinkRenderer->getLink(
-					$contentItem,
-					[ 'class' => self::CSS_CLASS['group-content-link'] ]
-				)
+			$allContent[] = $this->navigationLinkRenderer->getLink(
+				$contentItem,
+				[ 'class' => self::CSS_CLASS['group-content-link'] ]
 			);
 		}
 

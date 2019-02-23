@@ -37,12 +37,11 @@ class DescriptionList extends Element {
 
 		if ( isset( $config['items'] ) ) {
 			$allItems = [];
-
 			$descriptionListItem = new DescriptionListItem();
+
 			foreach ( $config['items'] as $item ) {
-				array_push(
-					$allItems,
-					$descriptionListItem->getItem( $config, $item['term'], $item['detail'] )
+				$allItems[] = $descriptionListItem->getItem(
+					$config, $item['term'], $item['detail']
 				);
 			}
 

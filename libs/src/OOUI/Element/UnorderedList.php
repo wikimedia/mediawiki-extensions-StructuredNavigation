@@ -39,10 +39,7 @@ class UnorderedList extends Element {
 
 			foreach ( $config['items'] as $item ) {
 				$listItem = $this->createListItem( $config );
-				array_push(
-					$allListItems,
-					$listItem->appendContent( new HtmlSnippet( $item ) )
-				);
+				$allListItems[] = $listItem->appendContent( new HtmlSnippet( $item ) );
 			}
 
 			$this->addItems( $allListItems );
