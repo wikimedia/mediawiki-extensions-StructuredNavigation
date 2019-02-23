@@ -37,7 +37,6 @@
 		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
 	},
 	"SpecialPages": {
-		"ImportExampleNavigations": "StructuredNavigation\\Specials\\ImportExampleNavigations",
 		"NavigationSchema": "StructuredNavigation\\Specials\\NavigationSchemaPage"
 	},
 	"ContentHandlers": {
