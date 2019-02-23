@@ -8,7 +8,7 @@ use StructuredNavigation\View\NonExistentView;
 /**
  * @license MIT
  */
-class BeforeDisplayNoArticleTextHandler {
+final class BeforeDisplayNoArticleTextHandler {
 
 	/** @var array */
 	private const RESOURCELOADER_MODULES = [
