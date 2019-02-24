@@ -8,7 +8,7 @@ use SpecialPage;
 /**
  * @license MIT
  */
-class NavigationSchemaPage extends SpecialPage {
+final class NavigationSchemaPage extends SpecialPage {
 
 	public function __construct() {
 		parent::__construct( 'NavigationSchema' );
