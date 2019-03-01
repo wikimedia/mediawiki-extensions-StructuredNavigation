@@ -7,9 +7,9 @@ use Parser;
 use ParserOutput;
 use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\Json\JsonEntityFactory;
+use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\View\NavigationView;
 use Title;
-use TitleParser;
 use TitleValue;
 
 /**
@@ -29,25 +29,25 @@ final class ParserFirstCallInitHandler {
 	/** @var NavigationView */
 	private $navigationView;
 
-	/** @var TitleParser */
-	private $titleParser;
+	/** @var NavigationTitleValue */
+	private $navigationTitleValue;
 
 	/**
 	 * @param AttributeQualifier $attributeQualifier
 	 * @param JsonEntityFactory $jsonEntityFactory
+	 * @param NavigationTitleValue $navigationTitleValue
 	 * @param NavigationView $navigationView
-	 * @param TitleParser $titleParser
 	 */
 	public function __construct(
 		AttributeQualifier $attributeQualifier,
 		JsonEntityFactory $jsonEntityFactory,
-		NavigationView $navigationView,
-		TitleParser $titleParser
+		NavigationTitleValue $navigationTitleValue,
+		NavigationView $navigationView
 	) {
 		$this->attributeQualifier = $attributeQualifier;
 		$this->jsonEntityFactory = $jsonEntityFactory;
+		$this->navigationTitleValue = $navigationTitleValue;
 		$this->navigationView = $navigationView;
-		$this->titleParser = $titleParser;
 	}
 
 	/**
@@ -57,7 +57,7 @@ final class ParserFirstCallInitHandler {
 	 * @return string
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) : string {
-		$title = $this->titleParser->parseTitle( $attributes['title'], NS_NAVIGATION );
+		$title = $this->navigationTitleValue->getTitleValue( $attributes['title'] );
 
 		$titleFromTitleValue = Title::newFromTitleValue( $title );
 		if ( !$titleFromTitleValue->exists() ) {

@@ -7,6 +7,7 @@ use ConfigException;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
+use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\View\NavigationView;
 use UnexpectedValueException;
 
@@ -50,6 +51,13 @@ final class Services {
 	 */
 	public function getNavigationLinkRenderer() : NavigationLinkRenderer {
 		return $this->services->getService( Constants::SERVICE_NAVIGATION_LINK_RENDERER );
+	}
+
+	/**
+	 * @return NavigationTitleValue
+	 */
+	public function getNavigationTitleValue() : NavigationTitleValue {
+		return $this->services->getService( Constants::SERVICE_NAVIGATION_TITLE_VALUE );
 	}
 
 	/**

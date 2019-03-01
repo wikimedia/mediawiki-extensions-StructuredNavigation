@@ -8,6 +8,7 @@ use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\JsonEntityFactory;
+use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\View\NavigationView;
 
 /**
@@ -26,6 +27,10 @@ return [
 		);
 	},
 
+	Constants::SERVICE_NAVIGATION_TITLE_VALUE => function ( MediaWikiServices $services ) : NavigationTitleValue {
+		return new NavigationTitleValue( $services->getTitleParser() );
+	},
+
 	Constants::SERVICE_NAVIGATION_VIEW => function ( MediaWikiServices $services ) : NavigationView {
 		return new NavigationView(
 			( new Services( $services ) )->getNavigationLinkRenderer()
@@ -33,11 +38,13 @@ return [
 	},
 
 	Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER => function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
+		$wrapper = new Services( $services );
+
 		return new ParserFirstCallInitHandler(
 			new AttributeQualifier(),
 			new JsonEntityFactory(),
-			( new Services( $services ) )->getNavigationView(),
-			$services->getTitleParser()
+			$wrapper->getNavigationTitleValue(),
+			$wrapper->getNavigationView()
 		);
-	}
+	},
 ];
