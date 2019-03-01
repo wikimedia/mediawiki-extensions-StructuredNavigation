@@ -20,10 +20,6 @@ use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
  */
 final class NavigationView {
 
-	/** @var NavigationLinkRenderer */
-	private $navigationLinkRenderer;
-
-	/** @var array */
 	private const CSS_CLASS = [
 		'groups' => 'mw-structurednav-groups-container',
 		'group' => 'mw-structurednav-group',
@@ -36,6 +32,9 @@ final class NavigationView {
 		'header-title' => 'mw-structurednav-header-title',
 		'nav' => 'mw-structurednav-navigation-container'
 	];
+
+	/** @var NavigationLinkRenderer */
+	private $navigationLinkRenderer;
 
 	/**
 	 * @param NavigationLinkRenderer $navigationLinkRenderer

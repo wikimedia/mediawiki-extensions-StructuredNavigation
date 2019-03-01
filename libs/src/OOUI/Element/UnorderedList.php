@@ -17,10 +17,10 @@ class UnorderedList extends Element {
 
 	use GroupElement;
 
-	/** @var string HTML element representing an unordered list */
+	/** HTML element representing an unordered list */
 	private const ELEMENT_UNORDERED_LIST = 'ul';
 
-	/** @var string HTML element representing an item in an unordered list */
+	/** HTML element representing an item in an unordered list */
 	private const ELEMENT_UNORDERED_LIST_ITEM = 'li';
 
 	/**

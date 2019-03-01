@@ -12,7 +12,6 @@ use TitleValue;
  */
 final class AttributeQualifier {
 
-	/** @var string */
 	private const ATTR_DATA_NAME = 'data-structurednavigation-name';
 
 	/**

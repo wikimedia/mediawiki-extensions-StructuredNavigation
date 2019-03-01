@@ -7,22 +7,16 @@ namespace StructuredNavigation\Services;
  */
 final class Constants {
 
-	/** @var string */
 	public const CONFIG_NAME = 'structurednavigation';
 
-	/** @var string */
 	public const SERVICE_CONFIG = 'StructuredNavigation.Config';
 
-	/** @var string */
 	public const SERVICE_NAVIGATION_LINK_RENDERER = 'StructuredNavigation.NavigationLinkRenderer';
 
-	/** @var string */
 	public const SERVICE_NAVIGATION_TITLE_VALUE = 'StructuredNavigation.NavigationTitleValue';
 
-	/** @var string */
 	public const SERVICE_NAVIGATION_VIEW = 'StructuredNavigation.NavigationView';
 
-	/** @var string */
 	public const SERVICE_PARSERFIRSTCALLINIT_HANDLER = 'StructuredNavigation.ParserFirstCallInitHandler';
 
 }

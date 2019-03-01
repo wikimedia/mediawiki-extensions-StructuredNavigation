@@ -12,10 +12,8 @@ use StructuredNavigation\Services\Services;
  */
 final class Hooks {
 
-	/** @var string */
 	private const PARSER_TAG = 'mw-navigation';
 
-	/** @var string */
 	private const PARSER_TAG_METHOD = 'getParserHandler';
 
 	/**

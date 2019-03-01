@@ -10,8 +10,10 @@ use SpecialPage;
  */
 final class NavigationSchemaPage extends SpecialPage {
 
+	private const PAGE_NAME = 'NavigationSchema';
+
 	public function __construct() {
-		parent::__construct( 'NavigationSchema' );
+		parent::__construct( self::PAGE_NAME );
 	}
 
 	/**

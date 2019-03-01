@@ -15,13 +15,13 @@ use OOUI\Tag;
  */
 class DescriptionListItem {
 
-	/** @var string HTML element representing a description term */
+	/** HTML element representing a description term */
 	private const ELEMENT_TERM = 'dt';
 
-	/** @var string HTML element representing a description detail */
+	/** HTML element representing a description detail */
 	private const ELEMENT_DETAIL = 'dd';
 
-	/** @var string HTML element representing a content container */
+	/** HTML element representing a content container */
 	private const ELEMENT_CONTAINER = 'div';
 
 	/**

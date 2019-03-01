@@ -16,7 +16,7 @@ class DescriptionList extends Element {
 
 	use GroupElement;
 
-	/** @var string HTML element representing a description list */
+	/** HTML element representing a description list */
 	private const ELEMENT_DESCRIPTION_LIST = 'dl';
 
 	/**

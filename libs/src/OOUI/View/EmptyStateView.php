@@ -16,7 +16,6 @@ use OOUI\Tag;
  */
 class EmptyStateView extends Layout {
 
-	/** @var array */
 	private const CSS_CLASS = [
 		'view-container' => 'oo-ui-view-emptystate-container',
 		'view-illustration' => 'oo-ui-view-emptystate-illustration',

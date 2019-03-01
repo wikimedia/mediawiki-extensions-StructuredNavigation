@@ -10,7 +10,6 @@ use StructuredNavigation\View\NonExistentView;
  */
 final class BeforeDisplayNoArticleTextHandler {
 
-	/** @var array */
 	private const RESOURCELOADER_MODULES = [
 		'ext.structurednavigation.libs.view.emptystate.styles',
 		'ext.structurednavigation.view.nonexistent.styles',

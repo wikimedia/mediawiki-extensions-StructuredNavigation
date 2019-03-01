@@ -17,7 +17,6 @@ use TitleValue;
  */
 final class ParserFirstCallInitHandler {
 
-	/** @var string */
 	private const PAGE_PROPERTY = 'structurednavigation';
 
 	/** @var AttributeQualifier */

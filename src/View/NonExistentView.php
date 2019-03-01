@@ -15,13 +15,10 @@ use Title;
  */
 final class NonExistentView {
 
-	/** @var string */
 	private const MESSAGE_TITLE = 'structurednavigation-view-emptystate-title';
 
-	/** @var string */
 	private const MESSAGE_SUMMARY = 'structurednavigation-view-emptystate-summary';
 
-	/** @var string */
 	private const MESSAGE_BUTTON_LABEL = 'structurednavigation-view-emptystate-button-label';
 
 	/** @var string */

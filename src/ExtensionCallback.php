@@ -9,7 +9,6 @@ use GlobalVarConfig;
  */
 class ExtensionCallback {
 
-	/** @var string */
 	private const CONFIG_PREFIX = 'wgStructuredNavigation';
 
 	/**
