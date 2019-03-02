@@ -8,6 +8,7 @@ use MediaWiki\MediaWikiServices;
 use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Title\NavigationTitleValue;
+use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\NavigationView;
 use UnexpectedValueException;
 
@@ -73,6 +74,15 @@ final class Services {
 	public function getParserFirstCallInitHandler() : ParserFirstCallInitHandler {
 		return $this->services->getService(
 			Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER
+		);
+	}
+
+	/**
+	 * @return QueryTitlesUsedLookup
+	 */
+	public function getQueryTitlesUsedLookup() : QueryTitlesUsedLookup {
+		return $this->services->getService(
+			Constants::SERVICE_QUERY_TITLES_USED_LOOKUP
 		);
 	}
 

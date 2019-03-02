@@ -9,6 +9,7 @@ use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
+use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\NavigationView;
 
 /**
@@ -47,4 +48,12 @@ return [
 			$wrapper->getNavigationView()
 		);
 	},
+
+	Constants::SERVICE_QUERY_TITLES_USED_LOOKUP => function ( MediaWikiServices $services ) : QueryTitlesUsedLookup {
+		return new QueryTitlesUsedLookup(
+			( new Services( $services ) )->getNavigationTitleValue(),
+			new JsonEntityFactory()
+		);
+	},
+
 ];

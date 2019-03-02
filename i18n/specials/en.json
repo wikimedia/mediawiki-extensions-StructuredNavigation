@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samantha Nguyen"
+		]
+	},
+	"navigationschema": "Navigation schema",
+	"titlesusedinnavigation": "Titles used in navigation",
+	"specials-titlesusedinnavigation-legend": "Titles used in navigation",
+	"specials-titlesusedinnavigation-field-title-label": "Navigation title",
+	"specials-titlesusedinnavigation-field-title-placeholder": "A title in the Navigation namespace, e.g \"Dontnod Entertainment\""
+}

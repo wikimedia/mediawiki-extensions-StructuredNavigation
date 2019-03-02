@@ -10,5 +10,6 @@ $specialPageAliases = [];
  * @author Samantha Nguyen < samanthanguyen111@gmail.com >
  */
 $specialPageAliases['en'] = [
-	'NavigationSchema' => [ 'NavigationSchema', 'Navigation Schema' ],
+	'NavigationSchema' => [ 'NavigationSchema' ],
+	'TitlesUsedInNavigation' => [ 'TitlesUsedInNavigation' ]
 ];

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samantha Nguyen"
+		]
+	},
+	"navigationschema": "Title for Special:NavigationSchema",
+	"titlesusedinnavigation": "Title for Special:TitlesUsedInNavigation",
+	"specials-titlesusedinnavigation-legend": "Legend used for Special:TitlesUsedInNavigation",
+	"specials-titlesusedinnavigation-field-title-label": "The label for the title field in Special:TitlesUsedInNavigation",
+	"specials-titlesusedinnavigation-field-title-placeholder": "The placeholder for the title field in Special:TitlesUsedInNavigation"
+}

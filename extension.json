@@ -17,7 +17,8 @@
 	"callback": "StructuredNavigation\\ExtensionCallback::onRegistrationCallback",
 	"MessagesDirs": {
 		"StructuredNavigation": [
-			"i18n"
+			"i18n",
+			"i18n/specials"
 		]
 	},
 	"ExtensionMessagesFiles": {
@@ -37,7 +38,8 @@
 		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
 	},
 	"SpecialPages": {
-		"NavigationSchema": "StructuredNavigation\\Specials\\NavigationSchemaPage"
+		"NavigationSchema": "StructuredNavigation\\Specials\\NavigationSchemaPage",
+		"TitlesUsedInNavigation": "StructuredNavigation\\Specials\\Wiring::onTitlesUsedInNavigation"
 	},
 	"ContentHandlers": {
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
