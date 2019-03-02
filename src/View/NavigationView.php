@@ -47,7 +47,7 @@ final class NavigationView {
 	 * @param JsonEntity $jsonEntity
 	 * @return Tag
 	 */
-	public function render( JsonEntity $jsonEntity ) : Tag {
+	public function getView( JsonEntity $jsonEntity ) : Tag {
 		return ( new Tag( 'nav' ) )
 			->addClasses( [ self::CSS_CLASS['nav'] ] )
 			->appendContent( new HtmlSnippet(

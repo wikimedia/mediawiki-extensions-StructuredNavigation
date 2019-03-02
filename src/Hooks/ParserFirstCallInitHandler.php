@@ -70,7 +70,7 @@ final class ParserFirstCallInitHandler {
 		$this->setPageProperty( $parserOutput, $title );
 		$this->loadResourceLoaderModules( $parserOutput );
 
-		$renderedNavigation = $this->navigationView->render( $content );
+		$renderedNavigation = $this->navigationView->getView( $content );
 		$this->attributeQualifier->setAttributes( $renderedNavigation, $title, $attributes );
 
 		return $renderedNavigation;
