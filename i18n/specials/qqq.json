@@ -4,6 +4,7 @@
 			"Samantha Nguyen"
 		]
 	},
+	"specialpages-group-structurednavigation": "Label for the special page group specific to the StructuredNavigation extension",
 	"navigationschema": "Title for Special:NavigationSchema",
 	"titlesusedinnavigation": "Title for Special:TitlesUsedInNavigation",
 	"specials-titlesusedinnavigation-legend": "Legend used for Special:TitlesUsedInNavigation",

@@ -17,6 +17,13 @@ final class NavigationSchemaPage extends SpecialPage {
 	}
 
 	/**
+	 * @inheritDoc
+	 */
+	protected function getGroupName() {
+		return Constants::SPECIAL_PAGE_GROUP;
+	}
+
+	/**
 	 * @param string|null $subPage
 	 */
 	public function execute( $subPage ) {

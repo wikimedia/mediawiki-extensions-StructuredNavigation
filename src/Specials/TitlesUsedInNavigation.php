@@ -11,7 +11,7 @@ use StructuredNavigation\Title\QueryTitlesUsedLookup;
 /**
  * @license MIT
  */
-class TitlesUsedInNavigation extends SpecialPage {
+final class TitlesUsedInNavigation extends SpecialPage {
 
 	private const FIELD_TITLE = 'title';
 
@@ -33,6 +33,13 @@ class TitlesUsedInNavigation extends SpecialPage {
 		parent::__construct( self::PAGE_NAME );
 
 		$this->queryTitlesUsedLookup = $queryTitlesUsedLookup;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	protected function getGroupName() {
+		return Constants::SPECIAL_PAGE_GROUP;
 	}
 
 	/**
