@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samantha Nguyen"
+		]
+	},
+	"right-structured-navigation-create": "{{doc-right|structured-navigation-create}}",
+	"action-structured-navigation-create": "{{doc-action|structured-navigation-create}}",
+	"right-structured-navigation-edit": "{{doc-right|structured-navigation-edit}}",
+	"action-structured-navigation-edit": "{{doc-action|structured-navigation-edit}}"
+}
