@@ -7,6 +7,7 @@ use ConfigException;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
+use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\NavigationView;
@@ -45,6 +46,13 @@ final class Services {
 	 */
 	public function getConfig() : Config {
 		return $this->services->getService( Constants::SERVICE_CONFIG );
+	}
+
+	/**
+	 * @return JsonEntityFactory
+	 */
+	public function getJsonEntityFactory() : JsonEntityFactory {
+		return $this->services->getService( Constants::SERVICE_JSON_ENTITY_FACTORY );
 	}
 
 	/**

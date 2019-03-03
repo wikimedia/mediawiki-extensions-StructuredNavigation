@@ -4,28 +4,19 @@ namespace StructuredNavigation\Title;
 
 use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Json\JsonEntityFactory;
-use Title;
 
 /**
  * @license MIT
  */
 final class QueryTitlesUsedLookup {
 
-	/** @var NavigationTitleValue */
-	private $navigationTitleValue;
-
 	/** @var JsonEntityFactory */
 	private $jsonEntityFactory;
 
 	/**
-	 * @param NavigationTitleValue $navigationTitleValue
 	 * @param JsonEntityFactory $jsonEntityFactory
 	 */
-	public function __construct(
-		NavigationTitleValue $navigationTitleValue,
-		JsonEntityFactory $jsonEntityFactory
-	) {
-		$this->navigationTitleValue = $navigationTitleValue;
+	public function __construct( JsonEntityFactory $jsonEntityFactory ) {
 		$this->jsonEntityFactory = $jsonEntityFactory;
 	}
 
@@ -60,9 +51,7 @@ final class QueryTitlesUsedLookup {
 	 * @return JsonEntity
 	 */
 	private function getJsonEntity( string $title ) : JsonEntity {
-		return $this->jsonEntityFactory->newFromTitle(
-			Title::newFromTitleValue( $this->navigationTitleValue->getTitleValue( $title ) )
-		);
+		return $this->jsonEntityFactory->newFromTitle( $title );
 	}
 
 }

@@ -21,6 +21,12 @@ return [
 		return $services->getConfigFactory()->makeConfig( Constants::CONFIG_NAME );
 	},
 
+	Constants::SERVICE_JSON_ENTITY_FACTORY => function ( MediaWikiServices $services ) : JsonEntityFactory {
+		return new JsonEntityFactory(
+			( new Services( $services ) )->getNavigationTitleValue()
+		);
+	},
+
 	Constants::SERVICE_NAVIGATION_LINK_RENDERER => function ( MediaWikiServices $services ) : NavigationLinkRenderer {
 		return new NavigationLinkRenderer(
 			$services->getLinkRenderer(),
@@ -43,16 +49,14 @@ return [
 
 		return new ParserFirstCallInitHandler(
 			new AttributeQualifier(),
-			new JsonEntityFactory(),
-			$wrapper->getNavigationTitleValue(),
+			$wrapper->getJsonEntityFactory(),
 			$wrapper->getNavigationView()
 		);
 	},
 
 	Constants::SERVICE_QUERY_TITLES_USED_LOOKUP => function ( MediaWikiServices $services ) : QueryTitlesUsedLookup {
 		return new QueryTitlesUsedLookup(
-			( new Services( $services ) )->getNavigationTitleValue(),
-			new JsonEntityFactory()
+			( new Services( $services ) )->getJsonEntityFactory()
 		);
 	},
 

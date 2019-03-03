@@ -2,15 +2,12 @@
 
 namespace StructuredNavigation\Hooks;
 
-use Error;
 use OutputPage;
 use Parser;
 use ParserOutput;
 use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\Json\JsonEntityFactory;
-use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\View\NavigationView;
-use Title;
 
 /**
  * @license MIT
@@ -28,24 +25,18 @@ final class ParserFirstCallInitHandler {
 	/** @var NavigationView */
 	private $navigationView;
 
-	/** @var NavigationTitleValue */
-	private $navigationTitleValue;
-
 	/**
 	 * @param AttributeQualifier $attributeQualifier
 	 * @param JsonEntityFactory $jsonEntityFactory
-	 * @param NavigationTitleValue $navigationTitleValue
 	 * @param NavigationView $navigationView
 	 */
 	public function __construct(
 		AttributeQualifier $attributeQualifier,
 		JsonEntityFactory $jsonEntityFactory,
-		NavigationTitleValue $navigationTitleValue,
 		NavigationView $navigationView
 	) {
 		$this->attributeQualifier = $attributeQualifier;
 		$this->jsonEntityFactory = $jsonEntityFactory;
-		$this->navigationTitleValue = $navigationTitleValue;
 		$this->navigationView = $navigationView;
 	}
 
@@ -57,14 +48,9 @@ final class ParserFirstCallInitHandler {
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) : string {
 		$userPassedTitle = $attributes['title'];
-		$title = $this->navigationTitleValue->getTitleValue( $userPassedTitle );
+		$content = $this->jsonEntityFactory->newFromTitle( $userPassedTitle );
 
-		try {
-			$content = $this->jsonEntityFactory->newFromTitle( Title::newFromTitleValue( $title ) );
-		} catch ( Error $e ) {
-			// The passed title doesn't exist, so it attempts
-			// to create a new Content object which ends up
-			// being null since there's no actual content.
+		if ( $content === false ) {
 			return false;
 		}
 

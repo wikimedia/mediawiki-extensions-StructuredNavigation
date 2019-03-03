@@ -11,6 +11,8 @@ final class Constants {
 
 	public const SERVICE_CONFIG = 'StructuredNavigation.Config';
 
+	public const SERVICE_JSON_ENTITY_FACTORY = 'StructuredNavigation.JsonEntityFactory';
+
 	public const SERVICE_NAVIGATION_LINK_RENDERER = 'StructuredNavigation.NavigationLinkRenderer';
 
 	public const SERVICE_NAVIGATION_TITLE_VALUE = 'StructuredNavigation.NavigationTitleValue';
