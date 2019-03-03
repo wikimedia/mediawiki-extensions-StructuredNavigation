@@ -3,7 +3,6 @@
 namespace StructuredNavigation;
 
 use OOUI\Tag;
-use TitleValue;
 
 /**
  * Handles the setting of attributes for a structured navigation.
@@ -19,18 +18,17 @@ final class AttributeQualifier {
 	 * attribute by default. If the `id` attribute is set by the user, it'll
 	 * also assign that as an attribute.
 	 *
-	 * @param Tag $renderedNavigation
-	 * @param TitleValue $title
+	 * @param Tag $navigation
 	 * @param array $attributes
 	 * @return void
 	 */
-	public function setAttributes( Tag $renderedNavigation, TitleValue $title, array $attributes ) : void {
-		$renderedNavigation->setAttributes( [
-			self::ATTR_DATA_NAME => $this->escapeAttributeContent( $title->getText() )
+	public function setAttributes( Tag $navigation, array $attributes ) : void {
+		$navigation->setAttributes( [
+			self::ATTR_DATA_NAME => $this->escapeAttributeContent( $attributes['title'] )
 		] );
 
 		if ( isset( $attributes['id'] ) ) {
-			$renderedNavigation->setAttributes( [
+			$navigation->setAttributes( [
 				'id' => $this->escapeAttributeContent( $attributes['id'] )
 			] );
 		}

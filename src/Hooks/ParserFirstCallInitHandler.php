@@ -2,6 +2,7 @@
 
 namespace StructuredNavigation\Hooks;
 
+use Error;
 use OutputPage;
 use Parser;
 use ParserOutput;
@@ -10,7 +11,6 @@ use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\View\NavigationView;
 use Title;
-use TitleValue;
 
 /**
  * @license MIT
@@ -56,24 +56,27 @@ final class ParserFirstCallInitHandler {
 	 * @return string
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) : string {
-		$title = $this->navigationTitleValue->getTitleValue( $attributes['title'] );
+		$userPassedTitle = $attributes['title'];
+		$title = $this->navigationTitleValue->getTitleValue( $userPassedTitle );
 
-		$titleFromTitleValue = Title::newFromTitleValue( $title );
-		if ( !$titleFromTitleValue->exists() ) {
+		try {
+			$content = $this->jsonEntityFactory->newFromTitle( Title::newFromTitleValue( $title ) );
+		} catch ( Error $e ) {
+			// The passed title doesn't exist, so it attempts
+			// to create a new Content object which ends up
+			// being null since there's no actual content.
 			return false;
 		}
 
-		$content = $this->jsonEntityFactory->newFromTitle( $titleFromTitleValue );
-
 		OutputPage::setupOOUI();
 		$parserOutput = $parser->getOutput();
-		$this->setPageProperty( $parserOutput, $title );
+		$this->setPageProperty( $parserOutput, $userPassedTitle );
 		$this->loadResourceLoaderModules( $parserOutput );
 
-		$renderedNavigation = $this->navigationView->getView( $content );
-		$this->attributeQualifier->setAttributes( $renderedNavigation, $title, $attributes );
+		$navigation = $this->navigationView->getView( $content );
+		$this->attributeQualifier->setAttributes( $navigation, $attributes );
 
-		return $renderedNavigation;
+		return $navigation;
 	}
 
 	/**
@@ -89,10 +92,11 @@ final class ParserFirstCallInitHandler {
 
 	/**
 	 * @param ParserOutput $parserOutput
-	 * @param TitleValue $title
+	 * @param string $title
 	 * @return void
 	 */
-	private function setPageProperty( ParserOutput $parserOutput, TitleValue $title ) : void {
-		$parserOutput->setProperty( self::PAGE_PROPERTY, $title->getText() );
+	private function setPageProperty( ParserOutput $parserOutput, string $title ) : void {
+		$parserOutput->setProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
 	}
+
 }
