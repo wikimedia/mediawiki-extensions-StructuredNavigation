@@ -23,8 +23,8 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"StructuredNavigationNamespaces": ".i18n.namespaces.php",
-		"StructuredNavigationAliases": ".i18n.aliases.php"
+		"StructuredNavigationNamespaces": "StructuredNavigation.i18n.namespaces.php",
+		"StructuredNavigationAliases": "StructuredNavigation.i18n.aliases.php"
 	},
 	"ServiceWiringFiles": [
 		"src/Services/ServiceWiring.php"
