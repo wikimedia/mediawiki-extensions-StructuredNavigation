@@ -2,6 +2,7 @@
 
 namespace StructuredNavigation\Json;
 
+use FormatJson;
 use WikiPage;
 use StructuredNavigation\Title\NavigationTitleValue;
 use Title;
@@ -36,7 +37,9 @@ class JsonEntityFactory {
 		}
 
 		return new JsonEntity(
-			WikiPage::factory( $title )->getContent()->getJsonData()
+			FormatJson::decode(
+				WikiPage::factory( $title )->getContent()->getNativeData(), true
+			)
 		);
 	}
 
