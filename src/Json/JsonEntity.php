@@ -25,6 +25,18 @@ final class JsonEntity {
 	}
 
 	/**
+	 * Returns the entire JSON blob. This should only be used
+	 * if you need access to the **entire** blob at once. If
+	 * you need more specific details, you should be calling
+	 * the other methods instead.
+	 *
+	 * @return array
+	 */
+	public function getContent() : array {
+		return $this->content;
+	}
+
+	/**
 	 * @return array
 	 */
 	public function getConfig() : array {

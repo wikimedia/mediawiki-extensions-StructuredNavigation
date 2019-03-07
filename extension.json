@@ -47,6 +47,10 @@
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
 	},
 	"APIPropModules": {
+		"structurednavigationnavigationdata": {
+			"class": "StructuredNavigation\\Api\\ApiQueryNavigationData",
+			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryNavigationData"
+		},
 		"structurednavigationtitlesused": {
 			"class": "StructuredNavigation\\Api\\ApiQueryTitlesUsed",
 			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryTitlesUsed"
