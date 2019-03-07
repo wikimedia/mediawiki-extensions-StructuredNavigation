@@ -18,6 +18,7 @@
 	"MessagesDirs": {
 		"StructuredNavigation": [
 			"i18n",
+			"i18n/api",
 			"i18n/permissions",
 			"i18n/specials"
 		]
@@ -44,6 +45,12 @@
 	},
 	"ContentHandlers": {
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
+	},
+	"APIPropModules": {
+		"structurednavigationtitlesused": {
+			"class": "StructuredNavigation\\Api\\ApiQueryTitlesUsed",
+			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryTitlesUsed"
+		}
 	},
 	"ConfigRegistry": {
 		"structurednavigation": "StructuredNavigation\\ExtensionCallback::getGlobalVarConfig"

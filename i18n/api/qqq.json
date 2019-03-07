@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Samantha Nguyen"
+		]
+	},
+	"apihelp-query+structurednavigationtitlesused-summary": "{{doc-apihelp-summary|structurednavigationtitlesused}}",
+	"apihelp-query+structurednavigationtitlesused-param-title": "{{doc-apihelp-param|structurednavigationtitlesused|title}}"
+}
