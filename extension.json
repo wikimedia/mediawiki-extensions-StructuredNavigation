@@ -51,6 +51,10 @@
 			"class": "StructuredNavigation\\Api\\ApiQueryNavigationData",
 			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryNavigationData"
 		},
+		"structurednavigationnavigationhtml": {
+			"class": "StructuredNavigation\\Api\\ApiQueryNavigationHtml",
+			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryNavigationHtml"
+		},
 		"structurednavigationtitlesused": {
 			"class": "StructuredNavigation\\Api\\ApiQueryTitlesUsed",
 			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryTitlesUsed"

@@ -26,6 +26,22 @@ final class Wiring {
 	/**
 	 * @param ApiQuery $apiQuery
 	 * @param string $moduleName
+	 * @return ApiQueryNavigationHtml
+	 */
+	public static function getApiQueryNavigationHtml( ApiQuery $apiQuery, string $moduleName ) : ApiQueryNavigationHtml {
+		$service = Services::getInstance();
+
+		return new ApiQueryNavigationHtml(
+			$apiQuery,
+			$moduleName,
+			$service->getJsonEntityFactory(),
+			$service->getNavigationView()
+		);
+	}
+
+	/**
+	 * @param ApiQuery $apiQuery
+	 * @param string $moduleName
 	 * @return ApiQueryTitlesUsed
 	 */
 	public static function getApiQueryTitlesUsed( ApiQuery $apiQuery, string $moduleName ) : ApiQueryTitlesUsed {

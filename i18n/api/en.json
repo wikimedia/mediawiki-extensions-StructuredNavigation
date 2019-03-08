@@ -6,6 +6,8 @@
 	},
 	"apihelp-query+structurednavigationnavigationdata-summary": "Retrieves the JSON content for a given navigation.",
 	"apihelp-query+structurednavigationnavigationdata-param-title": "A valid, existing title in the Navigation namespace on the wiki.",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Retrieves the view of a navigation by title as an HTML fragment.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "A valid, existing title in the Navigation namespace on the wiki.",
 	"apihelp-query+structurednavigationtitlesused-summary": "Retrieves all titles used by a given navigation.",
 	"apihelp-query+structurednavigationtitlesused-param-title": "A valid, existing title in the Navigation namespace on the wiki."
 }

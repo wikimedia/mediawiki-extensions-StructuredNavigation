@@ -6,6 +6,8 @@
 	},
 	"apihelp-query+structurednavigationnavigationdata-summary": "{{doc-apihelp-summary|structurednavigationnavigationdata}}",
 	"apihelp-query+structurednavigationnavigationdata-param-title": "{{doc-apihelp-param|structurednavigationnavigationdata|title}}",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "{{doc-apihelp-summary|structurednavigationnavigationhtml}}",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "{{doc-apihelp-param|structurednavigationnavigationhtml|title}}",
 	"apihelp-query+structurednavigationtitlesused-summary": "{{doc-apihelp-summary|structurednavigationtitlesused}}",
 	"apihelp-query+structurednavigationtitlesused-param-title": "{{doc-apihelp-param|structurednavigationtitlesused|title}}"
 }
