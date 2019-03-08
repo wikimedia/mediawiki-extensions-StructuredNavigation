@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation;
+namespace StructuredNavigation\View;
 
 use MediaWiki\Linker\LinkRenderer;
 use TitleParser;
@@ -8,7 +8,7 @@ use TitleParser;
 /**
  * @license MIT
  */
-final class NavigationLinkRenderer {
+final class ContentLinkView {
 
 	/** @var LinkRenderer */
 	private $linkRenderer;

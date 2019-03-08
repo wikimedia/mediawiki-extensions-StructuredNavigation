@@ -4,7 +4,6 @@ namespace StructuredNavigation\View;
 
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
-use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Libs\OOUI\Element\DescriptionList;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
@@ -33,14 +32,14 @@ final class NavigationView {
 		'nav' => 'mw-structurednav-navigation-container'
 	];
 
-	/** @var NavigationLinkRenderer */
-	private $navigationLinkRenderer;
+	/** @var ContentLinkView */
+	private $contentLinkView;
 
 	/**
-	 * @param NavigationLinkRenderer $navigationLinkRenderer
+	 * @param ContentLinkView $contentLinkView
 	 */
-	public function __construct( NavigationLinkRenderer $navigationLinkRenderer ) {
-		$this->navigationLinkRenderer = $navigationLinkRenderer;
+	public function __construct( ContentLinkView $contentLinkView ) {
+		$this->contentLinkView = $contentLinkView;
 	}
 
 	/**
@@ -103,7 +102,7 @@ final class NavigationView {
 		$allContent = [];
 
 		foreach ( $content as $contentItem ) {
-			$allContent[] = $this->navigationLinkRenderer->getLink(
+			$allContent[] = $this->contentLinkView->getLink(
 				$contentItem,
 				[ 'class' => self::CSS_CLASS['group-content-link'] ]
 			);

@@ -5,11 +5,11 @@ namespace StructuredNavigation\Services;
 use Config;
 use ConfigException;
 use MediaWiki\MediaWikiServices;
-use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
+use StructuredNavigation\View\ContentLinkView;
 use StructuredNavigation\View\NavigationView;
 use UnexpectedValueException;
 
@@ -56,10 +56,10 @@ final class Services {
 	}
 
 	/**
-	 * @return NavigationLinkRenderer
+	 * @return ContentLinkView
 	 */
-	public function getNavigationLinkRenderer() : NavigationLinkRenderer {
-		return $this->services->getService( Constants::SERVICE_NAVIGATION_LINK_RENDERER );
+	public function getContentLinkView() : ContentLinkView {
+		return $this->services->getService( Constants::SERVICE_CONTENT_LINK_VIEW );
 	}
 
 	/**

@@ -5,11 +5,11 @@ namespace StructuredNavigation\Services;
 use Config;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\AttributeQualifier;
-use StructuredNavigation\NavigationLinkRenderer;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
+use StructuredNavigation\View\ContentLinkView;
 use StructuredNavigation\View\NavigationView;
 
 /**
@@ -21,16 +21,16 @@ return [
 		return $services->getConfigFactory()->makeConfig( Constants::CONFIG_NAME );
 	},
 
-	Constants::SERVICE_JSON_ENTITY_FACTORY => function ( MediaWikiServices $services ) : JsonEntityFactory {
-		return new JsonEntityFactory(
-			( new Services( $services ) )->getNavigationTitleValue()
+	Constants::SERVICE_CONTENT_LINK_VIEW => function ( MediaWikiServices $services ) : ContentLinkView {
+		return new ContentLinkView(
+			$services->getLinkRenderer(),
+			$services->getTitleParser()
 		);
 	},
 
-	Constants::SERVICE_NAVIGATION_LINK_RENDERER => function ( MediaWikiServices $services ) : NavigationLinkRenderer {
-		return new NavigationLinkRenderer(
-			$services->getLinkRenderer(),
-			$services->getTitleParser()
+	Constants::SERVICE_JSON_ENTITY_FACTORY => function ( MediaWikiServices $services ) : JsonEntityFactory {
+		return new JsonEntityFactory(
+			( new Services( $services ) )->getNavigationTitleValue()
 		);
 	},
 
@@ -40,7 +40,7 @@ return [
 
 	Constants::SERVICE_NAVIGATION_VIEW => function ( MediaWikiServices $services ) : NavigationView {
 		return new NavigationView(
-			( new Services( $services ) )->getNavigationLinkRenderer()
+			( new Services( $services ) )->getContentLinkView()
 		);
 	},
 
