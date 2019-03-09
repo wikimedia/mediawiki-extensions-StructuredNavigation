@@ -8,9 +8,12 @@ use FormatJson;
 use StructuredNavigation\Json\SchemaContent;
 
 /**
+ * This API module allows querying for the JSON schema used by
+ * this extension to validate against the JSON structure of navigations.
+ *
  * @license MIT
  */
-class ApiMetaNavigationSchema extends ApiQueryBase {
+final class ApiMetaNavigationSchema extends ApiQueryBase {
 
 	/** @var SchemaContent */
 	private $schemaContent;
@@ -20,9 +23,12 @@ class ApiMetaNavigationSchema extends ApiQueryBase {
 	 * @param string $moduleName
 	 * @param SchemaContent $schemaContent
 	 */
-	public function __construct( ApiQuery $apiQuery, $moduleName, SchemaContent $schemaContent ) {
+	public function __construct(
+		ApiQuery $apiQuery,
+		string $moduleName,
+		SchemaContent $schemaContent
+	) {
 		parent::__construct( $apiQuery, $moduleName );
-
 		$this->schemaContent = $schemaContent;
 	}
 

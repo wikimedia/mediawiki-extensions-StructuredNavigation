@@ -8,6 +8,9 @@ use ApiQueryBase;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 
 /**
+ * This API module allows finding out all the titles used
+ * for a given navigation by title.
+ *
  * @license MIT
  */
 final class ApiQueryTitlesUsed extends ApiQueryBase {
@@ -26,7 +29,7 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 	 */
 	public function __construct(
 		ApiQuery $apiQuery,
-		$moduleName,
+		string $moduleName,
 		QueryTitlesUsedLookup $queryTitlesUsedLookup
 	) {
 		parent::__construct( $apiQuery, $moduleName, self::PREFIX );

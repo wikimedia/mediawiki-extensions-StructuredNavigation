@@ -10,6 +10,9 @@ use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\View\NavigationView;
 
 /**
+ * This API module allows querying for the view of a navigation
+ * (by title), as an HTML fragment.
+ *
  * @license MIT
  */
 final class ApiQueryNavigationHtml extends ApiQueryBase {

@@ -8,6 +8,10 @@ use ApiQueryBase;
 use StructuredNavigation\Json\JsonEntityFactory;
 
 /**
+ * This API module allows querying the JSON of a given navigation
+ * by its title in the Navigation namespace. The namespace is
+ * already assumed, and the consumer only has to pass the title text.
+ *
  * @license MIT
  */
 final class ApiQueryNavigationData extends ApiQueryBase {
