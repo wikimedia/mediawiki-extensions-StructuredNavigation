@@ -4,6 +4,7 @@
 			"Samantha Nguyen"
 		]
 	},
+	"apihelp-query+structurednavigationschema-summary": "Retrieves the JSON schema used to validate the JSON structure of navigations.",
 	"apihelp-query+structurednavigationnavigationdata-summary": "Retrieves the JSON content for a given navigation.",
 	"apihelp-query+structurednavigationnavigationdata-param-title": "A valid, existing title in the Navigation namespace on the wiki.",
 	"apihelp-query+structurednavigationnavigationhtml-summary": "Retrieves the view of a navigation by title as an HTML fragment.",

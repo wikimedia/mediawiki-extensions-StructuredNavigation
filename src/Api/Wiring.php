@@ -13,6 +13,19 @@ final class Wiring {
 	/**
 	 * @param ApiQuery $apiQuery
 	 * @param string $moduleName
+	 * @return ApiMetaNavigationSchema
+	 */
+	public static function getApiMetaNavigationSchema( ApiQuery $apiQuery, string $moduleName ) : ApiMetaNavigationSchema {
+		return new ApiMetaNavigationSchema(
+			$apiQuery,
+			$moduleName,
+			Services::getInstance()->getSchemaContent()
+		);
+	}
+
+	/**
+	 * @param ApiQuery $apiQuery
+	 * @param string $moduleName
 	 * @return ApiQueryNavigationData
 	 */
 	public static function getApiQueryNavigationData( ApiQuery $apiQuery, string $moduleName ) : ApiQueryNavigationData {

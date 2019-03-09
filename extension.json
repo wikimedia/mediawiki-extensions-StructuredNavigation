@@ -46,6 +46,12 @@
 	"ContentHandlers": {
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
 	},
+	"APIMetaModules": {
+		"structurednavigationschema": {
+			"class": "StructuredNavigation\\Api\\ApiMetaNavigationSchema",
+			"factory": "StructuredNavigation\\Api\\Wiring::getApiMetaNavigationSchema"
+		}
+	},
 	"APIPropModules": {
 		"structurednavigationnavigationdata": {
 			"class": "StructuredNavigation\\Api\\ApiQueryNavigationData",
