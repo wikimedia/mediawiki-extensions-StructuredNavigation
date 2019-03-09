@@ -12,9 +12,18 @@ final class Wiring {
 	/**
 	 * @return TitlesUsedInNavigation
 	 */
-	public static function onTitlesUsedInNavigation() : TitlesUsedInNavigation {
+	public static function getTitlesUsedInNavigation() : TitlesUsedInNavigation {
 		return new TitlesUsedInNavigation(
 			self::getServiceInstance()->getQueryTitlesUsedLookup()
+		);
+	}
+
+	/**
+	 * @return NavigationSchemaPage
+	 */
+	public static function getNavigationSchemaPage() : NavigationSchemaPage {
+		return new NavigationSchemaPage(
+			self::getServiceInstance()->getSchemaContent()
 		);
 	}
 

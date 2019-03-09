@@ -23,4 +23,6 @@ final class Constants {
 
 	public const SERVICE_QUERY_TITLES_USED_LOOKUP = 'StructuredNavigation.QueryTitlesUsedLookup';
 
+	public const SERVICE_SCHEMA_CONTENT = 'StructuredNavigation.SchemaContent';
+
 }

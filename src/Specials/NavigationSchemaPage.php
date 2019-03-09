@@ -4,6 +4,7 @@ namespace StructuredNavigation\Specials;
 
 use OOUI\Tag;
 use SpecialPage;
+use StructuredNavigation\Json\SchemaContent;
 
 /**
  * @license MIT
@@ -12,8 +13,16 @@ final class NavigationSchemaPage extends SpecialPage {
 
 	private const PAGE_NAME = 'NavigationSchema';
 
-	public function __construct() {
+	/** @var SchemaContent */
+	private $schemaContent;
+
+	/**
+	 * @param SchemaContent $schemaContent
+	 */
+	public function __construct( SchemaContent $schemaContent ) {
 		parent::__construct( self::PAGE_NAME );
+
+		$this->schemaContent = $schemaContent;
 	}
 
 	/**
@@ -27,11 +36,9 @@ final class NavigationSchemaPage extends SpecialPage {
 	 * @param string|null $subPage
 	 */
 	public function execute( $subPage ) {
-		$fileContent = file_get_contents( __DIR__ . '/../../docs/schema/schema.v1.json' );
-
 		$this->setHeaders();
 		$this->getOutput()->addHTML(
-			$this->getEmbeddedCodeView( $fileContent )
+			$this->getEmbeddedCodeView( $this->schemaContent->getSchemaContent() )
 		);
 	}
 
@@ -43,4 +50,5 @@ final class NavigationSchemaPage extends SpecialPage {
 		return ( new Tag( 'pre' ) )
 			->appendContent( $content );
 	}
+
 }

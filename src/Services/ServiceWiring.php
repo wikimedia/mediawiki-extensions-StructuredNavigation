@@ -7,6 +7,7 @@ use MediaWiki\MediaWikiServices;
 use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\JsonEntityFactory;
+use StructuredNavigation\Json\SchemaContent;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
@@ -57,6 +58,12 @@ return [
 	Constants::SERVICE_QUERY_TITLES_USED_LOOKUP => function ( MediaWikiServices $services ) : QueryTitlesUsedLookup {
 		return new QueryTitlesUsedLookup(
 			( new Services( $services ) )->getJsonEntityFactory()
+		);
+	},
+
+	Constants::SERVICE_SCHEMA_CONTENT => function ( MediaWikiServices $services ) : SchemaContent {
+		return new SchemaContent(
+			$services->getMainConfig()->get( 'ExtensionDirectory' )
 		);
 	},
 

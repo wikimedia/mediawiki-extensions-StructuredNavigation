@@ -7,6 +7,7 @@ use ConfigException;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\JsonEntityFactory;
+use StructuredNavigation\Json\SchemaContent;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
@@ -92,6 +93,13 @@ final class Services {
 		return $this->services->getService(
 			Constants::SERVICE_QUERY_TITLES_USED_LOOKUP
 		);
+	}
+
+	/**
+	 * @return SchemaContent
+	 */
+	public function getSchemaContent() : SchemaContent {
+		return $this->services->getService( Constants::SERVICE_SCHEMA_CONTENT );
 	}
 
 }

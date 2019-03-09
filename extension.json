@@ -40,8 +40,8 @@
 		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
 	},
 	"SpecialPages": {
-		"NavigationSchema": "StructuredNavigation\\Specials\\NavigationSchemaPage",
-		"TitlesUsedInNavigation": "StructuredNavigation\\Specials\\Wiring::onTitlesUsedInNavigation"
+		"NavigationSchema": "StructuredNavigation\\Specials\\Wiring::getNavigationSchemaPage",
+		"TitlesUsedInNavigation": "StructuredNavigation\\Specials\\Wiring::getTitlesUsedInNavigation"
 	},
 	"ContentHandlers": {
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
