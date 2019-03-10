@@ -6,6 +6,8 @@ use MediaWiki\Linker\LinkRenderer;
 use TitleParser;
 
 /**
+ * Represents a link within a view of a navigation.
+ *
  * @license MIT
  */
 final class ContentLinkView {

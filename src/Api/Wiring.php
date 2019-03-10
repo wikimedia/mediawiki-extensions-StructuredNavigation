@@ -6,6 +6,8 @@ use ApiQuery;
 use StructuredNavigation\Services\Services;
 
 /**
+ * Factory-based registration of API modules.
+ *
  * @license MIT
  */
 final class Wiring {

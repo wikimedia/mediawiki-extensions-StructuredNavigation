@@ -3,6 +3,8 @@
 namespace StructuredNavigation\Json;
 
 /**
+ * Represents the content of the JSON schema used by this extension.
+ *
  * @license MIT
  */
 class SchemaContent {

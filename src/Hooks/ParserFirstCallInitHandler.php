@@ -10,6 +10,7 @@ use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\View\NavigationView;
 
 /**
+ * @see https://www.mediawiki.org/wiki/Manual:Hooks/ParserFirstCallInit
  * @license MIT
  */
 final class ParserFirstCallInitHandler {

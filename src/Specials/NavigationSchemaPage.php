@@ -7,6 +7,9 @@ use SpecialPage;
 use StructuredNavigation\Json\SchemaContent;
 
 /**
+ * This special page allows viewing the schema used by the extension
+ * for validating the JSON structure of a navigation.
+ *
  * @license MIT
  */
 final class NavigationSchemaPage extends SpecialPage {

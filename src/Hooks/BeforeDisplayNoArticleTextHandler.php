@@ -6,6 +6,7 @@ use Article;
 use StructuredNavigation\View\NonExistentView;
 
 /**
+ * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeDisplayNoArticleText
  * @license MIT
  */
 final class BeforeDisplayNoArticleTextHandler {

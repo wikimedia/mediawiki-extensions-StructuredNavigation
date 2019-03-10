@@ -5,6 +5,8 @@ namespace StructuredNavigation\Specials;
 use StructuredNavigation\Services\Services;
 
 /**
+ * Factory-based registration of special pages.
+ *
  * @license MIT
  */
 final class Wiring {

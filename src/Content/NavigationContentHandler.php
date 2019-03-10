@@ -6,6 +6,8 @@ use FormatJson;
 use JsonContentHandler;
 
 /**
+ * Content handler for a structured navigation.
+ *
  * @license MIT
  */
 final class NavigationContentHandler extends JsonContentHandler {

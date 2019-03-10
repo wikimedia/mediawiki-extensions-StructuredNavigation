@@ -5,6 +5,8 @@ namespace StructuredNavigation\Content;
 use JsonContent;
 
 /**
+ * Content object for representing a structured navigation.
+ *
  * @license MIT
  */
 final class NavigationContent extends JsonContent {

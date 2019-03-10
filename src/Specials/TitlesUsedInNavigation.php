@@ -9,6 +9,9 @@ use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 
 /**
+ * This special page allows looking up all the titles used for
+ * a given navigation by name.
+ *
  * @license MIT
  */
 final class TitlesUsedInNavigation extends SpecialPage {

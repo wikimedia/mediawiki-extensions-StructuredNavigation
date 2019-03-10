@@ -6,6 +6,9 @@ use StructuredNavigation\Json\JsonEntity;
 use StructuredNavigation\Json\JsonEntityFactory;
 
 /**
+ * This service retrieves all titles that are being used
+ * for a given navigation by title.
+ *
  * @license MIT
  */
 final class QueryTitlesUsedLookup {
@@ -21,10 +24,6 @@ final class QueryTitlesUsedLookup {
 	}
 
 	/**
-	 * For a given title in the Navigation namespace, retrieve all
-	 * titles that are being used for the specific navigation as
-	 * strings in an array.
-	 *
 	 * @param string $navigationTitle
 	 * @return string[]
 	 */

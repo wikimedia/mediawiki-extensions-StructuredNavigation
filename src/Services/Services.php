@@ -18,7 +18,7 @@ use UnexpectedValueException;
  * Acts as a convience wrapper around the \MediaWiki\MediaWikiServices
  * object for retrieving services specific to this extension. This allows
  * the consumer to not have to know the unique service key of the specific
- * service, they can just call a method for what they want.
+ * service - they can just call a method for what they want.
  *
  * @license MIT
  */

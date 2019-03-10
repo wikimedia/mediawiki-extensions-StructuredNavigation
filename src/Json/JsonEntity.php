@@ -3,12 +3,9 @@
 namespace StructuredNavigation\Json;
 
 /**
- * An immutable convience wrapper around a JSON object that's been decoded
- * into an associative array. This allows outside users not having
- * to know what the actual array key name is, you can just retrieve it
- * using these methods. If the schema internally changes such as a rename
- * of a key, this object would hide that implementation detail and
- * nothing would break for outside users (probably)
+ * This provides basic read access to a navigation's JSON
+ * which is assumed to have been decoded into an associative
+ * PHP array.
  *
  * @license MIT
  */
@@ -80,4 +77,5 @@ final class JsonEntity {
 	private function findTitleLabel( array $item ) : string {
 		return $item['title']['label'];
 	}
+
 }

@@ -17,7 +17,7 @@ final class Hooks {
 	private const PARSER_TAG_METHOD = 'getParserHandler';
 
 	/**
-	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Hooks/BeforeDisplayNoArticleText
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeDisplayNoArticleText
 	 * @param Article $article
 	 * @return bool
 	 */
@@ -26,7 +26,7 @@ final class Hooks {
 	}
 
 	/**
-	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Hooks/ParserFirstCallInit
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ParserFirstCallInit
 	 * @param Parser $parser
 	 * @return void
 	 */
@@ -38,7 +38,7 @@ final class Hooks {
 	}
 
 	/**
-	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Hooks/UserGetReservedNames
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserGetReservedNames
 	 * @param array &$reservedUsernames
 	 * @return void
 	 */

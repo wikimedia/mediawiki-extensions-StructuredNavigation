@@ -8,6 +8,8 @@ use StructuredNavigation\Title\NavigationTitleValue;
 use Title;
 
 /**
+ * This factory allows creating a JsonEntity object from a given source.
+ *
  * @license MIT
  */
 class JsonEntityFactory {
