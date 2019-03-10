@@ -43,4 +43,14 @@ final class ApiMetaNavigationSchema extends ApiQueryBase {
 		);
 	}
 
+	/**
+	 * @inheritDoc
+	 */
+	protected function getExamplesMessages() {
+		return [
+			"action=query&meta={$this->getModuleName()}"
+				=> 'apihelp-query+structurednavigationschema-example',
+		];
+	}
+
 }
