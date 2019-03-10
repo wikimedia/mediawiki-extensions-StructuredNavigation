@@ -36,7 +36,7 @@ final class NavigationSchemaPage extends SpecialPage {
 	}
 
 	/**
-	 * @param string|null $subPage
+	 * @inheritDoc
 	 */
 	public function execute( $subPage ) {
 		$this->setHeaders();

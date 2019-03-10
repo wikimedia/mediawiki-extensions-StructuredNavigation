@@ -46,7 +46,7 @@ final class TitlesUsedInNavigation extends SpecialPage {
 	}
 
 	/**
-	 * @param string|null $subPage
+	 * @inheritDoc
 	 */
 	public function execute( $subPage ) {
 		$this->setHeaders();
@@ -59,9 +59,9 @@ final class TitlesUsedInNavigation extends SpecialPage {
 
 	/**
 	 * @param array $formData
-	 * @return false|void
+	 * @return void
 	 */
-	public function onSubmitCallback( array $formData ) {
+	public function onSubmitCallback( array $formData ) : void {
 		$this->getOutput()->addHTML(
 			$this->getTitleList( $formData[self::FIELD_TITLE] )
 		);
