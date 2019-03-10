@@ -82,4 +82,14 @@ final class ApiQueryNavigationHtml extends ApiQueryBase {
 		return true;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
+	public function getExamplesMessages() {
+		return [
+			"action=query&prop={$this->getModuleName()}&snqnhtitle=Dontnod_Entertainment"
+				=> 'apihelp-query+structurednavigationnavigationhtml-example',
+		];
+	}
+
 }

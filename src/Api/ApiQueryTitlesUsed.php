@@ -69,4 +69,14 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 		return true;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
+	public function getExamplesMessages() {
+		return [
+			"action=query&prop={$this->getModuleName()}&snqtutitle=Dontnod_Entertainment"
+				=> 'apihelp-query+structurednavigationtitlesused-example',
+		];
+	}
+
 }
