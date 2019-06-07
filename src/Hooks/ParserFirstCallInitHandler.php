@@ -45,9 +45,9 @@ final class ParserFirstCallInitHandler {
 	 * @param string|null $input
 	 * @param array $attributes
 	 * @param Parser $parser
-	 * @return string
+	 * @return \OOUI\Tag|false
 	 */
-	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) : string {
+	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) {
 		$userPassedTitle = $attributes['title'];
 		$content = $this->jsonEntityFactory->newFromTitle( $userPassedTitle );
 
