@@ -27,7 +27,7 @@ You can play with an example in `/docs/examples`. For this example, let's try us
 
 1. Create a new page at `Navigation:Dontnod Entertainment`, import the JSON into that page,
 then save your edit.
-2. At a separate wikitext page, add `<mw-navigation title="Dontnod Entertainment">` and press save.
+2. At a separate wikitext page, add `<mw-navigation title="Dontnod Entertainment" />` and press save.
 
 ## Contributing
 Are you interested in contributing? Read the [official contribution guide](.github/CONTRIBUTING.md), which covers:
