@@ -51,7 +51,7 @@ final class NonExistentView {
 	public function getView() : EmptyStateView {
 		return new EmptyStateView( [
 			'imageSource' => "{$this->extensionAssetsPath}/StructuredNavigation/resources/"
-				. "images/illustration-grayscale.png",
+				. "images/structured-navigation.svg",
 			'title' => $this->messageLocalizer->msg( self::MESSAGE_TITLE )->plain(),
 			'summary' => $this->messageLocalizer->msg( self::MESSAGE_SUMMARY )->plain(),
 			'buttonLabel' => $this->messageLocalizer->msg( self::MESSAGE_BUTTON_LABEL )->plain(),
