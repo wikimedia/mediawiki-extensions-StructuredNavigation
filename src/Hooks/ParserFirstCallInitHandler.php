@@ -2,12 +2,10 @@
 
 namespace StructuredNavigation\Hooks;
 
-use OutputPage;
 use Parser;
 use ParserOutput;
 use StructuredNavigation\AttributeQualifier;
-use StructuredNavigation\Json\JsonEntityFactory;
-use StructuredNavigation\View\NavigationView;
+use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
  * @see https://www.mediawiki.org/wiki/Manual:Hooks/ParserFirstCallInit
@@ -20,25 +18,19 @@ final class ParserFirstCallInitHandler {
 	/** @var AttributeQualifier */
 	private $attributeQualifier;
 
-	/** @var JsonEntityFactory */
-	private $jsonEntityFactory;
-
-	/** @var NavigationView */
-	private $navigationView;
+	/** @var NavigationViewPresenter */
+	private $navigationViewPresenter;
 
 	/**
 	 * @param AttributeQualifier $attributeQualifier
-	 * @param JsonEntityFactory $jsonEntityFactory
-	 * @param NavigationView $navigationView
+	 * @param NavigationViewPresenter $navigationViewPresenter
 	 */
 	public function __construct(
 		AttributeQualifier $attributeQualifier,
-		JsonEntityFactory $jsonEntityFactory,
-		NavigationView $navigationView
+		NavigationViewPresenter $navigationViewPresenter
 	) {
 		$this->attributeQualifier = $attributeQualifier;
-		$this->jsonEntityFactory = $jsonEntityFactory;
-		$this->navigationView = $navigationView;
+		$this->navigationViewPresenter = $navigationViewPresenter;
 	}
 
 	/**
@@ -49,32 +41,17 @@ final class ParserFirstCallInitHandler {
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) {
 		$userPassedTitle = $attributes['title'];
-		$content = $this->jsonEntityFactory->newFromTitle( $userPassedTitle );
+		$parserOutput = $parser->getOutput();
+		$this->setPageProperty( $parserOutput, $userPassedTitle );
 
-		if ( $content === false ) {
+		$navigation = $this->navigationViewPresenter->getFromTitle( $parserOutput, $userPassedTitle );
+		if ( $navigation === false ) {
 			return false;
 		}
 
-		OutputPage::setupOOUI();
-		$parserOutput = $parser->getOutput();
-		$this->setPageProperty( $parserOutput, $userPassedTitle );
-		$this->loadResourceLoaderModules( $parserOutput );
-
-		$navigation = $this->navigationView->getView( $content );
 		$this->attributeQualifier->setAttributes( $navigation, $attributes );
 
 		return $navigation;
-	}
-
-	/**
-	 * @param ParserOutput $parserOutput
-	 * @return void
-	 */
-	private function loadResourceLoaderModules( ParserOutput $parserOutput ) : void {
-		$parserOutput->addModuleStyles( [
-			'ext.structurednavigation.ui.structurednavigation.styles',
-			'ext.structurednavigation.ui.structurednavigation.separator.styles'
-		] );
 	}
 
 	/**

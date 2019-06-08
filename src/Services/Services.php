@@ -13,6 +13,7 @@ use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
 use StructuredNavigation\View\NavigationView;
 use UnexpectedValueException;
+use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
  * Acts as a convience wrapper around the \MediaWiki\MediaWikiServices
@@ -75,6 +76,13 @@ final class Services {
 	 */
 	public function getNavigationView() : NavigationView {
 		return $this->services->getService( Constants::SERVICE_NAVIGATION_VIEW );
+	}
+
+	/**
+	 * @return NavigationViewPresenter
+	 */
+	public function getNavigationViewPresenter() : NavigationViewPresenter {
+		return $this->services->getService( Constants::SERVICE_NAVIGATION_VIEW_PRESENTER );
 	}
 
 	/**

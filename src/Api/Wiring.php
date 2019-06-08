@@ -44,13 +44,10 @@ final class Wiring {
 	 * @return ApiQueryNavigationHtml
 	 */
 	public static function getApiQueryNavigationHtml( ApiQuery $apiQuery, string $moduleName ) : ApiQueryNavigationHtml {
-		$service = Services::getInstance();
-
 		return new ApiQueryNavigationHtml(
 			$apiQuery,
 			$moduleName,
-			$service->getJsonEntityFactory(),
-			$service->getNavigationView()
+			Services::getInstance()->getNavigationViewPresenter()
 		);
 	}
 

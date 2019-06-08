@@ -12,6 +12,7 @@ use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
 use StructuredNavigation\View\NavigationView;
+use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
  * @license MIT
@@ -45,13 +46,19 @@ return [
 		);
 	},
 
-	Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER => function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
+	Constants::SERVICE_NAVIGATION_VIEW_PRESENTER => function ( MediaWikiServices $services ) : NavigationViewPresenter {
 		$wrapper = new Services( $services );
 
-		return new ParserFirstCallInitHandler(
-			new AttributeQualifier(),
+		return new NavigationViewPresenter(
 			$wrapper->getJsonEntityFactory(),
 			$wrapper->getNavigationView()
+		);
+	},
+
+	Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER => function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
+		return new ParserFirstCallInitHandler(
+			new AttributeQualifier(),
+			( new Services( $services ) )->getNavigationViewPresenter()
 		);
 	},
 

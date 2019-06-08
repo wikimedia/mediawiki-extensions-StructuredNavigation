@@ -5,9 +5,7 @@ namespace StructuredNavigation\Api;
 use ApiBase;
 use ApiQuery;
 use ApiQueryBase;
-use OutputPage;
-use StructuredNavigation\Json\JsonEntityFactory;
-use StructuredNavigation\View\NavigationView;
+use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
  * This API module allows querying for the view of a navigation
@@ -21,27 +19,21 @@ final class ApiQueryNavigationHtml extends ApiQueryBase {
 
 	private const PREFIX = 'snqnh';
 
-	/** @var JsonEntityFactory */
-	private $jsonEntityFactory;
-
-	/** @var NavigationView */
-	private $navigationView;
+	/** @var NavigationViewPresenter */
+	private $navigationViewPresenter;
 
 	/**
 	 * @param ApiQuery $apiQuery
 	 * @param string $moduleName
-	 * @param JsonEntityFactory $jsonEntityFactory
-	 * @param NavigationView $navigationView
+	 * @param NavigationViewPresenter $navigationViewPresenter
 	 */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
-		JsonEntityFactory $jsonEntityFactory,
-		NavigationView $navigationView
+		NavigationViewPresenter $navigationViewPresenter
 	) {
 		parent::__construct( $apiQuery, $moduleName, self::PREFIX );
-		$this->jsonEntityFactory = $jsonEntityFactory;
-		$this->navigationView = $navigationView;
+		$this->navigationViewPresenter = $navigationViewPresenter;
 	}
 
 	/**
@@ -51,13 +43,13 @@ final class ApiQueryNavigationHtml extends ApiQueryBase {
 		$params = $this->extractRequestParams();
 		$title = $params[self::PARAM_TITLE];
 
-		OutputPage::setupOOUI();
 		$this->getResult()->addValue(
 			'query',
 			$this->getModuleName(),
 			[
-				$title => $this->navigationView->getView(
-					$this->jsonEntityFactory->newFromTitle( $title )
+				$title => $this->navigationViewPresenter->getFromTitle(
+					$this->getOutput(),
+					$title
 				)
 			]
 		);

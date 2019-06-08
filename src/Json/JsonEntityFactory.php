@@ -25,6 +25,14 @@ class JsonEntityFactory {
 	}
 
 	/**
+	 * @param array $source
+	 * @return JsonEntity
+	 */
+	public function newFromSource( array $source ) : JsonEntity {
+		return new JsonEntity( $source );
+	}
+
+	/**
 	 * Attempts to make a new JsonEntity from a given title.
 	 * Returns false otherwise if the title doesn't exist.
 	 *

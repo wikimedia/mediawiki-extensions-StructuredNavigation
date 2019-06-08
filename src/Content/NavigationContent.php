@@ -5,11 +5,9 @@ namespace StructuredNavigation\Content;
 use FormatJson;
 use JsonContent;
 use Title;
-use OutputPage;
 use ParserOptions;
 use ParserOutput;
 use StructuredNavigation\Services\Services;
-use StructuredNavigation\Json\JsonEntity;
 
 /**
  * Content object for representing a structured navigation.
@@ -36,16 +34,13 @@ final class NavigationContent extends JsonContent {
 		ParserOutput &$output
 	) {
 		if ( $generateHtml ) {
-			$navigationView = Services::getInstance()->getNavigationView();
-			$jsonEntity = new JsonEntity( FormatJson::decode( $this->getText(), true ) );
-
-			OutputPage::setupOOUI();
-			$output->addModuleStyles( [
-				'ext.structurednavigation.ui.structurednavigation.styles',
-				'ext.structurednavigation.ui.structurednavigation.separator.styles'
-			] );
-
-			$output->setText( $navigationView->getView( $jsonEntity ) );
+			$navigationViewPresenter = Services::getInstance()->getNavigationViewPresenter();
+			$output->setText(
+				$navigationViewPresenter->getFromSource(
+					$output,
+					FormatJson::decode( $this->getText(), true )
+				)
+			);
 		}
 	}
 }
