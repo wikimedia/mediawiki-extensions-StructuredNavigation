@@ -52,4 +52,4 @@ Using this extension allows creating navigations that are:
   - semantically sane: presentation details are separated from content (e.g separator symbol is auto-appended after each link using CSS - much nicer than having to manually include it after each link)
 
 ## License
-Licensed under the [MIT license](COPYING).
+Licensed under the [MIT license](LICENSE.txt).
