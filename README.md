@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="/resources/images/illustration.png" width="600px">
+	<img src="/resources/images/structured-navigation-colored.png" width="600px">
 </p>
 
 # <p align="center"> StructuredNavigation</p>
