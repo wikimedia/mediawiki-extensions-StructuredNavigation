@@ -4,7 +4,7 @@ namespace StructuredNavigation\Specials;
 
 use HTMLForm;
 use HTMLTitleTextField;
-use SpecialPage;
+use FormSpecialPage;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 
@@ -14,16 +14,12 @@ use StructuredNavigation\Title\QueryTitlesUsedLookup;
  *
  * @license MIT
  */
-final class TitlesUsedInNavigation extends SpecialPage {
+final class TitlesUsedInNavigation extends FormSpecialPage {
 
 	private const FIELD_TITLE = 'title';
-
 	private const MESSAGE_LEGEND = 'specials-titlesusedinnavigation-legend';
-
 	private const MESSAGE_TITLE_LABEL = 'specials-titlesusedinnavigation-field-title-label';
-
 	private const MESSAGE_TITLE_PLACEHOLDER = 'specials-titlesusedinnavigation-field-title-placeholder';
-
 	private const PAGE_NAME = 'TitlesUsedInNavigation';
 
 	/** @var QueryTitlesUsedLookup */
@@ -38,39 +34,31 @@ final class TitlesUsedInNavigation extends SpecialPage {
 		$this->queryTitlesUsedLookup = $queryTitlesUsedLookup;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	protected function getGroupName() {
 		return Constants::SPECIAL_PAGE_GROUP;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	public function execute( $subPage ) {
-		$this->setHeaders();
-
-		$htmlForm = HTMLForm::factory( 'ooui', $this->getFormFields(), $this->getContext() )
-			->setWrapperLegendMsg( $this->msg( self::MESSAGE_LEGEND ) )
-			->setSubmitCallback( [ $this, 'onSubmitCallback' ] )
-			->show();
+	/** @inheritDoc */
+	public function alterForm( HTMLForm $htmlForm ) {
+		$htmlForm
+			->setWrapperLegendMsg( $this->msg( self::MESSAGE_LEGEND ) );
 	}
 
-	/**
-	 * @param array $formData
-	 * @return void
-	 */
-	public function onSubmitCallback( array $formData ) : void {
-		$this->getOutput()->addHTML(
+	/** @inheritDoc */
+	protected function getDisplayFormat() {
+		return Constants::HTMLFORM_FORMAT_OOUI;
+	}
+
+	/** @inheritDoc */
+	public function onSubmit( array $formData, $htmlForm = null ) {
+		$htmlForm->setPostText(
 			$this->getTitleList( $formData[self::FIELD_TITLE] )
 		);
 	}
 
-	/**
-	 * @return array
-	 */
-	private function getFormFields() : array {
+	/** @inheritDoc */
+	protected function getFormFields() {
 		return [
 			self::FIELD_TITLE => [
 				'class' => HTMLTitleTextField::class,
