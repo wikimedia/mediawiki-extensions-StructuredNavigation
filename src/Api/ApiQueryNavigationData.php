@@ -17,7 +17,6 @@ use StructuredNavigation\Json\JsonEntityFactory;
 final class ApiQueryNavigationData extends ApiQueryBase {
 
 	private const PARAM_TITLE = 'title';
-
 	private const PREFIX = 'snqnd';
 
 	/** @var JsonEntityFactory */
@@ -37,9 +36,7 @@ final class ApiQueryNavigationData extends ApiQueryBase {
 		$this->jsonEntityFactory = $jsonEntityFactory;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function execute() {
 		$params = $this->extractRequestParams();
 		$title = $params[self::PARAM_TITLE];
@@ -51,9 +48,7 @@ final class ApiQueryNavigationData extends ApiQueryBase {
 		);
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function getAllowedParams() {
 		return [
 			self::PARAM_TITLE => [
@@ -63,16 +58,12 @@ final class ApiQueryNavigationData extends ApiQueryBase {
 		];
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function isInternal() {
 		return true;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function getExamplesMessages() {
 		return [
 			"action=query&prop={$this->getModuleName()}&snqndtitle=Dontnod_Entertainment"

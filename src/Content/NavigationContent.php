@@ -23,9 +23,7 @@ final class NavigationContent extends JsonContent {
 		parent::__construct( $text, CONTENT_MODEL_NAVIGATION );
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	protected function fillParserOutput(
 		Title $title,
 		$revId,

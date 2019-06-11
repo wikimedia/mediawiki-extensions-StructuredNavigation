@@ -16,7 +16,6 @@ use StructuredNavigation\View\NavigationViewPresenter;
 final class ApiQueryNavigationHtml extends ApiQueryBase {
 
 	private const PARAM_TITLE = 'title';
-
 	private const PREFIX = 'snqnh';
 
 	/** @var NavigationViewPresenter */
@@ -36,9 +35,7 @@ final class ApiQueryNavigationHtml extends ApiQueryBase {
 		$this->navigationViewPresenter = $navigationViewPresenter;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function execute() {
 		$params = $this->extractRequestParams();
 		$title = $params[self::PARAM_TITLE];
@@ -55,9 +52,7 @@ final class ApiQueryNavigationHtml extends ApiQueryBase {
 		);
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function getAllowedParams() {
 		return [
 			self::PARAM_TITLE => [
@@ -67,16 +62,12 @@ final class ApiQueryNavigationHtml extends ApiQueryBase {
 		];
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function isInternal() {
 		return true;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function getExamplesMessages() {
 		return [
 			"action=query&prop={$this->getModuleName()}&snqnhtitle=Dontnod_Entertainment"

@@ -19,9 +19,7 @@ final class NavigationContentHandler extends JsonContentHandler {
 		parent::__construct( $modelId );
 	}
 
-	/**
-	 * @return string
-	 */
+	/** @inheritDoc */
 	protected function getContentClass() : string {
 		return NavigationContent::class;
 	}

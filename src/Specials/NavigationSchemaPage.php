@@ -28,16 +28,12 @@ final class NavigationSchemaPage extends SpecialPage {
 		$this->schemaContent = $schemaContent;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	protected function getGroupName() {
 		return Constants::SPECIAL_PAGE_GROUP;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function execute( $subPage ) {
 		$this->setHeaders();
 		$this->getOutput()->addHTML(

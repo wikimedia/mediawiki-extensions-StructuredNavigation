@@ -32,9 +32,7 @@ final class ApiMetaNavigationSchema extends ApiQueryBase {
 		$this->schemaContent = $schemaContent;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function execute() {
 		$this->getResult()->addValue(
 			'query',
@@ -43,9 +41,7 @@ final class ApiMetaNavigationSchema extends ApiQueryBase {
 		);
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	protected function getExamplesMessages() {
 		return [
 			"action=query&meta={$this->getModuleName()}"

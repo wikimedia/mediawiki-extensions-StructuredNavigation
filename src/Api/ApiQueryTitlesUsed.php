@@ -16,7 +16,6 @@ use StructuredNavigation\Title\QueryTitlesUsedLookup;
 final class ApiQueryTitlesUsed extends ApiQueryBase {
 
 	private const PARAM_TITLE = 'title';
-
 	private const PREFIX = 'snqtu';
 
 	/** @var QueryTitlesUsedLookup */
@@ -36,9 +35,7 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 		$this->queryTitlesUsedLookup = $queryTitlesUsedLookup;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function execute() {
 		$params = $this->extractRequestParams();
 		$title = $params[self::PARAM_TITLE];
@@ -50,9 +47,7 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 		);
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function getAllowedParams() {
 		return [
 			self::PARAM_TITLE => [
@@ -62,16 +57,12 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 		];
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function isInternal() {
 		return true;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
+	/** @inheritDoc */
 	public function getExamplesMessages() {
 		return [
 			"action=query&prop={$this->getModuleName()}&snqtutitle=Dontnod_Entertainment"
