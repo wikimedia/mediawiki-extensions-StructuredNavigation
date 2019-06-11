@@ -15,6 +15,7 @@ use StructuredNavigation\Json\SchemaContent;
 final class NavigationSchemaPage extends SpecialPage {
 
 	private const PAGE_NAME = 'NavigationSchema';
+	private const MESSAGE_SUBTITLE = 'specials-navigationschema-subtitle';
 
 	/** @var SchemaContent */
 	private $schemaContent;
@@ -36,6 +37,7 @@ final class NavigationSchemaPage extends SpecialPage {
 	/** @inheritDoc */
 	public function execute( $subPage ) {
 		$this->setHeaders();
+		$this->getOutput()->setSubtitle( $this->msg( self::MESSAGE_SUBTITLE )->text() );
 		$this->getOutput()->addHTML(
 			$this->getEmbeddedCodeView( $this->schemaContent->getSchemaContent() )
 		);
