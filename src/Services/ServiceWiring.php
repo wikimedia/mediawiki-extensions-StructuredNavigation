@@ -8,6 +8,7 @@ use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Json\SchemaContent;
+use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
@@ -34,6 +35,10 @@ return [
 		return new JsonEntityFactory(
 			( new Services( $services ) )->getNavigationTitleValue()
 		);
+	},
+
+	Constants::SERVICE_NAMESPACED_TITLE_SEARCHER => function ( MediaWikiServices $services ) : NamespacedTitleSearcher {
+		return new NamespacedTitleSearcher( $services->newSearchEngine() );
 	},
 
 	Constants::SERVICE_NAVIGATION_TITLE_VALUE => function ( MediaWikiServices $services ) : NavigationTitleValue {

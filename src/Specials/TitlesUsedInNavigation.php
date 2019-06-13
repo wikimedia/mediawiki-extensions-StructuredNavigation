@@ -5,8 +5,10 @@ namespace StructuredNavigation\Specials;
 use HTMLForm;
 use HTMLTitleTextField;
 use FormSpecialPage;
+use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
+use StructuredNavigation\Title\NavigationTitleValue;
 
 /**
  * This special page allows looking up all the titles used for
@@ -25,13 +27,27 @@ final class TitlesUsedInNavigation extends FormSpecialPage {
 	/** @var QueryTitlesUsedLookup */
 	private $queryTitlesUsedLookup;
 
+	/** @var NamespacedTitleSearcher */
+	private $namespacedTitleSearcher;
+
+	/** @var NavigationTitleValue */
+	private $navigationTitleValue;
+
 	/**
 	 * @param QueryTitlesUsedLookup $queryTitlesUsedLookup
+	 * @param NamespacedTitleSearcher $namespacedTitleSearcher
+	 * @param NavigationTitleValue $navigationTitleValue
 	 */
-	public function __construct( QueryTitlesUsedLookup $queryTitlesUsedLookup ) {
+	public function __construct(
+		QueryTitlesUsedLookup $queryTitlesUsedLookup,
+		NamespacedTitleSearcher $namespacedTitleSearcher,
+		NavigationTitleValue $navigationTitleValue
+	) {
 		parent::__construct( self::PAGE_NAME );
 
 		$this->queryTitlesUsedLookup = $queryTitlesUsedLookup;
+		$this->namespacedTitleSearcher = $namespacedTitleSearcher;
+		$this->navigationTitleValue = $navigationTitleValue;
 	}
 
 	/** @inheritDoc */
@@ -62,7 +78,10 @@ final class TitlesUsedInNavigation extends FormSpecialPage {
 		return [
 			self::FIELD_TITLE => [
 				'class' => HTMLTitleTextField::class,
-				'default' => '',
+				'default' => $this->par ?
+					$this->navigationTitleValue
+						->getTitleValue( $this->par )
+						->getText() : '',
 				'label-message' => self::MESSAGE_TITLE_LABEL,
 				'placeholder-message' => self::MESSAGE_TITLE_PLACEHOLDER,
 				'namespace' => NS_NAVIGATION,
@@ -71,6 +90,12 @@ final class TitlesUsedInNavigation extends FormSpecialPage {
 				'creatable' => true
 			],
 		];
+	}
+
+	/** @inheritDoc */
+	public function prefixSearchSubpages( $search, $limit, $offset ) {
+		return $this->namespacedTitleSearcher
+			->getTitlesInNamespace( $search, $limit, $offset, NS_NAVIGATION );
 	}
 
 	/**

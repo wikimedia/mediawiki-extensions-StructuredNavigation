@@ -8,6 +8,7 @@ use MediaWiki\MediaWikiServices;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Json\SchemaContent;
+use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
@@ -62,6 +63,13 @@ final class Services {
 	 */
 	public function getContentLinkView() : ContentLinkView {
 		return $this->services->getService( Constants::SERVICE_CONTENT_LINK_VIEW );
+	}
+
+	/**
+	 * @return NamespacedTitleSearcher
+	 */
+	public function getNamespacedTitleSearcher() : NamespacedTitleSearcher {
+		return $this->services->getService( Constants::SERVICE_NAMESPACED_TITLE_SEARCHER );
 	}
 
 	/**

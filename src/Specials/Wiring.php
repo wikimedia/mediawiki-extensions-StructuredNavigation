@@ -15,8 +15,11 @@ final class Wiring {
 	 * @return TitlesUsedInNavigation
 	 */
 	public static function getTitlesUsedInNavigation() : TitlesUsedInNavigation {
+		$service = self::getServiceInstance();
 		return new TitlesUsedInNavigation(
-			self::getServiceInstance()->getQueryTitlesUsedLookup()
+			$service->getQueryTitlesUsedLookup(),
+			$service->getNamespacedTitleSearcher(),
+			$service->getNavigationTitleValue()
 		);
 	}
 
