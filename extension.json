@@ -125,6 +125,17 @@
 		},
 		"ext.structurednavigation.view.nonexistent.styles": {
 			"styles": "resources/styles/view/NonExistentView.less"
+		},
+		"ext.structurednavigation.content.copyEmbed": {
+			"scripts": "resources/modules/ext.structurednavigation.content.copyEmbed.js",
+			"messages": [
+				"structurednavigation-copy-label",
+				"structurednavigation-copy-state-fail",
+				"structurednavigation-copy-state-success"
+			],
+			"dependencies": [
+				"mediawiki.widgets"
+			]
 		}
 	},
 	"CodeMirrorTagModes": {

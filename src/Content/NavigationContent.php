@@ -39,6 +39,17 @@ final class NavigationContent extends JsonContent {
 					FormatJson::decode( $this->getText(), true )
 				)
 			);
+
+			$this->loadModules( $output );
 		}
 	}
+
+	/**
+	 * @param ParserOutput $parserOutput
+	 * @return void
+	 */
+	private function loadModules( ParserOutput $output ) : void {
+		$output->addModules( 'ext.structurednavigation.content.copyEmbed' );
+	}
+
 }
