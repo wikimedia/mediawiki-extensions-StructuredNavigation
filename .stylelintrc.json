@@ -3,6 +3,9 @@
 	"rules": {
 		"no-descending-specificity": null,
 		"selector-no-vendor-prefix": null,
-		"value-keyword-case": null
+		"value-keyword-case": null,
+
+		"number-leading-zero": "never",
+		"font-weight-notation": "numeric"
 	}
 }
