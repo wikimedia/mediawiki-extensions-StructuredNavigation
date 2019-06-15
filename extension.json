@@ -72,6 +72,9 @@
 	"config": {
 		"StructuredNavigationReservedUsername": {
 			"value": "msg:structurednavigation-reserved-username"
+		},
+		"StructuredNavigationEnableCopyEmbedFeature": {
+			"value": false
 		}
 	},
 	"namespaces": [
