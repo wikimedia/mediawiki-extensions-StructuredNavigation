@@ -131,6 +131,7 @@
 		},
 		"ext.structurednavigation.content.copyEmbed": {
 			"scripts": "resources/modules/ext.structurednavigation.content.copyEmbed.js",
+			"styles": "resources/styles/ext.structurednavigation.content.copyEmbed.less",
 			"messages": [
 				"structurednavigation-copy-label",
 				"structurednavigation-copy-state-fail",

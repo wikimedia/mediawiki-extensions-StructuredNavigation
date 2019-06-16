@@ -2,8 +2,8 @@
  * @license MIT
  */
 let textToCopy = "<mw-navigation title=\"" + mw.config.get( 'wgTitle' ) + "\" />";
-
 let copyEmbed = new mw.widgets.CopyTextLayout( {
+	classes: [ 'mw-structurednav-copyEmbedLayout' ],
 	align: 'top',
 	label: mw.msg( 'structurednavigation-copy-label' ),
 	copyText: textToCopy,
@@ -11,4 +11,4 @@ let copyEmbed = new mw.widgets.CopyTextLayout( {
 	failMessage: mw.msg( 'structurednavigation-copy-state-fail' )
 } );
 
-$( copyEmbed.$element ).insertAfter( '.mw-structurednav-navigation-container' );
+copyEmbed.$element.insertAfter( '.mw-structurednav-navigation-container' );
