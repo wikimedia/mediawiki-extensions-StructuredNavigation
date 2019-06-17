@@ -53,7 +53,7 @@ final class NavigationContent extends JsonContent {
 			Services::getInstance()->getConfig()
 				->get( 'EnableCopyEmbedFeature' ) === true
 		) {
-			$output->addModules( 'ext.structurednavigation.content.copyEmbed' );
+			$output->addModules( 'ext.structurednavigation.content' );
 		}
 	}
 

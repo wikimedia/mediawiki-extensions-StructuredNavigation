@@ -129,17 +129,27 @@
 		"ext.structurednavigation.view.nonexistent.styles": {
 			"styles": "resources/styles/view/NonExistentView.less"
 		},
-		"ext.structurednavigation.content.copyEmbed": {
-			"scripts": "resources/modules/ext.structurednavigation.content.copyEmbed.js",
-			"styles": "resources/styles/ext.structurednavigation.content.copyEmbed.less",
+		"ext.structurednavigation.content": {
+			"scripts": "resources/modules/ext.structurednavigation.content.js",
+			"dependencies": [
+				"ext.structurednavigation.CopyEmbedWidget"
+			]
+		},
+		"ext.structurednavigation.CopyEmbedWidget": {
+			"scripts": "resources/modules/ext.structurednavigation.CopyEmbedWidget.js",
+			"styles": "resources/styles/ext.structurednavigation.CopyEmbedWidget.less",
 			"messages": [
 				"structurednavigation-copy-label",
 				"structurednavigation-copy-state-fail",
 				"structurednavigation-copy-state-success"
 			],
 			"dependencies": [
-				"mediawiki.widgets"
+				"mediawiki.widgets",
+				"ext.structurednavigation.core"
 			]
+		},
+		"ext.structurednavigation.core": {
+			"scripts": "resources/modules/mw.structuredNav.js"
 		}
 	},
 	"CodeMirrorTagModes": {
