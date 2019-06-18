@@ -27,7 +27,6 @@ final class Hooks {
 	/**
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ParserFirstCallInit
 	 * @param Parser $parser
-	 * @return void
 	 */
 	public static function onParserFirstCallInit( Parser $parser ) : void {
 		$parser->setHook( self::PARSER_TAG, [
@@ -39,7 +38,6 @@ final class Hooks {
 	/**
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserGetReservedNames
 	 * @param array &$reservedUsernames
-	 * @return void
 	 */
 	public static function onUserGetReservedNames( array &$reservedUsernames ) : void {
 		$reservedUsernames[] = Services::getInstance()->getConfig()

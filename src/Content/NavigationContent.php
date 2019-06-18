@@ -46,7 +46,6 @@ final class NavigationContent extends JsonContent {
 
 	/**
 	 * @param ParserOutput $parserOutput
-	 * @return void
 	 */
 	private function maybeLoadCopyEmbedFeature( ParserOutput $output ) : void {
 		if (

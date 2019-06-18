@@ -59,7 +59,6 @@ final class NavigationViewPresenter {
 
 	/**
 	 * @param ParserOutput|OutputPage $output
-	 * @return void
 	 */
 	private function doSetup( $output ) : void {
 		OutputPage::setupOOUI();

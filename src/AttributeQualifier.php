@@ -20,7 +20,6 @@ final class AttributeQualifier {
 	 *
 	 * @param Tag $navigation
 	 * @param array $attributes
-	 * @return void
 	 */
 	public function setAttributes( Tag $navigation, array $attributes ) : void {
 		$navigation->setAttributes( [

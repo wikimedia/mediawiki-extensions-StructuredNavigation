@@ -39,9 +39,6 @@ final class BeforeDisplayNoArticleTextHandler {
 		return false;
 	}
 
-	/**
-	 * @return void
-	 */
 	private function getView() : void {
 		$context = $this->article->getContext();
 		$output = $context->getOutput();

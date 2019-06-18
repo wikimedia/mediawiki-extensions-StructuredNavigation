@@ -25,7 +25,6 @@ class ExtensionCallback {
 	 * Extension registration callback
 	 *
 	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Extension.json/Schema#callback
-	 * @return void
 	 */
 	public static function onRegistrationCallback() : void {
 		// Must match the name used in the 'ContentHandlers' section of extension.json
