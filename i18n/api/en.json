@@ -4,6 +4,8 @@
 			"Samantha Nguyen"
 		]
 	},
+	"apihelp-query+structurednavigationexamples-summary": "Retrieves the JSON of all navigation examples sourced from the StructuredNavigation extension. This will be from the version of the extension software that the wiki has installed.",
+	"apihelp-query+structurednavigationexamples-example": "Fetch the JSON of all navigation examples sourced from the StructuredNavigation extension",
 	"apihelp-query+structurednavigationschema-summary": "Retrieves the JSON schema used to validate the JSON structure of navigations.",
 	"apihelp-query+structurednavigationschema-example": "Fetch the navigation JSON schema",
 	"apihelp-query+structurednavigationnavigationdata-summary": "Retrieves the JSON content for a given navigation.",

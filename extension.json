@@ -50,7 +50,8 @@
 		"structurednavigationschema": {
 			"class": "StructuredNavigation\\Api\\ApiMetaNavigationSchema",
 			"factory": "StructuredNavigation\\Api\\Wiring::getApiMetaNavigationSchema"
-		}
+		},
+		"structurednavigationexamples": "StructuredNavigation\\Api\\ApiMetaNavigationExamples"
 	},
 	"APIPropModules": {
 		"structurednavigationnavigationdata": {

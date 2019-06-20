@@ -4,6 +4,8 @@
 			"Samantha Nguyen"
 		]
 	},
+	"apihelp-query+structurednavigationexamples-summary": "{doc-apihelp-summary|structurednavigationexamples}}",
+	"apihelp-query+structurednavigationexamples-example": "{{doc-apihelp-example|structurednavigationexamples}}",
 	"apihelp-query+structurednavigationschema-summary": "{{doc-apihelp-summary|structurednavigationschema}}",
 	"apihelp-query+structurednavigationschema-example": "{{doc-apihelp-example|structurednavigationschema}}",
 	"apihelp-query+structurednavigationnavigationdata-summary": "{{doc-apihelp-summary|structurednavigationnavigationdata}}",
