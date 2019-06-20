@@ -2,7 +2,6 @@
 
 namespace StructuredNavigation\Api;
 
-use ApiBase;
 use ApiQuery;
 use ApiQueryBase;
 use FormatJson;
@@ -30,9 +29,9 @@ class ApiMetaNavigationExamples extends ApiQueryBase {
 		$globFiles = glob( $files );
 		$allContent = [];
 
-		foreach( $globFiles as $file ) {
+		foreach ( $globFiles as $file ) {
 			$content = FormatJson::decode( file_get_contents( $file ) );
-			$allContent[str_replace($prefix,'', $file)] = $content;
+			$allContent[str_replace( $prefix, '', $file )] = $content;
 		}
 
 		return $allContent;
