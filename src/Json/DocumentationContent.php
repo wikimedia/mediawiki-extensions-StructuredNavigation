@@ -30,7 +30,7 @@ class DocumentationContent {
 	 * @return array
 	 */
 	public function getDecodedSchemaContent() : array {
-		return json_decode( $this->getSchemaContent() );
+		return json_decode( $this->getSchemaContent(), true );
 	}
 
 	/**
