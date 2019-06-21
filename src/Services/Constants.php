@@ -17,6 +17,6 @@ final class Constants {
 	public const SERVICE_NAVIGATION_VIEW_PRESENTER = 'StructuredNavigation.NavigationViewPresenter';
 	public const SERVICE_PARSERFIRSTCALLINIT_HANDLER = 'StructuredNavigation.ParserFirstCallInitHandler';
 	public const SERVICE_QUERY_TITLES_USED_LOOKUP = 'StructuredNavigation.QueryTitlesUsedLookup';
-	public const SERVICE_SCHEMA_CONTENT = 'StructuredNavigation.SchemaContent';
+	public const SERVICE_DOCUMENTATION_CONTENT = 'StructuredNavigation.DocumentationContent';
 
 }

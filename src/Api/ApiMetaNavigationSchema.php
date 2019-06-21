@@ -4,8 +4,7 @@ namespace StructuredNavigation\Api;
 
 use ApiQuery;
 use ApiQueryBase;
-use FormatJson;
-use StructuredNavigation\Json\SchemaContent;
+use StructuredNavigation\Json\DocumentationContent;
 
 /**
  * This API module allows querying for the JSON schema used by
@@ -15,21 +14,21 @@ use StructuredNavigation\Json\SchemaContent;
  */
 final class ApiMetaNavigationSchema extends ApiQueryBase {
 
-	/** @var SchemaContent */
-	private $schemaContent;
+	/** @var DocumentationContent */
+	private $documentationContent;
 
 	/**
 	 * @param ApiQuery $apiQuery
 	 * @param string $moduleName
-	 * @param SchemaContent $schemaContent
+	 * @param DocumentationContent $documentationContent
 	 */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
-		SchemaContent $schemaContent
+		DocumentationContent $documentationContent
 	) {
 		parent::__construct( $apiQuery, $moduleName );
-		$this->schemaContent = $schemaContent;
+		$this->documentationContent = $documentationContent;
 	}
 
 	/** @inheritDoc */
@@ -37,7 +36,7 @@ final class ApiMetaNavigationSchema extends ApiQueryBase {
 		$this->getResult()->addValue(
 			'query',
 			$this->getModuleName(),
-			FormatJson::decode( $this->schemaContent->getSchemaContent() )
+			$this->documentationContent->getDecodedSchemaContent()
 		);
 	}
 

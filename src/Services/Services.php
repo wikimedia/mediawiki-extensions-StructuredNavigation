@@ -6,15 +6,15 @@ use Config;
 use ConfigException;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
+use StructuredNavigation\Json\DocumentationContent;
 use StructuredNavigation\Json\JsonEntityFactory;
-use StructuredNavigation\Json\SchemaContent;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
 use StructuredNavigation\View\NavigationView;
-use UnexpectedValueException;
 use StructuredNavigation\View\NavigationViewPresenter;
+use UnexpectedValueException;
 
 /**
  * Acts as a convience wrapper around the \MediaWiki\MediaWikiServices
@@ -112,10 +112,10 @@ final class Services {
 	}
 
 	/**
-	 * @return SchemaContent
+	 * @return DocumentationContent
 	 */
-	public function getSchemaContent() : SchemaContent {
-		return $this->services->getService( Constants::SERVICE_SCHEMA_CONTENT );
+	public function getDocumentationContent() : DocumentationContent {
+		return $this->services->getService( Constants::SERVICE_DOCUMENTATION_CONTENT );
 	}
 
 }

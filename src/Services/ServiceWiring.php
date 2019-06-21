@@ -6,8 +6,8 @@ use Config;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
+use StructuredNavigation\Json\DocumentationContent;
 use StructuredNavigation\Json\JsonEntityFactory;
-use StructuredNavigation\Json\SchemaContent;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
@@ -73,8 +73,8 @@ return [
 		);
 	},
 
-	Constants::SERVICE_SCHEMA_CONTENT => function ( MediaWikiServices $services ) : SchemaContent {
-		return new SchemaContent(
+	Constants::SERVICE_DOCUMENTATION_CONTENT => function ( MediaWikiServices $services ) : DocumentationContent {
+		return new DocumentationContent(
 			$services->getMainConfig()->get( 'ExtensionDirectory' )
 		);
 	},

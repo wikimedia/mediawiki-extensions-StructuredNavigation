@@ -28,7 +28,7 @@ final class Wiring {
 	 */
 	public static function getNavigationSchemaPage() : NavigationSchemaPage {
 		return new NavigationSchemaPage(
-			self::getServiceInstance()->getSchemaContent()
+			self::getServiceInstance()->getDocumentationContent()
 		);
 	}
 

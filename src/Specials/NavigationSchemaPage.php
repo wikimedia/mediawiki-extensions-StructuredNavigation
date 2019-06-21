@@ -4,7 +4,7 @@ namespace StructuredNavigation\Specials;
 
 use OOUI\Tag;
 use SpecialPage;
-use StructuredNavigation\Json\SchemaContent;
+use StructuredNavigation\Json\DocumentationContent;
 
 /**
  * This special page allows viewing the schema used by the extension
@@ -17,16 +17,15 @@ final class NavigationSchemaPage extends SpecialPage {
 	private const PAGE_NAME = 'NavigationSchema';
 	private const MESSAGE_SUBTITLE = 'specials-navigationschema-subtitle';
 
-	/** @var SchemaContent */
-	private $schemaContent;
+	/** @var DocumentationContent */
+	private $documentationContent;
 
 	/**
-	 * @param SchemaContent $schemaContent
+	 * @param DocumentationContent $documentationContent
 	 */
-	public function __construct( SchemaContent $schemaContent ) {
+	public function __construct( DocumentationContent $documentationContent ) {
 		parent::__construct( self::PAGE_NAME );
-
-		$this->schemaContent = $schemaContent;
+		$this->documentationContent = $documentationContent;
 	}
 
 	/** @inheritDoc */
@@ -39,7 +38,7 @@ final class NavigationSchemaPage extends SpecialPage {
 		$this->setHeaders();
 		$this->getOutput()->setSubtitle( $this->msg( self::MESSAGE_SUBTITLE )->text() );
 		$this->getOutput()->addHTML(
-			$this->getEmbeddedCodeView( $this->schemaContent->getSchemaContent() )
+			$this->getEmbeddedCodeView( $this->documentationContent->getSchemaContent() )
 		);
 	}
 

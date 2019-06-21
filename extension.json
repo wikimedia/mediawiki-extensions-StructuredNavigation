@@ -47,11 +47,14 @@
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
 	},
 	"APIMetaModules": {
+		"structurednavigationexamples": {
+			"class": "StructuredNavigation\\Api\\ApiMetaNavigationExamples",
+			"factory": "StructuredNavigation\\Api\\Wiring::getApiMetaNavigationExamples"
+		},
 		"structurednavigationschema": {
 			"class": "StructuredNavigation\\Api\\ApiMetaNavigationSchema",
 			"factory": "StructuredNavigation\\Api\\Wiring::getApiMetaNavigationSchema"
-		},
-		"structurednavigationexamples": "StructuredNavigation\\Api\\ApiMetaNavigationExamples"
+		}
 	},
 	"APIPropModules": {
 		"structurednavigationnavigationdata": {
