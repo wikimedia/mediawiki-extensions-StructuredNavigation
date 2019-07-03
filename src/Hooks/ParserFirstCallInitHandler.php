@@ -2,6 +2,7 @@
 
 namespace StructuredNavigation\Hooks;
 
+use OOUI\Tag;
 use Parser;
 use ParserOutput;
 use StructuredNavigation\AttributeQualifier;
@@ -37,7 +38,7 @@ final class ParserFirstCallInitHandler {
 	 * @param string|null $input
 	 * @param array $attributes
 	 * @param Parser $parser
-	 * @return \OOUI\Tag|false
+	 * @return Tag|false
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) {
 		$userPassedTitle = $attributes['title'];
