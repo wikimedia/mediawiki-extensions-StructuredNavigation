@@ -50,10 +50,18 @@ final class NonExistentView {
 		return new EmptyStateView( [
 			'imageSource' => "{$this->extensionAssetsPath}/StructuredNavigation/resources/"
 				. "images/structured-navigation.svg",
-			'title' => $this->messageLocalizer->msg( self::MESSAGE_TITLE )->plain(),
-			'summary' => $this->messageLocalizer->msg( self::MESSAGE_SUMMARY )->plain(),
-			'buttonLabel' => $this->messageLocalizer->msg( self::MESSAGE_BUTTON_LABEL )->plain(),
+			'title' => $this->getMessage( self::MESSAGE_TITLE ),
+			'summary' => $this->getMessage( self::MESSAGE_SUMMARY ),
+			'buttonLabel' => $this->getMessage( self::MESSAGE_BUTTON_LABEL ),
 			'buttonHref' => $this->title->getFullURL( [ 'action' => 'edit', 'redlink' => '1' ] ),
 		] );
 	}
+
+	/**
+	 * @return string
+	 */
+	private function getMessage( string $msg ) : string {
+		return $this->messageLocalizer->msg( $msg )->plain();
+	}
+
 }
