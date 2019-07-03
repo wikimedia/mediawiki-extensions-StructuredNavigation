@@ -7,9 +7,9 @@
 	"structurednavigation-desc": "Allows creating a structured, machine-readable navigation for use on articles.",
 	"structurednavigation-separator-symbol": "\\",
 	"structurednavigation-reserved-username": "StructuredNavigation script",
-	"structurednavigation-view-emptystate-title": "A navigation on this topic doesn't exist yet.",
-	"structurednavigation-view-emptystate-summary": "Why not create one?",
-	"structurednavigation-view-emptystate-button-label": "Create a navigation",
+	"structurednavigation-view-navigation-not-found-title": "A navigation on this topic doesn't exist yet.",
+	"structurednavigation-view-navigation-not-found-summary": "Why not create one?",
+	"structurednavigation-view-navigation-not-found-button-label": "Create a navigation",
 	"structurednavigation-copy-label": "Embed code",
 	"structurednavigation-copy-state-fail": "Failed to copy code to clipboard.",
 	"structurednavigation-copy-state-success": "Code copied to cliboard."

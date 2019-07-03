@@ -7,9 +7,9 @@
 	"structurednavigation-desc": "Describes the purpose of the StructuredNavigation extension",
 	"structurednavigation-separator-symbol": "Defines the symbol/character that should be used for separating each link in a navigation.",
 	"structurednavigation-reserved-username": "Defines the username that's reserved by this extension for doing automated tasks.",
-	"structurednavigation-view-emptystate-title": "The title shown for the empty state screen when a user visits a navigation that doesn't exist yet.",
-	"structurednavigation-view-emptystate-summary": "The summary shown for the empty state screen when a user visits a navigation that doesn't exist yet.",
-	"structurednavigation-view-emptystate-button-label": "The button label shown on the empty state screen when a user visits a navigation that doesn't exist yet.",
+	"structurednavigation-view-navigation-not-found-title": "The title shown for the empty state screen when a user visits a navigation that doesn't exist yet.",
+	"structurednavigation-view-navigation-not-found-summary": "The summary shown for the empty state screen when a user visits a navigation that doesn't exist yet.",
+	"structurednavigation-view-navigation-not-found-label": "The button label shown on the empty state screen when a user visits a navigation that doesn't exist yet.",
 	"structurednavigation-copy-label": "Label for the text input field that allows copying the embed code to the cliboard.",
 	"structurednavigation-copy-state-fail": "A stateful message shown when copying the code to clipboard failed.",
 	"structurednavigation-copy-state-success": "A stateful message shown when copying the code to clipboard was successful."

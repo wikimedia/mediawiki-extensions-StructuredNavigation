@@ -130,8 +130,8 @@
 		"ext.structurednavigation.libs.view.emptystate.styles": {
 			"styles": "libs/resources/ooui/EmptyStateView.less"
 		},
-		"ext.structurednavigation.view.nonexistent.styles": {
-			"styles": "resources/styles/view/NonExistentView.less"
+		"ext.structurednavigation.view.navigationnotfound.styles": {
+			"styles": "resources/styles/view/NavigationNotFoundView.less"
 		},
 		"ext.structurednavigation.content": {
 			"scripts": "resources/modules/ext.structurednavigation.content.js",

@@ -3,7 +3,7 @@
 namespace StructuredNavigation\Hooks;
 
 use Article;
-use StructuredNavigation\View\NonExistentView;
+use StructuredNavigation\View\NavigationNotFoundView;
 
 /**
  * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeDisplayNoArticleText
@@ -13,7 +13,7 @@ final class BeforeDisplayNoArticleTextHandler {
 
 	private const RESOURCELOADER_MODULES = [
 		'ext.structurednavigation.libs.view.emptystate.styles',
-		'ext.structurednavigation.view.nonexistent.styles',
+		'ext.structurednavigation.view.navigationnotfound.styles',
 	];
 
 	/** @var Article */
@@ -46,7 +46,7 @@ final class BeforeDisplayNoArticleTextHandler {
 		$output->enableOOUI();
 		$output->addModuleStyles( self::RESOURCELOADER_MODULES );
 		$output->addHTML(
-			( new NonExistentView(
+			( new NavigationNotFoundView(
 				$context->getConfig()->get( 'ExtensionAssetsPath' ),
 				$context,
 				$this->article->getTitle()

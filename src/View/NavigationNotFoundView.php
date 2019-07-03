@@ -13,11 +13,11 @@ use Title;
  *
  * @license MIT
  */
-final class NonExistentView {
+final class NavigationNotFoundView {
 
-	private const MESSAGE_TITLE = 'structurednavigation-view-emptystate-title';
-	private const MESSAGE_SUMMARY = 'structurednavigation-view-emptystate-summary';
-	private const MESSAGE_BUTTON_LABEL = 'structurednavigation-view-emptystate-button-label';
+	private const MESSAGE_TITLE = 'structurednavigation-view-navigation-not-found-title';
+	private const MESSAGE_SUMMARY = 'structurednavigation-view-navigation-not-found-summary';
+	private const MESSAGE_BUTTON_LABEL = 'structurednavigation-view-navigation-not-found-button-label';
 
 	/** @var string */
 	private $extensionAssetsPath;
