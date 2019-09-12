@@ -48,74 +48,70 @@ final class Services {
 	 * @return Config
 	 */
 	public function getConfig() : Config {
-		return $this->services->getService( Constants::SERVICE_CONFIG );
-	}
-
-	/**
-	 * @return JsonEntityFactory
-	 */
-	public function getJsonEntityFactory() : JsonEntityFactory {
-		return $this->services->getService( Constants::SERVICE_JSON_ENTITY_FACTORY );
+		return $this->services->getService( 'StructuredNavigation.Config' );
 	}
 
 	/**
 	 * @return ContentLinkView
 	 */
 	public function getContentLinkView() : ContentLinkView {
-		return $this->services->getService( Constants::SERVICE_CONTENT_LINK_VIEW );
+		return $this->services->getService( 'StructuredNavigation.ContentLinkView' );
+	}
+
+	/**
+	 * @return JsonEntityFactory
+	 */
+	public function getJsonEntityFactory() : JsonEntityFactory {
+		return $this->services->getService( 'StructuredNavigation.JsonEntityFactory' );
 	}
 
 	/**
 	 * @return NamespacedTitleSearcher
 	 */
 	public function getNamespacedTitleSearcher() : NamespacedTitleSearcher {
-		return $this->services->getService( Constants::SERVICE_NAMESPACED_TITLE_SEARCHER );
+		return $this->services->getService( 'StructuredNavigation.NamespacedTitleSearcher' );
 	}
 
 	/**
 	 * @return NavigationTitleValue
 	 */
 	public function getNavigationTitleValue() : NavigationTitleValue {
-		return $this->services->getService( Constants::SERVICE_NAVIGATION_TITLE_VALUE );
+		return $this->services->getService( 'StructuredNavigation.NavigationTitleValue' );
 	}
 
 	/**
 	 * @return NavigationView
 	 */
 	public function getNavigationView() : NavigationView {
-		return $this->services->getService( Constants::SERVICE_NAVIGATION_VIEW );
+		return $this->services->getService( 'StructuredNavigation.NavigationView' );
 	}
 
 	/**
 	 * @return NavigationViewPresenter
 	 */
 	public function getNavigationViewPresenter() : NavigationViewPresenter {
-		return $this->services->getService( Constants::SERVICE_NAVIGATION_VIEW_PRESENTER );
+		return $this->services->getService( 'StructuredNavigation.NavigationViewPresenter' );
 	}
 
 	/**
 	 * @return ParserFirstCallInitHandler
 	 */
 	public function getParserFirstCallInitHandler() : ParserFirstCallInitHandler {
-		return $this->services->getService(
-			Constants::SERVICE_PARSERFIRSTCALLINIT_HANDLER
-		);
+		return $this->services->getService( 'StructuredNavigation.ParserFirstCallInitHandler' );
 	}
 
 	/**
 	 * @return QueryTitlesUsedLookup
 	 */
 	public function getQueryTitlesUsedLookup() : QueryTitlesUsedLookup {
-		return $this->services->getService(
-			Constants::SERVICE_QUERY_TITLES_USED_LOOKUP
-		);
+		return $this->services->getService( 'StructuredNavigation.QueryTitlesUsedLookup' );
 	}
 
 	/**
 	 * @return DocumentationContent
 	 */
 	public function getDocumentationContent() : DocumentationContent {
-		return $this->services->getService( Constants::SERVICE_DOCUMENTATION_CONTENT );
+		return $this->services->getService( 'StructuredNavigation.DocumentationContent' );
 	}
 
 }
