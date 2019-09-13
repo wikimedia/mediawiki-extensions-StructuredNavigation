@@ -40,8 +40,20 @@
 		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
 	},
 	"SpecialPages": {
-		"NavigationSchema": "StructuredNavigation\\Specials\\Wiring::getNavigationSchemaPage",
-		"TitlesUsedInNavigation": "StructuredNavigation\\Specials\\Wiring::getTitlesUsedInNavigation"
+		"NavigationSchema": {
+			"class": "StructuredNavigation\\Specials\\NavigationSchemaPage",
+			"services": [
+				"StructuredNavigation.DocumentationContent"
+			]
+		},
+		"TitlesUsedInNavigation": {
+			"class": "StructuredNavigation\\Specials\\TitlesUsedInNavigation",
+			"services": [
+				"StructuredNavigation.QueryTitlesUsedLookup",
+				"StructuredNavigation.NamespacedTitleSearcher",
+				"StructuredNavigation.NavigationTitleValue"
+			]
+		}
 	},
 	"ContentHandlers": {
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
@@ -49,25 +61,35 @@
 	"APIMetaModules": {
 		"structurednavigationexamples": {
 			"class": "StructuredNavigation\\Api\\ApiMetaNavigationExamples",
-			"factory": "StructuredNavigation\\Api\\Wiring::getApiMetaNavigationExamples"
+			"services": [
+				"StructuredNavigation.DocumentationContent"
+			]
 		},
 		"structurednavigationschema": {
 			"class": "StructuredNavigation\\Api\\ApiMetaNavigationSchema",
-			"factory": "StructuredNavigation\\Api\\Wiring::getApiMetaNavigationSchema"
+			"services": [
+				"StructuredNavigation.DocumentationContent"
+			]
 		}
 	},
 	"APIPropModules": {
 		"structurednavigationnavigationdata": {
 			"class": "StructuredNavigation\\Api\\ApiQueryNavigationData",
-			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryNavigationData"
+			"services": [
+				"StructuredNavigation.JsonEntityFactory"
+			]
 		},
 		"structurednavigationnavigationhtml": {
 			"class": "StructuredNavigation\\Api\\ApiQueryNavigationHtml",
-			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryNavigationHtml"
+			"services": [
+				"StructuredNavigation.NavigationViewPresenter"
+			]
 		},
 		"structurednavigationtitlesused": {
 			"class": "StructuredNavigation\\Api\\ApiQueryTitlesUsed",
-			"factory": "StructuredNavigation\\Api\\Wiring::getApiQueryTitlesUsed"
+			"services": [
+				"StructuredNavigation.QueryTitlesUsedLookup"
+			]
 		}
 	},
 	"ConfigRegistry": {
@@ -76,9 +98,6 @@
 	"config": {
 		"StructuredNavigationReservedUsername": {
 			"value": "msg:structurednavigation-reserved-username"
-		},
-		"StructuredNavigationEnableCopyEmbedFeature": {
-			"value": false
 		}
 	},
 	"namespaces": [

@@ -40,18 +40,6 @@ final class NavigationContent extends JsonContent {
 				)
 			);
 
-			$this->maybeLoadCopyEmbedFeature( $output );
-		}
-	}
-
-	/**
-	 * @param ParserOutput $parserOutput
-	 */
-	private function maybeLoadCopyEmbedFeature( ParserOutput $output ) : void {
-		if (
-			Services::getInstance()->getConfig()
-				->get( 'EnableCopyEmbedFeature' ) === true
-		) {
 			$output->addModules( 'ext.structurednavigation.content' );
 		}
 	}
