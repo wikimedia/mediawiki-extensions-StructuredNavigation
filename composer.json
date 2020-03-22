@@ -4,7 +4,7 @@
 		"jakub-onderka/php-console-highlighter": "0.4.0",
 		"mediawiki/minus-x": "0.3.2",
 		"mediawiki/mediawiki-codesniffer": "26.0.0",
-		"phploc/phploc": "^4.0",
+		"phploc/phploc": "^6.0",
 		"phpmetrics/phpmetrics": "^2.4"
 	},
 	"scripts": {
