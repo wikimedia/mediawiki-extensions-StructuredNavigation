@@ -5,20 +5,20 @@ namespace StructuredNavigation\View;
 use OOUI\Tag;
 use OutputPage;
 use ParserOutput;
-use StructuredNavigation\Json\JsonEntityFactory;
+use StructuredNavigation\NavigationFactory;
 
 /**
  * @license MIT
  */
 final class NavigationViewPresenter {
-	private JsonEntityFactory $jsonEntityFactory;
+	private NavigationFactory $navigationFactory;
 	private NavigationView $navigationView;
 
 	public function __construct(
-		JsonEntityFactory $jsonEntityFactory,
+		NavigationFactory $navigationFactory,
 		NavigationView $navigationView
 	) {
-		$this->jsonEntityFactory = $jsonEntityFactory;
+		$this->navigationFactory = $navigationFactory;
 		$this->navigationView = $navigationView;
 	}
 
@@ -29,7 +29,7 @@ final class NavigationViewPresenter {
 	 */
 	public function getFromTitle( $output, string $title ) {
 		$this->doSetup( $output );
-		$jsonEntity = $this->jsonEntityFactory->newFromTitle( $title );
+		$jsonEntity = $this->navigationFactory->newFromTitle( $title );
 		if ( $jsonEntity === false ) {
 			return false;
 		}
@@ -45,7 +45,7 @@ final class NavigationViewPresenter {
 	public function getFromSource( $output, array $content ) : Tag {
 		$this->doSetup( $output );
 		return $this->navigationView->getView(
-			$this->jsonEntityFactory->newFromSource( $content )
+			$this->navigationFactory->newFromSource( $content )
 		);
 	}
 

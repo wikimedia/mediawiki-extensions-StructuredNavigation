@@ -5,7 +5,7 @@ namespace StructuredNavigation\Api;
 use ApiBase;
 use ApiQuery;
 use ApiQueryBase;
-use StructuredNavigation\Json\JsonEntityFactory;
+use StructuredNavigation\NavigationFactory;
 
 /**
  * This API module allows querying the JSON of a given navigation
@@ -18,16 +18,16 @@ final class ApiQueryNavigationData extends ApiQueryBase {
 	private const PARAM_TITLE = 'title';
 	private const PREFIX = 'snqnd';
 
-	private JsonEntityFactory $jsonEntityFactory;
+	private NavigationFactory $navigationFactory;
 
 	/** @inheritDoc */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
-		JsonEntityFactory $jsonEntityFactory
+		NavigationFactory $navigationFactory
 	) {
 		parent::__construct( $apiQuery, $moduleName, self::PREFIX );
-		$this->jsonEntityFactory = $jsonEntityFactory;
+		$this->navigationFactory = $navigationFactory;
 	}
 
 	/** @inheritDoc */
@@ -38,7 +38,7 @@ final class ApiQueryNavigationData extends ApiQueryBase {
 		$this->getResult()->addValue(
 			'query',
 			$this->getModuleName(),
-			[ $title => $this->jsonEntityFactory->newFromTitle( $title )->getContent() ]
+			[ $title => $this->navigationFactory->newFromTitle( $title )->getContent() ]
 		);
 	}
 

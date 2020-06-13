@@ -6,9 +6,6 @@ use TitleParser;
 use TitleValue;
 
 /**
- * Service which retrieves a page in the Navigation namespace
- * and returns it as a TitleValue object.
- *
  * @license MIT
  */
 class NavigationTitleValue {

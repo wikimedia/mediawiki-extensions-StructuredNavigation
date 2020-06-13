@@ -4,7 +4,7 @@ namespace StructuredNavigation\View;
 
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
-use StructuredNavigation\Json\JsonEntity;
+use StructuredNavigation\Navigation;
 use StructuredNavigation\Libs\OOUI\Element\DescriptionList;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
 
@@ -37,34 +37,34 @@ final class NavigationView {
 		$this->contentLinkView = $contentLinkView;
 	}
 
-	public function getView( JsonEntity $jsonEntity ) : Tag {
+	public function getView( Navigation $navigation ) : Tag {
 		return ( new Tag( 'nav' ) )
 			->addClasses( [ self::CSS_CLASS['nav'] ] )
 			->appendContent( new HtmlSnippet(
-				$this->doRenderHeader( $jsonEntity ) .
-				$this->doRenderGroups( $jsonEntity )
+				$this->doRenderHeader( $navigation ) .
+				$this->doRenderGroups( $navigation )
 			) );
 	}
 
-	private function doRenderHeader( JsonEntity $jsonEntity ) : Tag {
+	private function doRenderHeader( Navigation $navigation ) : Tag {
 		return ( new Tag( 'header' ) )
 			->addClasses( [ self::CSS_CLASS['header'] ] )
 			->appendContent( new HtmlSnippet(
 				( new Tag( 'h2' ) )
 					->addClasses( [ self::CSS_CLASS['header-title'] ] )
-					->appendContent( $jsonEntity->getTitleLabel() )
+					->appendContent( $navigation->getTitleLabel() )
 					->toString()
 			) );
 	}
 
-	private function doRenderGroups( JsonEntity $jsonEntity ) : DescriptionList {
+	private function doRenderGroups( Navigation $navigation ) : DescriptionList {
 		$allGroups = [];
-		$groups = $jsonEntity->getGroups();
+		$groups = $navigation->getGroups();
 
 		foreach ( $groups as $group ) {
 			$allGroups[] = [
-				'term' => $jsonEntity->getGroupTitleLabel( $group ),
-				'detail' => $this->doRenderContent( $jsonEntity->getGroupContent( $group ) )
+				'term' => $navigation->getGroupTitleLabel( $group ),
+				'detail' => $this->doRenderContent( $navigation->getGroupContent( $group ) )
 			];
 		}
 

@@ -1,34 +1,33 @@
 <?php
 
-namespace StructuredNavigation\Json;
+namespace StructuredNavigation;
 
 use FormatJson;
+use StructuredNavigation\Navigation;
 use StructuredNavigation\Title\NavigationTitleValue;
 use Title;
 use WikiPage;
 
 /**
- * This factory allows creating a JsonEntity object from a given source.
- *
  * @license MIT
  */
-class JsonEntityFactory {
+class NavigationFactory {
 	private NavigationTitleValue $navigationTitleValue;
 
 	public function __construct( NavigationTitleValue $navigationTitleValue ) {
 		$this->navigationTitleValue = $navigationTitleValue;
 	}
 
-	public function newFromSource( array $source ) : JsonEntity {
-		return new JsonEntity( $source );
+	public function newFromSource( array $source ) : Navigation {
+		return new Navigation( $source );
 	}
 
 	/**
-	 * Attempts to make a new JsonEntity from a given title.
+	 * Attempts to make a new Navigation object from a given title.
 	 * Returns false otherwise if the title doesn't exist.
 	 *
 	 * @param string $passedTitle
-	 * @return JsonEntity|false
+	 * @return Navigation|false
 	 */
 	public function newFromTitle( string $passedTitle ) {
 		$title = Title::newFromTitleValue( $this->navigationTitleValue->getTitleValue( $passedTitle ) );
@@ -37,7 +36,7 @@ class JsonEntityFactory {
 			return false;
 		}
 
-		return new JsonEntity(
+		return new Navigation(
 			FormatJson::decode(
 				WikiPage::factory( $title )->getContent()->getNativeData(), true
 			)

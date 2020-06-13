@@ -7,8 +7,8 @@ use ConfigException;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\DocumentationContent;
-use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
+use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
@@ -47,8 +47,8 @@ final class Services {
 		return $this->services->getService( 'StructuredNavigation.ContentLinkView' );
 	}
 
-	public function getJsonEntityFactory() : JsonEntityFactory {
-		return $this->services->getService( 'StructuredNavigation.JsonEntityFactory' );
+	public function getNavigationFactory() : NavigationFactory {
+		return $this->services->getService( 'StructuredNavigation.NavigationFactory' );
 	}
 
 	public function getNamespacedTitleSearcher() : NamespacedTitleSearcher {

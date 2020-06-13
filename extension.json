@@ -76,7 +76,7 @@
 		"structurednavigationnavigationdata": {
 			"class": "StructuredNavigation\\Api\\ApiQueryNavigationData",
 			"services": [
-				"StructuredNavigation.JsonEntityFactory"
+				"StructuredNavigation.NavigationFactory"
 			]
 		},
 		"structurednavigationnavigationhtml": {

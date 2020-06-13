@@ -2,8 +2,8 @@
 
 namespace StructuredNavigation\Title;
 
-use StructuredNavigation\Json\JsonEntity;
-use StructuredNavigation\Json\JsonEntityFactory;
+use StructuredNavigation\Navigation;
+use StructuredNavigation\NavigationFactory;
 
 /**
  * This service retrieves all titles that are being used
@@ -12,14 +12,14 @@ use StructuredNavigation\Json\JsonEntityFactory;
  * @license MIT
  */
 final class QueryTitlesUsedLookup {
-	private JsonEntityFactory $jsonEntityFactory;
+	private NavigationFactory $navigationFactory;
 
-	public function __construct( JsonEntityFactory $jsonEntityFactory ) {
-		$this->jsonEntityFactory = $jsonEntityFactory;
+	public function __construct( NavigationFactory $navigationFactory ) {
+		$this->navigationFactory = $navigationFactory;
 	}
 
 	public function getTitlesUsed( string $navigationTitle ) : array {
-		$jsonEntity = $this->getJsonEntity( $navigationTitle );
+		$jsonEntity = $this->getNavigation( $navigationTitle );
 		$titlesUsed = [];
 		$allGroups = $jsonEntity->getGroups();
 
@@ -36,7 +36,7 @@ final class QueryTitlesUsedLookup {
 		return array_unique( $titlesUsed );
 	}
 
-	private function getJsonEntity( string $title ) : JsonEntity {
-		return $this->jsonEntityFactory->newFromTitle( $title );
+	private function getNavigation( string $title ) : Navigation {
+		return $this->navigationFactory->newFromTitle( $title );
 	}
 }

@@ -7,8 +7,8 @@ use MediaWiki\MediaWikiServices;
 use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Json\DocumentationContent;
-use StructuredNavigation\Json\JsonEntityFactory;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
+use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\ContentLinkView;
@@ -33,9 +33,9 @@ return [
 		);
 		},
 
-	'StructuredNavigation.JsonEntityFactory'
-		=> function ( MediaWikiServices $services ) : JsonEntityFactory {
-		return new JsonEntityFactory(
+	'StructuredNavigation.NavigationFactory'
+		=> function ( MediaWikiServices $services ) : NavigationFactory {
+		return new NavigationFactory(
 			( new Services( $services ) )->getNavigationTitleValue()
 		);
 		},
@@ -62,7 +62,7 @@ return [
 		$wrapper = new Services( $services );
 
 		return new NavigationViewPresenter(
-			$wrapper->getJsonEntityFactory(),
+			$wrapper->getNavigationFactory(),
 			$wrapper->getNavigationView()
 		);
 		},
@@ -78,7 +78,7 @@ return [
 	'StructuredNavigation.QueryTitlesUsedLookup'
 		=> function ( MediaWikiServices $services ) : QueryTitlesUsedLookup {
 		return new QueryTitlesUsedLookup(
-			( new Services( $services ) )->getJsonEntityFactory()
+			( new Services( $services ) )->getNavigationFactory()
 		);
 		},
 
