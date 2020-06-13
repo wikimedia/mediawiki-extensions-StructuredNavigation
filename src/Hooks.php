@@ -42,5 +42,4 @@ final class Hooks {
 		$reservedUsernames[] = Services::getInstance()->getConfig()
 			->get( 'ReservedUsername' );
 	}
-
 }

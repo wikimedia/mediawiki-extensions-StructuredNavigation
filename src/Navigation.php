@@ -1,41 +1,37 @@
 <?php
 
-namespace StructuredNavigation\Json;
+namespace StructuredNavigation;
 
 /**
- * This provides basic read access to a navigation's JSON
- * which is assumed to have been decoded into an associative
- * PHP array.
- *
  * @license MIT
  */
-final class JsonEntity {
+class Navigation {
 	private array $content;
+	private array $config;
+	private string $titleLabel;
+	private array $groups;
 
 	public function __construct( array $content ) {
 		$this->content = $content;
+		$this->config = $this->content['config'];
+		$this->titleLabel = $this->config['title']['label'];
+		$this->groups = $this->content['groups'];
 	}
 
-	/**
-	 * Returns the entire JSON blob. This should only be used
-	 * if you need access to the **entire** blob at once. If
-	 * you need more specific details, you should be calling
-	 * the other methods instead.
-	 */
 	public function getContent() : array {
 		return $this->content;
 	}
 
 	public function getConfig() : array {
-		return $this->content['config'];
+		return $this->config;
 	}
 
 	public function getTitleLabel() : string {
-		return $this->findTitleLabel( $this->getConfig() );
+		return $this->titleLabel;
 	}
 
 	public function getGroups() : array {
-		return $this->content['groups'];
+		return $this->groups;
 	}
 
 	public function getGroupTitleLabel( array $group ) : string {

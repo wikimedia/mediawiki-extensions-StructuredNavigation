@@ -59,5 +59,4 @@ final class NavigationViewPresenter {
 			'ext.structurednavigation.ui.structurednavigation.separator.styles'
 		] );
 	}
-
 }

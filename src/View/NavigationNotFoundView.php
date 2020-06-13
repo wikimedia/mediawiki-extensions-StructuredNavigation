@@ -46,5 +46,4 @@ final class NavigationNotFoundView {
 	private function getMessage( string $msg ) : string {
 		return $this->messageLocalizer->msg( $msg )->plain();
 	}
-
 }
