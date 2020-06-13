@@ -4,9 +4,9 @@ namespace StructuredNavigation\View;
 
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
-use StructuredNavigation\Navigation;
 use StructuredNavigation\Libs\OOUI\Element\DescriptionList;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
+use StructuredNavigation\Navigation;
 
 /**
  * Renders a structured navigation view. This by default does

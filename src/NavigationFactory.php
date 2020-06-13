@@ -3,7 +3,6 @@
 namespace StructuredNavigation;
 
 use FormatJson;
-use StructuredNavigation\Navigation;
 use StructuredNavigation\Title\NavigationTitleValue;
 use Title;
 use WikiPage;
