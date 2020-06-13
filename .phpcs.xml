@@ -2,6 +2,7 @@
 <ruleset>
 	<file>.</file>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate" />
 		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.Found" />
 		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.ReturnTypeFound" />
 		<exclude name="MediaWiki.PHP71Features.NullableType.NotAllowed" />

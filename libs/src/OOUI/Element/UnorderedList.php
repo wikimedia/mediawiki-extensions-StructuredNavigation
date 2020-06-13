@@ -3,8 +3,8 @@
 namespace StructuredNavigation\Libs\OOUI\Element;
 
 use OOUI\Element;
-use OOUI\HtmlSnippet;
 use OOUI\GroupElement;
+use OOUI\HtmlSnippet;
 use OOUI\Tag;
 
 /**

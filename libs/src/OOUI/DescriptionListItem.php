@@ -25,19 +25,19 @@ class DescriptionListItem {
 	private const ELEMENT_CONTAINER = 'div';
 
 	/**
+	 * @param string $termContent
+	 * @param string $detailContent
 	 * @param array $config
 	 * 	bool $config['use-div-container'] Whether or not to contain this item in a <div>
 	 * 	array $config['term-attributes'] HTML Attributes to apply to <dt>
 	 * 	array $config['detail-attributes'] HTML Attributes to apply to <dd>
 	 * 	array $config['container-attributes'] HTML Attributes to apply to <div> container
-	 * @param string $termContent
-	 * @param string $detailContent
 	 * @return Tag|HtmlSnippet
 	 */
 	public function getItem(
-		array $config = [],
 		string $termContent,
-		string $detailContent
+		string $detailContent,
+		array $config = []
 	) {
 		$htmlPair = new HtmlSnippet(
 			$this->getTerm( $config )->appendContent( new HtmlSnippet( $termContent ) ) .

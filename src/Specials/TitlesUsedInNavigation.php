@@ -2,13 +2,13 @@
 
 namespace StructuredNavigation\Specials;
 
+use FormSpecialPage;
 use HTMLForm;
 use HTMLTitleTextField;
-use FormSpecialPage;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
-use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\Title\NavigationTitleValue;
+use StructuredNavigation\Title\QueryTitlesUsedLookup;
 
 /**
  * This special page allows looking up all the titles used for

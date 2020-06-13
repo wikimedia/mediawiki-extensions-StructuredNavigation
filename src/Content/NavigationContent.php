@@ -4,10 +4,10 @@ namespace StructuredNavigation\Content;
 
 use FormatJson;
 use JsonContent;
-use Title;
 use ParserOptions;
 use ParserOutput;
 use StructuredNavigation\Services\Services;
+use Title;
 
 /**
  * Content object for representing a structured navigation.

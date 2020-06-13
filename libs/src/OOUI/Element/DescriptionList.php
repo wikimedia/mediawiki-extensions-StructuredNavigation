@@ -41,7 +41,7 @@ class DescriptionList extends Element {
 
 			foreach ( $config['items'] as $item ) {
 				$allItems[] = $descriptionListItem->getItem(
-					$config, $item['term'], $item['detail']
+					$item['term'], $item['detail'], $config
 				);
 			}
 

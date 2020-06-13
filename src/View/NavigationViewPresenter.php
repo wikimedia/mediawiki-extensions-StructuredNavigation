@@ -2,8 +2,8 @@
 
 namespace StructuredNavigation\View;
 
-use OutputPage;
 use OOUI\Tag;
+use OutputPage;
 use ParserOutput;
 use StructuredNavigation\Json\JsonEntityFactory;
 

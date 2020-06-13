@@ -23,7 +23,7 @@ return [
 	'StructuredNavigation.Config'
 		=> function ( MediaWikiServices $services ) : Config {
 		return $services->getConfigFactory()->makeConfig( 'structurednavigation' );
-	},
+		},
 
 	'StructuredNavigation.ContentLinkView'
 		=> function ( MediaWikiServices $services ) : ContentLinkView {
@@ -31,31 +31,31 @@ return [
 			$services->getLinkRenderer(),
 			$services->getTitleParser()
 		);
-	},
+		},
 
 	'StructuredNavigation.JsonEntityFactory'
 		=> function ( MediaWikiServices $services ) : JsonEntityFactory {
 		return new JsonEntityFactory(
 			( new Services( $services ) )->getNavigationTitleValue()
 		);
-	},
+		},
 
 	'StructuredNavigation.NamespacedTitleSearcher'
 		=> function ( MediaWikiServices $services ) : NamespacedTitleSearcher {
 		return new NamespacedTitleSearcher( $services->newSearchEngine() );
-	},
+		},
 
 	'StructuredNavigation.NavigationTitleValue'
 		=> function ( MediaWikiServices $services ) : NavigationTitleValue {
 		return new NavigationTitleValue( $services->getTitleParser() );
-	},
+		},
 
 	'StructuredNavigation.NavigationView'
 		=> function ( MediaWikiServices $services ) : NavigationView {
 		return new NavigationView(
 			( new Services( $services ) )->getContentLinkView()
 		);
-	},
+		},
 
 	'StructuredNavigation.NavigationViewPresenter'
 		=> function ( MediaWikiServices $services ) : NavigationViewPresenter {
@@ -65,7 +65,7 @@ return [
 			$wrapper->getJsonEntityFactory(),
 			$wrapper->getNavigationView()
 		);
-	},
+		},
 
 	'StructuredNavigation.ParserFirstCallInitHandler'
 		=> function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
@@ -73,20 +73,20 @@ return [
 			new AttributeQualifier(),
 			( new Services( $services ) )->getNavigationViewPresenter()
 		);
-	},
+		},
 
 	'StructuredNavigation.QueryTitlesUsedLookup'
 		=> function ( MediaWikiServices $services ) : QueryTitlesUsedLookup {
 		return new QueryTitlesUsedLookup(
 			( new Services( $services ) )->getJsonEntityFactory()
 		);
-	},
+		},
 
 	'StructuredNavigation.DocumentationContent'
 		=> function ( MediaWikiServices $services ) : DocumentationContent {
 		return new DocumentationContent(
 			$services->getMainConfig()->get( 'ExtensionDirectory' )
 		);
-	},
+		},
 
 ];

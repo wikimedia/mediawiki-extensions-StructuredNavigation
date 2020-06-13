@@ -3,9 +3,9 @@
 namespace StructuredNavigation\Json;
 
 use FormatJson;
-use WikiPage;
 use StructuredNavigation\Title\NavigationTitleValue;
 use Title;
+use WikiPage;
 
 /**
  * This factory allows creating a JsonEntity object from a given source.
