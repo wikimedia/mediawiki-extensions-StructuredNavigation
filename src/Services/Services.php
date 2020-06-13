@@ -25,20 +25,12 @@ use UnexpectedValueException;
  * @license MIT
  */
 final class Services {
+	private MediaWikiServices $services;
 
-	/** @var MediaWikiServices */
-	private $services;
-
-	/**
-	 * @param MediaWikiServices $services
-	 */
 	public function __construct( MediaWikiServices $services ) {
 		$this->services = $services;
 	}
 
-	/**
-	 * @return Services
-	 */
 	public static function getInstance() : Services {
 		return new self( MediaWikiServices::getInstance() );
 	}
@@ -51,67 +43,39 @@ final class Services {
 		return $this->services->getService( 'StructuredNavigation.Config' );
 	}
 
-	/**
-	 * @return ContentLinkView
-	 */
 	public function getContentLinkView() : ContentLinkView {
 		return $this->services->getService( 'StructuredNavigation.ContentLinkView' );
 	}
 
-	/**
-	 * @return JsonEntityFactory
-	 */
 	public function getJsonEntityFactory() : JsonEntityFactory {
 		return $this->services->getService( 'StructuredNavigation.JsonEntityFactory' );
 	}
 
-	/**
-	 * @return NamespacedTitleSearcher
-	 */
 	public function getNamespacedTitleSearcher() : NamespacedTitleSearcher {
 		return $this->services->getService( 'StructuredNavigation.NamespacedTitleSearcher' );
 	}
 
-	/**
-	 * @return NavigationTitleValue
-	 */
 	public function getNavigationTitleValue() : NavigationTitleValue {
 		return $this->services->getService( 'StructuredNavigation.NavigationTitleValue' );
 	}
 
-	/**
-	 * @return NavigationView
-	 */
 	public function getNavigationView() : NavigationView {
 		return $this->services->getService( 'StructuredNavigation.NavigationView' );
 	}
 
-	/**
-	 * @return NavigationViewPresenter
-	 */
 	public function getNavigationViewPresenter() : NavigationViewPresenter {
 		return $this->services->getService( 'StructuredNavigation.NavigationViewPresenter' );
 	}
 
-	/**
-	 * @return ParserFirstCallInitHandler
-	 */
 	public function getParserFirstCallInitHandler() : ParserFirstCallInitHandler {
 		return $this->services->getService( 'StructuredNavigation.ParserFirstCallInitHandler' );
 	}
 
-	/**
-	 * @return QueryTitlesUsedLookup
-	 */
 	public function getQueryTitlesUsedLookup() : QueryTitlesUsedLookup {
 		return $this->services->getService( 'StructuredNavigation.QueryTitlesUsedLookup' );
 	}
 
-	/**
-	 * @return DocumentationContent
-	 */
 	public function getDocumentationContent() : DocumentationContent {
 		return $this->services->getService( 'StructuredNavigation.DocumentationContent' );
 	}
-
 }

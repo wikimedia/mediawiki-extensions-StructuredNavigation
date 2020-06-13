@@ -11,17 +11,9 @@ use TitleParser;
  * @license MIT
  */
 final class ContentLinkView {
+	private LinkRenderer $linkRenderer;
+	private TitleParser $titleParser;
 
-	/** @var LinkRenderer */
-	private $linkRenderer;
-
-	/** @var TitleParser */
-	private $titleParser;
-
-	/**
-	 * @param LinkRenderer $linkRenderer
-	 * @param TitleParser $titleParser
-	 */
 	public function __construct(
 		LinkRenderer $linkRenderer,
 		TitleParser $titleParser
@@ -46,5 +38,4 @@ final class ContentLinkView {
 
 		return $this->linkRenderer->makeLink( $parsedTitle, $label, $attributes );
 	}
-
 }

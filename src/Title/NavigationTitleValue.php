@@ -12,23 +12,13 @@ use TitleValue;
  * @license MIT
  */
 class NavigationTitleValue {
+	private TitleParser $titleParser;
 
-	/** @var TitleParser */
-	private $titleParser;
-
-	/**
-	 * @param TitleParser $titleParser
-	 */
 	public function __construct( TitleParser $titleParser ) {
 		$this->titleParser = $titleParser;
 	}
 
-	/**
-	 * @param string $title
-	 * @return TitleValue
-	 */
 	public function getTitleValue( string $title ) : TitleValue {
 		return $this->titleParser->parseTitle( $title, NS_NAVIGATION );
 	}
-
 }

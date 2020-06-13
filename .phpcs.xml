@@ -2,7 +2,14 @@
 <ruleset>
 	<file>.</file>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<!-- a big chunk of the comments would be redundant when the code is strongly typehinted and well named -->
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
+		<!-- don't need to document private methods -->
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate" />
+		<!-- same as above -->
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag" />
+
+		<!-- I like typehints, so ¯\_(ツ)_/¯ -->
 		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.Found" />
 		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.ReturnTypeFound" />
 		<exclude name="MediaWiki.PHP71Features.NullableType.NotAllowed" />

@@ -14,18 +14,12 @@ use StructuredNavigation\View\NavigationViewPresenter;
  * @license MIT
  */
 final class ApiQueryNavigationHtml extends ApiQueryBase {
-
 	private const PARAM_TITLE = 'title';
 	private const PREFIX = 'snqnh';
 
-	/** @var NavigationViewPresenter */
-	private $navigationViewPresenter;
+	private NavigationViewPresenter $navigationViewPresenter;
 
-	/**
-	 * @param ApiQuery $apiQuery
-	 * @param string $moduleName
-	 * @param NavigationViewPresenter $navigationViewPresenter
-	 */
+	/** @inheritDoc */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
@@ -74,5 +68,4 @@ final class ApiQueryNavigationHtml extends ApiQueryBase {
 				=> 'apihelp-query+structurednavigationnavigationhtml-example',
 		];
 	}
-
 }

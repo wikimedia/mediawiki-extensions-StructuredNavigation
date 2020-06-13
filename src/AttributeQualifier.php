@@ -10,7 +10,6 @@ use OOUI\Tag;
  * @license MIT
  */
 final class AttributeQualifier {
-
 	private const ATTR_DATA_NAME = 'data-structurednavigation-name';
 
 	/**

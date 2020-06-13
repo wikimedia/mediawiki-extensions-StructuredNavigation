@@ -17,27 +17,16 @@ use StructuredNavigation\Title\QueryTitlesUsedLookup;
  * @license MIT
  */
 final class TitlesUsedInNavigation extends FormSpecialPage {
-
 	private const FIELD_TITLE = 'title';
 	private const MESSAGE_LEGEND = 'specials-titlesusedinnavigation-legend';
 	private const MESSAGE_TITLE_LABEL = 'specials-titlesusedinnavigation-field-title-label';
 	private const MESSAGE_TITLE_PLACEHOLDER = 'specials-titlesusedinnavigation-field-title-placeholder';
 	private const PAGE_NAME = 'TitlesUsedInNavigation';
 
-	/** @var QueryTitlesUsedLookup */
-	private $queryTitlesUsedLookup;
+	private QueryTitlesUsedLookup $queryTitlesUsedLookup;
+	private NamespacedTitleSearcher $namespacedTitleSearcher;
+	private NavigationTitleValue $navigationTitleValue;
 
-	/** @var NamespacedTitleSearcher */
-	private $namespacedTitleSearcher;
-
-	/** @var NavigationTitleValue */
-	private $navigationTitleValue;
-
-	/**
-	 * @param QueryTitlesUsedLookup $queryTitlesUsedLookup
-	 * @param NamespacedTitleSearcher $namespacedTitleSearcher
-	 * @param NavigationTitleValue $navigationTitleValue
-	 */
 	public function __construct(
 		QueryTitlesUsedLookup $queryTitlesUsedLookup,
 		NamespacedTitleSearcher $namespacedTitleSearcher,
@@ -98,10 +87,6 @@ final class TitlesUsedInNavigation extends FormSpecialPage {
 			->getTitlesInNamespace( $search, $limit, $offset, NS_NAVIGATION );
 	}
 
-	/**
-	 * @param string $title
-	 * @return UnorderedList
-	 */
 	private function getTitleList( string $title ) : UnorderedList {
 		return new UnorderedList( [
 			'items' => $this->queryTitlesUsedLookup

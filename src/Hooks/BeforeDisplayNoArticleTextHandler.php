@@ -10,25 +10,17 @@ use StructuredNavigation\View\NavigationNotFoundView;
  * @license MIT
  */
 final class BeforeDisplayNoArticleTextHandler {
-
 	private const RESOURCELOADER_MODULES = [
 		'ext.structurednavigation.libs.view.emptystate.styles',
 		'ext.structurednavigation.view.navigationnotfound.styles',
 	];
 
-	/** @var Article */
-	private $article;
+	private Article $article;
 
-	/**
-	 * @param Article $article
-	 */
 	public function __construct( Article $article ) {
 		$this->article = $article;
 	}
 
-	/**
-	 * @return bool
-	 */
 	public function getHandler() : bool {
 		if ( $this->article->getPage()->getContentModel() !== CONTENT_MODEL_NAVIGATION ) {
 			return true;
@@ -53,5 +45,4 @@ final class BeforeDisplayNoArticleTextHandler {
 			) )->getView()
 		);
 	}
-
 }

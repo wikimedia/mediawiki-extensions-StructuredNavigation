@@ -14,18 +14,12 @@ use StructuredNavigation\Title\QueryTitlesUsedLookup;
  * @license MIT
  */
 final class ApiQueryTitlesUsed extends ApiQueryBase {
-
 	private const PARAM_TITLE = 'title';
 	private const PREFIX = 'snqtu';
 
-	/** @var QueryTitlesUsedLookup */
-	private $queryTitlesUsedLookup;
+	private QueryTitlesUsedLookup $queryTitlesUsedLookup;
 
-	/**
-	 * @param ApiQuery $apiQuery
-	 * @param string $moduleName
-	 * @param QueryTitlesUsedLookup $queryTitlesUsedLookup
-	 */
+	/** @inheritDoc */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
@@ -69,5 +63,4 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 				=> 'apihelp-query+structurednavigationtitlesused-example',
 		];
 	}
-
 }

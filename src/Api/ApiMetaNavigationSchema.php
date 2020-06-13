@@ -13,15 +13,9 @@ use StructuredNavigation\Json\DocumentationContent;
  * @license MIT
  */
 final class ApiMetaNavigationSchema extends ApiQueryBase {
+	private DocumentationContent $documentationContent;
 
-	/** @var DocumentationContent */
-	private $documentationContent;
-
-	/**
-	 * @param ApiQuery $apiQuery
-	 * @param string $moduleName
-	 * @param DocumentationContent $documentationContent
-	 */
+	/** @inheritDoc */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
@@ -47,5 +41,4 @@ final class ApiMetaNavigationSchema extends ApiQueryBase {
 				=> 'apihelp-query+structurednavigationschema-example',
 		];
 	}
-
 }

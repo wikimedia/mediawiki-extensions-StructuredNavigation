@@ -12,21 +12,12 @@ use StructuredNavigation\Json\JsonEntityFactory;
  * @license MIT
  */
 final class QueryTitlesUsedLookup {
+	private JsonEntityFactory $jsonEntityFactory;
 
-	/** @var JsonEntityFactory */
-	private $jsonEntityFactory;
-
-	/**
-	 * @param JsonEntityFactory $jsonEntityFactory
-	 */
 	public function __construct( JsonEntityFactory $jsonEntityFactory ) {
 		$this->jsonEntityFactory = $jsonEntityFactory;
 	}
 
-	/**
-	 * @param string $navigationTitle
-	 * @return string[]
-	 */
 	public function getTitlesUsed( string $navigationTitle ) : array {
 		$jsonEntity = $this->getJsonEntity( $navigationTitle );
 		$titlesUsed = [];
@@ -45,12 +36,7 @@ final class QueryTitlesUsedLookup {
 		return array_unique( $titlesUsed );
 	}
 
-	/**
-	 * @param string $title
-	 * @return JsonEntity
-	 */
 	private function getJsonEntity( string $title ) : JsonEntity {
 		return $this->jsonEntityFactory->newFromTitle( $title );
 	}
-
 }

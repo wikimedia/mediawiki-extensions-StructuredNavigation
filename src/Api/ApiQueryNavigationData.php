@@ -15,18 +15,12 @@ use StructuredNavigation\Json\JsonEntityFactory;
  * @license MIT
  */
 final class ApiQueryNavigationData extends ApiQueryBase {
-
 	private const PARAM_TITLE = 'title';
 	private const PREFIX = 'snqnd';
 
-	/** @var JsonEntityFactory */
-	private $jsonEntityFactory;
+	private JsonEntityFactory $jsonEntityFactory;
 
-	/**
-	 * @param ApiQuery $apiQuery
-	 * @param string $moduleName
-	 * @param JsonEntityFactory $jsonEntityFactory
-	 */
+	/** @inheritDoc */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
@@ -70,5 +64,4 @@ final class ApiQueryNavigationData extends ApiQueryBase {
 				=> 'apihelp-query+structurednavigationnavigationdata-example',
 		];
 	}
-
 }

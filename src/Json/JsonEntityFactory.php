@@ -13,21 +13,12 @@ use WikiPage;
  * @license MIT
  */
 class JsonEntityFactory {
+	private NavigationTitleValue $navigationTitleValue;
 
-	/** @var NavigationTitleValue */
-	private $navigationTitleValue;
-
-	/**
-	 * @param NavigationTitleValue $navigationTitleValue
-	 */
 	public function __construct( NavigationTitleValue $navigationTitleValue ) {
 		$this->navigationTitleValue = $navigationTitleValue;
 	}
 
-	/**
-	 * @param array $source
-	 * @return JsonEntity
-	 */
 	public function newFromSource( array $source ) : JsonEntity {
 		return new JsonEntity( $source );
 	}
@@ -52,5 +43,4 @@ class JsonEntityFactory {
 			)
 		);
 	}
-
 }

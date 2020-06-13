@@ -13,19 +13,11 @@ use StructuredNavigation\View\NavigationViewPresenter;
  * @license MIT
  */
 final class ParserFirstCallInitHandler {
-
 	private const PAGE_PROPERTY = 'structurednavigation';
 
-	/** @var AttributeQualifier */
-	private $attributeQualifier;
+	private AttributeQualifier $attributeQualifier;
+	private NavigationViewPresenter $navigationViewPresenter;
 
-	/** @var NavigationViewPresenter */
-	private $navigationViewPresenter;
-
-	/**
-	 * @param AttributeQualifier $attributeQualifier
-	 * @param NavigationViewPresenter $navigationViewPresenter
-	 */
 	public function __construct(
 		AttributeQualifier $attributeQualifier,
 		NavigationViewPresenter $navigationViewPresenter
@@ -35,9 +27,6 @@ final class ParserFirstCallInitHandler {
 	}
 
 	/**
-	 * @param string|null $input
-	 * @param array $attributes
-	 * @param Parser $parser
 	 * @return Tag|false
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) {
@@ -55,12 +44,7 @@ final class ParserFirstCallInitHandler {
 		return $navigation;
 	}
 
-	/**
-	 * @param ParserOutput $parserOutput
-	 * @param string $title
-	 */
 	private function setPageProperty( ParserOutput $parserOutput, string $title ) : void {
 		$parserOutput->setProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
 	}
-
 }

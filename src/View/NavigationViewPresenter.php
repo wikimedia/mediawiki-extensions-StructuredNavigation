@@ -11,17 +11,9 @@ use StructuredNavigation\Json\JsonEntityFactory;
  * @license MIT
  */
 final class NavigationViewPresenter {
+	private JsonEntityFactory $jsonEntityFactory;
+	private NavigationView $navigationView;
 
-	/** @var JsonEntityFactory */
-	private $jsonEntityFactory;
-
-	/** @var NavigationView */
-	private $navigationView;
-
-	/**
-	 * @param JsonEntityFactory $jsonEntityFactory
-	 * @param NavigationView $navigationView
-	 */
 	public function __construct(
 		JsonEntityFactory $jsonEntityFactory,
 		NavigationView $navigationView
@@ -50,7 +42,7 @@ final class NavigationViewPresenter {
 	 * @param array $content
 	 * @return Tag
 	 */
-	public function getFromSource( $output, array $content ) {
+	public function getFromSource( $output, array $content ) : Tag {
 		$this->doSetup( $output );
 		return $this->navigationView->getView(
 			$this->jsonEntityFactory->newFromSource( $content )

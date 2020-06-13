@@ -18,7 +18,6 @@ use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
  * @license MIT
  */
 final class NavigationView {
-
 	private const CSS_CLASS = [
 		'groups' => 'mw-structurednav-groups-container',
 		'group' => 'mw-structurednav-group',
@@ -32,20 +31,12 @@ final class NavigationView {
 		'nav' => 'mw-structurednav-navigation-container'
 	];
 
-	/** @var ContentLinkView */
-	private $contentLinkView;
+	private ContentLinkView $contentLinkView;
 
-	/**
-	 * @param ContentLinkView $contentLinkView
-	 */
 	public function __construct( ContentLinkView $contentLinkView ) {
 		$this->contentLinkView = $contentLinkView;
 	}
 
-	/**
-	 * @param JsonEntity $jsonEntity
-	 * @return Tag
-	 */
 	public function getView( JsonEntity $jsonEntity ) : Tag {
 		return ( new Tag( 'nav' ) )
 			->addClasses( [ self::CSS_CLASS['nav'] ] )
@@ -55,10 +46,6 @@ final class NavigationView {
 			) );
 	}
 
-	/**
-	 * @param JsonEntity $jsonEntity
-	 * @return Tag
-	 */
 	private function doRenderHeader( JsonEntity $jsonEntity ) : Tag {
 		return ( new Tag( 'header' ) )
 			->addClasses( [ self::CSS_CLASS['header'] ] )
@@ -70,10 +57,6 @@ final class NavigationView {
 			) );
 	}
 
-	/**
-	 * @param JsonEntity $jsonEntity
-	 * @return DescriptionList
-	 */
 	private function doRenderGroups( JsonEntity $jsonEntity ) : DescriptionList {
 		$allGroups = [];
 		$groups = $jsonEntity->getGroups();
@@ -94,10 +77,6 @@ final class NavigationView {
 		] );
 	}
 
-	/**
-	 * @param array $content
-	 * @return UnorderedList
-	 */
 	private function doRenderContent( array $content ) : UnorderedList {
 		$allContent = [];
 

@@ -13,16 +13,11 @@ use StructuredNavigation\Json\DocumentationContent;
  * @license MIT
  */
 final class NavigationSchemaPage extends SpecialPage {
-
 	private const PAGE_NAME = 'NavigationSchema';
 	private const MESSAGE_SUBTITLE = 'specials-navigationschema-subtitle';
 
-	/** @var DocumentationContent */
-	private $documentationContent;
+	private DocumentationContent $documentationContent;
 
-	/**
-	 * @param DocumentationContent $documentationContent
-	 */
 	public function __construct( DocumentationContent $documentationContent ) {
 		parent::__construct( self::PAGE_NAME );
 		$this->documentationContent = $documentationContent;
@@ -42,13 +37,8 @@ final class NavigationSchemaPage extends SpecialPage {
 		);
 	}
 
-	/**
-	 * @param string $content
-	 * @return Tag
-	 */
 	private function getEmbeddedCodeView( string $content ) : Tag {
 		return ( new Tag( 'pre' ) )
 			->appendContent( $content );
 	}
-
 }

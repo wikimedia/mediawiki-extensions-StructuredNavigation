@@ -10,9 +10,7 @@ use StructuredNavigation\Json\DocumentationContent;
  * @license MIT
  */
 class ApiMetaNavigationExamples extends ApiQueryBase {
-
-	/** @var DocumentationContent */
-	private $documentationContent;
+	private DocumentationContent $documentationContent;
 
 	/** @inheritDoc */
 	public function __construct(
@@ -40,5 +38,4 @@ class ApiMetaNavigationExamples extends ApiQueryBase {
 				=> 'apihelp-query+structurednavigationexamples-example',
 		];
 	}
-
 }

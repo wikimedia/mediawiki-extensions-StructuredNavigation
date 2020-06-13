@@ -14,25 +14,14 @@ use Title;
  * @license MIT
  */
 final class NavigationNotFoundView {
-
 	private const MESSAGE_TITLE = 'structurednavigation-view-navigation-not-found-title';
 	private const MESSAGE_SUMMARY = 'structurednavigation-view-navigation-not-found-summary';
 	private const MESSAGE_BUTTON_LABEL = 'structurednavigation-view-navigation-not-found-button-label';
 
-	/** @var string */
-	private $extensionAssetsPath;
+	private string $extensionAssetsPath;
+	private MessageLocalizer $messageLocalizer;
+	private Title $title;
 
-	/** @var MessageLocalizer */
-	private $messageLocalizer;
-
-	/** @var Title */
-	private $title;
-
-	/**
-	 * @param string $extensionAssetsPath
-	 * @param MessageLocalizer $messageLocalizer
-	 * @param Title $title
-	 */
 	public function __construct(
 		string $extensionAssetsPath,
 		MessageLocalizer $messageLocalizer,
@@ -43,9 +32,6 @@ final class NavigationNotFoundView {
 		$this->title = $title;
 	}
 
-	/**
-	 * @return EmptyStateView
-	 */
 	public function getView() : EmptyStateView {
 		return new EmptyStateView( [
 			'imageSource' => "{$this->extensionAssetsPath}/StructuredNavigation/resources/"

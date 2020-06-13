@@ -11,7 +11,6 @@ use StructuredNavigation\Services\Services;
  * @license MIT
  */
 final class Hooks {
-
 	private const PARSER_TAG = 'mw-navigation';
 	private const PARSER_TAG_METHOD = 'getParserHandler';
 

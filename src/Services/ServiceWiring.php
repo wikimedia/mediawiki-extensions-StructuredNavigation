@@ -88,5 +88,4 @@ return [
 			$services->getMainConfig()->get( 'ExtensionDirectory' )
 		);
 		},
-
 ];

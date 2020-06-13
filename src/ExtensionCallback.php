@@ -8,7 +8,6 @@ use GlobalVarConfig;
  * @license MIT
  */
 class ExtensionCallback {
-
 	private const CONFIG_PREFIX = 'wgStructuredNavigation';
 
 	/**

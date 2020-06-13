@@ -10,7 +10,6 @@ namespace StructuredNavigation\Json;
  * @license MIT
  */
 final class JsonEntity {
-
 	/** @var array */
 	private $content;
 
@@ -77,5 +76,4 @@ final class JsonEntity {
 	private function findTitleLabel( array $item ) : string {
 		return $item['title']['label'];
 	}
-
 }
