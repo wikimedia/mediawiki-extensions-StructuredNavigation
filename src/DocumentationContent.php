@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Json;
+namespace StructuredNavigation;
 
 /**
  * Represents the JSON from the extension's documentation, which includes

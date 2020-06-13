@@ -5,8 +5,8 @@ namespace StructuredNavigation\Services;
 use Config;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\AttributeQualifier;
+use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
-use StructuredNavigation\Json\DocumentationContent;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
@@ -18,7 +18,6 @@ use StructuredNavigation\View\NavigationViewPresenter;
 /**
  * @license MIT
  */
-
 return [
 	'StructuredNavigation.Config'
 		=> function ( MediaWikiServices $services ) : Config {

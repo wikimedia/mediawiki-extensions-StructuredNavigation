@@ -4,7 +4,7 @@ namespace StructuredNavigation\Api;
 
 use ApiQuery;
 use ApiQueryBase;
-use StructuredNavigation\Json\DocumentationContent;
+use StructuredNavigation\DocumentationContent;
 
 /**
  * This API module allows querying for the JSON schema used by

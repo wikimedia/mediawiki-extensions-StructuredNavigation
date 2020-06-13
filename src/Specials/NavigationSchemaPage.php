@@ -4,7 +4,7 @@ namespace StructuredNavigation\Specials;
 
 use OOUI\Tag;
 use SpecialPage;
-use StructuredNavigation\Json\DocumentationContent;
+use StructuredNavigation\DocumentationContent;
 
 /**
  * This special page allows viewing the schema used by the extension

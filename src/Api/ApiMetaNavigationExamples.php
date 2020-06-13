@@ -4,7 +4,7 @@ namespace StructuredNavigation\Api;
 
 use ApiQuery;
 use ApiQueryBase;
-use StructuredNavigation\Json\DocumentationContent;
+use StructuredNavigation\DocumentationContent;
 
 /**
  * @license MIT
