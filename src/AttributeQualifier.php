@@ -16,9 +16,6 @@ final class AttributeQualifier {
 	 * This will automatically assign the `data-structurednavigation-name`
 	 * attribute by default. If the `id` attribute is set by the user, it'll
 	 * also assign that as an attribute.
-	 *
-	 * @param Tag $navigation
-	 * @param array $attributes
 	 */
 	public function setAttributes( Tag $navigation, array $attributes ) : void {
 		$navigation->setAttributes( [
@@ -32,10 +29,6 @@ final class AttributeQualifier {
 		}
 	}
 
-	/**
-	 * @param string $attribute
-	 * @return string
-	 */
 	private function escapeAttributeContent( string $attribute ) : string {
 		return htmlspecialchars( $attribute, ENT_QUOTES );
 	}
