@@ -14,11 +14,6 @@
 		"fix": [
 			"minus-x fix .",
 			"phpcbf"
-		],
-		"metrics": [
-			"phploc src",
-			"phploc libs/src",
-			"phpmetrics --report-html=docs/phpmetrics ."
 		]
 	}
 }
