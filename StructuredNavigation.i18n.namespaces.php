@@ -12,7 +12,7 @@ if ( !defined( 'NS_NAVIGATION' ) ) {
 
 /**
  * English
- * @author Samantha Nguyen < samanthanguyen111@gmail.com >
+ * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 $namespaceNames['en'] = [
 	NS_NAVIGATION => 'Navigation',

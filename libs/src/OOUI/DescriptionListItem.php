@@ -11,7 +11,7 @@ use OOUI\Tag;
  * a <div> container (uses a container by default).
  *
  * @license MIT
- * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
+ * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 class DescriptionListItem {
 

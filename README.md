@@ -16,11 +16,6 @@
 	</a>
 </p>
 
-## Play with this extension
-A public demo of this extension is available at https://structurednavigation.wmflabs.org. Feel free to experiment to see how the extension works in real time without having to setup MediaWiki and install this extension locally. You can read how to use it in the section below. Note that this site is a Cloud VPS project provided by [Wikimedia Cloud Services team](https://www.mediawiki.org/wiki/Wikimedia_Cloud_Services_team), and thus governed under their [Cloud Services Terms of Use](https://wikitech.wikimedia.org/wiki/Wikitech:Cloud_Services_Terms_of_use). By using the site, you agree to the terms of use.
-
-Thank you!
-
 ## How to Use
 <p align="center">
 	<img src="/resources/images/how-to-process.png" width="800px">

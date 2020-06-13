@@ -7,7 +7,7 @@ $specialPageAliases = [];
 
 /**
  * English
- * @author Samantha Nguyen < samanthanguyen111@gmail.com >
+ * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 $specialPageAliases['en'] = [
 	'NavigationSchema' => [ 'NavigationSchema' ],
