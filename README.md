@@ -34,7 +34,7 @@ Are you interested in contributing? Read the [official contribution guide](.gith
  - [Coding conventions](.github/CONTRIBUTING.md#coding-conventions)
 
 ## Install
-This extension requires MediaWiki 1.32 (or greater) and PHP 7.1 (or greater). To install:
+This extension requires MediaWiki 1.34 (or greater) and PHP 7.4 (or greater). To install:
 
 1. Git clone this repository locally on your wiki.
 2. Add this line to your `LocalSettings.php` file:
