@@ -14,14 +14,8 @@ use OOUI\Tag;
  * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 class DescriptionListItem {
-
-	/** HTML element representing a description term */
 	private const ELEMENT_TERM = 'dt';
-
-	/** HTML element representing a description detail */
 	private const ELEMENT_DETAIL = 'dd';
-
-	/** HTML element representing a content container */
 	private const ELEMENT_CONTAINER = 'div';
 
 	/**
@@ -61,28 +55,14 @@ class DescriptionListItem {
 			->appendContent( $content );
 	}
 
-	/**
-	 * @param array $config
-	 * @return Tag
-	 */
 	private function getTerm( array $config = [] ) : Tag {
 		return $this->getElement( self::ELEMENT_TERM, $config, 'term-attributes' );
 	}
 
-	/**
-	 * @param array $config
-	 * @return Tag
-	 */
 	private function getDetail( array $config = [] ) : Tag {
 		return $this->getElement( self::ELEMENT_DETAIL, $config, 'detail-attributes' );
 	}
 
-	/**
-	 * @param string $elementName
-	 * @param array $config
-	 * @param string $elementAttributesKey
-	 * @return Tag
-	 */
 	private function getElement( string $elementName, array $config, string $elementAttributesKey ) : Tag {
 		$element = new Tag( $elementName );
 

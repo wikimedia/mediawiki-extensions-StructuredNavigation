@@ -14,13 +14,9 @@ use OOUI\Tag;
  * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 class UnorderedList extends Element {
-
 	use GroupElement;
 
-	/** HTML element representing an unordered list */
 	private const ELEMENT_UNORDERED_LIST = 'ul';
-
-	/** HTML element representing an item in an unordered list */
 	private const ELEMENT_UNORDERED_LIST_ITEM = 'li';
 
 	/**

@@ -15,7 +15,6 @@ use OOUI\Tag;
  * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
  */
 class EmptyStateView extends Layout {
-
 	private const CSS_CLASS = [
 		'view-container' => 'oo-ui-view-emptystate-container',
 		'view-illustration' => 'oo-ui-view-emptystate-illustration',
@@ -24,20 +23,11 @@ class EmptyStateView extends Layout {
 		'view-action' => 'oo-ui-view-emptystate-action'
 	];
 
-	/** @var string */
-	private $imageSource;
-
-	/** @var string */
-	private $title;
-
-	/** @var string */
-	private $summary;
-
-	/** @var string */
-	private $buttonLabel;
-
-	/** @var string */
-	private $buttonHref;
+	private string $imageSource;
+	private string $title;
+	private string $summary;
+	private string $buttonLabel;
+	private string $buttonHref;
 
 	/**
 	 * @param array $config
@@ -65,9 +55,6 @@ class EmptyStateView extends Layout {
 		] );
 	}
 
-	/**
-	 * @return Tag
-	 */
 	private function getIllustration() : Tag {
 		return ( new Tag( 'img' ) )
 			->addClasses( [ self::CSS_CLASS['view-illustration'] ] )
@@ -78,27 +65,18 @@ class EmptyStateView extends Layout {
 			] );
 	}
 
-	/**
-	 * @return Tag
-	 */
 	private function getTitle() : Tag {
 		return ( new Tag( 'h3' ) )
 			->addClasses( [ self::CSS_CLASS['view-title'] ] )
 			->appendContent( $this->title );
 	}
 
-	/**
-	 * @return Tag
-	 */
 	private function getSummary() : Tag {
 		return ( new Tag( 'div' ) )
 			->addClasses( [ self::CSS_CLASS['view-summary'] ] )
 			->appendContent( $this->summary );
 	}
 
-	/**
-	 * @return ButtonWidget
-	 */
 	private function getAction() : ButtonWidget {
 		return new ButtonWidget( [
 			'label' => $this->buttonLabel,
@@ -107,5 +85,4 @@ class EmptyStateView extends Layout {
 			'classes' => [ self::CSS_CLASS['view-action'] ]
 		] );
 	}
-
 }

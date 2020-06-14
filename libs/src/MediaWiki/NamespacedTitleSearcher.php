@@ -10,28 +10,16 @@ use Title;
  * in a specific namespace. Intended for use in an instance of a \SpecialPage.
  *
  * @license MIT
- * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
+ * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 final class NamespacedTitleSearcher {
+	private SearchEngine $searchEngine;
 
-	/** @var SearchEngine */
-	private $searchEngine;
-
-	/**
-	 * @param SearchEngine $searchEngine
-	 */
 	public function __construct( SearchEngine $searchEngine ) {
 		$this->searchEngine = $searchEngine;
 	}
 
-	/**
-	 * @param string $search Prefix to search for
-	 * @param int $limit Maximum number of results to return (usually 10)
-	 * @param int $offset Number of results to skip (usually 0)
-	 * @param int $namespace Unique ID of namespace
-	 * @return array
-	 */
-	public function getTitlesInNamespace( string $search, int $limit, int $offset, int $namespace ) : array {
+	public function getTitlesInNamespace( string $search, int $resultLimit, int $titlesToSkip, int $namespace ) : array {
 		$title = Title::newFromText( $search, $namespace );
 		if ( $title && $title->getNamespace() !== $namespace ) {
 			$title = Title::makeTitleSafe( $namespace, $search );
@@ -41,7 +29,7 @@ final class NamespacedTitleSearcher {
 			return [];
 		}
 
-		$this->searchEngine->setLimitOffset( $limit, $offset );
+		$this->searchEngine->setLimitOffset( $resultLimit, $titlesToSkip );
 		$this->searchEngine->setNamespaces( [ $namespace ] );
 		$result = $this->searchEngine->defaultPrefixSearch( $search );
 
@@ -50,5 +38,4 @@ final class NamespacedTitleSearcher {
 			return $t->getText();
 		}, $result );
 	}
-
 }

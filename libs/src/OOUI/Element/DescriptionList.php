@@ -13,7 +13,6 @@ use StructuredNavigation\Libs\OOUI\DescriptionListItem;
  * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 class DescriptionList extends Element {
-
 	use GroupElement;
 
 	/** HTML element representing a description list */
@@ -55,5 +54,4 @@ class DescriptionList extends Element {
 	public function getTagName() : string {
 		return self::ELEMENT_DESCRIPTION_LIST;
 	}
-
 }
