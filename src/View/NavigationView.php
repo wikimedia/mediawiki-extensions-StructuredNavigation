@@ -2,6 +2,7 @@
 
 namespace StructuredNavigation\View;
 
+use MediaWiki\Linker\LinkRenderer;
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
 use StructuredNavigation\Libs\OOUI\Element\DescriptionList;
@@ -31,22 +32,22 @@ final class NavigationView {
 		'nav' => 'mw-structurednav-navigation-container'
 	];
 
-	private ContentLinkView $contentLinkView;
+	private LinkRenderer $linkRenderer;
 
-	public function __construct( ContentLinkView $contentLinkView ) {
-		$this->contentLinkView = $contentLinkView;
+	public function __construct( LinkRenderer $linkRenderer ) {
+		$this->linkRenderer = $linkRenderer;
 	}
 
 	public function getView( Navigation $navigation ) : Tag {
 		return ( new Tag( 'nav' ) )
 			->addClasses( [ self::CSS_CLASS['nav'] ] )
 			->appendContent( new HtmlSnippet(
-				$this->doRenderHeader( $navigation ) .
-				$this->doRenderGroups( $navigation )
+				$this->renderHeader( $navigation ) .
+				$this->renderGroups( $navigation )
 			) );
 	}
 
-	private function doRenderHeader( Navigation $navigation ) : Tag {
+	private function renderHeader( Navigation $navigation ) : Tag {
 		return ( new Tag( 'header' ) )
 			->addClasses( [ self::CSS_CLASS['header'] ] )
 			->appendContent( new HtmlSnippet(
@@ -57,14 +58,13 @@ final class NavigationView {
 			) );
 	}
 
-	private function doRenderGroups( Navigation $navigation ) : DescriptionList {
-		$allGroups = [];
+	private function renderGroups( Navigation $navigation ) : DescriptionList {
+		$allGroups = [];	
 		$groups = $navigation->getGroups();
-
 		foreach ( $groups as $group ) {
 			$allGroups[] = [
-				'term' => $navigation->getGroupTitleLabel( $group ),
-				'detail' => $this->doRenderContent( $navigation->getGroupContent( $group ) )
+				'term' => $group->getLabel(),
+				'detail' => $this->renderContent( $group->getLinks() )
 			];
 		}
 
@@ -77,12 +77,16 @@ final class NavigationView {
 		] );
 	}
 
-	private function doRenderContent( array $content ) : UnorderedList {
+	/**
+	 * @param NavigationGroupLink[] $navigationLinks
+	 */
+	private function renderContent( array $navigationLinks ) : UnorderedList {
 		$allContent = [];
 
-		foreach ( $content as $contentItem ) {
-			$allContent[] = $this->contentLinkView->getLink(
-				$contentItem,
+		foreach ( $navigationLinks as $navigationLink ) {
+			$allContent[] = $this->linkRenderer->makeLink(
+				$navigationLink->getTitleValue(),
+				$navigationLink->getLabel(),
 				[ 'class' => self::CSS_CLASS['group-content-link'] ]
 			);
 		}

@@ -11,7 +11,6 @@ use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
-use StructuredNavigation\View\ContentLinkView;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
 
@@ -24,17 +23,10 @@ return [
 		return $services->getConfigFactory()->makeConfig( 'structurednavigation' );
 		},
 
-	'StructuredNavigation.ContentLinkView'
-		=> function ( MediaWikiServices $services ) : ContentLinkView {
-		return new ContentLinkView(
-			$services->getLinkRenderer(),
-			$services->getTitleParser()
-		);
-		},
-
 	'StructuredNavigation.NavigationFactory'
 		=> function ( MediaWikiServices $services ) : NavigationFactory {
 		return new NavigationFactory(
+			$services->getTitleParser(),
 			( new Services( $services ) )->getNavigationTitleValue()
 		);
 		},
@@ -52,7 +44,7 @@ return [
 	'StructuredNavigation.NavigationView'
 		=> function ( MediaWikiServices $services ) : NavigationView {
 		return new NavigationView(
-			( new Services( $services ) )->getContentLinkView()
+			$services->getLinkRenderer()
 		);
 		},
 

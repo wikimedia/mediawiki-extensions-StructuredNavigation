@@ -11,7 +11,6 @@ use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;
-use StructuredNavigation\View\ContentLinkView;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
 use UnexpectedValueException;
@@ -41,10 +40,6 @@ final class Services {
 	 */
 	public function getConfig() : Config {
 		return $this->services->getService( 'StructuredNavigation.Config' );
-	}
-
-	public function getContentLinkView() : ContentLinkView {
-		return $this->services->getService( 'StructuredNavigation.ContentLinkView' );
 	}
 
 	public function getNavigationFactory() : NavigationFactory {

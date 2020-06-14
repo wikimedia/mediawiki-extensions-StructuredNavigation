@@ -5,44 +5,30 @@ namespace StructuredNavigation;
 /**
  * @license MIT
  */
-class Navigation {
+final class Navigation {
 	private array $content;
-	private array $config;
 	private string $titleLabel;
+	/** @param NavigationGroup[] */
 	private array $groups;
 
-	public function __construct( array $content ) {
+	public function __construct( array $content, string $titleLabel, array $groups ) {
 		$this->content = $content;
-		$this->config = $this->content['config'];
-		$this->titleLabel = $this->config['title']['label'];
-		$this->groups = $this->content['groups'];
+		$this->titleLabel = $titleLabel;
+		$this->groups = $groups;
 	}
 
 	public function getContent() : array {
 		return $this->content;
 	}
 
-	public function getConfig() : array {
-		return $this->config;
-	}
-
 	public function getTitleLabel() : string {
 		return $this->titleLabel;
 	}
 
+	/**
+	 * @return NavigationGroup[]
+	 */
 	public function getGroups() : array {
 		return $this->groups;
-	}
-
-	public function getGroupTitleLabel( array $group ) : string {
-		return $this->findTitleLabel( $group );
-	}
-
-	public function getGroupContent( array $group ) : array {
-		return $group['content'];
-	}
-
-	private function findTitleLabel( array $item ) : string {
-		return $item['title']['label'];
 	}
 }
