@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation;
+namespace StructuredNavigation\Hooks;
 
 use Article;
 use Parser;
@@ -10,7 +10,7 @@ use StructuredNavigation\Services\Services;
 /**
  * @license MIT
  */
-final class Hooks {
+final class HookHandler {
 	private const PARSER_TAG = 'mw-navigation';
 	private const PARSER_TAG_METHOD = 'getParserHandler';
 

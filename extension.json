@@ -35,9 +35,9 @@
 		"StructuredNavigation\\Libs\\": "libs/src/"
 	},
 	"Hooks": {
-		"BeforeDisplayNoArticleText": "StructuredNavigation\\Hooks::onBeforeDisplayNoArticleText",
-		"ParserFirstCallInit": "StructuredNavigation\\Hooks::onParserFirstCallInit",
-		"UserGetReservedNames": "StructuredNavigation\\Hooks::onUserGetReservedNames"
+		"BeforeDisplayNoArticleText": "StructuredNavigation\\Hooks\\HookHandler::onBeforeDisplayNoArticleText",
+		"ParserFirstCallInit": "StructuredNavigation\\Hooks\\HookHandler::onParserFirstCallInit",
+		"UserGetReservedNames": "StructuredNavigation\\Hooks\\HookHandler::onUserGetReservedNames"
 	},
 	"SpecialPages": {
 		"NavigationSchema": {
