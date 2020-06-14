@@ -19,7 +19,8 @@ final class NamespacedTitleSearcher {
 		$this->searchEngine = $searchEngine;
 	}
 
-	public function getTitlesInNamespace( string $search, int $resultLimit, int $titlesToSkip, int $namespace ) : array {
+	public function getTitlesInNamespace(
+		string $search, int $resultLimit, int $titlesToSkip, int $namespace ) : array {
 		$title = Title::newFromText( $search, $namespace );
 		if ( $title && $title->getNamespace() !== $namespace ) {
 			$title = Title::makeTitleSafe( $namespace, $search );

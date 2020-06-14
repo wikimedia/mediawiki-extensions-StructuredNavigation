@@ -4,7 +4,6 @@ namespace StructuredNavigation\Hooks;
 
 use Article;
 use Parser;
-use StructuredNavigation\Hooks\BeforeDisplayNoArticleTextHandler;
 use StructuredNavigation\Services\Services;
 
 /**
