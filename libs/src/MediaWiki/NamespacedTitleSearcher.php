@@ -4,6 +4,7 @@ namespace StructuredNavigation\Libs\MediaWiki;
 
 use SearchEngine;
 use Title;
+use TitleFactory;
 
 /**
  * A namespace-agnostic searcher by default that allows retrieving titles
@@ -14,16 +15,18 @@ use Title;
  */
 final class NamespacedTitleSearcher {
 	private SearchEngine $searchEngine;
+	private TitleFactory $titleFactory;
 
-	public function __construct( SearchEngine $searchEngine ) {
+	public function __construct( SearchEngine $searchEngine, TitleFactory $titleFactory ) {
 		$this->searchEngine = $searchEngine;
+		$this->titleFactory = $titleFactory;
 	}
 
 	public function getTitlesInNamespace(
 		string $search, int $resultLimit, int $titlesToSkip, int $namespace ) : array {
-		$title = Title::newFromText( $search, $namespace );
+		$title = $this->titleFactory->newFromText( $search, $namespace );
 		if ( $title && $title->getNamespace() !== $namespace ) {
-			$title = Title::makeTitleSafe( $namespace, $search );
+			$title = $this->titleFactory->makeTitleSafe( $namespace, $search );
 		}
 
 		if ( !$title ) {
