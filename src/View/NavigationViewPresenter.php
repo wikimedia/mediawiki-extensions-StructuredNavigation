@@ -56,7 +56,11 @@ final class NavigationViewPresenter {
 		OutputPage::setupOOUI();
 		$output->addModuleStyles( [
 			'ext.structurednavigation.ui.structurednavigation.styles',
-			'ext.structurednavigation.ui.structurednavigation.separator.styles'
+			'ext.structurednavigation.ui.structurednavigation.separator.styles',
+			'ext.structurednavigation.wiki.styles'
+		] );
+		$output->addModules( [
+			'ext.structurednavigation.wiki',
 		] );
 	}
 }

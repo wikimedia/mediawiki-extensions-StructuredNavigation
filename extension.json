@@ -177,6 +177,14 @@
 		"remoteExtPath": "StructuredNavigation"
 	},
 	"ResourceModules": {
+		"ext.structurednavigation.wiki": {
+			"class": "ResourceLoaderWikiModule",
+			"scripts": [ "MediaWiki:StructuredNavigation.js" ]
+		},
+		"ext.structurednavigation.wiki.styles": {
+			"class": "ResourceLoaderWikiModule",
+			"styles": [ "MediaWiki:StructuredNavigation.css" ]
+		},
 		"ext.structurednavigation.ui.structurednavigation.styles": {
 			"styles": "resources/styles/ui/structurednavigation.less"
 		},
@@ -215,9 +223,6 @@
 		"ext.structurednavigation.core": {
 			"scripts": "resources/modules/mw.structuredNav.js"
 		}
-	},
-	"CodeMirrorTagModes": {
-		"mw-navigation": "text/mediawiki"
 	},
 	"manifest_version": 2
 }
