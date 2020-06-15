@@ -3,7 +3,6 @@
 namespace StructuredNavigation\Services;
 
 use Config;
-use ConfigException;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
@@ -11,7 +10,6 @@ use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
-use UnexpectedValueException;
 
 /**
  * Acts as a convience wrapper around the \MediaWiki\MediaWikiServices
@@ -32,10 +30,6 @@ final class Services {
 		return new self( MediaWikiServices::getInstance() );
 	}
 
-	/**
-	 * @throws ConfigException|UnexpectedValueException
-	 * @return Config
-	 */
 	public function getConfig() : Config {
 		return $this->services->getService( 'StructuredNavigation.Config' );
 	}
