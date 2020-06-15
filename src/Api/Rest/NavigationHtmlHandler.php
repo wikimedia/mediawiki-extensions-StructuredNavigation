@@ -20,7 +20,7 @@ class NavigationHtmlHandler extends SimpleHandler {
 	public function run( string $title ) {
 		return $this->navigationViewPresenter->getFromTitle(
 			// should inject RC somehow, or refactor NavigationViewPresenter
-			RequestContext::getMain()->getOutput(), 
+			RequestContext::getMain()->getOutput(),
 			$title
 		)->toString();
 	}

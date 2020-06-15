@@ -59,7 +59,7 @@ final class NavigationView {
 	}
 
 	private function renderGroups( Navigation $navigation ) : DescriptionList {
-		$allGroups = [];	
+		$allGroups = [];
 		$groups = $navigation->getGroups();
 		foreach ( $groups as $group ) {
 			$allGroups[] = [
