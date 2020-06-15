@@ -9,7 +9,6 @@ use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
-use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
 
@@ -25,19 +24,13 @@ return [
 	'StructuredNavigation.NavigationFactory'
 		=> function ( MediaWikiServices $services ) : NavigationFactory {
 		return new NavigationFactory(
-			$services->getTitleParser(),
-			( new Services( $services ) )->getNavigationTitleValue()
+			$services->getTitleParser()
 		);
 		},
 
 	'StructuredNavigation.NamespacedTitleSearcher'
 		=> function ( MediaWikiServices $services ) : NamespacedTitleSearcher {
 		return new NamespacedTitleSearcher( $services->newSearchEngine() );
-		},
-
-	'StructuredNavigation.NavigationTitleValue'
-		=> function ( MediaWikiServices $services ) : NavigationTitleValue {
-		return new NavigationTitleValue( $services->getTitleParser() );
 		},
 
 	'StructuredNavigation.NavigationView'

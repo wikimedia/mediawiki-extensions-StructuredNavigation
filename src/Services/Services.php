@@ -9,7 +9,6 @@ use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
-use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
 use UnexpectedValueException;
@@ -47,10 +46,6 @@ final class Services {
 
 	public function getNamespacedTitleSearcher() : NamespacedTitleSearcher {
 		return $this->services->getService( 'StructuredNavigation.NamespacedTitleSearcher' );
-	}
-
-	public function getNavigationTitleValue() : NavigationTitleValue {
-		return $this->services->getService( 'StructuredNavigation.NavigationTitleValue' );
 	}
 
 	public function getNavigationView() : NavigationView {

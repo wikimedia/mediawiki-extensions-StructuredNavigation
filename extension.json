@@ -50,8 +50,7 @@
 			"class": "StructuredNavigation\\Specials\\TitlesUsedInNavigation",
 			"services": [
 				"StructuredNavigation.NavigationFactory",
-				"StructuredNavigation.NamespacedTitleSearcher",
-				"StructuredNavigation.NavigationTitleValue"
+				"StructuredNavigation.NamespacedTitleSearcher"
 			]
 		}
 	},

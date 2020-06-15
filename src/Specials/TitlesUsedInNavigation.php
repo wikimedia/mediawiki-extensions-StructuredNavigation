@@ -7,7 +7,6 @@ use HTMLForm;
 use HTMLTitleTextField;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
-use StructuredNavigation\Title\NavigationTitleValue;
 use StructuredNavigation\NavigationFactory;
 
 /**
@@ -25,18 +24,15 @@ final class TitlesUsedInNavigation extends FormSpecialPage {
 
 	private NavigationFactory $navigationFactory;
 	private NamespacedTitleSearcher $namespacedTitleSearcher;
-	private NavigationTitleValue $navigationTitleValue;
 
 	public function __construct(
 		NavigationFactory $navigationFactory,
-		NamespacedTitleSearcher $namespacedTitleSearcher,
-		NavigationTitleValue $navigationTitleValue
+		NamespacedTitleSearcher $namespacedTitleSearcher
 	) {
 		parent::__construct( self::PAGE_NAME );
 
 		$this->navigationFactory = $navigationFactory;
 		$this->namespacedTitleSearcher = $namespacedTitleSearcher;
-		$this->navigationTitleValue = $navigationTitleValue;
 	}
 
 	/** @inheritDoc */
@@ -67,10 +63,6 @@ final class TitlesUsedInNavigation extends FormSpecialPage {
 		return [
 			self::FIELD_TITLE => [
 				'class' => HTMLTitleTextField::class,
-				'default' => $this->par ?
-					$this->navigationTitleValue
-						->getTitleValue( $this->par )
-						->getText() : '',
 				'label-message' => self::MESSAGE_TITLE_LABEL,
 				'placeholder-message' => self::MESSAGE_TITLE_PLACEHOLDER,
 				'namespace' => NS_NAVIGATION,

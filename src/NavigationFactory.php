@@ -3,7 +3,6 @@
 namespace StructuredNavigation;
 
 use FormatJson;
-use StructuredNavigation\Title\NavigationTitleValue;
 use Title;
 use TitleParser;
 use WikiPage;
@@ -13,11 +12,9 @@ use WikiPage;
  */
 final class NavigationFactory {
 	private TitleParser $titleParser;
-	private NavigationTitleValue $navigationTitleValue;
 
-	public function __construct( TitleParser $titleParser, NavigationTitleValue $navigationTitleValue ) {
+	public function __construct( TitleParser $titleParser ) {
 		$this->titleParser = $titleParser;
-		$this->navigationTitleValue = $navigationTitleValue;
 	}
 
 	public function newFromSource( array $source ) : Navigation {
@@ -29,7 +26,7 @@ final class NavigationFactory {
 			foreach ( $jsonGroup['content'] as $stringOrArrayLink ) {
 				if ( is_array( $stringOrArrayLink ) ) {
 					$links[] = $this->parseNavigationLink( $stringOrArrayLink );
-					
+
 				} else {
 					$links[] = $this->parseNavigationLink( $stringOrArrayLink );
 				}
@@ -56,7 +53,8 @@ final class NavigationFactory {
 	 * @return Navigation|false
 	 */
 	public function newFromTitle( string $passedTitle ) {
-		$title = Title::newFromTitleValue( $this->navigationTitleValue->getTitleValue( $passedTitle ) );
+		$title = Title::newFromTitleValue(
+			$this->titleParser->parseTitle( $title, NS_NAVIGATION ) );
 
 		if ( !$title->exists() ) {
 			return false;
@@ -72,7 +70,7 @@ final class NavigationFactory {
 	private function parseNavigationLink( $stringOrArrayLink ) : NavigationGroupLink {
 		if ( is_array( $stringOrArrayLink ) ) {
 			return new NavigationGroupLink(
-				$this->titleParser->parseTitle( $stringOrArrayLink[0] ), 
+				$this->titleParser->parseTitle( $stringOrArrayLink[0] ),
 				$stringOrArrayLink[0],
 				$stringOrArrayLink[1]
 			);
