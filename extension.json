@@ -9,9 +9,9 @@
 	"descriptionmsg": "structurednavigation-desc",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.32.0",
+		"MediaWiki": ">= 1.34.0",
 		"platform": {
-			"php": ">= 7.1"
+			"php": ">= 7.4"
 		}
 	},
 	"callback": "StructuredNavigation\\ExtensionCallback::onRegistrationCallback",
@@ -92,6 +92,48 @@
 			]
 		}
 	},
+	"RestRoutes": [
+		{
+			"path": "/structurednav/v0/examples",
+			"method": "GET",
+			"class": "StructuredNavigation\\Rest\\NavigationExamplesHandler",
+			"services": [
+				"StructuredNavigation.DocumentationContent"
+			]
+		},
+		{
+			"path": "/structurednav/v0/schema",
+			"method": "GET",
+			"class": "StructuredNavigation\\Rest\\NavigationSchemaHandler",
+			"services": [
+				"StructuredNavigation.DocumentationContent"
+			]
+		},
+		{
+			"path": "/structurednav/v0/{title}/data",
+			"method": "GET",
+			"class": "StructuredNavigation\\Rest\\NavigationDataHandler",
+			"services": [
+				"StructuredNavigation.NavigationFactory"
+			]
+		},
+		{
+			"path": "/structurednav/v0/{title}/html",
+			"method": "GET",
+			"class": "StructuredNavigation\\Rest\\NavigationHtmlHandler",
+			"services": [
+				"StructuredNavigation.NavigationViewPresenter"
+			]
+		},
+		{
+			"path": "/structurednav/v0/{title}/titles-used",
+			"method": "GET",
+			"class": "StructuredNavigation\\Rest\\NavigationTitlesUsedHandler",
+			"services": [
+				"StructuredNavigation.QueryTitlesUsedLookup"
+			]
+		}
+	],
 	"ConfigRegistry": {
 		"structurednavigation": "StructuredNavigation\\ExtensionCallback::getGlobalVarConfig"
 	},
