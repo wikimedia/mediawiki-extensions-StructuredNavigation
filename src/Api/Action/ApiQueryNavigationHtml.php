@@ -38,10 +38,7 @@ final class ApiQueryNavigationHtml extends ApiQueryBase {
 			'query',
 			$this->getModuleName(),
 			[
-				$title => $this->navigationViewPresenter->getFromTitle(
-					$this->getOutput(),
-					$title
-				)
+				$title => $this->navigationViewPresenter->getFromTitle( $title )
 			]
 		);
 	}

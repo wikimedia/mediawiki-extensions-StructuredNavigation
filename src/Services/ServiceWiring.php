@@ -4,13 +4,13 @@ namespace StructuredNavigation\Services;
 
 use Config;
 use MediaWiki\MediaWikiServices;
-use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
+use TemplateParser;
 
 /**
  * @license MIT
@@ -36,7 +36,11 @@ return [
 	'StructuredNavigation.NavigationView'
 		=> function ( MediaWikiServices $services ) : NavigationView {
 		return new NavigationView(
-			$services->getLinkRenderer()
+			$services->getLinkRenderer(),
+			new TemplateParser(
+				$services->getMainConfig()->get( 'ExtensionDirectory' )
+				. '/StructuredNavigation/templates'
+			)
 		);
 		},
 
@@ -53,7 +57,6 @@ return [
 	'StructuredNavigation.ParserFirstCallInitHandler'
 		=> function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
 		return new ParserFirstCallInitHandler(
-			new AttributeQualifier(),
 			( new Services( $services ) )->getNavigationViewPresenter()
 		);
 		},

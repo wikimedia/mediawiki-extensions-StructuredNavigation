@@ -2,7 +2,6 @@
 
 namespace StructuredNavigation\View;
 
-use OOUI\Tag;
 use OutputPage;
 use ParserOutput;
 use StructuredNavigation\NavigationFactory;
@@ -23,27 +22,23 @@ final class NavigationViewPresenter {
 	}
 
 	/**
-	 * @param ParserOutput|OutputPage $output
 	 * @param string $title
-	 * @return Tag|false
+	 * @return string|false
 	 */
-	public function getFromTitle( $output, string $title ) {
-		$this->doSetup( $output );
-		$jsonEntity = $this->navigationFactory->newFromTitle( $title );
-		if ( $jsonEntity === false ) {
+	public function getFromTitle( string $title ) {
+		$navigation = $this->navigationFactory->newFromTitle( $title );
+		if ( $navigation === false ) {
 			return false;
 		}
 
-		return $this->navigationView->getView( $jsonEntity );
+		return $this->navigationView->getView( $navigation );
 	}
 
 	/**
-	 * @param ParserOutput|OutputPage $output
 	 * @param array $content
-	 * @return Tag
+	 * @return string
 	 */
-	public function getFromSource( $output, array $content ) : Tag {
-		$this->doSetup( $output );
+	public function getFromSource( array $content ) : string {
 		return $this->navigationView->getView(
 			$this->navigationFactory->newFromSource( $content )
 		);
@@ -52,8 +47,7 @@ final class NavigationViewPresenter {
 	/**
 	 * @param ParserOutput|OutputPage $output
 	 */
-	private function doSetup( $output ) : void {
-		OutputPage::setupOOUI();
+	public function loadModules( $output ) : void {
 		$output->addModuleStyles( [
 			'ext.structurednavigation.ui.structurednavigation.styles',
 			'ext.structurednavigation.ui.structurednavigation.separator.styles',

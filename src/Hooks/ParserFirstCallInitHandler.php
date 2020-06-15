@@ -2,10 +2,8 @@
 
 namespace StructuredNavigation\Hooks;
 
-use OOUI\Tag;
 use Parser;
 use ParserOutput;
-use StructuredNavigation\AttributeQualifier;
 use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
@@ -15,32 +13,26 @@ use StructuredNavigation\View\NavigationViewPresenter;
 final class ParserFirstCallInitHandler {
 	private const PAGE_PROPERTY = 'structurednavigation';
 
-	private AttributeQualifier $attributeQualifier;
 	private NavigationViewPresenter $navigationViewPresenter;
 
-	public function __construct(
-		AttributeQualifier $attributeQualifier,
-		NavigationViewPresenter $navigationViewPresenter
-	) {
-		$this->attributeQualifier = $attributeQualifier;
+	public function __construct( NavigationViewPresenter $navigationViewPresenter ) {
 		$this->navigationViewPresenter = $navigationViewPresenter;
 	}
 
 	/**
-	 * @return Tag|false
+	 * @return string|false
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) {
 		$userPassedTitle = $attributes['title'];
 		$parserOutput = $parser->getOutput();
 		$this->setPageProperty( $parserOutput, $userPassedTitle );
 
-		$navigation = $this->navigationViewPresenter->getFromTitle( $parserOutput, $userPassedTitle );
+		$navigation = $this->navigationViewPresenter->getFromTitle( $userPassedTitle );
 		if ( $navigation === false ) {
 			return false;
 		}
 
-		$this->attributeQualifier->setAttributes( $navigation, $attributes );
-
+		$this->navigationViewPresenter->loadModules( $parserOutput );
 		return $navigation;
 	}
 

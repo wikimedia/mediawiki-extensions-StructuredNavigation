@@ -3,7 +3,6 @@
 namespace StructuredNavigation\Api\Rest;
 
 use MediaWiki\Rest\SimpleHandler;
-use RequestContext;
 use StructuredNavigation\View\NavigationViewPresenter;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -18,11 +17,7 @@ class NavigationHtmlHandler extends SimpleHandler {
 	}
 
 	public function run( string $title ) {
-		return $this->navigationViewPresenter->getFromTitle(
-			// should inject RC somehow, or refactor NavigationViewPresenter
-			RequestContext::getMain()->getOutput(),
-			$title
-		)->toString();
+		return $this->navigationViewPresenter->getFromTitle( $title );
 	}
 
 	/** @inheritDoc */

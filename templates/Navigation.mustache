@@ -1,0 +1,17 @@
+<nav class="mw-structurednav-navigation-container">
+	<header class="mw-structurednav-header">
+		<h2 class="mw-structurednav-header-title">{{title_label}}</h2>
+	</header>
+	<dl class="mw-structurednav-groups-container">
+		{{#groups}}
+			<div class="mw-structurednav-group">
+				<dt class="mw-structurednav-group-title">{{group_label}}</dt>
+				<ul class="mw-structurednav-group-content-list">
+					{{#links}}
+						<li class="mw-structurednav-group-content-item">{{{link}}}</li>
+					{{/links}}
+				</ul>
+			</div>
+		{{/groups}}
+	</dl>
+</nav>

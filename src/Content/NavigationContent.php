@@ -31,11 +31,11 @@ final class NavigationContent extends JsonContent {
 			$navigationViewPresenter = Services::getInstance()->getNavigationViewPresenter();
 			$output->setText(
 				$navigationViewPresenter->getFromSource(
-					$output,
 					FormatJson::decode( $this->getText(), true )
 				)
 			);
 
+			$navigationViewPresenter->loadModules( $output );
 			$output->addModules( 'ext.structurednavigation.content' );
 		}
 	}
