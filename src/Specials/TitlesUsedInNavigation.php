@@ -8,7 +8,7 @@ use HTMLTitleTextField;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
 use StructuredNavigation\Title\NavigationTitleValue;
-use StructuredNavigation\Title\QueryTitlesUsedLookup;
+use StructuredNavigation\NavigationFactory;
 
 /**
  * This special page allows looking up all the titles used for
@@ -23,18 +23,18 @@ final class TitlesUsedInNavigation extends FormSpecialPage {
 	private const MESSAGE_TITLE_PLACEHOLDER = 'specials-titlesusedinnavigation-field-title-placeholder';
 	private const PAGE_NAME = 'TitlesUsedInNavigation';
 
-	private QueryTitlesUsedLookup $queryTitlesUsedLookup;
+	private NavigationFactory $navigationFactory;
 	private NamespacedTitleSearcher $namespacedTitleSearcher;
 	private NavigationTitleValue $navigationTitleValue;
 
 	public function __construct(
-		QueryTitlesUsedLookup $queryTitlesUsedLookup,
+		NavigationFactory $navigationFactory,
 		NamespacedTitleSearcher $namespacedTitleSearcher,
 		NavigationTitleValue $navigationTitleValue
 	) {
 		parent::__construct( self::PAGE_NAME );
 
-		$this->queryTitlesUsedLookup = $queryTitlesUsedLookup;
+		$this->navigationFactory = $navigationFactory;
 		$this->namespacedTitleSearcher = $namespacedTitleSearcher;
 		$this->navigationTitleValue = $navigationTitleValue;
 	}
@@ -89,8 +89,7 @@ final class TitlesUsedInNavigation extends FormSpecialPage {
 
 	private function getTitleList( string $title ) : UnorderedList {
 		return new UnorderedList( [
-			'items' => $this->queryTitlesUsedLookup
-				->getTitlesUsed( $title )
+			'items' => $this->navigationFactory->newFromTitle( $title )->getAllLinks()
 		] );
 	}
 }

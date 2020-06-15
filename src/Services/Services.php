@@ -10,7 +10,6 @@ use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
-use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
 use UnexpectedValueException;
@@ -64,10 +63,6 @@ final class Services {
 
 	public function getParserFirstCallInitHandler() : ParserFirstCallInitHandler {
 		return $this->services->getService( 'StructuredNavigation.ParserFirstCallInitHandler' );
-	}
-
-	public function getQueryTitlesUsedLookup() : QueryTitlesUsedLookup {
-		return $this->services->getService( 'StructuredNavigation.QueryTitlesUsedLookup' );
 	}
 
 	public function getDocumentationContent() : DocumentationContent {

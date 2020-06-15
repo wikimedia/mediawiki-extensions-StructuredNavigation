@@ -5,7 +5,7 @@ namespace StructuredNavigation\Api\Action;
 use ApiBase;
 use ApiQuery;
 use ApiQueryBase;
-use StructuredNavigation\Title\QueryTitlesUsedLookup;
+use StructuredNavigation\NavigationFactory;
 
 /**
  * This API module allows finding out all the titles used
@@ -17,16 +17,16 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 	private const PARAM_TITLE = 'title';
 	private const PREFIX = 'snqtu';
 
-	private QueryTitlesUsedLookup $queryTitlesUsedLookup;
+	private NavigationFactory $navigationFactory;
 
 	/** @inheritDoc */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
-		QueryTitlesUsedLookup $queryTitlesUsedLookup
+		NavigationFactory $navigationFactory
 	) {
 		parent::__construct( $apiQuery, $moduleName, self::PREFIX );
-		$this->queryTitlesUsedLookup = $queryTitlesUsedLookup;
+		$this->navigationFactory = $navigationFactory;
 	}
 
 	/** @inheritDoc */
@@ -37,7 +37,7 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 		$this->getResult()->addValue(
 			'query',
 			$this->getModuleName(),
-			[ $title => $this->queryTitlesUsedLookup->getTitlesUsed( $title ) ]
+			[ $title => $this->navigationFactory->newFromTitle( $title )->getAllLinks() ]
 		);
 	}
 

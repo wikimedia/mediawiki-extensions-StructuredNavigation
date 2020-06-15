@@ -10,7 +10,6 @@ use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\Title\NavigationTitleValue;
-use StructuredNavigation\Title\QueryTitlesUsedLookup;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
 
@@ -63,13 +62,6 @@ return [
 		return new ParserFirstCallInitHandler(
 			new AttributeQualifier(),
 			( new Services( $services ) )->getNavigationViewPresenter()
-		);
-		},
-
-	'StructuredNavigation.QueryTitlesUsedLookup'
-		=> function ( MediaWikiServices $services ) : QueryTitlesUsedLookup {
-		return new QueryTitlesUsedLookup(
-			( new Services( $services ) )->getNavigationFactory()
 		);
 		},
 

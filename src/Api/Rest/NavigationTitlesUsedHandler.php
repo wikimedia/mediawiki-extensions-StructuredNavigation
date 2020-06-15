@@ -3,21 +3,21 @@
 namespace StructuredNavigation\Api\Rest;
 
 use MediaWiki\Rest\SimpleHandler;
-use StructuredNavigation\Title\QueryTitlesUsedLookup;
+use StructuredNavigation\NavigationFactory;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * @license MIT
  */
 class NavigationTitlesUsedHandler extends SimpleHandler {
-	private QueryTitlesUsedLookup $queryTitlesUsedLookup;
+	private NavigationFactory $navigationFactory;
 
-	public function __construct( QueryTitlesUsedLookup $queryTitlesUsedLookup ) {
-		$this->queryTitlesUsedLookup = $queryTitlesUsedLookup;
+	public function __construct( NavigationFactory $navigationFactory ) {
+		$this->navigationFactory = $navigationFactory;
 	}
 
 	public function run( string $title ) {
-		return $this->queryTitlesUsedLookup->getTitlesUsed( $title );
+		return $this->navigationFactory->newFromTitle( $title )->getAllLinks();
 	}
 
 	/** @inheritDoc */

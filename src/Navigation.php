@@ -31,4 +31,18 @@ final class Navigation {
 	public function getGroups() : array {
 		return $this->groups;
 	}
+
+	/**
+	 * @return NavigationGroupLink[]
+	 */
+	public function getAllLinks() : array {
+		$allLinks = [];
+		foreach ( $this->groups as $group ) {
+			foreach ( $group->getLinks() as $link ) {
+				$allLinks[] = $link->getTitle();
+			}
+		}
+
+		return array_unique( $allLinks );
+	}
 }
