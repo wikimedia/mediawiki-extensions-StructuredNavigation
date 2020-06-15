@@ -60,13 +60,13 @@
 	},
 	"APIMetaModules": {
 		"structurednavigationexamples": {
-			"class": "StructuredNavigation\\Api\\ApiMetaNavigationExamples",
+			"class": "StructuredNavigation\\Api\\Action\\ApiMetaNavigationExamples",
 			"services": [
 				"StructuredNavigation.DocumentationContent"
 			]
 		},
 		"structurednavigationschema": {
-			"class": "StructuredNavigation\\Api\\ApiMetaNavigationSchema",
+			"class": "StructuredNavigation\\Api\\Action\\ApiMetaNavigationSchema",
 			"services": [
 				"StructuredNavigation.DocumentationContent"
 			]
@@ -74,19 +74,19 @@
 	},
 	"APIPropModules": {
 		"structurednavigationnavigationdata": {
-			"class": "StructuredNavigation\\Api\\ApiQueryNavigationData",
+			"class": "StructuredNavigation\\Api\\Action\\ApiQueryNavigationData",
 			"services": [
 				"StructuredNavigation.NavigationFactory"
 			]
 		},
 		"structurednavigationnavigationhtml": {
-			"class": "StructuredNavigation\\Api\\ApiQueryNavigationHtml",
+			"class": "StructuredNavigation\\Api\\Action\\ApiQueryNavigationHtml",
 			"services": [
 				"StructuredNavigation.NavigationViewPresenter"
 			]
 		},
 		"structurednavigationtitlesused": {
-			"class": "StructuredNavigation\\Api\\ApiQueryTitlesUsed",
+			"class": "StructuredNavigation\\Api\\Action\\ApiQueryTitlesUsed",
 			"services": [
 				"StructuredNavigation.QueryTitlesUsedLookup"
 			]
@@ -96,7 +96,7 @@
 		{
 			"path": "/structurednav/v0/examples",
 			"method": "GET",
-			"class": "StructuredNavigation\\Rest\\NavigationExamplesHandler",
+			"class": "StructuredNavigation\\Api\\Rest\\NavigationExamplesHandler",
 			"services": [
 				"StructuredNavigation.DocumentationContent"
 			]
@@ -104,7 +104,7 @@
 		{
 			"path": "/structurednav/v0/schema",
 			"method": "GET",
-			"class": "StructuredNavigation\\Rest\\NavigationSchemaHandler",
+			"class": "StructuredNavigation\\Api\\Rest\\NavigationSchemaHandler",
 			"services": [
 				"StructuredNavigation.DocumentationContent"
 			]
@@ -112,7 +112,7 @@
 		{
 			"path": "/structurednav/v0/{title}/data",
 			"method": "GET",
-			"class": "StructuredNavigation\\Rest\\NavigationDataHandler",
+			"class": "StructuredNavigation\\Api\\Rest\\NavigationDataHandler",
 			"services": [
 				"StructuredNavigation.NavigationFactory"
 			]
@@ -120,7 +120,7 @@
 		{
 			"path": "/structurednav/v0/{title}/html",
 			"method": "GET",
-			"class": "StructuredNavigation\\Rest\\NavigationHtmlHandler",
+			"class": "StructuredNavigation\\Api\\Rest\\NavigationHtmlHandler",
 			"services": [
 				"StructuredNavigation.NavigationViewPresenter"
 			]
@@ -128,7 +128,7 @@
 		{
 			"path": "/structurednav/v0/{title}/titles-used",
 			"method": "GET",
-			"class": "StructuredNavigation\\Rest\\NavigationTitlesUsedHandler",
+			"class": "StructuredNavigation\\Api\\Rest\\NavigationTitlesUsedHandler",
 			"services": [
 				"StructuredNavigation.QueryTitlesUsedLookup"
 			]

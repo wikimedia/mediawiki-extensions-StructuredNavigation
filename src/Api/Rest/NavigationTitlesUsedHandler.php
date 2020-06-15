@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Rest;
+namespace StructuredNavigation\Api\Rest;
 
 use MediaWiki\Rest\SimpleHandler;
 use StructuredNavigation\Title\QueryTitlesUsedLookup;

@@ -1,33 +1,32 @@
 <?php
 
-namespace StructuredNavigation\Api;
+namespace StructuredNavigation\Api\Action;
 
 use ApiBase;
 use ApiQuery;
 use ApiQueryBase;
-use StructuredNavigation\NavigationFactory;
+use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
- * This API module allows querying the JSON of a given navigation
- * by its title in the Navigation namespace. The namespace is
- * already assumed, and the consumer only has to pass the title text.
+ * This API module allows querying for the view of a navigation
+ * (by title), as an HTML fragment.
  *
  * @license MIT
  */
-final class ApiQueryNavigationData extends ApiQueryBase {
+final class ApiQueryNavigationHtml extends ApiQueryBase {
 	private const PARAM_TITLE = 'title';
-	private const PREFIX = 'snqnd';
+	private const PREFIX = 'snqnh';
 
-	private NavigationFactory $navigationFactory;
+	private NavigationViewPresenter $navigationViewPresenter;
 
 	/** @inheritDoc */
 	public function __construct(
 		ApiQuery $apiQuery,
 		string $moduleName,
-		NavigationFactory $navigationFactory
+		NavigationViewPresenter $navigationViewPresenter
 	) {
 		parent::__construct( $apiQuery, $moduleName, self::PREFIX );
-		$this->navigationFactory = $navigationFactory;
+		$this->navigationViewPresenter = $navigationViewPresenter;
 	}
 
 	/** @inheritDoc */
@@ -38,7 +37,12 @@ final class ApiQueryNavigationData extends ApiQueryBase {
 		$this->getResult()->addValue(
 			'query',
 			$this->getModuleName(),
-			[ $title => $this->navigationFactory->newFromTitle( $title )->getContent() ]
+			[
+				$title => $this->navigationViewPresenter->getFromTitle(
+					$this->getOutput(),
+					$title
+				)
+			]
 		);
 	}
 
@@ -60,8 +64,8 @@ final class ApiQueryNavigationData extends ApiQueryBase {
 	/** @inheritDoc */
 	public function getExamplesMessages() {
 		return [
-			"action=query&prop={$this->getModuleName()}&snqndtitle=Dontnod_Entertainment"
-				=> 'apihelp-query+structurednavigationnavigationdata-example',
+			"action=query&prop={$this->getModuleName()}&snqnhtitle=Dontnod_Entertainment"
+				=> 'apihelp-query+structurednavigationnavigationhtml-example',
 		];
 	}
 }

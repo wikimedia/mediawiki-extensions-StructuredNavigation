@@ -1,18 +1,15 @@
 <?php
 
-namespace StructuredNavigation\Api;
+namespace StructuredNavigation\Api\Action;
 
 use ApiQuery;
 use ApiQueryBase;
 use StructuredNavigation\DocumentationContent;
 
 /**
- * This API module allows querying for the JSON schema used by
- * this extension to validate against the JSON structure of navigations.
- *
  * @license MIT
  */
-final class ApiMetaNavigationSchema extends ApiQueryBase {
+class ApiMetaNavigationExamples extends ApiQueryBase {
 	private DocumentationContent $documentationContent;
 
 	/** @inheritDoc */
@@ -30,7 +27,7 @@ final class ApiMetaNavigationSchema extends ApiQueryBase {
 		$this->getResult()->addValue(
 			'query',
 			$this->getModuleName(),
-			$this->documentationContent->getDecodedSchemaContent()
+			$this->documentationContent->getExamples()
 		);
 	}
 
@@ -38,7 +35,7 @@ final class ApiMetaNavigationSchema extends ApiQueryBase {
 	protected function getExamplesMessages() {
 		return [
 			"action=query&meta={$this->getModuleName()}"
-				=> 'apihelp-query+structurednavigationschema-example',
+				=> 'apihelp-query+structurednavigationexamples-example',
 		];
 	}
 }

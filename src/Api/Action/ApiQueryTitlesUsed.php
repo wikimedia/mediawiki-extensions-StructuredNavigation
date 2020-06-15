@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Api;
+namespace StructuredNavigation\Api\Action;
 
 use ApiBase;
 use ApiQuery;
