@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation;
+namespace StructuredNavigation\Hooks;
 
 use GlobalVarConfig;
 

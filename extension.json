@@ -14,7 +14,7 @@
 			"php": ">= 7.4"
 		}
 	},
-	"callback": "StructuredNavigation\\ExtensionCallback::onRegistrationCallback",
+	"callback": "StructuredNavigation\\Hooks\\ExtensionCallback::onRegistrationCallback",
 	"MessagesDirs": {
 		"StructuredNavigation": [
 			"i18n",
@@ -134,7 +134,7 @@
 		}
 	],
 	"ConfigRegistry": {
-		"structurednavigation": "StructuredNavigation\\ExtensionCallback::getGlobalVarConfig"
+		"structurednavigation": "StructuredNavigation\\Hooks\\ExtensionCallback::getGlobalVarConfig"
 	},
 	"config": {
 		"StructuredNavigationReservedUsername": {
