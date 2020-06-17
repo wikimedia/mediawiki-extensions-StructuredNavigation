@@ -178,39 +178,33 @@
 		"remoteExtPath": "StructuredNavigation"
 	},
 	"ResourceModules": {
-		"ext.structurednavigation.wiki": {
+		"ext.structuredNav.wiki": {
 			"class": "ResourceLoaderWikiModule",
 			"scripts": [ "MediaWiki:StructuredNavigation.js" ]
 		},
-		"ext.structurednavigation.wiki.styles": {
+		"ext.structuredNav.wiki.styles": {
 			"class": "ResourceLoaderWikiModule",
 			"styles": [ "MediaWiki:StructuredNavigation.css" ]
 		},
-		"ext.structurednavigation.ui.structurednavigation.styles": {
-			"styles": "resources/styles/ui/structurednavigation.less"
+		"ext.structuredNav.NavigationView.styles": {
+			"styles": "resources/styles/ext.structuredNav.NavigationView.less"
 		},
-		"ext.structurednavigation.ui.structurednavigation.separator.styles": {
+		"ext.structuredNav.NavigationView.separator.styles": {
 			"class": "ResourceLoaderLessVarFileModule",
-			"styles": "resources/styles/ui/separator.less",
+			"styles": "resources/styles/ext.structuredNav.NavigationView.separator.less",
 			"lessMessages": [
 				"structurednavigation-separator-symbol"
 			]
 		},
-		"ext.structurednavigation.libs.view.emptystate.styles": {
-			"styles": "libs/resources/ooui/EmptyStateView.less"
-		},
-		"ext.structurednavigation.view.navigationnotfound.styles": {
-			"styles": "resources/styles/view/NavigationNotFoundView.less"
-		},
-		"ext.structurednavigation.content": {
-			"scripts": "resources/modules/ext.structurednavigation.content.js",
-			"dependencies": [
-				"ext.structurednavigation.CopyEmbedWidget"
+		"ext.structuredNav.NavigationNotFoundView.styles": {
+			"styles": [
+				"libs/resources/ooui/EmptyStateView.less",
+				"resources/styles/ext.structuredNav.NavigationNotFoundView.less"
 			]
 		},
-		"ext.structurednavigation.CopyEmbedWidget": {
-			"scripts": "resources/modules/ext.structurednavigation.CopyEmbedWidget.js",
-			"styles": "resources/styles/ext.structurednavigation.CopyEmbedWidget.less",
+		"ext.structuredNav.CopyEmbedWidget": {
+			"scripts": "resources/modules/ext.structuredNav.CopyEmbedWidget.js",
+			"styles": "resources/styles/ext.structuredNav.CopyEmbedWidget.less",
 			"messages": [
 				"structurednavigation-copy-label",
 				"structurednavigation-copy-state-fail",
@@ -218,11 +212,17 @@
 			],
 			"dependencies": [
 				"mediawiki.widgets",
-				"ext.structurednavigation.core"
+				"ext.structuredNav.core"
 			]
 		},
-		"ext.structurednavigation.core": {
-			"scripts": "resources/modules/mw.structuredNav.js"
+		"ext.structuredNav.content": {
+			"scripts": "resources/modules/ext.structuredNav.content.js",
+			"dependencies": [
+				"ext.structuredNav.CopyEmbedWidget"
+			]
+		},
+		"ext.structuredNav.core": {
+			"scripts": "resources/modules/ext.structuredNav.core.js"
 		}
 	},
 	"manifest_version": 2

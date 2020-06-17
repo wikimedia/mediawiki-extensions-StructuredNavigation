@@ -49,12 +49,12 @@ final class NavigationViewPresenter {
 	 */
 	public function loadModules( $output ) : void {
 		$output->addModuleStyles( [
-			'ext.structurednavigation.ui.structurednavigation.styles',
-			'ext.structurednavigation.ui.structurednavigation.separator.styles',
-			'ext.structurednavigation.wiki.styles'
+			'ext.structuredNav.NavigationView.styles',
+			'ext.structuredNav.NavigationView.separator.styles',
+			'ext.structuredNav.wiki.styles'
 		] );
 		$output->addModules( [
-			'ext.structurednavigation.wiki',
+			'ext.structuredNav.wiki',
 		] );
 	}
 }

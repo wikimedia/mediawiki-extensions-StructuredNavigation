@@ -36,7 +36,7 @@ final class NavigationContent extends JsonContent {
 			);
 
 			$navigationViewPresenter->loadModules( $output );
-			$output->addModules( 'ext.structurednavigation.content' );
+			$output->addModules( 'ext.structuredNav.content' );
 		}
 	}
 }

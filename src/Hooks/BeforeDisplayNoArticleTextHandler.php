@@ -10,11 +10,6 @@ use StructuredNavigation\Services\Services;
  * @license MIT
  */
 final class BeforeDisplayNoArticleTextHandler {
-	private const RESOURCELOADER_MODULES = [
-		'ext.structurednavigation.libs.view.emptystate.styles',
-		'ext.structurednavigation.view.navigationnotfound.styles',
-	];
-
 	private Article $article;
 
 	public function __construct( Article $article ) {
@@ -38,7 +33,7 @@ final class BeforeDisplayNoArticleTextHandler {
 		$output = $context->getOutput();
 
 		$output->enableOOUI();
-		$output->addModuleStyles( self::RESOURCELOADER_MODULES );
+		$output->addModuleStyles( 'ext.structuredNav.NavigationNotFoundView.styles' );
 		$output->addHTML(
 			Services::getInstance()
 				->getNavigationNotFoundView()
