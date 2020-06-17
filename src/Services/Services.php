@@ -8,8 +8,8 @@ use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
-use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationNotFoundView;
+use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
 
 /**

@@ -2,10 +2,10 @@
 
 namespace StructuredNavigation\View;
 
-use Wikimedia\Message\ITextFormatter;
-use Wikimedia\Message\MessageValue;
 use StructuredNavigation\Libs\OOUI\View\EmptyStateView;
 use Title;
+use Wikimedia\Message\ITextFormatter;
+use Wikimedia\Message\MessageValue;
 
 /**
  * Represents an empty state screen for when a user visits a navigation
