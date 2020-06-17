@@ -4,6 +4,7 @@ namespace StructuredNavigation\View;
 
 use MediaWiki\Linker\LinkRenderer;
 use StructuredNavigation\Navigation;
+use StructuredNavigation\NavigationGroupLink;
 use TemplateParser;
 
 class NavigationView {
@@ -26,17 +27,22 @@ class NavigationView {
 	}
 
 	public function getView( Navigation $navigation ) : string {
+		return $this->templateParser->processTemplate(
+			self::TEMPLATE_NAME,
+			[
+				self::PARAM_TITLE_LABEL => $navigation->getTitleLabel(),
+				self::PARAM_GROUPS => $this->getGroups( $navigation )
+			]
+		);
+	}
+
+	private function getGroups( Navigation $navigation ) : array {
 		$groups = [];
-		foreach( $navigation->getGroups() as $group ) {
+		$navGroups = $navigation->getGroups();
+		foreach ( $navGroups as $group ) {
 			$links = [];
 			foreach ( $group->getLinks() as $link ) {
-				$links[] = [ self::PARAM_LINK =>
-					$this->linkRenderer->makeLink(
-						$link->getTitleValue(),
-						$link->getLabel(),
-						[ 'class' => 'mw-structurednav-group-content-link' ]
-					)
-				];
+				$links[] = [ self::PARAM_LINK => $this->getLink( $link ) ];
 			}
 
 			$groups[] = [
@@ -45,12 +51,14 @@ class NavigationView {
 			];
 		}
 
-		return $this->templateParser->processTemplate(
-			self::TEMPLATE_NAME,
-			[
-				self::PARAM_TITLE_LABEL => $navigation->getTitleLabel(),
-				self::PARAM_GROUPS => $groups
-			]
+		return $groups;
+	}
+
+	private function getLink( NavigationGroupLink $link ) : string {
+		return $this->linkRenderer->makeLink(
+			$link->getTitleValue(),
+			$link->getLabel(),
+			[ 'class' => 'mw-structurednav-group-content-link' ]
 		);
 	}
 }
