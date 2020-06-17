@@ -36,6 +36,7 @@
 	},
 	"Hooks": {
 		"BeforeDisplayNoArticleText": "StructuredNavigation\\Hooks\\HookHandler::onBeforeDisplayNoArticleText",
+		"CodeEditorGetPageLanguage": "StructuredNavigation\\Hooks\\HookHandler::onCodeEditorGetPageLanguage",
 		"ParserFirstCallInit": "StructuredNavigation\\Hooks\\HookHandler::onParserFirstCallInit",
 		"UserGetReservedNames": "StructuredNavigation\\Hooks\\HookHandler::onUserGetReservedNames"
 	},

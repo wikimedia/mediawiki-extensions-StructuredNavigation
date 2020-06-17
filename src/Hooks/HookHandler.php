@@ -5,6 +5,7 @@ namespace StructuredNavigation\Hooks;
 use Article;
 use Parser;
 use StructuredNavigation\Services\Services;
+use Title;
 
 /**
  * @license MIT
@@ -20,6 +21,21 @@ final class HookHandler {
 	 */
 	public static function onBeforeDisplayNoArticleText( Article $article ) : bool {
 		return ( new BeforeDisplayNoArticleTextHandler( $article ) )->getHandler();
+	}
+
+	/**
+	 * @see https://www.mediawiki.org/wiki/Extension:CodeEditor/Hooks/CodeEditorGetPageLanguage
+	 * @param Title $title
+	 * @param string|null &$lang
+	 * @return bool
+	 */
+	public static function onCodeEditorGetPageLanguage( Title $title, ?string &$lang ) {
+		if ( $title->hasContentModel( 'StructuredNavigation' ) ) {
+			$lang = 'json';
+			return false;
+		}
+
+		return true;
 	}
 
 	/**
