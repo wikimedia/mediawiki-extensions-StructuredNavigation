@@ -9,6 +9,7 @@ use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\View\NavigationView;
+use StructuredNavigation\View\NavigationNotFoundView;
 use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
@@ -44,6 +45,10 @@ final class Services {
 
 	public function getNavigationView() : NavigationView {
 		return $this->services->getService( 'StructuredNavigation.NavigationView' );
+	}
+
+	public function getNavigationNotFoundView() : NavigationNotFoundView {
+		return $this->services->getService( 'StructuredNavigation.NavigationNotFoundView' );
 	}
 
 	public function getNavigationViewPresenter() : NavigationViewPresenter {

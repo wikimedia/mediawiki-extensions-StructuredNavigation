@@ -3,7 +3,7 @@
 namespace StructuredNavigation\Hooks;
 
 use Article;
-use StructuredNavigation\View\NavigationNotFoundView;
+use StructuredNavigation\Services\Services;
 
 /**
  * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeDisplayNoArticleText
@@ -22,12 +22,14 @@ final class BeforeDisplayNoArticleTextHandler {
 	}
 
 	public function getHandler() : bool {
-		if ( $this->article->getPage()->getContentModel() !== CONTENT_MODEL_NAVIGATION ) {
+		if (
+			$this->article->getPage()->getContentModel()
+			!== CONTENT_MODEL_NAVIGATION
+		) {
 			return true;
 		}
 
 		$this->getView();
-
 		return false;
 	}
 
@@ -38,11 +40,9 @@ final class BeforeDisplayNoArticleTextHandler {
 		$output->enableOOUI();
 		$output->addModuleStyles( self::RESOURCELOADER_MODULES );
 		$output->addHTML(
-			( new NavigationNotFoundView(
-				$context->getConfig()->get( 'ExtensionAssetsPath' ),
-				$context,
-				$this->article->getTitle()
-			) )->getView()
+			Services::getInstance()
+				->getNavigationNotFoundView()
+				->getView( $this->article->getTitle() )
 		);
 	}
 }

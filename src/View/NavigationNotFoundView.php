@@ -2,7 +2,8 @@
 
 namespace StructuredNavigation\View;
 
-use MessageLocalizer;
+use Wikimedia\Message\ITextFormatter;
+use Wikimedia\Message\MessageValue;
 use StructuredNavigation\Libs\OOUI\View\EmptyStateView;
 use Title;
 
@@ -19,31 +20,28 @@ final class NavigationNotFoundView {
 	private const MESSAGE_BUTTON_LABEL = 'structurednavigation-view-navigation-not-found-button-label';
 
 	private string $extensionAssetsPath;
-	private MessageLocalizer $messageLocalizer;
-	private Title $title;
+	private ITextFormatter $textFormatter;
 
 	public function __construct(
 		string $extensionAssetsPath,
-		MessageLocalizer $messageLocalizer,
-		Title $title
+		ITextFormatter $textFormatter
 	) {
 		$this->extensionAssetsPath = $extensionAssetsPath;
-		$this->messageLocalizer = $messageLocalizer;
-		$this->title = $title;
+		$this->textFormatter = $textFormatter;
 	}
 
-	public function getView() : EmptyStateView {
+	public function getView( Title $title ) : EmptyStateView {
 		return new EmptyStateView( [
 			'imageSource' => "{$this->extensionAssetsPath}/StructuredNavigation/resources/"
 				. "images/structured-navigation.svg",
 			'title' => $this->getMessage( self::MESSAGE_TITLE ),
 			'summary' => $this->getMessage( self::MESSAGE_SUMMARY ),
 			'buttonLabel' => $this->getMessage( self::MESSAGE_BUTTON_LABEL ),
-			'buttonHref' => $this->title->getFullURL( [ 'action' => 'edit', 'redlink' => '1' ] ),
+			'buttonHref' => $title->getFullURL( [ 'action' => 'edit', 'redlink' => '1' ] ),
 		] );
 	}
 
 	private function getMessage( string $msg ) : string {
-		return $this->messageLocalizer->msg( $msg )->plain();
+		return $this->textFormatter->format( new MessageValue( $msg ) );
 	}
 }

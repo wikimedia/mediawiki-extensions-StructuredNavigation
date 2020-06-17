@@ -9,6 +9,7 @@ use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
 use StructuredNavigation\View\NavigationView;
+use StructuredNavigation\View\NavigationNotFoundView;
 use StructuredNavigation\View\NavigationViewPresenter;
 use TemplateParser;
 
@@ -40,6 +41,17 @@ return [
 			new TemplateParser(
 				$services->getMainConfig()->get( 'ExtensionDirectory' )
 				. '/StructuredNavigation/templates'
+			)
+		);
+		},
+
+	'StructuredNavigation.NavigationNotFoundView'
+		=> function ( MediaWikiServices $services ) : NavigationNotFoundView {
+		$mainConfig = $services->getMainConfig();
+		return new NavigationNotFoundView(
+			$mainConfig->get( 'ExtensionAssetsPath' ),
+			$services->getMessageFormatterFactory()->getTextFormatter(
+				$mainConfig->get( 'LanguageCode' )
 			)
 		);
 		},
