@@ -7,15 +7,6 @@
 	<strong>A MediaWiki extension that allows creating machine-readable navigation templates.</strong>
 </p>
 
-<p align="center">
-	<a href="https://opensource.org/licenses/MIT">
-		<img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License: MIT">
-	</a>
-	<a href="https://travis-ci.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation">
-		<img src="https://travis-ci.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation.svg?branch=master" alt="Build Status">
-	</a>
-</p>
-
 ## How to Use
 <p align="center">
 	<img src="/resources/images/how-to-process.png" width="800px">
@@ -43,11 +34,12 @@ wfLoadExtension( 'StructuredNavigation' );
 ```
 
 ## Benefits
-Using this extension allows creating navigations that are:
-  - machine-readable (`.json`, a universally accepted data format )
-  - automatically tracked using the `structurednavigation` page property (try using `[[Special:PagesWithProp/structurednavigation]]`)
-  - produced using a standard, semantic HTML output
-  - semantically sane: presentation details are separated from content (e.g separator symbol is auto-appended after each link using CSS - much nicer than having to manually include it after each link)
+Using this extension allows creating navigations that:
+  - are machine-readable in JSON, an open format for storing data
+  - are retrievable with MediaWiki's Action API and REST API
+  - only contain data: presentation details are separated from the content. No wikitext, inline CSS, or HTML required; e.g the separator symbol is auto-appended after each link using CSS.
+  - are automatically tracked using the `structurednavigation` page property (try using `[[Special:PagesWithProp/structurednavigation]]`)
+  - produce semantic and accessible HTML
 
 ## License
 Licensed under the [MIT license](LICENSE.txt).
