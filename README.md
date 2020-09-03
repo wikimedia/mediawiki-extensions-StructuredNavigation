@@ -18,12 +18,6 @@ You can play with an example in `/docs/examples`. For this example, let's try us
 then save your edit.
 2. At a separate wikitext page, add `<mw-navigation title="Dontnod Entertainment" />` and press save.
 
-## Contributing
-Are you interested in contributing? Read the [official contribution guide](.github/CONTRIBUTING.md), which covers:
- - [How to submit an issue](.github/CONTRIBUTING.md#submitting-an-issue)
- - [How to submit a patch](.github/CONTRIBUTING.md#submitting-a-patch)
- - [Coding conventions](.github/CONTRIBUTING.md#coding-conventions)
-
 ## Install
 This extension requires MediaWiki 1.34 (or greater) and PHP 7.4 (or greater). To install:
 
@@ -42,4 +36,4 @@ Using this extension allows creating navigations that:
   - produce semantic and accessible HTML
 
 ## License
-Licensed under the [MIT license](LICENSE.txt).
+Licensed under the [MIT license](COPYING).

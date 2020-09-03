@@ -6,5 +6,5 @@ These are the extensions that StructuredNavigation currently integrates with.
 ## Planned, upcoming integrations
 The list below are extensions that StructuredNavigation will integrate with in the upcoming future.
 
- - **SyntaxHighlight GeSHi**: You will be able to view Special:NavigationSchema with a syntax-highlighted JSON schema. (tracked in [#41](https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/41))
- - **VisualEditor**: You will be able to insert a structured navigation through the VisualEditor interface. (tracked in [#42](https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/42))
+ - **SyntaxHighlight GeSHi**: You will be able to view Special:NavigationSchema with a syntax-highlighted JSON schema. (originally tracked in [#41](https://github.com/neoncitylights/StructuredNavigation/issues/41))
+ - **VisualEditor**: You will be able to insert a structured navigation through the VisualEditor interface. (originally tracked in [#42](https://github.com/neoncitylights/StructuredNavigation/issues/42))

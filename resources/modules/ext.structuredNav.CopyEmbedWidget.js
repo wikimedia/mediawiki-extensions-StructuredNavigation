@@ -12,7 +12,7 @@ mw.structuredNav.CopyEmbedWidget = function MwStructuredNavCopyEmbed( config ) {
 	config = $.extend( {
 		align: 'top',
 		label: mw.msg( 'structurednavigation-copy-label' ),
-		copyText: this.getTextToCopy(),
+		copyText: this.getTextToCopy()
 	}, config );
 
 	mw.structuredNav.CopyEmbedWidget.parent.call( this, config );
