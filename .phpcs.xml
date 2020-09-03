@@ -20,7 +20,7 @@
 	<!--
 		Should enforce typehinting, and throw an error when the incorrect typehint
 		is being used against a parameter (checks against the PHP doc annotations)
-		@see: https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/18
+		@see: https://github.com/neoncitylights/StructuredNavigation/issues/18
 	-->
 	<rule ref="Squiz.Commenting.FunctionComment.IncorrectTypeHint"/>
 
@@ -31,13 +31,6 @@
 			<property name="lineLimit" value="120" />
 		</properties>
 	</rule>
-
-	<!--
-		Explicitly enable these Generic.Metrics.* sniffs to help ensure code quality.
-		@see: https://github.com/SamanthaNguyen/mediawiki-extensions-StructuredNavigation/issues/17
-	-->
-	<rule ref="Generic.Metrics.CyclomaticComplexity"></rule>
-	<rule ref="Generic.Metrics.NestingLevel"></rule>
 
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
 	<arg name="extensions" value="php,php5,inc"/>
