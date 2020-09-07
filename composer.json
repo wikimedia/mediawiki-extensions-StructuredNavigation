@@ -15,5 +15,8 @@
 			"minus-x fix .",
 			"phpcbf"
 		]
+	},
+	"require": {
+		"php": ">=7.4"
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace StructuredNavigation\Api\Action;
 
-use ApiBase;
 use ApiQuery;
 use ApiQueryBase;
 use StructuredNavigation\NavigationFactory;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * This API module allows finding out all the titles used
@@ -45,8 +45,8 @@ final class ApiQueryTitlesUsed extends ApiQueryBase {
 	public function getAllowedParams() {
 		return [
 			self::PARAM_TITLE => [
-				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true,
 			],
 		];
 	}
