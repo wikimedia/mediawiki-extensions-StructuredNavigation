@@ -29,15 +29,18 @@ final class BeforeDisplayNoArticleTextHandler {
 	}
 
 	private function getView() : void {
-		$context = $this->article->getContext();
+		$article = $this->article;
+		$context = $article->getContext();
+		$title = $context->getTitle();
 		$output = $context->getOutput();
+		$user = $context->getUser();
 
 		$output->enableOOUI();
 		$output->addModuleStyles( 'ext.structuredNav.NavigationNotFoundView.styles' );
 		$output->addHTML(
 			Services::getInstance()
 				->getNavigationNotFoundView()
-				->getView( $this->article->getTitle() )
+				->getView( $title, $user )
 		);
 	}
 }

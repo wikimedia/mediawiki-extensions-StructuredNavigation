@@ -10,6 +10,8 @@
 	"structurednav-nav-not-found-title": "The title shown for the empty state screen when a user visits a navigation that doesn't exist yet.",
 	"structurednav-nav-not-found-summary": "The summary shown for the empty state screen when a user visits a navigation that doesn't exist yet.",
 	"structurednav-nav-not-found-button-label": "The button label shown on the empty state screen when a user visits a navigation that doesn't exist yet.",
+	"structurednav-nav-not-found-summary-not-logged-in": "The summary shown on the empty state screen when a user visits a navigation that doesn't exist yet, and is also not logged in.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "The button label shown on the empty state screen when a user visits a navigation that doesn't exist yet, and is also not logged in.",
 	"structurednav-copy-label": "Label for the text input field that allows copying the embed code to the cliboard.",
 	"structurednav-copy-state-fail": "A stateful message shown when copying the code to clipboard failed.",
 	"structurednav-copy-state-success": "A stateful message shown when copying the code to clipboard was successful."

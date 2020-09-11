@@ -7,9 +7,11 @@
 	"structurednav-desc": "Allows creating a structured, machine-readable navigation for use on articles.",
 	"structurednav-separator-symbol": "\\",
 	"structurednav-reserved-username": "StructuredNavigation script",
-	"structurednav-nav-not-found-title": "A navigation on this topic doesn't exist yet.",
+	"structurednav-nav-not-found-title": "A navigation on the topic named \"$1\" doesn't exist yet.",
 	"structurednav-nav-not-found-summary": "Why not create one?",
 	"structurednav-nav-not-found-button-label": "Create a navigation",
+	"structurednav-nav-not-found-summary-not-logged-in": "Log in or create an account to create this navigation.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Log in and edit",
 	"structurednav-copy-label": "Embed code",
 	"structurednav-copy-state-fail": "Failed to copy code to clipboard.",
 	"structurednav-copy-state-success": "Code copied to cliboard."
