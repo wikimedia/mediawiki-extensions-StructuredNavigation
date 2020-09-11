@@ -53,7 +53,7 @@ final class NavigationFactory {
 	 * @return Navigation|false
 	 */
 	public function newFromTitle( string $passedTitle ) {
-		$title = Title::newFromTitleValue(
+		$title = Title::newFromLinkTarget(
 			$this->titleParser->parseTitle( $passedTitle, NS_NAVIGATION ) );
 
 		if ( !$title->exists() ) {
