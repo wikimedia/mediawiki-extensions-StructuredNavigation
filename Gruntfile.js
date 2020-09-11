@@ -15,7 +15,12 @@ module.exports = function ( grunt ) {
 				'**/*.js',
 				'!node_modules/**',
 				'!vendor/**'
-			]
+			],
+			fix: {
+				options: {
+					fix: true
+				}
+			}
 		},
 		stylelint: {
 			all: [
@@ -28,5 +33,6 @@ module.exports = function ( grunt ) {
 	} );
 
 	grunt.registerTask( 'test', [ 'banana', 'eslint', 'stylelint' ] );
+	grunt.registerTask( 'fix', 'eslint:fix' );
 	grunt.registerTask( 'default', 'test' );
 };

@@ -1,5 +1,9 @@
 {
-	"extends": "wikimedia",
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/jquery",
+		"wikimedia/mediawiki"
+	],
 	"env": {
 		"browser": true,
 		"jquery": true,
@@ -11,6 +15,10 @@
 		"ve": false
 	},
 	"rules": {
-		"dot-notation": [ "error", { "allowKeywords": true } ]
+		"dot-notation": [
+			"error", {
+				"allowKeywords": true
+			}
+		]
 	}
 }
