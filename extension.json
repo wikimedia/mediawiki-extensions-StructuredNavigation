@@ -6,7 +6,7 @@
 	],
 	"license-name": "MIT",
 	"url": "https://www.mediawiki.org/wiki/Extension:StructuredNavigation",
-	"descriptionmsg": "structurednavigation-desc",
+	"descriptionmsg": "structurednav-desc",
 	"type": "parserhook",
 	"requires": {
 		"MediaWiki": ">= 1.34.0",
@@ -139,7 +139,7 @@
 	},
 	"config": {
 		"StructuredNavigationReservedUsername": {
-			"value": "msg:structurednavigation-reserved-username"
+			"value": "msg:structurednav-reserved-username"
 		}
 	},
 	"namespaces": [
@@ -150,8 +150,8 @@
 			"subpages": true,
 			"defaultcontentmodel": "StructuredNavigation",
 			"protection": [
-				"structured-navigation-edit",
-				"structured-navigation-create"
+				"structurednav-edit",
+				"structurednav-create"
 			]
 		},
 		{
@@ -165,13 +165,13 @@
 	],
 	"GroupPermissions": {
 		"user": {
-			"structured-navigation-create": true,
-			"structured-navigation-edit": true
+			"structurednav-create": true,
+			"structurednav-edit": true
 		}
 	},
 	"AvailableRights": [
-		"structured-navigation-create",
-		"structured-navigation-edit"
+		"structurednav-create",
+		"structurednav-edit"
 	],
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
@@ -193,7 +193,7 @@
 			"class": "ResourceLoaderLessVarFileModule",
 			"styles": "resources/styles/ext.structuredNav.NavigationView.separator.less",
 			"lessMessages": [
-				"structurednavigation-separator-symbol"
+				"structurednav-separator-symbol"
 			]
 		},
 		"ext.structuredNav.NavigationNotFoundView.styles": {
@@ -206,9 +206,9 @@
 			"scripts": "resources/modules/ext.structuredNav.CopyEmbedWidget.js",
 			"styles": "resources/styles/ext.structuredNav.CopyEmbedWidget.less",
 			"messages": [
-				"structurednavigation-copy-label",
-				"structurednavigation-copy-state-fail",
-				"structurednavigation-copy-state-success"
+				"structurednav-copy-label",
+				"structurednav-copy-state-fail",
+				"structurednav-copy-state-success"
 			],
 			"dependencies": [
 				"mediawiki.widgets",

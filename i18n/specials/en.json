@@ -4,7 +4,7 @@
 			"Samantha Nguyen"
 		]
 	},
-	"specialpages-group-structurednavigation": "StructuredNavigation",
+	"specialpages-group-structurednav": "StructuredNavigation",
 	"navigationschema": "Navigation schema",
 	"titlesusedinnavigation": "Titles used in navigation",
 	"specials-navigationschema-subtitle": "JSON schema for structured navigations",

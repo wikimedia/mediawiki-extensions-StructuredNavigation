@@ -15,9 +15,9 @@ use Wikimedia\Message\MessageValue;
  * @license MIT
  */
 final class NavigationNotFoundView {
-	private const MESSAGE_TITLE = 'structurednavigation-view-navigation-not-found-title';
-	private const MESSAGE_SUMMARY = 'structurednavigation-view-navigation-not-found-summary';
-	private const MESSAGE_BUTTON_LABEL = 'structurednavigation-view-navigation-not-found-button-label';
+	private const MESSAGE_TITLE = 'structurednav-nav-not-found-title';
+	private const MESSAGE_SUMMARY = 'structurednav-nav-not-found-summary';
+	private const MESSAGE_BUTTON_LABEL = 'structurednav-nav-not-found-button-label';
 
 	private string $extensionAssetsPath;
 	private ITextFormatter $textFormatter;

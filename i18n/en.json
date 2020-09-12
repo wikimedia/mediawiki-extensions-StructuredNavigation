@@ -4,13 +4,13 @@
 			"Samantha Nguyen"
 		]
 	},
-	"structurednavigation-desc": "Allows creating a structured, machine-readable navigation for use on articles.",
-	"structurednavigation-separator-symbol": "\\",
-	"structurednavigation-reserved-username": "StructuredNavigation script",
-	"structurednavigation-view-navigation-not-found-title": "A navigation on this topic doesn't exist yet.",
-	"structurednavigation-view-navigation-not-found-summary": "Why not create one?",
-	"structurednavigation-view-navigation-not-found-button-label": "Create a navigation",
-	"structurednavigation-copy-label": "Embed code",
-	"structurednavigation-copy-state-fail": "Failed to copy code to clipboard.",
-	"structurednavigation-copy-state-success": "Code copied to cliboard."
+	"structurednav-desc": "Allows creating a structured, machine-readable navigation for use on articles.",
+	"structurednav-separator-symbol": "\\",
+	"structurednav-reserved-username": "StructuredNavigation script",
+	"structurednav-nav-not-found-title": "A navigation on this topic doesn't exist yet.",
+	"structurednav-nav-not-found-summary": "Why not create one?",
+	"structurednav-nav-not-found-button-label": "Create a navigation",
+	"structurednav-copy-label": "Embed code",
+	"structurednav-copy-state-fail": "Failed to copy code to clipboard.",
+	"structurednav-copy-state-success": "Code copied to cliboard."
 }

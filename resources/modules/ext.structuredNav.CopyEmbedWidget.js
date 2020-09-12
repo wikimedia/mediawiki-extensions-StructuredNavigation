@@ -11,14 +11,14 @@
 mw.structuredNav.CopyEmbedWidget = function MwStructuredNavCopyEmbed( config ) {
 	config = $.extend( {
 		align: 'top',
-		label: mw.msg( 'structurednavigation-copy-label' ),
+		label: mw.msg( 'structurednav-copy-label' ),
 		copyText: this.getTextToCopy()
 	}, config );
 
 	mw.structuredNav.CopyEmbedWidget.parent.call( this, config );
 
-	this.successMessage = mw.msg( 'structurednavigation-copy-state-success' );
-	this.failMessage = mw.msg( 'structurednavigation-copy-state-fail' );
+	this.successMessage = mw.msg( 'structurednav-copy-state-success' );
+	this.failMessage = mw.msg( 'structurednav-copy-state-fail' );
 
 	this.$element.addClass( 'mw-structurednav-copyEmbedWidget' );
 };
