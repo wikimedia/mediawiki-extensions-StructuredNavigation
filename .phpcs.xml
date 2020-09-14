@@ -6,15 +6,6 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 		<!-- don't need to document private methods -->
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate" />
-		<!-- same as above -->
-		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag" />
-		<exclude name="MediaWiki.Commenting.FunctionComment.MissingReturn" />
-
-		<!-- I like typehints, so ¯\_(ツ)_/¯ -->
-		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.Found" />
-		<exclude name="MediaWiki.PHP70Features.ScalarTypeHintUsage.ReturnTypeFound" />
-		<exclude name="MediaWiki.PHP71Features.NullableType.NotAllowed" />
-		<exclude name="MediaWiki.PHP71Features.VoidReturnType.NotAllowed" />
 	</rule>
 
 	<!--

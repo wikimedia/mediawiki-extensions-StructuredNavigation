@@ -20,6 +20,10 @@ final class ParserFirstCallInitHandler {
 	}
 
 	/**
+	 * @param string|null $input
+	 * @param string[] $attributes
+	 * @param Parser $parser
+	 *
 	 * @return string|false
 	 */
 	public function getParserHandler( ?string $input, array $attributes, Parser $parser ) {
