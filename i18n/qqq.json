@@ -14,5 +14,16 @@
 	"structurednav-nav-not-found-button-label-not-logged-in": "The button label shown on the empty state screen when a user visits a navigation that doesn't exist yet, and is also not logged in.",
 	"structurednav-copy-label": "Label for the text input field that allows copying the embed code to the cliboard.",
 	"structurednav-copy-state-fail": "A stateful message shown when copying the code to clipboard failed.",
-	"structurednav-copy-state-success": "A stateful message shown when copying the code to clipboard was successful."
+	"structurednav-copy-state-success": "A stateful message shown when copying the code to clipboard was successful.",
+	"right-structurednav-create": "{{doc-right|structurednav-create}}",
+	"action-structurednav-create": "{{doc-action|structurednav-create}}",
+	"right-structurednav-edit": "{{doc-right|structurednav-edit}}",
+	"action-structurednav-edit": "{{doc-action|structurednav-edit}}",
+	"specialpages-group-structurednav": "Label for the special page group specific to the StructuredNavigation extension",
+	"navigationschema": "Title for Special:NavigationSchema",
+	"titlesusedinnavigation": "Title for Special:TitlesUsedInNavigation",
+	"specials-navigationschema-subtitle": "Subtitle for Special:NavigationSchema",
+	"specials-titlesusedinnavigation-legend": "Legend used for Special:TitlesUsedInNavigation",
+	"specials-titlesusedinnavigation-field-title-label": "The label for the title field in Special:TitlesUsedInNavigation",
+	"specials-titlesusedinnavigation-field-title-placeholder": "The placeholder for the title field in Special:TitlesUsedInNavigation"
 }

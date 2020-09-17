@@ -18,9 +18,7 @@
 	"MessagesDirs": {
 		"StructuredNavigation": [
 			"i18n",
-			"i18n/api",
-			"i18n/permissions",
-			"i18n/specials"
+			"i18n/api"
 		]
 	},
 	"ExtensionMessagesFiles": {

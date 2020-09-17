@@ -14,5 +14,16 @@
 	"structurednav-nav-not-found-button-label-not-logged-in": "Log in and edit",
 	"structurednav-copy-label": "Embed code",
 	"structurednav-copy-state-fail": "Failed to copy code to clipboard.",
-	"structurednav-copy-state-success": "Code copied to cliboard."
+	"structurednav-copy-state-success": "Code copied to cliboard.",
+	"right-structurednav-create": "Create a structured navigation",
+	"action-structurednav-create": "create a structured navigation",
+	"right-structurednav-edit": "Edit a structured navigation",
+	"action-structurednav-edit": "edit a structured navigation",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Navigation schema",
+	"titlesusedinnavigation": "Titles used in navigation",
+	"specials-navigationschema-subtitle": "JSON schema for structured navigations",
+	"specials-titlesusedinnavigation-legend": "Titles used in navigation",
+	"specials-titlesusedinnavigation-field-title-label": "Navigation title",
+	"specials-titlesusedinnavigation-field-title-placeholder": "A title in the Navigation namespace, e.g \"Dontnod Entertainment\""
 }
