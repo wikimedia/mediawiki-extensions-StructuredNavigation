@@ -33,9 +33,9 @@
 		"StructuredNavigation\\Libs\\": "libs/src/"
 	},
 	"Hooks": {
-		"BeforeDisplayNoArticleText": "StructuredNavigation\\Hooks\\HookHandler::onBeforeDisplayNoArticleText",
+		"BeforeDisplayNoArticleText": "StructuredNavigation\\Hooks\\BeforeDisplayNoArticleTextHandler::onBeforeDisplayNoArticleText",
 		"CodeEditorGetPageLanguage": "StructuredNavigation\\Hooks\\HookHandler::onCodeEditorGetPageLanguage",
-		"ParserFirstCallInit": "StructuredNavigation\\Hooks\\HookHandler::onParserFirstCallInit",
+		"ParserFirstCallInit": "StructuredNavigation\\Hooks\\ParserFirstCallInitHandler::onParserFirstCallInit",
 		"UserGetReservedNames": "StructuredNavigation\\Hooks\\HookHandler::onUserGetReservedNames"
 	},
 	"SpecialPages": {

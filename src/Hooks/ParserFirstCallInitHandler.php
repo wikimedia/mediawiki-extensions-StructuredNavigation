@@ -4,6 +4,7 @@ namespace StructuredNavigation\Hooks;
 
 use Parser;
 use ParserOutput;
+use StructuredNavigation\Services\Services;
 use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
@@ -12,11 +13,23 @@ use StructuredNavigation\View\NavigationViewPresenter;
  */
 final class ParserFirstCallInitHandler {
 	private const PAGE_PROPERTY = 'structurednavigation';
+	private const PARSER_TAG = 'mw-navigation';
+	private const PARSER_TAG_METHOD = 'getParserHandler';
 
 	private NavigationViewPresenter $navigationViewPresenter;
 
 	public function __construct( NavigationViewPresenter $navigationViewPresenter ) {
 		$this->navigationViewPresenter = $navigationViewPresenter;
+	}
+
+	/**
+	 * @param Parser $parser
+	 */
+	public static function onParserFirstCallInit( Parser $parser ) : void {
+		$parser->setHook( self::PARSER_TAG, [
+			Services::getInstance()->getParserFirstCallInitHandler(),
+			self::PARSER_TAG_METHOD
+		] );
 	}
 
 	/**

@@ -16,6 +16,14 @@ final class BeforeDisplayNoArticleTextHandler {
 		$this->article = $article;
 	}
 
+	/**
+	 * @param Article $article
+	 * @return bool
+	 */
+	public static function onBeforeDisplayNoArticleText( Article $article ) : bool {
+		return ( new self( $article ) )->getHandler();
+	}
+
 	public function getHandler() : bool {
 		if (
 			$this->article->getPage()->getContentModel()
