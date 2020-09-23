@@ -2,10 +2,10 @@
 
 namespace StructuredNavigation\View;
 
+use MediaWiki\User\UserIdentity;
 use SpecialPage;
 use StructuredNavigation\Libs\OOUI\View\EmptyStateView;
 use Title;
-use User;
 use Wikimedia\Message\ITextFormatter;
 use Wikimedia\Message\MessageValue;
 
@@ -34,7 +34,7 @@ final class NavigationNotFoundView {
 		$this->textFormatter = $textFormatter;
 	}
 
-	public function getView( Title $title, User $user ) : EmptyStateView {
+	public function getView( Title $title, UserIdentity $user ) : EmptyStateView {
 		$emptyStateConfig = array_merge(
 			[
 				'imageSource' => "{$this->extensionAssetsPath}/StructuredNavigation/resources/"
@@ -47,14 +47,14 @@ final class NavigationNotFoundView {
 		return new EmptyStateView( $emptyStateConfig );
 	}
 
-	private function getFlavorTextConfig( Title $title, User $user ) : array {
+	private function getFlavorTextConfig( Title $title, UserIdentity $user ) : array {
 		$flavorTextConfig = [
 			'summary' => $this->getMessage( self::MSG_SUMMARY ),
 			'buttonLabel' => $this->getMessage( self::MSG_BUTTON_LABEL ),
 			'buttonHref' => $title->getFullURL( [ 'action' => 'edit', 'redlink' => '1' ] ),
 		];
 
-		if ( !$user->isLoggedIn() ) {
+		if ( !$user->isRegistered() ) {
 			$flavorTextConfig['summary'] = $this->getMessage( self::MSG_SUMMARY_NOT_LOGGED_IN );
 			$flavorTextConfig['buttonLabel'] = $this->getMessage( self::MSG_BUTTON_LABEL_NOT_LOGGED_IN );
 			$flavorTextConfig['buttonHref'] = SpecialPage::getTitleFor( 'UserLogin' )->getFullURL( [
