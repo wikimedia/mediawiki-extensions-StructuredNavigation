@@ -12,7 +12,7 @@ use StructuredNavigation\DocumentationContent;
  *
  * @license MIT
  */
-final class NavigationSchemaPage extends SpecialPage {
+final class SpecialNavigationSchema extends SpecialPage {
 	private const PAGE_NAME = 'NavigationSchema';
 	private const MESSAGE_SUBTITLE = 'specials-navigationschema-subtitle';
 

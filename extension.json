@@ -40,13 +40,13 @@
 	},
 	"SpecialPages": {
 		"NavigationSchema": {
-			"class": "StructuredNavigation\\Specials\\NavigationSchemaPage",
+			"class": "StructuredNavigation\\Specials\\SpecialNavigationSchema",
 			"services": [
 				"StructuredNavigation.DocumentationContent"
 			]
 		},
 		"TitlesUsedInNavigation": {
-			"class": "StructuredNavigation\\Specials\\TitlesUsedInNavigation",
+			"class": "StructuredNavigation\\Specials\\SpecialTitlesUsedInNavigation",
 			"services": [
 				"StructuredNavigation.NavigationFactory",
 				"StructuredNavigation.NamespacedTitleSearcher"

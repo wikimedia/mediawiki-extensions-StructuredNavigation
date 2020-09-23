@@ -15,7 +15,7 @@ use StructuredNavigation\NavigationFactory;
  *
  * @license MIT
  */
-final class TitlesUsedInNavigation extends FormSpecialPage {
+final class SpecialTitlesUsedInNavigation extends FormSpecialPage {
 	private const FIELD_TITLE = 'title';
 	private const MESSAGE_LEGEND = 'specials-titlesusedinnavigation-legend';
 	private const MESSAGE_TITLE_LABEL = 'specials-titlesusedinnavigation-field-title-label';
