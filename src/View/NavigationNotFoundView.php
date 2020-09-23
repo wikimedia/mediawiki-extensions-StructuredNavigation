@@ -38,7 +38,7 @@ final class NavigationNotFoundView {
 		$emptyStateConfig = array_merge(
 			[
 				'imageSource' => "{$this->extensionAssetsPath}/StructuredNavigation/resources/"
-				. "images/structured-navigation.svg",
+				. 'images/structured-navigation.svg',
 				'title' => $this->getMessage( self::MSG_TITLE, [ $title->getText() ] ),
 			],
 			$this->getFlavorTextConfig( $title, $user )

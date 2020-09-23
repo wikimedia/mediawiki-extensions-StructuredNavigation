@@ -11,9 +11,9 @@ class NavigationView {
 	private const TEMPLATE_NAME = 'Navigation';
 	private const PARAM_TITLE_LABEL = 'title_label';
 	private const PARAM_GROUPS = 'groups';
-	private const PARAM_GROUP_LABEL = "group_label";
-	private const PARAM_LINKS = "links";
-	private const PARAM_LINK = "link";
+	private const PARAM_GROUP_LABEL = 'group_label';
+	private const PARAM_LINKS = 'links';
+	private const PARAM_LINK = 'link';
 
 	private LinkRenderer $linkRenderer;
 	private TemplateParser $templateParser;
