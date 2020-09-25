@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Récupère le JSON de tous les exemples de navigation source de l’extension StructuredNavigation. Ce sera fait depuis la version du logiciel de l’extension que le wiki a installé.",
+	"apihelp-query+structurednavigationexamples-example": "Récupère le JSON de tous les exemples de navigation source pour l’extension StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Récupère le schéma JSON utilisé pour valider la structure JSON des navigations.",
+	"apihelp-query+structurednavigationschema-example": "Récupérer le schéma du JSON de navigation",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Récupère le contenu JSON pour une navigation donnée.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Un titre existant valide dans l’espace de noms Navigation sur le wiki.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Récupère le contenu JSON d’une navigation nommée <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Récupère l’affichage d’une navigation par titre sous forme de fragment HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Un titre existant valide dans l’espace de noms Navigation sur le wiki.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Récupérer l’affichage d’une navigation nommée <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Récupère tous les titres utilisés dans une navigation donnée.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Un titre existant valide dans l’espace de noms Navigation sur le wiki.",
+	"apihelp-query+structurednavigationtitlesused-example": "Récupérer tous les titres utilisés dans la navigation nommée <kbd>Dontnod Entertainment</kbd>"
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"GinawaSaHapon"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Kinukuha ang JSON ng lahat ng mga halimbawang nabigasyong mula sa dugtong na StructuredNavigation. Manggagaling ito sa bersiyon ng software ng dugtong na in-install ng wiki.",
+	"apihelp-query+structurednavigationexamples-example": "Kunin ang JSON ng lahat ng mga halimbawang mula sa dugtong na StructuredNavigation",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Kinukuha ang laman na JSON para sa isang partikular na nabigasyon.",
+	"apihelp-query+structurednavigationtitlesused-example": "Kunin ang lahat ng mga pamagat na ginamit sa nabigasyong <kbd>Dontnod Entertainment</kbd>"
+}

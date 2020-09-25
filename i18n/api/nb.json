@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Henter JSON med alle navigasjonseksempler fra utvidelsen Strukturert navigasjon. Dette vil være fra versjonen av utvidelsesprogramvaren som wikien har installert.",
+	"apihelp-query+structurednavigationexamples-example": "Hent JSON med alle navigasjonseksempler fra utvidelsen Strukturert navigasjon",
+	"apihelp-query+structurednavigationschema-summary": "Henter JSON-skjemaet brukt for å validere JSON-strukturen til navigasjoner.",
+	"apihelp-query+structurednavigationschema-example": "Hent navigasjons-JSON-skjema",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Henter JSON-innholdet for en gitt navigasjon.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "En gyldig, eksisterende tittel i navigasjonsnavnerommet på wikien.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Hent JSON-innholdet til en navigasjon med navn <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Henter visningen av en navigasjon med tittel som et HTML-fragment.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "En gyldig, eksisterende tittel i navigasjonsnavnerommet på wikien.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Hent visningen av en navigasjon med navn <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Henter alle titler brukt av en gitt navigasjon",
+	"apihelp-query+structurednavigationtitlesused-param-title": "En gyldig, eksisterende tittel i navigasjonsnavnerommet på wikien.",
+	"apihelp-query+structurednavigationtitlesused-example": "Hent alle titler brukt i en navigasjon med navn <kbd>Dontnod Entertainment</kbd>"
+}

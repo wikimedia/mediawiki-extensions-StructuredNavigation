@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"GinawaSaHapon"
+		]
+	},
+	"structurednav-nav-not-found-title": "Wala pa sa ngayon ang nabigasyon sa paksang \"$1\".",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Mag-login at i-edit",
+	"action-structurednav-edit": "pag-eedit sa isang structured navigation",
+	"navigationschema": "Iskema ng nabigasyon",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Pamagat sa ngalan-espasyo ng nabigasyon, hal \"Dontnod Entertainment\""
+}

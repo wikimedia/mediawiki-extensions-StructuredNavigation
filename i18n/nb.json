@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"structurednav-desc": "Gjør det mulig å opprette strukturert, maskinlesbar navigasjon til bruk i artikler.",
+	"structurednav-reserved-username": "StructuredNavigation-srkipt",
+	"structurednav-nav-not-found-title": "En navigasjon om emnet med navn «$1» finnes ikke ennå.",
+	"structurednav-nav-not-found-summary": "Hvorfor ikke opprette en?",
+	"structurednav-nav-not-found-button-label": "Opprett en navigasjon",
+	"structurednav-nav-not-found-summary-not-logged-in": "Logg inn eller opprett en konto for å opprette denne navigasjonen.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Logg inn og rediger",
+	"structurednav-copy-label": "Bygg inn kode",
+	"structurednav-copy-state-fail": "Kunne ikke kopiere kode til utklippstavlen.",
+	"structurednav-copy-state-success": "Kode kopiert til utklippstavlen.",
+	"right-structurednav-create": "Opprette en strukturert navigasjon",
+	"action-structurednav-create": "opprette en strukturert navigasjon",
+	"right-structurednav-edit": "Redigere en strukturert navigasjon",
+	"action-structurednav-edit": "redigere en strukturert navigasjon",
+	"specialpages-group-structurednav": "Strukturert navigasjon",
+	"navigationschema": "Navigasjonsskjema",
+	"titlesusedinnavigation": "Titler brukt i navigasjonen",
+	"specials-navigationschema-subtitle": "JSON-skjema for strukturerte navigasjoner",
+	"specials-titlesusedinnavigation-legend": "Titler brukt i navigasjon",
+	"specials-titlesusedinnavigation-field-title-label": "Navigasjonstittel",
+	"specials-titlesusedinnavigation-field-title-placeholder": "En tittel i navigasjonsnavnerommet, f.eks. «Dontnod Entertainment»"
+}

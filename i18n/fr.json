@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Thibaut120094"
+		]
+	},
+	"structurednav-desc": "Permet de créer une navigation structurée lisible par une machine, pour utiliser dans les articles.",
+	"structurednav-reserved-username": "Script StructuredNavigation",
+	"structurednav-nav-not-found-title": "Une navigation sur le sujet nommé « $1 » n’existe pas encore.",
+	"structurednav-nav-not-found-summary": "Pourquoi ne pas en créer une ?",
+	"structurednav-nav-not-found-button-label": "Créer une navigation",
+	"structurednav-nav-not-found-summary-not-logged-in": "Se connecter ou créer un compte pour créer cette navigation.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Se connecter et modifier",
+	"structurednav-copy-label": "Code incorporé",
+	"structurednav-copy-state-fail": "Échec de copie du code au presse-papiers.",
+	"structurednav-copy-state-success": "Code copié dans le presse-papiers.",
+	"right-structurednav-create": "Créer une navigation structurée",
+	"action-structurednav-create": "créer une navigation structurée",
+	"right-structurednav-edit": "Modifier une navigation structurée",
+	"action-structurednav-edit": "modifier une navigation structurée",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Schéma de navigation",
+	"titlesusedinnavigation": "Titres utilisés dans la navigation",
+	"specials-navigationschema-subtitle": "Schéma JSON pour les navigations structurées",
+	"specials-titlesusedinnavigation-legend": "Titres utilisés dans la navigation",
+	"specials-titlesusedinnavigation-field-title-label": "Titre de navigation",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Un titre dans l’espace de noms Navigation, par ex. « Dontnod Entertainment »"
+}

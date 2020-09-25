@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"structurednav-desc": "Permite a criação de uma navegação estruturada e legível por máquina para uso em artigos.",
+	"structurednav-reserved-username": "Script de navegação estruturada",
+	"structurednav-nav-not-found-title": "Ainda não existe uma navegação no tópico chamado \"$1\".",
+	"structurednav-nav-not-found-summary": "Por que não criar um?",
+	"structurednav-nav-not-found-button-label": "Criar uma navegação",
+	"structurednav-nav-not-found-summary-not-logged-in": "Entre ou crie uma conta para criar esta navegação.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Entrar e editar",
+	"structurednav-copy-label": "Código embutido",
+	"structurednav-copy-state-fail": "Falha ao copiar o código para a área de transferência.",
+	"structurednav-copy-state-success": "Código copiado para a área de transferência.",
+	"right-structurednav-create": "criar uma navegação estruturada",
+	"action-structurednav-create": "criar uma navegação estruturada",
+	"right-structurednav-edit": "Editar uma navegação estruturada",
+	"action-structurednav-edit": "editar uma navegação estruturada",
+	"specialpages-group-structurednav": "Navegação estruturada",
+	"navigationschema": "Esquema de navegação",
+	"titlesusedinnavigation": "Títulos usados na navegação",
+	"specials-navigationschema-subtitle": "Esquema JSON para navegações estruturadas",
+	"specials-titlesusedinnavigation-legend": "Títulos usados na navegação",
+	"specials-titlesusedinnavigation-field-title-label": "Titulo da navegação",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Um título no espaço nominal de navegação, por exemplo, \"Dontnod Entertainment\""
+}

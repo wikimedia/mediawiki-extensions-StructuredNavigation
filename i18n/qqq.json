@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Samantha Nguyen"
+			"Samantha Nguyen",
+			"Umherirrender"
 		]
 	},
-	"structurednav-desc": "Describes the purpose of the structurednav extension",
-	"structurednav-separator-symbol": "Defines the symbol/character that should be used for separating each link in a navigation.",
+	"structurednav-desc": "{{desc|name=StructuredNavigation|url=https://www.mediawiki.org/wiki/Extension:StructuredNavigation}}",
+	"structurednav-separator-symbol": "{{notranslate}}\nDefines the symbol/character that should be used for separating each link in a navigation.",
 	"structurednav-reserved-username": "Defines the username that's reserved by this extension for doing automated tasks.",
 	"structurednav-nav-not-found-title": "The title shown for the empty state screen when a user visits a navigation that doesn't exist yet.",
 	"structurednav-nav-not-found-summary": "The summary shown for the empty state screen when a user visits a navigation that doesn't exist yet.",
@@ -19,7 +20,7 @@
 	"action-structurednav-create": "{{doc-action|structurednav-create}}",
 	"right-structurednav-edit": "{{doc-right|structurednav-edit}}",
 	"action-structurednav-edit": "{{doc-action|structurednav-edit}}",
-	"specialpages-group-structurednav": "Label for the special page group specific to the StructuredNavigation extension",
+	"specialpages-group-structurednav": "{{doc-special-group|structurednav}}\nLabel for the special page group specific to the StructuredNavigation extension",
 	"navigationschema": "Title for Special:NavigationSchema",
 	"titlesusedinnavigation": "Title for Special:TitlesUsedInNavigation",
 	"specials-navigationschema-subtitle": "Subtitle for Special:NavigationSchema",
