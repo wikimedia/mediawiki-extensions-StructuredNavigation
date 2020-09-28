@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Selcuksntrk"
+		]
+	},
+	"structurednav-desc": "Makalelerde kullanılması için yapılandırılmış, makine tarafından anlaşılabilir navigasyon oluşturmaya izin verir.",
+	"structurednav-reserved-username": "StructuredNavigation script",
+	"structurednav-nav-not-found-title": "Henüz \"$1\" adlı konuda bir navigasyon bulunmamaktadır.",
+	"structurednav-nav-not-found-summary": "Neden bir tane oluşturmuyorsunuz?",
+	"structurednav-nav-not-found-button-label": "Navigasyon oluştur",
+	"structurednav-nav-not-found-summary-not-logged-in": "Bu navigasyonu oluşturabilmek için giriş yapın veya kayıt olun.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Giriş yap ve düzenle",
+	"structurednav-copy-label": "Gömülü kod",
+	"structurednav-copy-state-fail": "Kod panoya kopyalanamadı."
+}

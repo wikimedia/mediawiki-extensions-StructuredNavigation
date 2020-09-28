@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"A2y4",
+			"Omotecho"
+		]
+	},
+	"structurednav-desc": "構造化され機械可読なナビゲーション機能を記事に追加。",
+	"structurednav-nav-not-found-button-label": "ナビゲーションを作成",
+	"structurednav-nav-not-found-button-label-not-logged-in": "ログインして編集",
+	"structurednav-copy-state-success": "クリップボードにコードをコピーしました。"
+}

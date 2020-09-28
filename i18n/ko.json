@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"structurednav-reserved-username": "StructuredNavigation 스크립트",
+	"structurednav-nav-not-found-button-label-not-logged-in": "로그인하여 편집하기",
+	"structurednav-copy-label": "코드 넣기",
+	"structurednav-copy-state-fail": "코드를 클립보드에 복사하는데 실패했습니다.",
+	"structurednav-copy-state-success": "코드를 클립보드에 복사했습니다."
+}
