@@ -16,5 +16,6 @@
 	"apihelp-query+structurednavigationnavigationhtml-example": "Fetch the view of a navigation named <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationtitlesused-summary": "Retrieves all titles used by a given navigation.",
 	"apihelp-query+structurednavigationtitlesused-param-title": "A valid, existing title in the Navigation namespace on the wiki.",
-	"apihelp-query+structurednavigationtitlesused-example": "Fetch all titles used in a navigation named <kbd>Dontnod Entertainment</kbd>"
+	"apihelp-query+structurednavigationtitlesused-example": "Fetch all titles used in a navigation named <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "The REST API for StructuredNavigation is experimental and disabled by default. This requires setting $wgStructuredNavigationEnableExperimentalAPI to true. If you are not a site administrator, please discuss it with your site administrator about enabling this feature."
 }

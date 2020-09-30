@@ -9,6 +9,8 @@ use StructuredNavigation\DocumentationContent;
  * @license MIT
  */
 class NavigationExamplesHandler extends SimpleHandler {
+	use NavigationRESTEnabledTrait;
+
 	private DocumentationContent $documentationContent;
 
 	public function __construct( DocumentationContent $documentationContent ) {
@@ -16,6 +18,8 @@ class NavigationExamplesHandler extends SimpleHandler {
 	}
 
 	public function run() {
+		$this->showErrorIfDisabled();
+
 		return $this->documentationContent->getExamples();
 	}
 

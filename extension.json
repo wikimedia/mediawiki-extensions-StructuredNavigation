@@ -56,40 +56,6 @@
 	"ContentHandlers": {
 		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
 	},
-	"APIMetaModules": {
-		"structurednavigationexamples": {
-			"class": "StructuredNavigation\\Api\\Action\\ApiMetaNavigationExamples",
-			"services": [
-				"StructuredNavigation.DocumentationContent"
-			]
-		},
-		"structurednavigationschema": {
-			"class": "StructuredNavigation\\Api\\Action\\ApiMetaNavigationSchema",
-			"services": [
-				"StructuredNavigation.DocumentationContent"
-			]
-		}
-	},
-	"APIPropModules": {
-		"structurednavigationnavigationdata": {
-			"class": "StructuredNavigation\\Api\\Action\\ApiQueryNavigationData",
-			"services": [
-				"StructuredNavigation.NavigationFactory"
-			]
-		},
-		"structurednavigationnavigationhtml": {
-			"class": "StructuredNavigation\\Api\\Action\\ApiQueryNavigationHtml",
-			"services": [
-				"StructuredNavigation.NavigationViewPresenter"
-			]
-		},
-		"structurednavigationtitlesused": {
-			"class": "StructuredNavigation\\Api\\Action\\ApiQueryTitlesUsed",
-			"services": [
-				"StructuredNavigation.NavigationFactory"
-			]
-		}
-	},
 	"RestRoutes": [
 		{
 			"path": "/structurednav/v0/examples",
@@ -136,6 +102,9 @@
 		"structurednavigation": "StructuredNavigation\\Hooks\\ExtensionCallback::getGlobalVarConfig"
 	},
 	"config": {
+		"StructuredNavigationEnableExperimentalAPI": {
+			"value": false
+		},
 		"StructuredNavigationReservedUsername": {
 			"value": "msg:structurednav-reserved-username"
 		}

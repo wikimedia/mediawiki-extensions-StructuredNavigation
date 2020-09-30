@@ -10,6 +10,8 @@ use Wikimedia\ParamValidator\ParamValidator;
  * @license MIT
  */
 class NavigationHtmlHandler extends SimpleHandler {
+	use NavigationRESTEnabledTrait;
+
 	private NavigationViewPresenter $navigationViewPresenter;
 
 	public function __construct( NavigationViewPresenter $navigationViewPresenter ) {
@@ -17,6 +19,8 @@ class NavigationHtmlHandler extends SimpleHandler {
 	}
 
 	public function run( string $title ) {
+		$this->showErrorIfDisabled();
+
 		return $this->navigationViewPresenter->getFromTitle( $title );
 	}
 

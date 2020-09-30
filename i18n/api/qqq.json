@@ -17,5 +17,6 @@
 	"apihelp-query+structurednavigationnavigationhtml-example": "{{doc-apihelp-example|query+structurednavigationnavigationhtml}}",
 	"apihelp-query+structurednavigationtitlesused-summary": "{{doc-apihelp-summary|query+structurednavigationtitlesused}}",
 	"apihelp-query+structurednavigationtitlesused-param-title": "{{doc-apihelp-param|query+structurednavigationtitlesused|title}}",
-	"apihelp-query+structurednavigationtitlesused-example": "{{doc-apihelp-example|query+structurednavigationtitlesused}}"
+	"apihelp-query+structurednavigationtitlesused-example": "{{doc-apihelp-example|query+structurednavigationtitlesused}}",
+	"structurednavigation-rest-api-not-enabled": "This error message is thrown when a user tries to use a REST API, and the experimental API feature is disabled. By default, the configuration setting \"$wgStructuredNavigationEnableExperimentalAPI\" is set to false."
 }

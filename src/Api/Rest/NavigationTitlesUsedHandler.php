@@ -10,6 +10,8 @@ use Wikimedia\ParamValidator\ParamValidator;
  * @license MIT
  */
 class NavigationTitlesUsedHandler extends SimpleHandler {
+	use NavigationRESTEnabledTrait;
+
 	private NavigationFactory $navigationFactory;
 
 	public function __construct( NavigationFactory $navigationFactory ) {
@@ -17,6 +19,8 @@ class NavigationTitlesUsedHandler extends SimpleHandler {
 	}
 
 	public function run( string $title ) {
+		$this->showErrorIfDisabled();
+
 		return $this->navigationFactory->newFromTitle( $title )->getAllLinks();
 	}
 
