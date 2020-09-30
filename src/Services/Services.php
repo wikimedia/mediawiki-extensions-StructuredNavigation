@@ -8,6 +8,7 @@ use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
+use StructuredNavigation\Schema\NavigationSchemaValidator;
 use StructuredNavigation\View\NavigationNotFoundView;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
@@ -61,5 +62,9 @@ final class Services {
 
 	public function getDocumentationContent() : DocumentationContent {
 		return $this->services->getService( 'StructuredNavigation.DocumentationContent' );
+	}
+
+	public function getNavigationSchemaValidator() : NavigationSchemaValidator {
+		return $this->services->getService( 'StructuredNavigation.SchemaValidator' );
 	}
 }

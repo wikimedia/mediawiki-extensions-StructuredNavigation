@@ -26,6 +26,10 @@ This extension requires MediaWiki 1.34 (or greater) and PHP 7.4 (or greater). To
 ```php
 wfLoadExtension( 'StructuredNavigation' );
 ```
+3. Install PHP package dependencies using composer:
+```
+composer update
+```
 
 ## Benefits
 Using this extension allows creating navigations that:

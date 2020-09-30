@@ -8,6 +8,7 @@ use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\NavigationFactory;
+use StructuredNavigation\Schema\NavigationSchemaValidator;
 use StructuredNavigation\View\NavigationNotFoundView;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
@@ -79,4 +80,11 @@ return [
 			$services->getMainConfig()->get( 'ExtensionDirectory' )
 		);
 		},
+
+	'StructuredNavigation.SchemaValidator'
+		=> function ( MediaWikiServices $services ) : NavigationSchemaValidator {
+		return new NavigationSchemaValidator(
+			$services->getMainConfig()->get( 'ExtensionDirectory' )
+		);
+		}
 ];

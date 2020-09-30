@@ -15,6 +15,7 @@
 	"structurednav-copy-label": "Embed code",
 	"structurednav-copy-state-fail": "Failed to copy code to clipboard.",
 	"structurednav-copy-state-success": "Code copied to cliboard.",
+	"structurednav-schema-invalid": "$1",
 	"right-structurednav-create": "Create a structured navigation",
 	"action-structurednav-create": "create a structured navigation",
 	"right-structurednav-edit": "Edit a structured navigation",
