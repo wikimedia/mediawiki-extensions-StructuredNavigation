@@ -16,5 +16,6 @@
 	"apihelp-query+structurednavigationnavigationhtml-example": "Hent visningen av en navigasjon med navn <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationtitlesused-summary": "Henter alle titler brukt av en gitt navigasjon",
 	"apihelp-query+structurednavigationtitlesused-param-title": "En gyldig, eksisterende tittel i navigasjonsnavnerommet på wikien.",
-	"apihelp-query+structurednavigationtitlesused-example": "Hent alle titler brukt i en navigasjon med navn <kbd>Dontnod Entertainment</kbd>"
+	"apihelp-query+structurednavigationtitlesused-example": "Hent alle titler brukt i en navigasjon med navn <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "RESP-API-et for strukturert navigasjon er eksperimentelt og slått av som standard. Dette krever at man setter $wgStructuredNavigationEnableExperimentalAPI til true. Hvis du ikke er nettstedets administrator, spør vedkommende om å slå på denne funksjonen."
 }

@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail"
+		]
+	},
+	"structurednav-desc": "Umożliwia tworzenie strukturalnej nawigacji czytelnej dla maszyn do użytku w artykułach",
+	"structurednav-reserved-username": "Skrypt strukturalnej nawigacji",
+	"structurednav-nav-not-found-title": "Nawigacja tematu „$1” jeszcze nie istnieje.",
+	"structurednav-nav-not-found-summary": "Chcesz ją utworzyć?",
+	"structurednav-nav-not-found-button-label": "Stwórz nawigację",
+	"structurednav-nav-not-found-summary-not-logged-in": "Zaloguj się lub załóż konto, aby stworzyć tę nawigację.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Zaloguj się i edytuj",
+	"structurednav-copy-label": "Osadź kod",
+	"structurednav-copy-state-fail": "Kopiowanie kodu do schowka nie powiodło się.",
+	"structurednav-copy-state-success": "Skopiowano kod do schowka.",
+	"right-structurednav-create": "Tworzenie strukturalnej nawigacji",
+	"action-structurednav-create": "tworzenia strukturalnej nawigacji",
+	"right-structurednav-edit": "Edytowanie strukturalnej nawigacji",
+	"action-structurednav-edit": "edytowania strukturalnej nawigacji",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Schemat nawigacji",
+	"titlesusedinnavigation": "Tytuły używane w nawigacji",
+	"specials-navigationschema-subtitle": "Schemat JSON dla strukturalnych nawigacji",
+	"specials-titlesusedinnavigation-legend": "Tytuły używane w nawigacji",
+	"specials-titlesusedinnavigation-field-title-label": "Tytuł nawigacji",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Tytuł w przestrzeni nazw „Nawigacja”, np. „Dontnod Entertainment”"
+}

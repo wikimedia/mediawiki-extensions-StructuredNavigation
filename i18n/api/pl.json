@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Pozyskuje JSON wszystkich przykładów nawigacji z rozszerzenia StructuredNavigation. Pochodzi z wersji rozszerzenia zainstalowanego na tej wiki.",
+	"apihelp-query+structurednavigationexamples-example": "Pozyskaj JSON wszystkich przykładów nawigacji z rozszerzenia StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Pozyskuje schemat JSON używany do walidacji struktury JSON nawigacji.",
+	"apihelp-query+structurednavigationschema-example": "Pozyskaj schemat JSON nawigacji",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Pozyskuje zawartość JSON dla podanej nawigacji.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Poprawny oraz istniejący tytuł w przestrzeni nazw „Navigation” na tej wiki.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Pozyskaj zawartość JSON nawigacji o nazwie <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Pozyskuje podgląd podanej nawigacji jako fragment kodu HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Poprawny oraz istniejący tytuł w przestrzeni nazw „Navigation” na tej wiki.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Pozyskaj wygląd nawigacji o nazwie <kbd>Dontnod Entertainment</kbd",
+	"apihelp-query+structurednavigationtitlesused-summary": "Pozyskuje wszelkie tytuły używane przez podaną nawigację.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Poprawny oraz istniejący tytuł w przestrzeni nazw „Navigation” na tej wiki.",
+	"apihelp-query+structurednavigationtitlesused-example": "Pozyskaj wszystkie tytułu używane w nawigacji o nazwie <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "REST API rozszerzenia StructuredNavigation znajduje się w fazie eksperymentalnej i jest domyślnie wyłączone. Wymaga ustawienia wartości zmiennej $wgStructuredNavigationEnableExperimentalAPI na true. Jeżeli nie jesteś administratorem witryny, skontaktuj się z administratorem w sprawie omówienia włączenia tej funkcji."
+}
