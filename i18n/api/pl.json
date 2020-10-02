@@ -13,7 +13,7 @@
 	"apihelp-query+structurednavigationnavigationdata-example": "Pozyskaj zawartość JSON nawigacji o nazwie <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationnavigationhtml-summary": "Pozyskuje podgląd podanej nawigacji jako fragment kodu HTML.",
 	"apihelp-query+structurednavigationnavigationhtml-param-title": "Poprawny oraz istniejący tytuł w przestrzeni nazw „Navigation” na tej wiki.",
-	"apihelp-query+structurednavigationnavigationhtml-example": "Pozyskaj wygląd nawigacji o nazwie <kbd>Dontnod Entertainment</kbd",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Pozyskaj wygląd nawigacji o nazwie <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationtitlesused-summary": "Pozyskuje wszelkie tytuły używane przez podaną nawigację.",
 	"apihelp-query+structurednavigationtitlesused-param-title": "Poprawny oraz istniejący tytuł w przestrzeni nazw „Navigation” na tej wiki.",
 	"apihelp-query+structurednavigationtitlesused-example": "Pozyskaj wszystkie tytułu używane w nawigacji o nazwie <kbd>Dontnod Entertainment</kbd>",

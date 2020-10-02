@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"structurednav-desc": "Permite crear navegaciones estructuradas y utilizables por máquinas para utilizarlas en los artículos.",
+	"structurednav-reserved-username": "Secuencia de StructuredNavigation",
+	"structurednav-nav-not-found-button-label": "Crear una navegación",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Acceder y editar",
+	"structurednav-copy-label": "Código de incrustación",
+	"structurednav-copy-state-fail": "No se pudo copiar el código en el portapapeles.",
+	"structurednav-copy-state-success": "Se copió el código en el portapapeles.",
+	"right-structurednav-create": "Crear navegaciones estructuradas",
+	"action-structurednav-create": "crear una navegación estructurada",
+	"right-structurednav-edit": "Editar navegaciones estructuradas",
+	"titlesusedinnavigation": "Títulos utilizados en la navegación",
+	"specials-navigationschema-subtitle": "Esquema JSON para navegaciones estructuradas",
+	"specials-titlesusedinnavigation-legend": "Títulos utilizados en la navegación",
+	"specials-titlesusedinnavigation-field-title-label": "Título de la navegación"
+}

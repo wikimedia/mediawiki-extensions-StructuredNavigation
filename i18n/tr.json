@@ -1,16 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
+			"MuratTheTurkish",
 			"Selcuksntrk"
 		]
 	},
-	"structurednav-desc": "Makalelerde kullanılması için yapılandırılmış, makine tarafından anlaşılabilir navigasyon oluşturmaya izin verir.",
-	"structurednav-reserved-username": "StructuredNavigation script",
-	"structurednav-nav-not-found-title": "Henüz \"$1\" adlı konuda bir navigasyon bulunmamaktadır.",
+	"structurednav-desc": "Maddelerde kullanılmak üzere yapılandırılmış, makine tarafından okunabilir bir gezinme oluşturmaya izin verir.",
+	"structurednav-reserved-username": "StructuredNavigation betiği",
+	"structurednav-nav-not-found-title": "Henüz \"$1\" adlı konuda bir gezinme yok.",
 	"structurednav-nav-not-found-summary": "Neden bir tane oluşturmuyorsunuz?",
-	"structurednav-nav-not-found-button-label": "Navigasyon oluştur",
-	"structurednav-nav-not-found-summary-not-logged-in": "Bu navigasyonu oluşturabilmek için giriş yapın veya kayıt olun.",
-	"structurednav-nav-not-found-button-label-not-logged-in": "Giriş yap ve düzenle",
+	"structurednav-nav-not-found-button-label": "Bir gezinti oluştur",
+	"structurednav-nav-not-found-summary-not-logged-in": "Bu gezintiyi oluşturmak için oturum açın veya bir hesap oluşturun.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Oturum aç ve düzenle",
 	"structurednav-copy-label": "Gömülü kod",
-	"structurednav-copy-state-fail": "Kod panoya kopyalanamadı."
+	"structurednav-copy-state-fail": "Kod panoya kopyalanamadı.",
+	"structurednav-copy-state-success": "Kod panoya kopyalandı.",
+	"right-structurednav-create": "Yapılandırılmış bir gezinme oluştur",
+	"action-structurednav-create": "yapılandırılmış bir gezinme oluştur",
+	"right-structurednav-edit": "Yapılandırılmış bir gezinme düzenle",
+	"action-structurednav-edit": "yapılandırılmış bir gezinme düzenle",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Gezinme şeması",
+	"titlesusedinnavigation": "Gezinmede kullanılan başlıklar",
+	"specials-navigationschema-subtitle": "Yapılandırılmış gezinmeler için JSON şeması",
+	"specials-titlesusedinnavigation-legend": "Gezinmede kullanılan başlıklar",
+	"specials-titlesusedinnavigation-field-title-label": "Gezinme başlığı",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Gezinme ad alanındaki bir başlık, ör. \"Dontnod Entertainment\""
 }

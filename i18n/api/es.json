@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"apihelp-query+structurednavigationschema-example": "Recuperar el esquema de navegación JSON"
+}

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hanna Tardos"
+		]
+	},
+	"structurednavigation-rest-api-not-enabled": "A StructuredNavigation REST API-ja kísérleti fázisban van, alapállapotban nem elérhető. Bekapcsolásához érvényesíteni kell a $wgStructuredNavigationEnableExperimentalAPI-t. Amennyiben nem vagy erre jogosult, kérj tanácsot az adminisztrátortól az említett funkcióval kapcsolatban."
+}

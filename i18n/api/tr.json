@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"MuratTheTurkish"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "StructuredNavigation uzantısından elde edilen tüm gezinme örneklerinin JSON'unu alır. Bu, vikinin yüklediği uzantı yazılımının sürümünden olacaktır.",
+	"apihelp-query+structurednavigationexamples-example": "StructuredNavigation uzantısından elde edilen tüm gezinme örneklerinin JSON'sini getirin",
+	"apihelp-query+structurednavigationschema-summary": "Gezinmelerin JSON yapısını doğrulamak için kullanılan JSON şemasını alır.",
+	"apihelp-query+structurednavigationschema-example": "Gezinme JSON şemasını getirin",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Belirli bir gezinme için JSON içeriğini alır.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Viki üzerindeki Gezinti ad alanında bulunan geçerli, mevcut bir başlık.",
+	"apihelp-query+structurednavigationnavigationdata-example": "<kbd>Dontnod Entertainment</kbd> adlı bir gezintinin JSON içeriğini alın",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Başlığa göre gezinme görünümünü HTML parçası olarak alır.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Viki üzerindeki Gezinti ad alanında bulunan geçerli, mevcut bir başlık.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "<kbd>Dontnod Entertainment</kbd> adlı bir gezintinin JSON görünümü alın",
+	"apihelp-query+structurednavigationtitlesused-summary": "Belirli bir gezinme tarafından kullanılan tüm başlıkları alır.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Viki üzerindeki Gezinti ad alanında bulunan geçerli, mevcut bir başlık.",
+	"apihelp-query+structurednavigationtitlesused-example": "<kbd>Dontnod Entertainment</kbd> adlı bir gezinmede kullanılan tüm başlıkları getirin",
+	"structurednavigation-rest-api-not-enabled": "StructuredNavigation için REST API deneyseldir ve varsayılan olarak devre dışıdır. Bu, $wgStructuredNavigationEnableExperimentalAPI'nin true olarak ayarlanmasını gerektirir. Site hizmetli değilseniz, lütfen bu özelliği etkinleştirmek için site hizmetlinizle tartışın."
+}
