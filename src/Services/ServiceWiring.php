@@ -26,6 +26,7 @@ return [
 	'StructuredNavigation.NavigationFactory'
 		=> function ( MediaWikiServices $services ) : NavigationFactory {
 		return new NavigationFactory(
+			$services->getRevisionLookup(),
 			$services->getTitleParser()
 		);
 		},

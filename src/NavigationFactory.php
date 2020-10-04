@@ -3,17 +3,19 @@
 namespace StructuredNavigation;
 
 use FormatJson;
-use Title;
+use MediaWiki\Revision\RevisionLookup;
+use MediaWiki\Revision\SlotRecord;
 use TitleParser;
-use WikiPage;
 
 /**
  * @license MIT
  */
 final class NavigationFactory {
+	private RevisionLookup $revisionLookup;
 	private TitleParser $titleParser;
 
-	public function __construct( TitleParser $titleParser ) {
+	public function __construct( RevisionLookup $revisionLookup, TitleParser $titleParser ) {
+		$this->revisionLookup = $revisionLookup;
 		$this->titleParser = $titleParser;
 	}
 
@@ -53,16 +55,18 @@ final class NavigationFactory {
 	 * @return Navigation|false
 	 */
 	public function newFromTitle( string $passedTitle ) {
-		$title = Title::newFromLinkTarget(
-			$this->titleParser->parseTitle( $passedTitle, NS_NAVIGATION ) );
-
-		if ( !$title->exists() ) {
+		$title = $this->titleParser->parseTitle( $passedTitle, NS_NAVIGATION );
+		$revisionFromTitle = $this->revisionLookup->getRevisionByTitle( $title );
+		if ( $revisionFromTitle === null ) {
 			return false;
 		}
 
 		return $this->newFromSource(
 			FormatJson::decode(
-				WikiPage::factory( $title )->getContent()->getNativeData(), true
+				$revisionFromTitle
+					->getContent( SlotRecord::MAIN )
+					->getText(),
+				true
 			)
 		);
 	}
