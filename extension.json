@@ -192,5 +192,6 @@
 			"scripts": "resources/modules/ext.structuredNav.core.js"
 		}
 	},
+	"load_composer_autoloader": true,
 	"manifest_version": 2
 }
