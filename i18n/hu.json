@@ -4,5 +4,25 @@
 			"Hanna Tardos"
 		]
 	},
-	"structurednav-nav-not-found-button-label-not-logged-in": "Bejelentkezés és szerkesztés"
+	"structurednav-desc": "Lehetővé teszi a cikkek közti strukturált, gépi olvasásra alkalmas navigációt.",
+	"structurednav-reserved-username": "StrukturáltNavigáció script",
+	"structurednav-nav-not-found-title": "A $1 téma navigációja még nem létezik.",
+	"structurednav-nav-not-found-summary": "Létrehozol egyet?",
+	"structurednav-nav-not-found-button-label": "Navigáció létrehozása",
+	"structurednav-nav-not-found-summary-not-logged-in": "Jelentkezz be vagy regisztrálj, hogy létre hozhasd ezt a navigációt",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Bejelentkezés és szerkesztés",
+	"structurednav-copy-label": "Beágyazási kód",
+	"structurednav-copy-state-fail": "Kód vágólapra másolása sikertelen.",
+	"structurednav-copy-state-success": "Kód a vágólapra másolva",
+	"right-structurednav-create": "Strukturált navigáció létrehozása",
+	"action-structurednav-create": "strukturált navigáció létrehozása",
+	"right-structurednav-edit": "Strukturált navigáció szerkesztése",
+	"action-structurednav-edit": "strukturált navigáció szerkesztése",
+	"specialpages-group-structurednav": "StrukturáltNavigáció",
+	"navigationschema": "Navigációs séma",
+	"titlesusedinnavigation": "Címek használata navigációban",
+	"specials-navigationschema-subtitle": "JSON séma strukturált navigációkhoz",
+	"specials-titlesusedinnavigation-legend": "Címek használata navigációban",
+	"specials-titlesusedinnavigation-field-title-label": "Navigáció cím",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Cím a Navigációs névtartományban, pl.: \"Dontnod Entertainment\""
 }
