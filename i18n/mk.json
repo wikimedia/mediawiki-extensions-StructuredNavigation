@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"structurednav-desc": "Овозможува создавање на структуриран и машински читлив прегледник за употреба во статии.",
+	"structurednav-reserved-username": "Скрипта „Структуриран прегледник“",
+	"structurednav-nav-not-found-title": "Засега не постои прегледник на темата „$1“.",
+	"structurednav-nav-not-found-summary": "Зошто не го создадете?",
+	"structurednav-nav-not-found-button-label": "Создај прегледник",
+	"structurednav-nav-not-found-summary-not-logged-in": "Најавете се или направете сметка за да го создадете овој прегледник.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Најавете се и уредувајте",
+	"structurednav-copy-label": "Вметнат код",
+	"structurednav-copy-state-fail": "Не успеав да го пресликам кодот во меѓускладот.",
+	"structurednav-copy-state-success": "Кодот е пресликан во меѓускладот.",
+	"right-structurednav-create": "Создавање на структурирани прегледници",
+	"action-structurednav-create": "создавање на структурирани прегледници",
+	"right-structurednav-edit": "Уредување на структуриран прегледник",
+	"action-structurednav-edit": "уредување на структуриран прегледник",
+	"specialpages-group-structurednav": "Структуриран прегледник",
+	"navigationschema": "Прегледничка шема",
+	"titlesusedinnavigation": "Наслови користени во прегледникот",
+	"specials-navigationschema-subtitle": "JSON-шема за структурирани прегледници",
+	"specials-titlesusedinnavigation-legend": "Наслови користени во прегледникот",
+	"specials-titlesusedinnavigation-field-title-label": "Наслов на прегледникот",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Наслов во именскиот простор за прегледници, на пр. „Село Негобило“"
+}
