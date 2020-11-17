@@ -8,7 +8,7 @@ namespace StructuredNavigation;
 final class Navigation {
 	private array $content;
 	private string $titleLabel;
-	/** @param NavigationGroup[] */
+	/** @var NavigationGroup[] */
 	private array $groups;
 
 	public function __construct( array $content, string $titleLabel, array $groups ) {

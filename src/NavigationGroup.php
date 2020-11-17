@@ -7,7 +7,7 @@ namespace StructuredNavigation;
  */
 final class NavigationGroup {
 	private string $label;
-	/** @param NavigationGroupLink[] */
+	/** @var NavigationGroupLink[] */
 	private array $links;
 
 	public function __construct( string $label, array $links ) {
