@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sabelöga"
+		]
+	},
+	"structurednav-desc": "Gör det möjlig att etablera strukturerat, maskinläsbar navigation till bruk i artiklar.",
+	"structurednav-reserved-username": "StructuredNavigation-skript",
+	"structurednav-nav-not-found-title": "En navigation för ämnet \"$1\" finns ännu inte",
+	"structurednav-nav-not-found-summary": "Varför inte skapa en?",
+	"structurednav-nav-not-found-button-label": "Skapa en navigation",
+	"structurednav-nav-not-found-summary-not-logged-in": "Logga in eller skapa ett konto för att skapa denna navigation",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Logga in och redigera"
+}
