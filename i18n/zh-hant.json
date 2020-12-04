@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"structurednav-desc": "允許用於在條目上建立結構化、機器可讀的導覽。",
+	"structurednav-reserved-username": "StructuredNavigation 腳本",
+	"structurednav-nav-not-found-title": "尚未存在主題名為「$1」的導覽。",
+	"structurednav-nav-not-found-summary": "何不建立一個？",
+	"structurednav-nav-not-found-button-label": "建立導覽",
+	"structurednav-nav-not-found-summary-not-logged-in": "登入或建立帳號以便建立此導覽。",
+	"structurednav-nav-not-found-button-label-not-logged-in": "登入與編輯",
+	"structurednav-copy-label": "內嵌代碼",
+	"structurednav-copy-state-fail": "複製代碼到剪貼簿失敗。",
+	"structurednav-copy-state-success": "代碼已複製到剪貼簿。",
+	"right-structurednav-create": "建立結構化導覽",
+	"action-structurednav-create": "建立結構化導覽",
+	"right-structurednav-edit": "編輯結構化導覽",
+	"action-structurednav-edit": "編輯結構化導覽",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "導覽架構",
+	"titlesusedinnavigation": "使用在導覽的標題",
+	"specials-navigationschema-subtitle": "用於結構化導覽的 JSON 架構",
+	"specials-titlesusedinnavigation-legend": "使用在導覽的標題",
+	"specials-titlesusedinnavigation-field-title-label": "導覽標題",
+	"specials-titlesusedinnavigation-field-title-placeholder": "在導覽命名空間的標題，例如「Dontnod Entertainment」"
+}

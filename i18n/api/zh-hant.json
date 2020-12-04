@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "檢索來自 StructuredNavigation 擴充的所有 JSON 導覽範例。這會來自 Wiki 已安裝的擴充軟體版本。",
+	"apihelp-query+structurednavigationexamples-example": "取得來自 StructuredNavigation 擴充套件的所有導覽範例 JSON",
+	"apihelp-query+structurednavigationschema-summary": "檢索使用在驗證導覽 JSON 結構化的 JSON 架構。",
+	"apihelp-query+structurednavigationschema-example": "取得導覽 JSON 架構",
+	"apihelp-query+structurednavigationnavigationdata-summary": "檢索指定導覽的 JSON 內容。",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Wiki 上導覽命名空間裡有效、現存的標題。",
+	"apihelp-query+structurednavigationnavigationdata-example": "取得導覽名稱為 <kbd>Dontnod Entertainment</kbd> 的 JSON 內容",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "檢索以標題作為 HTML 片段的導覽視圖。",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Wiki 上導覽命名空間裡有效、現存的標題。",
+	"apihelp-query+structurednavigationnavigationhtml-example": "取得導覽名稱為 <kbd>Dontnod Entertainment</kbd> 視圖",
+	"apihelp-query+structurednavigationtitlesused-summary": "檢索依據所指定導覽全部使用到的標題。",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Wiki 上導覽命名空間裡有效、現存的標題。",
+	"apihelp-query+structurednavigationtitlesused-example": "取得名稱為 <kbd>Dontnod Entertainment</kbd> 的導覽裡所有使用到標題",
+	"structurednavigation-rest-api-not-enabled": "用於 StructuredNavigation 的 REST API 目前為實驗階段，在預設情況下為停用。要使用需要將 $wgStructuredNavigationEnableExperimentalAPI 設定為 true。如果您不是站台管理員，請與您的站台管理員討論有關啟用此功能的事情。"
+}
