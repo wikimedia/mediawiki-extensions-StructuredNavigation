@@ -16,5 +16,6 @@
 	"apihelp-query+structurednavigationnavigationhtml-example": "Obtenha a visualização de uma navegação com nome de <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationtitlesused-summary": "Recupera todos os títulos usados por uma determinada navegação.",
 	"apihelp-query+structurednavigationtitlesused-param-title": "Um título válido e existente no espaço nominal de navegação na wiki.",
-	"apihelp-query+structurednavigationtitlesused-example": "Obter todos os títulos usados em uma navegação com nome de <kbd>Dontnod Entertainment</kbd>"
+	"apihelp-query+structurednavigationtitlesused-example": "Obter todos os títulos usados em uma navegação com nome de <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "A API REST para StructuredNavigation é experimental e desabilitada por padrão. Isso requer a configuração de $wgStructuredNavigationEnableExperimentalAPI como true. Se você não for um administrador do site, converse com o administrador do site sobre a ativação desse recurso."
 }
