@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eduardo Addad de Oliveira"
+			"Eduardo Addad de Oliveira",
+			"Eduardoaddad"
 		]
 	},
 	"apihelp-query+structurednavigationexamples-summary": "Recupera o JSON de todos os exemplos de navegação originados da extensão StructuredNavigation. Será da versão do software de extensão que a wiki instalou.",
