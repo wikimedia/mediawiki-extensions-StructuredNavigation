@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
-			"Thibaut120094"
+			"Thibaut120094",
+			"Verdy p"
 		]
 	},
-	"structurednav-desc": "Permet de créer une navigation structurée lisible par une machine, pour utiliser dans les articles.",
+	"structurednav-desc": "Permet de créer une navigation structurée lisible par une machine et utilisable dans les articles.",
 	"structurednav-reserved-username": "Script StructuredNavigation",
 	"structurednav-nav-not-found-title": "Une navigation sur le sujet nommé « $1 » n’existe pas encore.",
 	"structurednav-nav-not-found-summary": "Pourquoi ne pas en créer une ?",
@@ -13,7 +14,7 @@
 	"structurednav-nav-not-found-summary-not-logged-in": "Se connecter ou créer un compte pour créer cette navigation.",
 	"structurednav-nav-not-found-button-label-not-logged-in": "Se connecter et modifier",
 	"structurednav-copy-label": "Code incorporé",
-	"structurednav-copy-state-fail": "Échec de copie du code au presse-papiers.",
+	"structurednav-copy-state-fail": "Échec de copie du code dans le presse-papiers.",
 	"structurednav-copy-state-success": "Code copié dans le presse-papiers.",
 	"right-structurednav-create": "Créer une navigation structurée",
 	"action-structurednav-create": "créer une navigation structurée",
