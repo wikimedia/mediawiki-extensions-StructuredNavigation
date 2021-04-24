@@ -11,13 +11,13 @@ module.exports = function ( grunt ) {
 		banana: config.MessagesDirs,
 		eslint: {
 			all: [
-				'*.js',
-				'**/*.js',
+				'**/*.{js,json}',
 				'!node_modules/**',
 				'!vendor/**'
 			],
 			fix: {
 				options: {
+					cache: true,
 					fix: true
 				}
 			}
@@ -32,7 +32,7 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'test', [ 'banana', 'eslint', 'stylelint' ] );
+	grunt.registerTask( 'test', [ 'eslint:all', 'banana', 'stylelint' ] );
 	grunt.registerTask( 'fix', 'eslint:fix' );
 	grunt.registerTask( 'default', 'test' );
 };
