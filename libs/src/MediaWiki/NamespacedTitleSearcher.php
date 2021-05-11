@@ -34,7 +34,7 @@ final class NamespacedTitleSearcher {
 		$this->searchEngine->setNamespaces( [ $namespace ] );
 		$result = $this->searchEngine->defaultPrefixSearch( $search );
 
-		return array_map( function ( Title $t ) {
+		return array_map( static function ( Title $t ) {
 			// Remove namespace in search suggestion
 			return $t->getText();
 		}, $result );
