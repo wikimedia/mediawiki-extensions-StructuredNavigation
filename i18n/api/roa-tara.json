@@ -4,5 +4,6 @@
 			"Joetaras"
 		]
 	},
-	"apihelp-query+structurednavigationschema-example": "Analizze 'u scheme de navigazione JSON"
+	"apihelp-query+structurednavigationschema-example": "Analizze 'u scheme de navigazione JSON",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Pigghie 'u condenute JSON pe 'na certa navigazzione."
 }
