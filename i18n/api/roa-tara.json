@@ -6,7 +6,11 @@
 	},
 	"apihelp-query+structurednavigationschema-example": "Analizze 'u scheme de navigazione JSON",
 	"apihelp-query+structurednavigationnavigationdata-summary": "Pigghie 'u condenute JSON pe 'na certa navigazzione.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "'Nu titole valide e esistende jndr'à 'u namespace Navigation sus 'a uicchi.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Analizze tutte le condenute JSON de 'na navigazzione chiamate <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "'Nu titole valide e esistende jndr'à 'u namespace Navigation sus 'a uicchi.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Analizze 'u 'ndrucamende de 'na navigazzione chiamate <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationtitlesused-summary": "Pigghie tutte le titole ausate da 'na certa navigazzione.",
-	"apihelp-query+structurednavigationtitlesused-param-title": "'Nu tiole valide e esistende jndr'à 'u namespace Navigation sus 'a uicchi.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "'Nu titole valide e esistende jndr'à 'u namespace Navigation sus 'a uicchi.",
 	"apihelp-query+structurednavigationtitlesused-example": "Analizze tutte le titole ausate jndr'à 'na navigazizone chiamate <kbd>Dontnod Entertainment</kbd>"
 }
