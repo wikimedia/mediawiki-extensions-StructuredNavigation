@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"structurednav-desc": "Conzende 'a ccrejazione de 'na navigazzione strutturate, leggibbele da 'a maghene pe l'ause sus a le vôsce.",
+	"structurednav-reserved-username": "Script de StructuredNavigation",
+	"structurednav-nav-not-found-title": "'Na navigazione sus a l'argomende chiamate \"$1\" angore non g'esiste.",
+	"structurednav-nav-not-found-summary": "Purcé no ne ccreje une?",
+	"structurednav-nav-not-found-button-label": "Ccreje 'na navigazzione",
+	"structurednav-nav-not-found-summary-not-logged-in": "Tràse o ccreje 'nu cunde pe ccrejà sta navigazzione.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Tràse e cange",
+	"structurednav-copy-label": "Codece 'ngapsulate",
+	"structurednav-copy-state-fail": "Copie d'u codice jndr'à l'appunde fallite.",
+	"structurednav-copy-state-success": "Codece copiate jndr'à l'appunde.",
+	"right-structurednav-create": "Ccreje 'na navigazzione strutturate",
+	"action-structurednav-create": "ccreje 'na navigazzione strutturate",
+	"right-structurednav-edit": "Cange 'na navigazzione strutturate",
+	"action-structurednav-edit": "cange 'na navigazzione strutturate",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Scheme de navigazzione",
+	"titlesusedinnavigation": "Titole ausate jndr'à navigazzione",
+	"specials-navigationschema-subtitle": "Scheme d'u JSON pe le navigazziune strutturate",
+	"specials-titlesusedinnavigation-legend": "Titole ausate jndr'à navigazzione",
+	"specials-titlesusedinnavigation-field-title-label": "Titole de navigazzione",
+	"specials-titlesusedinnavigation-field-title-placeholder": "'Nu titole jndr'à 'u namespace d'a Navigazzione, p.e. \"Dontnod Entertainment\""
+}
