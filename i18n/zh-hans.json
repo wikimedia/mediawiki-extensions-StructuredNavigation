@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dianliang233"
+		]
+	},
+	"structurednav-desc": "允许创建结构化的、可供极其阅读的的导航，并将其用于条目中。",
+	"structurednav-reserved-username": "StructuredNavigation脚本",
+	"structurednav-nav-not-found-title": "名为“$1”的的导航尚不存在。",
+	"structurednav-nav-not-found-summary": "您可以创建它。",
+	"structurednav-nav-not-found-button-label": "创建导航",
+	"structurednav-nav-not-found-summary-not-logged-in": "登录或注册以创建此导航。",
+	"structurednav-nav-not-found-button-label-not-logged-in": "登录并编辑",
+	"structurednav-copy-label": "嵌入代码",
+	"structurednav-copy-state-fail": "无法将代码复制到剪贴板。",
+	"structurednav-copy-state-success": "代码已复制到剪贴板。",
+	"right-structurednav-create": "创建结构化导航",
+	"action-structurednav-create": "创建结构化导航",
+	"right-structurednav-edit": "编辑结构化导航",
+	"action-structurednav-edit": "编辑结构化导航",
+	"specialpages-group-structurednav": "结构化导航",
+	"navigationschema": "导航架构",
+	"titlesusedinnavigation": "导航中的页面标题",
+	"specials-navigationschema-subtitle": "结构化导航的JSON架构（schema）",
+	"specials-titlesusedinnavigation-legend": "导航中的页面标题",
+	"specials-titlesusedinnavigation-field-title-label": "导航标题",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Navigation名字空间中的一个标题，例如“Dontnod Entertainment”"
+}
