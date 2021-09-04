@@ -19,12 +19,12 @@ use TemplateParser;
  */
 return [
 	'StructuredNavigation.Config'
-		=> static function ( MediaWikiServices $services ) : Config {
+		=> static function ( MediaWikiServices $services ): Config {
 		return $services->getConfigFactory()->makeConfig( 'structurednavigation' );
 		},
 
 	'StructuredNavigation.NavigationFactory'
-		=> static function ( MediaWikiServices $services ) : NavigationFactory {
+		=> static function ( MediaWikiServices $services ): NavigationFactory {
 		return new NavigationFactory(
 			$services->getRevisionLookup(),
 			$services->getTitleParser()
@@ -32,12 +32,12 @@ return [
 		},
 
 	'StructuredNavigation.NamespacedTitleSearcher'
-		=> static function ( MediaWikiServices $services ) : NamespacedTitleSearcher {
+		=> static function ( MediaWikiServices $services ): NamespacedTitleSearcher {
 		return new NamespacedTitleSearcher( $services->newSearchEngine() );
 		},
 
 	'StructuredNavigation.NavigationView'
-		=> static function ( MediaWikiServices $services ) : NavigationView {
+		=> static function ( MediaWikiServices $services ): NavigationView {
 		return new NavigationView(
 			$services->getLinkRenderer(),
 			new TemplateParser(
@@ -48,7 +48,7 @@ return [
 		},
 
 	'StructuredNavigation.NavigationNotFoundView'
-		=> static function ( MediaWikiServices $services ) : NavigationNotFoundView {
+		=> static function ( MediaWikiServices $services ): NavigationNotFoundView {
 		$mainConfig = $services->getMainConfig();
 		return new NavigationNotFoundView(
 			$mainConfig->get( 'ExtensionAssetsPath' ),
@@ -59,7 +59,7 @@ return [
 		},
 
 	'StructuredNavigation.NavigationViewPresenter'
-		=> static function ( MediaWikiServices $services ) : NavigationViewPresenter {
+		=> static function ( MediaWikiServices $services ): NavigationViewPresenter {
 		$wrapper = new Services( $services );
 
 		return new NavigationViewPresenter(
@@ -69,21 +69,21 @@ return [
 		},
 
 	'StructuredNavigation.ParserFirstCallInitHandler'
-		=> static function ( MediaWikiServices $services ) : ParserFirstCallInitHandler {
+		=> static function ( MediaWikiServices $services ): ParserFirstCallInitHandler {
 		return new ParserFirstCallInitHandler(
 			( new Services( $services ) )->getNavigationViewPresenter()
 		);
 		},
 
 	'StructuredNavigation.DocumentationContent'
-		=> static function ( MediaWikiServices $services ) : DocumentationContent {
+		=> static function ( MediaWikiServices $services ): DocumentationContent {
 		return new DocumentationContent(
 			$services->getMainConfig()->get( 'ExtensionDirectory' )
 		);
 		},
 
 	'StructuredNavigation.SchemaValidator'
-		=> static function ( MediaWikiServices $services ) : NavigationSchemaValidator {
+		=> static function ( MediaWikiServices $services ): NavigationSchemaValidator {
 		return new NavigationSchemaValidator(
 			$services->getMainConfig()->get( 'ExtensionDirectory' )
 		);

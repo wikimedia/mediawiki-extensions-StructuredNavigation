@@ -79,7 +79,7 @@ final class SpecialTitlesUsedInNavigation extends FormSpecialPage {
 			->getTitlesInNamespace( $search, $limit, $offset, NS_NAVIGATION );
 	}
 
-	private function getTitleList( string $title ) : UnorderedList {
+	private function getTitleList( string $title ): UnorderedList {
 		return new UnorderedList( [
 			'items' => $this->navigationFactory->newFromTitle( $title )->getAllLinks()
 		] );

@@ -24,7 +24,7 @@ class NavigationSchemaHandler extends SimpleHandler {
 	}
 
 	/** @inheritDoc */
-	public function needsWriteAccess() : bool {
+	public function needsWriteAccess(): bool {
 		return false;
 	}
 }

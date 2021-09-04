@@ -16,18 +16,18 @@ final class NavigationContentHandler extends JsonContentHandler {
 	}
 
 	/** @inheritDoc */
-	protected function getContentClass() : string {
+	protected function getContentClass(): string {
 		return NavigationContent::class;
 	}
 
 	/** @inheritDoc */
-	public function makeEmptyContent() : NavigationContent {
+	public function makeEmptyContent(): NavigationContent {
 		return new NavigationContent(
 			FormatJson::encode( $this->getPlaceholderContent(), "\t" )
 		);
 	}
 
-	private function getPlaceholderContent() : array {
+	private function getPlaceholderContent(): array {
 		return [
 			'config' => [
 				'title' => [

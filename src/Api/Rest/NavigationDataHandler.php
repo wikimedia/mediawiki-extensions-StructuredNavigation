@@ -25,12 +25,12 @@ class NavigationDataHandler extends SimpleHandler {
 	}
 
 	/** @inheritDoc */
-	public function needsWriteAccess() : bool {
+	public function needsWriteAccess(): bool {
 		return false;
 	}
 
 	/** @inheritDoc */
-	public function getParamSettings() : array {
+	public function getParamSettings(): array {
 		return [
 			'title' => [
 				self::PARAM_SOURCE => 'path',

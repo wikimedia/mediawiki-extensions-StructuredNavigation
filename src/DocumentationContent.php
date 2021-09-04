@@ -15,15 +15,15 @@ class DocumentationContent {
 		$this->extensionDirectory = $extensionDirectory;
 	}
 
-	public function getSchemaContent() : string {
+	public function getSchemaContent(): string {
 		return file_get_contents( $this->makePath( 'schema/schema.v1.json' ) );
 	}
 
-	public function getDecodedSchemaContent() : array {
+	public function getDecodedSchemaContent(): array {
 		return json_decode( $this->getSchemaContent(), true );
 	}
 
-	public function getExamples() : array {
+	public function getExamples(): array {
 		$prefix = $this->makePath( 'examples/' );
 		$files = glob( "{$prefix}*.json" );
 		$allContent = [];
@@ -36,7 +36,7 @@ class DocumentationContent {
 		return $allContent;
 	}
 
-	private function makePath( string $path ) : string {
+	private function makePath( string $path ): string {
 		return "{$this->extensionDirectory}/StructuredNavigation/docs/{$path}";
 	}
 }

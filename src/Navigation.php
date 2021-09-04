@@ -17,25 +17,25 @@ final class Navigation {
 		$this->groups = $groups;
 	}
 
-	public function getContent() : array {
+	public function getContent(): array {
 		return $this->content;
 	}
 
-	public function getTitleLabel() : string {
+	public function getTitleLabel(): string {
 		return $this->titleLabel;
 	}
 
 	/**
 	 * @return NavigationGroup[]
 	 */
-	public function getGroups() : array {
+	public function getGroups(): array {
 		return $this->groups;
 	}
 
 	/**
 	 * @return NavigationGroupLink[]
 	 */
-	public function getAllLinks() : array {
+	public function getAllLinks(): array {
 		$allLinks = [];
 		foreach ( $this->groups as $group ) {
 			foreach ( $group->getLinks() as $link ) {

@@ -19,7 +19,7 @@ final class NavigationFactory {
 		$this->titleParser = $titleParser;
 	}
 
-	public function newFromSource( array $source ) : Navigation {
+	public function newFromSource( array $source ): Navigation {
 		$content = $source;
 		$jsonGroups = $content['groups'];
 		$objectGroups = [];
@@ -71,7 +71,7 @@ final class NavigationFactory {
 		);
 	}
 
-	private function parseNavigationLink( $stringOrArrayLink ) : NavigationGroupLink {
+	private function parseNavigationLink( $stringOrArrayLink ): NavigationGroupLink {
 		if ( is_array( $stringOrArrayLink ) ) {
 			return new NavigationGroupLink(
 				$this->titleParser->parseTitle( $stringOrArrayLink[0] ),

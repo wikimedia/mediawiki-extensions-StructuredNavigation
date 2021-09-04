@@ -15,14 +15,14 @@ final class NavigationGroup {
 		$this->links = $links;
 	}
 
-	public function getLabel() : string {
+	public function getLabel(): string {
 		return $this->label;
 	}
 
 	/**
 	 * @return NavigationGroupLink[]
 	 */
-	public function getLinks() : array {
+	public function getLinks(): array {
 		return $this->links;
 	}
 }

@@ -34,7 +34,7 @@ final class NavigationNotFoundView {
 		$this->textFormatter = $textFormatter;
 	}
 
-	public function getView( Title $title, UserIdentity $user ) : EmptyStateView {
+	public function getView( Title $title, UserIdentity $user ): EmptyStateView {
 		$emptyStateConfig = array_merge(
 			[
 				'imageSource' => "{$this->extensionAssetsPath}/StructuredNavigation/resources/"
@@ -47,7 +47,7 @@ final class NavigationNotFoundView {
 		return new EmptyStateView( $emptyStateConfig );
 	}
 
-	private function getFlavorTextConfig( Title $title, UserIdentity $user ) : array {
+	private function getFlavorTextConfig( Title $title, UserIdentity $user ): array {
 		$flavorTextConfig = [
 			'summary' => $this->getMessage( self::MSG_SUMMARY ),
 			'buttonLabel' => $this->getMessage( self::MSG_BUTTON_LABEL ),
@@ -67,7 +67,7 @@ final class NavigationNotFoundView {
 		return $flavorTextConfig;
 	}
 
-	private function getMessage( string $msg, array $params = [] ) : string {
+	private function getMessage( string $msg, array $params = [] ): string {
 		return $this->textFormatter->format( new MessageValue( $msg, $params ) );
 	}
 }

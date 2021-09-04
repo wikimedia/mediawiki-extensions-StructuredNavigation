@@ -37,7 +37,7 @@ final class SpecialNavigationSchema extends SpecialPage {
 		);
 	}
 
-	private function getEmbeddedCodeView( string $content ) : Tag {
+	private function getEmbeddedCodeView( string $content ): Tag {
 		return ( new Tag( 'pre' ) )
 			->appendContent( $content );
 	}

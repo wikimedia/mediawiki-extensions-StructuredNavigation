@@ -18,15 +18,15 @@ final class NavigationGroupLink {
 		$this->label = $label ?? $this->title;
 	}
 
-	public function getTitleValue() : TitleValue {
+	public function getTitleValue(): TitleValue {
 		return $this->titleValue;
 	}
 
-	public function getTitle() : string {
+	public function getTitle(): string {
 		return $this->title;
 	}
 
-	public function getLabel() : string {
+	public function getLabel(): string {
 		return $this->label;
 	}
 }

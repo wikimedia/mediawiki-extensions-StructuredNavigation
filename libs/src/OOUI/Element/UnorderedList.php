@@ -45,7 +45,7 @@ class UnorderedList extends Element {
 	/**
 	 * @return string
 	 */
-	public function getTagName() : string {
+	public function getTagName(): string {
 		return self::ELEMENT_UNORDERED_LIST;
 	}
 
@@ -53,7 +53,7 @@ class UnorderedList extends Element {
 	 * @param array $config
 	 * @return Tag
 	 */
-	private function createListItem( array $config = [] ) : Tag {
+	private function createListItem( array $config = [] ): Tag {
 		$listItem = new Tag( self::ELEMENT_UNORDERED_LIST_ITEM );
 
 		if (

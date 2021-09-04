@@ -28,7 +28,7 @@ final class HookHandler {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserGetReservedNames
 	 * @param array &$reservedUsernames
 	 */
-	public static function onUserGetReservedNames( array &$reservedUsernames ) : void {
+	public static function onUserGetReservedNames( array &$reservedUsernames ): void {
 		$reservedUsernames[] = Services::getInstance()->getConfig()
 			->get( 'ReservedUsername' );
 	}

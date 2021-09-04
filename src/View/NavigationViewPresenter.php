@@ -38,7 +38,7 @@ final class NavigationViewPresenter {
 	 * @param array $content
 	 * @return string
 	 */
-	public function getFromSource( array $content ) : string {
+	public function getFromSource( array $content ): string {
 		return $this->navigationView->getView(
 			$this->navigationFactory->newFromSource( $content )
 		);
@@ -47,7 +47,7 @@ final class NavigationViewPresenter {
 	/**
 	 * @param ParserOutput|OutputPage $output
 	 */
-	public function loadModules( $output ) : void {
+	public function loadModules( $output ): void {
 		$output->addModuleStyles( [
 			'ext.structuredNav.NavigationView.styles',
 			'ext.structuredNav.NavigationView.separator.styles',

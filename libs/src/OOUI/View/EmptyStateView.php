@@ -55,7 +55,7 @@ class EmptyStateView extends Layout {
 		] );
 	}
 
-	private function getIllustration() : Tag {
+	private function getIllustration(): Tag {
 		return ( new Tag( 'img' ) )
 			->addClasses( [ self::CSS_CLASS['view-illustration'] ] )
 			->setAttributes( [
@@ -65,19 +65,19 @@ class EmptyStateView extends Layout {
 			] );
 	}
 
-	private function getTitle() : Tag {
+	private function getTitle(): Tag {
 		return ( new Tag( 'h3' ) )
 			->addClasses( [ self::CSS_CLASS['view-title'] ] )
 			->appendContent( $this->title );
 	}
 
-	private function getSummary() : Tag {
+	private function getSummary(): Tag {
 		return ( new Tag( 'div' ) )
 			->addClasses( [ self::CSS_CLASS['view-summary'] ] )
 			->appendContent( $this->summary );
 	}
 
-	private function getAction() : ButtonWidget {
+	private function getAction(): ButtonWidget {
 		return new ButtonWidget( [
 			'label' => $this->buttonLabel,
 			'href' => $this->buttonHref,

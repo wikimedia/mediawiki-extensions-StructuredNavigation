@@ -28,43 +28,43 @@ final class Services {
 		$this->services = $services;
 	}
 
-	public static function getInstance() : Services {
+	public static function getInstance(): Services {
 		return new self( MediaWikiServices::getInstance() );
 	}
 
-	public function getConfig() : Config {
+	public function getConfig(): Config {
 		return $this->services->getService( 'StructuredNavigation.Config' );
 	}
 
-	public function getNavigationFactory() : NavigationFactory {
+	public function getNavigationFactory(): NavigationFactory {
 		return $this->services->getService( 'StructuredNavigation.NavigationFactory' );
 	}
 
-	public function getNamespacedTitleSearcher() : NamespacedTitleSearcher {
+	public function getNamespacedTitleSearcher(): NamespacedTitleSearcher {
 		return $this->services->getService( 'StructuredNavigation.NamespacedTitleSearcher' );
 	}
 
-	public function getNavigationView() : NavigationView {
+	public function getNavigationView(): NavigationView {
 		return $this->services->getService( 'StructuredNavigation.NavigationView' );
 	}
 
-	public function getNavigationNotFoundView() : NavigationNotFoundView {
+	public function getNavigationNotFoundView(): NavigationNotFoundView {
 		return $this->services->getService( 'StructuredNavigation.NavigationNotFoundView' );
 	}
 
-	public function getNavigationViewPresenter() : NavigationViewPresenter {
+	public function getNavigationViewPresenter(): NavigationViewPresenter {
 		return $this->services->getService( 'StructuredNavigation.NavigationViewPresenter' );
 	}
 
-	public function getParserFirstCallInitHandler() : ParserFirstCallInitHandler {
+	public function getParserFirstCallInitHandler(): ParserFirstCallInitHandler {
 		return $this->services->getService( 'StructuredNavigation.ParserFirstCallInitHandler' );
 	}
 
-	public function getDocumentationContent() : DocumentationContent {
+	public function getDocumentationContent(): DocumentationContent {
 		return $this->services->getService( 'StructuredNavigation.DocumentationContent' );
 	}
 
-	public function getNavigationSchemaValidator() : NavigationSchemaValidator {
+	public function getNavigationSchemaValidator(): NavigationSchemaValidator {
 		return $this->services->getService( 'StructuredNavigation.SchemaValidator' );
 	}
 }

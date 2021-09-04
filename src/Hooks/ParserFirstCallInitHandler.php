@@ -25,7 +25,7 @@ final class ParserFirstCallInitHandler {
 	/**
 	 * @param Parser $parser
 	 */
-	public static function onParserFirstCallInit( Parser $parser ) : void {
+	public static function onParserFirstCallInit( Parser $parser ): void {
 		$parser->setHook( self::PARSER_TAG, [
 			Services::getInstance()->getParserFirstCallInitHandler(),
 			self::PARSER_TAG_METHOD
@@ -53,7 +53,7 @@ final class ParserFirstCallInitHandler {
 		return $navigation;
 	}
 
-	private function setPageProperty( ParserOutput $parserOutput, string $title ) : void {
+	private function setPageProperty( ParserOutput $parserOutput, string $title ): void {
 		$parserOutput->setProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
 	}
 }

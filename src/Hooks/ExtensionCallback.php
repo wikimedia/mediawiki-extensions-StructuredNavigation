@@ -21,7 +21,7 @@ class ExtensionCallback {
 	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Extension.json/Schema#ConfigRegistry
 	 * @return GlobalVarConfig
 	 */
-	public static function getGlobalVarConfig() : GlobalVarConfig {
+	public static function getGlobalVarConfig(): GlobalVarConfig {
 		return new GlobalVarConfig( self::CONFIG_PREFIX );
 	}
 
@@ -30,14 +30,14 @@ class ExtensionCallback {
 	 *
 	 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Extension.json/Schema#callback
 	 */
-	public static function onRegistrationCallback() : void {
+	public static function onRegistrationCallback(): void {
 		// Must match the name used in the 'ContentHandlers' section of extension.json
 		define( 'CONTENT_MODEL_NAVIGATION', 'StructuredNavigation' );
 
 		self::maybeEnableAPI();
 	}
 
-	private static function maybeEnableAPI() : void {
+	private static function maybeEnableAPI(): void {
 		global $wgStructuredNavigationEnableExperimentalAPI;
 		if ( $wgStructuredNavigationEnableExperimentalAPI === false ) {
 			return;

@@ -29,7 +29,7 @@ final class NavigationSchemaValidator {
 		throw new NavigationSchemaValidationError( $errors );
 	}
 
-	private function getSchema() : string {
+	private function getSchema(): string {
 		return "{$this->extensionDirectory}/StructuredNavigation/docs/schema/schema.v1.json";
 	}
 }

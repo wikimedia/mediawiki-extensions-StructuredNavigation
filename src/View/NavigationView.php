@@ -26,7 +26,7 @@ class NavigationView {
 		$this->templateParser = $templateParser;
 	}
 
-	public function getView( Navigation $navigation ) : string {
+	public function getView( Navigation $navigation ): string {
 		return $this->templateParser->processTemplate(
 			self::TEMPLATE_NAME,
 			[
@@ -36,7 +36,7 @@ class NavigationView {
 		);
 	}
 
-	private function getGroups( Navigation $navigation ) : array {
+	private function getGroups( Navigation $navigation ): array {
 		$groups = [];
 		$navGroups = $navigation->getGroups();
 		foreach ( $navGroups as $group ) {
@@ -54,7 +54,7 @@ class NavigationView {
 		return $groups;
 	}
 
-	private function getLink( NavigationGroupLink $link ) : string {
+	private function getLink( NavigationGroupLink $link ): string {
 		return $this->linkRenderer->makeLink(
 			$link->getTitleValue(),
 			$link->getLabel(),
