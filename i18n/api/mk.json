@@ -4,5 +4,7 @@
 			"Bjankuloski06"
 		]
 	},
-	"apihelp-query+structurednavigationexamples-summary": "Добива JSON за сите прегледнички примероци од додатокот „Структуриран прегледник“. Ова ќе биде од верзијата на додатокот воспоставен во викито."
+	"apihelp-query+structurednavigationexamples-summary": "Добива JSON за сите прегледнички примероци од додатокот „Структуриран прегледник“. Ова ќе биде од верзијата на додатокот воспоставен во викито.",
+	"apihelp-query+structurednavigationtitlesused-summary": "Ги зема сите наслови што се користат од даден прегледник.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Важечки постоечки наслов во именскиот простор Прегледник на викито."
 }
