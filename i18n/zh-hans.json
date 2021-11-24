@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dianliang233"
+			"Dianliang233",
+			"Xiplus"
 		]
 	},
 	"structurednav-desc": "允许创建结构化的、可供极其阅读的的导航，并将其用于条目中。",
@@ -24,5 +25,5 @@
 	"specials-navigationschema-subtitle": "结构化导航的JSON架构（schema）",
 	"specials-titlesusedinnavigation-legend": "导航中的页面标题",
 	"specials-titlesusedinnavigation-field-title-label": "导航标题",
-	"specials-titlesusedinnavigation-field-title-placeholder": "Navigation名字空间中的一个标题，例如“Dontnod Entertainment”"
+	"specials-titlesusedinnavigation-field-title-placeholder": "Navigation命名空间中的一个标题，例如“Dontnod Entertainment”"
 }
