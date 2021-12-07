@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"DDPAT"
+		]
+	},
+	"structurednav-desc": "Дозволяє створювати структуровану, машиночитану навігацію для використання над статтями.",
+	"structurednav-reserved-username": "Скрипт StructuredNavigation",
+	"structurednav-nav-not-found-title": "Навігації по темі \"$1\" ще не існує.",
+	"structurednav-nav-not-found-summary": "Чому б не створити його?",
+	"structurednav-nav-not-found-button-label": "Створити навігацію",
+	"structurednav-nav-not-found-summary-not-logged-in": "Увійдіть або створіть обліковий запис, щоб створити цю навігацію.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Увійти та редагувати",
+	"structurednav-copy-label": "Код для вставлення",
+	"structurednav-copy-state-fail": "Не вдалося скопіювати код у буфер обміну.",
+	"structurednav-copy-state-success": "Код скопійовано в буфер обміну.",
+	"right-structurednav-create": "Створити структуровану навігацію",
+	"action-structurednav-create": "створити структуровану навігацію",
+	"right-structurednav-edit": "Редагувати структуровану навігацію",
+	"action-structurednav-edit": "редагувати структуровану навігацію",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Схема навігації",
+	"titlesusedinnavigation": "Заголовки, що використовуються в навігації",
+	"specials-navigationschema-subtitle": "Схема JSON для структурованої навігації",
+	"specials-titlesusedinnavigation-legend": "Заголовки, що використовуються в навігації",
+	"specials-titlesusedinnavigation-field-title-label": "Назва навігації",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Назва в просторі імен Навігації, наприклад \"Dontnod Entertainment\""
+}

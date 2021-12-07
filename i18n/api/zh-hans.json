@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dianliang233",
+			"Xiplus"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "获取所有来源于StructuredNavigation扩展的导航示例的JSON。结果将会取决于此wiki安装的扩展版本。",
+	"apihelp-query+structurednavigationexamples-example": "获取所有来源于StructuredNavigation扩展的导航示例的JSON",
+	"apihelp-query+structurednavigationschema-summary": "获取用于验证导航JSON结构的JSON架构（schema）。",
+	"apihelp-query+structurednavigationschema-example": "获取导航JSON架构（schema）",
+	"apihelp-query+structurednavigationnavigationdata-summary": "获取指定的导航JSON。",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "在wiki的Navigation命名空间中一个有效且存在的标题。",
+	"apihelp-query+structurednavigationnavigationdata-example": "获取名为<kbd>Dontnod Entertainment</kbd>的导航的JSON内容",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "通过标题获得指定导航的HTML片段",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "在wiki的Navigation命名空间中一个有效且存在的标题。",
+	"apihelp-query+structurednavigationnavigationhtml-example": "获取名为<kbd>Dontnod Entertainment</kbd>的导航的HTML片段",
+	"apihelp-query+structurednavigationtitlesused-summary": "获得指定导航中所有的页面标题",
+	"apihelp-query+structurednavigationtitlesused-param-title": "在wiki的Navigation命名空间中一个有效且存在的标题。",
+	"apihelp-query+structurednavigationtitlesused-example": "获取名为<kbd>Dontnod Entertainment</kbd>的导航中所有的页面标题",
+	"structurednavigation-rest-api-not-enabled": "StructuredNavigation的REST API是实验性的并默认禁用。若想开启它，请将$wgStructuredNavigationEnableExperimentalAPI设为true。若您不是站点管理员，请与您的站点管理员交流以开启此功能。"
+}

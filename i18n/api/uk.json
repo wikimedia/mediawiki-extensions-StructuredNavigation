@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"DDPAT"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Отримує JSON усіх прикладів навігації, отриманих із розширення StructuredNavigation. Це буде з версії програмного забезпечення розширення, яке встановлено у вікі.",
+	"apihelp-query+structurednavigationexamples-example": "Отримайте JSON усіх прикладів навігації, отриманих із розширення StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Отримує схему JSON, яка використовується для перевірки структури навігацій JSON.",
+	"apihelp-query+structurednavigationschema-example": "Отримайте навігаційну схему JSON",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Отримує вміст JSON для певної навігації.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Дійсний, існуючий заголовок у просторі імен навігації у вікі.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Отримайте вміст JSON навігації з назвою <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Отримує подання навігації за заголовком як фрагмент HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Дійсний, існуючий заголовок у просторі імен навігації у вікі.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Отримайте подання навігації <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Отримує всі заголовки, які використовуються даною навігацією.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Дійсний, існуючий заголовок у просторі імен навігації у вікі.",
+	"apihelp-query+structurednavigationtitlesused-example": "Отримати всі заголовки, які використовуються в навігаційній системі <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "REST API для StructuredNavigation є експериментальним і за замовчуванням вимкнено. Для цього потрібно встановити для $wgStructuredNavigationEnableExperimentalAPI значення true. Якщо ви не адміністратор сайту, просимо обговорити це з адміністратором сайту щодо включення цієї функції."
+}

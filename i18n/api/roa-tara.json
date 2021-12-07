@@ -4,5 +4,18 @@
 			"Joetaras"
 		]
 	},
-	"apihelp-query+structurednavigationschema-example": "Analizze 'u scheme de navigazione JSON"
+	"apihelp-query+structurednavigationexamples-summary": "Pigghie 'u JSON de tutte le esembie de navigazzione fatte cu l'estenzione StructuredNavigation. Quiste depende da 'a versione de l'estenzione software installate sus 'a uicchi.",
+	"apihelp-query+structurednavigationexamples-example": "Analizze 'u JSON de tutte le esembie de navigazzione fatte cu l'estenzione StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Pigghie 'u scheme JSON ausate pe validà 'a strutture JSON de le navigazziune.",
+	"apihelp-query+structurednavigationschema-example": "Analizze 'u scheme de navigazione JSON",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Pigghie 'u condenute JSON pe 'na certa navigazzione.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "'Nu titole valide e esistende jndr'à 'u namespace Navigation sus 'a uicchi.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Analizze tutte le condenute JSON de 'na navigazzione chiamate <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Pigghie 'u 'ndrucamende de 'na navigazzione pe titole cumme 'nu frammende HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "'Nu titole valide e esistende jndr'à 'u namespace Navigation sus 'a uicchi.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Analizze 'u 'ndrucamende de 'na navigazzione chiamate <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Pigghie tutte le titole ausate da 'na certa navigazzione.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "'Nu titole valide e esistende jndr'à 'u namespace Navigation sus 'a uicchi.",
+	"apihelp-query+structurednavigationtitlesused-example": "Analizze tutte le titole ausate jndr'à 'na navigazizone chiamate <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "L'API REST pe StructuredNavigation jè sperimendale e disabbilitate de base. Quiste vole 'u $wgStructuredNavigationEnableExperimentalAPI a true. Ce non ge sì 'nu amministratore d'u site, pe piacere dille a 'n'amministratore pe ffà abbilità sta funzione."
 }
