@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Daud I.F. Argana"
+		]
+	},
+	"structurednav-desc": "Memungkinkan membuat navigasi yang terstruktur dan bisa dibaca mesin untuk digunakan di artikel.",
+	"structurednav-reserved-username": "Skrip StructuredNavigation",
+	"structurednav-nav-not-found-title": "Navigasi untuk topik bernama \"$1\" belum ada.",
+	"structurednav-nav-not-found-summary": "Mengapa bukan Anda saja yang membuatnya?",
+	"structurednav-nav-not-found-button-label": "Buat navigasi",
+	"structurednav-nav-not-found-summary-not-logged-in": "Masuk log atau buat sebuah akun untuk membuat navigasi ini.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Masuk log dan sunting",
+	"structurednav-copy-label": "Tanamkan kode",
+	"structurednav-copy-state-fail": "Gagal menyalin kode ke papan klip.",
+	"structurednav-copy-state-success": "Kode disalin ke papan klip.",
+	"right-structurednav-create": "Membuat navigasi terstruktur",
+	"action-structurednav-create": "membuat navigasi terstruktur",
+	"right-structurednav-edit": "Menyunting navigasi terstruktur",
+	"action-structurednav-edit": "menyunting navigasi terstruktur",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Skema navigasi",
+	"titlesusedinnavigation": "Judul yang digunakan dalam navigasi",
+	"specials-navigationschema-subtitle": "Skema JSON untuk navigasi terstruktur",
+	"specials-titlesusedinnavigation-legend": "Judul yang digunakan dalam navigasi",
+	"specials-titlesusedinnavigation-field-title-label": "Judul navigasi",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Judul di ruang nama Navigasi, contoh \"Dontnod Entertainment\""
+}
