@@ -54,6 +54,11 @@ final class ParserFirstCallInitHandler {
 	}
 
 	private function setPageProperty( ParserOutput $parserOutput, string $title ): void {
-		$parserOutput->setProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
+		if ( method_exists( $parserOutput, 'setPageProperty' ) ) {
+			// MW 1.38
+			$parserOutput->setPageProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
+		} else {
+			$parserOutput->setProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
+		}
 	}
 }
