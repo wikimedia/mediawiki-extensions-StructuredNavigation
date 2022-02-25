@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"DDPAT"
+			"DDPAT",
+			"Ice bulldog"
 		]
 	},
 	"apihelp-query+structurednavigationexamples-summary": "Отримує JSON усіх прикладів навігації, отриманих із розширення StructuredNavigation. Це буде з версії програмного забезпечення розширення, яке встановлено у вікі.",
