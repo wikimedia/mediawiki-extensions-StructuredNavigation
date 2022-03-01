@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari"
+		]
+	},
+	"structurednav-desc": "వ్యాసాల్లో వాడేందుకు, ఒక క్రమ పద్ధతిలో, యంత్రం చదవగలిగే విధంగా ఉండే నేవిగేషన్ను సృష్టించే వీలు కలిగిస్తుంది.",
+	"structurednav-nav-not-found-title": "\"$1\" అనే టాపిక్కుకు నేవిగేషను లేదు.",
+	"structurednav-nav-not-found-summary": "మీరే ఒకటి సృష్టించవచ్చుగా?",
+	"structurednav-nav-not-found-button-label": "నేవిగేషన్ను సృష్టించు",
+	"structurednav-nav-not-found-summary-not-logged-in": "ఈ నేవిగేషన్ను సృష్టించడానికి లాగినవండి, లేదా ఖాతా సృష్టించుకోండి.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "లాగినై దిద్దుబాటు చెయ్యండి",
+	"structurednav-copy-label": "ఇమిడ్చిన కోడ్",
+	"structurednav-copy-state-fail": "కోడ్‌ను క్లిప్‌బోర్డుకు కాపీ చెయ్యడం విఫలమైంది.",
+	"structurednav-copy-state-success": "కోడ్‌ను క్లిప్‌బోర్డుకు కాపీ చేసాం.",
+	"right-structurednav-create": "క్రమాకృతి నేవిగేషన్ను సృష్టించడం"
+}
