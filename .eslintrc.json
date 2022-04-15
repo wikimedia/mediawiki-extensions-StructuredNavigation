@@ -1,4 +1,5 @@
 {
+	"root": true,
 	"extends": [
 		"wikimedia/client",
 		"wikimedia/jquery",
@@ -16,7 +17,8 @@
 	},
 	"rules": {
 		"dot-notation": [
-			"error", {
+			"error",
+			{
 				"allowKeywords": true
 			}
 		]
