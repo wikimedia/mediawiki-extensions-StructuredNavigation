@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Minh Nguyen",
 			"Pisceskaze"
 		]
 	},
 	"structurednav-desc": "Cung cấp hộp điều hướng nội dung có cấu trúc sử dụng được trong các trang bài viết.",
 	"structurednav-reserved-username": "StructuredNavigation script",
-	"structurednav-nav-not-found-title": "Hộp điều hướng \"$1\" không tồn tại.",
+	"structurednav-nav-not-found-title": "Hộp điều hướng “$1” không tồn tại.",
 	"structurednav-nav-not-found-summary": "Sao lại không thử tạo một cái nhỉ?",
 	"structurednav-nav-not-found-button-label": "Tạo hộp điều hướng",
 	"structurednav-nav-not-found-summary-not-logged-in": "Đăng nhập hoặc tạo mới tài khoản để tạo hộp điều hướng này.",
@@ -24,5 +25,5 @@
 	"specials-navigationschema-subtitle": "Cấu trúc JSON cho hộp điều hướng có cấu trúc",
 	"specials-titlesusedinnavigation-legend": "Các trang được liên kết",
 	"specials-titlesusedinnavigation-field-title-label": "Trang điều hướng",
-	"specials-titlesusedinnavigation-field-title-placeholder": "Tên một trang trong không gian tên \"Điều hướng\", ví dụ như \"Lớp học Mật Ngữ\""
+	"specials-titlesusedinnavigation-field-title-placeholder": "Tên một trang trong không gian tên “Điều hướng”, ví dụ như “Lớp học Mật Ngữ”"
 }
