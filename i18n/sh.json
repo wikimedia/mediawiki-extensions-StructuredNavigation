@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"right-structurednav-create": "Pravljenje strukturirane navigacije",
+	"action-structurednav-create": "pravljenje strukturirane navigacije",
+	"right-structurednav-edit": "Uređivanje strukturirane navigacije",
+	"action-structurednav-edit": "uređivanje strukturirane navigacije",
+	"specialpages-group-structurednav": "Strukturirana navigacija"
+}
