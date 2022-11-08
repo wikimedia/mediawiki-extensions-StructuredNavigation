@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Recupera le JSON de tote le exemplos de navigation obtenite del extension StructuredNavigation. Isto provenira del version del software del extension que le wiki ha installate.",
+	"apihelp-query+structurednavigationexamples-example": "Recuperar le JSON de tote le exemplos de navigation obtenite del extension StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Recupera le schema JSON usate pro validar le structura JSON de navigationes.",
+	"apihelp-query+structurednavigationschema-example": "Obtener le schema JSON de navigation",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Recupera le contento JSON pro un navigation date.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Un titulo valide e existente in le spatio de nomines Navigation sur le wiki.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Obtener le contento JSON de un navigation appellate <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Recupera le vista de un navigation per titulo in forma de un fragmento HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Un titulo valide e existente in le spatio de nomines Navigation sur le wiki.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Obtener le vista de un navigation appellate <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Recupera tote le titulos usate per un navigation date.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Un titulo valide e existente in le spatio de nomines Navigation sur le wiki.",
+	"apihelp-query+structurednavigationtitlesused-example": "Obtener tote le titulos usate in un navigation appellate <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "Le API REST pro StructuredNavigation es experimental e disactivate per predefinition. Illo require mitter $wgStructuredNavigationEnableExperimentalAPI a ver. Si tu non es un administrator del sito, per favor discute le activation de iste function con le administrator de tu sito."
+}

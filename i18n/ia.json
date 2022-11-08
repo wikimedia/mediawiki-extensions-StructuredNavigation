@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"structurednav-desc": "Permitte crear un navigation structurate e legibile per machina a usar sur articulos.",
+	"structurednav-reserved-username": "Script StructuredNavigation",
+	"structurednav-nav-not-found-title": "Non existe ancora un navigation sur le topico appellate \"$1\".",
+	"structurednav-nav-not-found-summary": "Proque non crear un?",
+	"structurednav-nav-not-found-button-label": "Crear un navigation",
+	"structurednav-nav-not-found-summary-not-logged-in": "Aperi session o crea un conto pro crear iste navigation.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Aperir session e modificar",
+	"structurednav-copy-label": "Codice a incastrar",
+	"structurednav-copy-state-fail": "Fallimento de copiar le codice al area de transferentia.",
+	"structurednav-copy-state-success": "Codice copiate al area de transferentia.",
+	"right-structurednav-create": "Crear un navigation structurate",
+	"action-structurednav-create": "crear un navigation structurate",
+	"right-structurednav-edit": "Modificar un navigation structurate",
+	"action-structurednav-edit": "modificar un navigation structurate",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Schema de navigation",
+	"titlesusedinnavigation": "Titulos usate in navigation",
+	"specials-navigationschema-subtitle": "Schema JSON pro navigationes structurate",
+	"specials-titlesusedinnavigation-legend": "Titulos usate in navigation",
+	"specials-titlesusedinnavigation-field-title-label": "Titulo del navigation",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Un titulo in le spatio de nomines Navigation, p.ex. \"Dontnod Entertainment\""
+}
