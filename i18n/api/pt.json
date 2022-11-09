@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Importa o JSON de todos os exemplos de navegação vindos da extensão NavegaçãoEstruturada. Este JSON será da versão do software de extensão que a wiki tem instalado.",
+	"apihelp-query+structurednavigationexamples-example": "Obter o JSON de todos os exemplos de navegação vindos da extensão NavegaçãoEstruturada",
+	"apihelp-query+structurednavigationschema-summary": "Importa o esquema JSON usado para validar a estrutura JSON de navegações.",
+	"apihelp-query+structurednavigationschema-example": "Obter o esquema JSON de navegação",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Importa o conteúdo JSON de uma navegação determinada.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Um título válido e existente no espaço nominal Navegação da wiki.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Obter o conteúdo JSON de uma navegação chamada <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Importa a vista de uma navegação por título na forma de fragmento de HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Um título válido e existente no espaço nominal Navegação da wiki.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Obter a vista de uma navegação chamada <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Importa todos os títulos usados por uma determinada navegação.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Um título válido e existente no espaço nominal Navegação da wiki.",
+	"apihelp-query+structurednavigationtitlesused-example": "Obter todos os títulos usados numa navegação chamada <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "A API REST para NavegaçãoEstruturada é experimental e está desativada por omissão. Ativá-la requer definir $wgStructuredNavigationEnableExperimentalAPI como verdadeiro (''true''). Se não é administrador do ''site'', discuta com um administrador a possibilidade de ativar esta funcionalidade."
+}

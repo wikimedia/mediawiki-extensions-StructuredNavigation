@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Samantha Nguyen",
-			"Umherirrender"
+			"Umherirrender",
+			"McDutchie"
 		]
 	},
 	"structurednav-desc": "{{desc|name=StructuredNavigation|url=https://www.mediawiki.org/wiki/Extension:StructuredNavigation}}",
@@ -27,5 +28,5 @@
 	"specials-navigationschema-subtitle": "Subtitle for Special:NavigationSchema",
 	"specials-titlesusedinnavigation-legend": "Legend used for Special:TitlesUsedInNavigation",
 	"specials-titlesusedinnavigation-field-title-label": "The label for the title field in Special:TitlesUsedInNavigation",
-	"specials-titlesusedinnavigation-field-title-placeholder": "The placeholder for the title field in Special:TitlesUsedInNavigation"
+	"specials-titlesusedinnavigation-field-title-placeholder": "The placeholder for the title field in Special:TitlesUsedInNavigation\n\n([[:w:Don't_Nod|Dontnod Entertainment]] is a French video game developer)"
 }
