@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guherto"
+			"Guherto",
+			"Balyozxane"
 		]
 	},
 	"structurednav-nav-not-found-summary": "Çima yekî çênakî?",
-	"structurednav-nav-not-found-button-label-not-logged-in": "Têkeve û biguherîne"
+	"structurednav-nav-not-found-button-label-not-logged-in": "Têkeve û biguhêre"
 }
