@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Pridobi JSON vseh zgledov navigacije, pridobljenih iz razširitve StructuredNavigation. To bo iz različice razširitvene programske opreme, ki jo je namestil viki.",
+	"apihelp-query+structurednavigationexamples-example": "Pridobi JSON vseh zgledov navigacije, pridobljenih iz razširitve StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Pridobi shemo JSON, ki se uporablja za preverjanje strukture JSON navigacij.",
+	"apihelp-query+structurednavigationschema-example": "Pridobite navigacijsko shemo JSON",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Pridobi vsebino JSON za dano navigacijo.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Veljaven, obstoječ naslov v imenskem prostoru Navigacija v vikiju.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Pridobite vsebino JSON navigacije z imenom <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Pridobi pogled navigacije po naslovu kot fragment HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Veljaven, obstoječ naslov v imenskem prostoru Navigacija v vikiju.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Pridobite pogled navigacije z imenom <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Pridobi vse naslove, ki jih uporablja določena navigacija.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Veljaven, obstoječ naslov v imenskem prostoru Navigacija v vikiju.",
+	"apihelp-query+structurednavigationtitlesused-example": "Pridobite vse naslove, ki se uporabljajo v navigaciji z imenom <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "REST API za StructuredNavigation je eksperimentalen in privzeto onemogočen. To zahteva nastavitev $wgStructuredNavigationEnableExperimentalAPI na »true«. Če niste administrator spletišča, se o omogočenju te funkcije posvetujte z administratorjem spletišča."
+}
