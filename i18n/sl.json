@@ -4,5 +4,25 @@
 			"Eleassar"
 		]
 	},
-	"specials-titlesusedinnavigation-field-title-label": "Naslov navigacije"
+	"structurednav-desc": "Omogoča ustvarjanje strukturirane, strojno berljive navigacije za uporabo pri člankih.",
+	"structurednav-reserved-username": "Skript StructuredNavigation",
+	"structurednav-nav-not-found-title": "Navigacija za temo z imenom »$1« še ne obstaja.",
+	"structurednav-nav-not-found-summary": "Zakaj je ne bi ustvarili?",
+	"structurednav-nav-not-found-button-label": "Ustvarite navigacijo",
+	"structurednav-nav-not-found-summary-not-logged-in": "Prijavite se ali si ustvarite račun, da ustvarite to navigacijo.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Prijavite se in uredite",
+	"structurednav-copy-label": "Vdelana koda",
+	"structurednav-copy-state-fail": "Kopiranje URL-ja v odložišče je spodletelo.",
+	"structurednav-copy-state-success": "Koda kopirana v odložišče.",
+	"right-structurednav-create": "Ustvarjanje strukturirane navigacije",
+	"action-structurednav-create": "ustvarjanje strukturirane navigacije",
+	"right-structurednav-edit": "Urejanje strukturirane navigacije",
+	"action-structurednav-edit": "urejanje strukturirane navigacije",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Navigacijska shema",
+	"titlesusedinnavigation": "Naslovi, uporabljeni v navigaciji",
+	"specials-navigationschema-subtitle": "Shema JSON za strukturirane navigacije",
+	"specials-titlesusedinnavigation-legend": "Naslovi, uporabljeni v navigaciji",
+	"specials-titlesusedinnavigation-field-title-label": "Naslov navigacije",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Naslov v imenskem prostoru navigacije, npr. »Dontnod Entertainment«"
 }
