@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "אחזור ה־JSON של כל דוגמאות הניווט שמקורן בהרחבה StructuredNavigation. זה יהיה מהגרסה של תוכנת ההרחבה שהוויקי התקינה.",
+	"apihelp-query+structurednavigationexamples-example": "אחזור ה־JSON של כל דוגמאות הניווט שמקורן בהרחבה StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "אחזור סכֵמת ה־JSON המשמשת לאימות מבנה ה־JSON של ניווטים.",
+	"apihelp-query+structurednavigationschema-example": "אחזור סכֵמת הניווט ב־JSON",
+	"apihelp-query+structurednavigationnavigationdata-summary": "אחזור תוכן ה־JSON עבור ניווט נתון.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "כותרת תקינה וקיימת במרחב השם של ניווט בוויקי.",
+	"apihelp-query+structurednavigationnavigationdata-example": "אחזור תוכן ה־JSON של ניווט בשם <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "אחזור התצוגה של ניווט לפי כותרת כמקטע HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "כותרת תקינה וקיימת במרחב השם של ניווט בוויקי.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "אחזור התצוגה של ניווט בשם <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "אחזור כל הכותרות בשימוש על־ידי ניווט נתון.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "כותרת תקינה וקיימת במרחב השם של ניווט בוויקי.",
+	"apihelp-query+structurednavigationtitlesused-example": "אחזור כל הכותרות של ניווט בשם <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "ה־REST API עבור StructuredNavigation הוא ניסיוני וכבוי כברירת מחדל. זה מחייב להגדיר את <span dir=\"ltr\">$wgStructuredNavigationEnableExperimentalAPI</span> ל־true. אם אין לך ברשאת מפעיל אתר, נא לשוחח על כך עם מפעיל האתר שלך לגבי הפעלת התכונה הזאת."
+}
