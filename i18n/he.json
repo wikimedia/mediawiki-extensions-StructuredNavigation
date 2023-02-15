@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"structurednav-desc": "אפשרות ליצור ניווט מובנה וקריא למכונות לשימוש בערכים.",
+	"structurednav-reserved-username": "סקריפט StructuredNavigation",
+	"structurednav-nav-not-found-title": "ניווט בנושא בשם \"$1\" עדיין לא קיים.",
+	"structurednav-nav-not-found-summary": "למה לא ליצור אחד?",
+	"structurednav-nav-not-found-button-label": "יצירת ניווט",
+	"structurednav-nav-not-found-summary-not-logged-in": "יש להתחבר או ליצור חשבון כדי ליצור את הניווט הזה.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "להיכנס ולערוך",
+	"structurednav-copy-label": "להטביע קוד",
+	"structurednav-copy-state-fail": "ההעתקה ללוח נכשלה.",
+	"structurednav-copy-state-success": "הקוד הועתק ללוח.",
+	"right-structurednav-create": "יצירת ניווט מובנה",
+	"action-structurednav-create": "ליצור ניווט מובנה",
+	"right-structurednav-edit": "עריכת ניווט מובנה",
+	"action-structurednav-edit": "לערוך ניווט מובנה",
+	"specialpages-group-structurednav": "ניווט מובנה",
+	"navigationschema": "סכֵמת ניווט",
+	"titlesusedinnavigation": "כותרות בשימוש בניווט",
+	"specials-navigationschema-subtitle": "סכֵמת JSON עבור ניווטים מובנים",
+	"specials-titlesusedinnavigation-legend": "כותרות בשימוש בניווט",
+	"specials-titlesusedinnavigation-field-title-label": "כותרת ניווט",
+	"specials-titlesusedinnavigation-field-title-placeholder": "כותרת במרחב השם של הניווט, למשל \"Dontnod Entertainment\""
+}
