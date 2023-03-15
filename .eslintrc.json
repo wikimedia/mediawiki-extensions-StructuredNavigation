@@ -15,7 +15,8 @@
 	},
 	"rules": {
 		"dot-notation": [
-			"error", {
+			"error",
+			{
 				"allowKeywords": true
 			}
 		]
