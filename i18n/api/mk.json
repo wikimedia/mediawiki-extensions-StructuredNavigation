@@ -5,6 +5,17 @@
 		]
 	},
 	"apihelp-query+structurednavigationexamples-summary": "Добива JSON за сите прегледнички примероци од додатокот „Структуриран прегледник“. Ова ќе биде од верзијата на додатокот воспоставен во викито.",
+	"apihelp-query+structurednavigationexamples-example": "Дај го JSON за сите примери за прегледници од додатокот StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Ја дава JSON-шемата користена за потврдување на JSON-структурата на прегледниците.",
+	"apihelp-query+structurednavigationschema-example": "Дај ја JSON-шемата на прегледникот",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Ја дава JSON-содржината за даден прегледник.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Важечки постоечки наслов во именскиот простор Прегледник на викито.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Дај ја JSON-содржината на прегледникот наречен <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Го дава приказот на прегледникот по според наслов како HTML-отсечок.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Важечки постоечки наслов во именскиот простор Прегледник на викито.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Дај го прикажаното на прегледникот наречен <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationtitlesused-summary": "Ги зема сите наслови што се користат од даден прегледник.",
-	"apihelp-query+structurednavigationtitlesused-param-title": "Важечки постоечки наслов во именскиот простор Прегледник на викито."
+	"apihelp-query+structurednavigationtitlesused-param-title": "Важечки постоечки наслов во именскиот простор Прегледник на викито.",
+	"apihelp-query+structurednavigationtitlesused-example": "Дај ги сите наслови користени во прегледникот наречен <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "Приложникот REST за StructuredNavigation е експериментален и оневозможен по основно. Ова бара да му се зададе „true“ на $wgStructuredNavigationEnableExperimentalAPI. Ако не сте администратор, поразговарајте со него во врска со овозможувањето на оваа функција."
 }
