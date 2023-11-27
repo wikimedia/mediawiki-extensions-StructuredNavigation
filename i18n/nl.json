@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie",
+			"Vistaus"
+		]
+	},
+	"structurednav-desc": "Maakt het mogelijk een gestructureerde, machinaal leesbare navigatie te creëren voor gebruik in artikelen.",
+	"structurednav-reserved-username": "StructuredNavigation-script",
+	"structurednav-nav-not-found-title": "Er bestaat nog geen navigatie over het onderwerp “$1”.",
+	"structurednav-nav-not-found-summary": "Waarom maakt u er niet één?",
+	"structurednav-nav-not-found-button-label": "Een navigatie aanmaken",
+	"structurednav-nav-not-found-summary-not-logged-in": "Meld u aan of maak een account aan om deze navigatie aan te maken.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Aanmelden en bewerken",
+	"structurednav-copy-label": "Inbedcode",
+	"structurednav-copy-state-fail": "Kan de code niet naar het klembord kopiëren.",
+	"structurednav-copy-state-success": "Code gekopieerd naar klembord.",
+	"right-structurednav-create": "Een gestructureerde navigatie aanmaken",
+	"action-structurednav-create": "een gestructureerde navigatie aan te maken",
+	"right-structurednav-edit": "Een gestructureerde navigatie bewerken",
+	"action-structurednav-edit": "een gestructureerde navigatie te bewerken",
+	"specialpages-group-structurednav": "Gestructureerde navigatie",
+	"navigationschema": "Navigatieschema",
+	"titlesusedinnavigation": "Bij navigatie gebruikte titels",
+	"specials-navigationschema-subtitle": "JSON-schema voor gestructureerde navigatie",
+	"specials-titlesusedinnavigation-legend": "Bij navigatie gebruikte titels",
+	"specials-titlesusedinnavigation-field-title-label": "Navigatietitel",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Een titel in de naamruimte Navigatie, bijvoorbeeld “Dontnod Entertainment”"
+}
