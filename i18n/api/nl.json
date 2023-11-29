@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Haalt de JSON op van alle navigatievoorbeelden afkomstig van de uitbreiding StructuredNavigation. Dit zal afkomstig zijn van de versie van de uitbreidingssoftware die op de wiki is geïnstalleerd.",
+	"apihelp-query+structurednavigationexamples-example": "Haal de JSON op van alle navigatievoorbeelden afkomstig van de uitbreiding StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Haalt het JSON-schema op dat wordt gebruikt om de JSON-structuur van navigaties te valideren.",
+	"apihelp-query+structurednavigationschema-example": "Haal het navigatie-JSON-schema op",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Haalt de JSON-inhoud op voor een bepaalde navigatie.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Een geldige, bestaande titel in de naamruimte Navigatie op de wiki.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Haal de JSON-inhoud op van een navigatie met de naam <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Haalt de weergave van een navigatie op titel op als een HTML-fragment.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Een geldige, bestaande titel in de naamruimte Navigatie op de wiki.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Haal de weergave op van een navigatie met de naam <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Haalt alle titels op die door een bepaalde navigatie worden gebruikt.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Een geldige, bestaande titel in de naamruimte Navigatie op de wiki.",
+	"apihelp-query+structurednavigationtitlesused-example": "Haal alle titels op die worden gebruikt in een navigatie met de naam <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "De REST API voor StructuredNavigation is experimenteel en normaal gesproken uitgeschakeld. Hiervoor moet $wgStructuredNavigationEnableExperimentalAPI op true worden ingesteld. Als u geen sitebeheerder bent, neem dan contact op met uw sitebeheerder over het inschakelen van deze functie."
+}
