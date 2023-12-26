@@ -6,7 +6,7 @@
 	},
 	"apihelp-query+structurednavigationexamples-summary": "אחזור ה־JSON של כל דוגמאות הניווט שמקורן בהרחבה StructuredNavigation. זה יהיה מהגרסה של תוכנת ההרחבה שהוויקי התקינה.",
 	"apihelp-query+structurednavigationexamples-example": "אחזור ה־JSON של כל דוגמאות הניווט שמקורן בהרחבה StructuredNavigation",
-	"apihelp-query+structurednavigationschema-summary": "אחזור סכֵמת ה־JSON המשמשת לאימות מבנה ה־JSON של ניווטים.",
+	"apihelp-query+structurednavigationschema-summary": "אחזור סכֵמת ה־JSON המשמשת לבדיקת תקינות מבנה ה־JSON של ניווטים.",
 	"apihelp-query+structurednavigationschema-example": "אחזור סכֵמת הניווט ב־JSON",
 	"apihelp-query+structurednavigationnavigationdata-summary": "אחזור תוכן ה־JSON עבור ניווט נתון.",
 	"apihelp-query+structurednavigationnavigationdata-param-title": "כותרת תקינה וקיימת במרחב השם של ניווט בוויקי.",
