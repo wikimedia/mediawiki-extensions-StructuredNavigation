@@ -146,18 +146,18 @@
 	},
 	"ResourceModules": {
 		"ext.structuredNav.wiki": {
-			"class": "ResourceLoaderWikiModule",
+			"class": "MediaWiki\\ResourceLoader\\WikiModule",
 			"scripts": [ "MediaWiki:StructuredNavigation.js" ]
 		},
 		"ext.structuredNav.wiki.styles": {
-			"class": "ResourceLoaderWikiModule",
+			"class": "MediaWiki\\ResourceLoader\\WikiModule",
 			"styles": [ "MediaWiki:StructuredNavigation.css" ]
 		},
 		"ext.structuredNav.NavigationView.styles": {
 			"styles": "resources/styles/ext.structuredNav.NavigationView.less"
 		},
 		"ext.structuredNav.NavigationView.separator.styles": {
-			"class": "ResourceLoaderLessVarFileModule",
+			"class": "MediaWiki\\ResourceLoader\\LessVarFileModule",
 			"styles": "resources/styles/ext.structuredNav.NavigationView.separator.less",
 			"lessMessages": [
 				"structurednav-separator-symbol"
