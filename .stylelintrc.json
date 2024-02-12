@@ -6,6 +6,7 @@
 		"value-keyword-case": null,
 		"declaration-property-unit-disallowed-list": null,
 		"number-leading-zero": "never",
-		"font-weight-notation": "numeric"
+		"font-weight-notation": "numeric",
+		"stylistic/number-leading-zero": null
 	}
 }
