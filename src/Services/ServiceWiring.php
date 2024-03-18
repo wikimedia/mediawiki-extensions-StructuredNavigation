@@ -20,72 +20,72 @@ use TemplateParser;
 return [
 	'StructuredNavigation.Config'
 		=> static function ( MediaWikiServices $services ): Config {
-		return $services->getConfigFactory()->makeConfig( 'structurednavigation' );
+			return $services->getConfigFactory()->makeConfig( 'structurednavigation' );
 		},
 
 	'StructuredNavigation.NavigationFactory'
 		=> static function ( MediaWikiServices $services ): NavigationFactory {
-		return new NavigationFactory(
-			$services->getRevisionLookup(),
-			$services->getTitleParser()
-		);
+			return new NavigationFactory(
+				$services->getRevisionLookup(),
+				$services->getTitleParser()
+			);
 		},
 
 	'StructuredNavigation.NamespacedTitleSearcher'
 		=> static function ( MediaWikiServices $services ): NamespacedTitleSearcher {
-		return new NamespacedTitleSearcher( $services->newSearchEngine() );
+			return new NamespacedTitleSearcher( $services->newSearchEngine() );
 		},
 
 	'StructuredNavigation.NavigationView'
 		=> static function ( MediaWikiServices $services ): NavigationView {
-		return new NavigationView(
-			$services->getLinkRenderer(),
-			new TemplateParser(
-				$services->getMainConfig()->get( 'ExtensionDirectory' )
-				. '/StructuredNavigation/templates'
-			)
-		);
+			return new NavigationView(
+				$services->getLinkRenderer(),
+				new TemplateParser(
+					$services->getMainConfig()->get( 'ExtensionDirectory' )
+					. '/StructuredNavigation/templates'
+				)
+			);
 		},
 
 	'StructuredNavigation.NavigationNotFoundView'
 		=> static function ( MediaWikiServices $services ): NavigationNotFoundView {
-		$mainConfig = $services->getMainConfig();
-		return new NavigationNotFoundView(
-			$mainConfig->get( 'ExtensionAssetsPath' ),
-			$services->getMessageFormatterFactory()->getTextFormatter(
-				$mainConfig->get( 'LanguageCode' )
-			)
-		);
+			$mainConfig = $services->getMainConfig();
+			return new NavigationNotFoundView(
+				$mainConfig->get( 'ExtensionAssetsPath' ),
+				$services->getMessageFormatterFactory()->getTextFormatter(
+					$mainConfig->get( 'LanguageCode' )
+				)
+			);
 		},
 
 	'StructuredNavigation.NavigationViewPresenter'
 		=> static function ( MediaWikiServices $services ): NavigationViewPresenter {
-		$wrapper = new Services( $services );
+			$wrapper = new Services( $services );
 
-		return new NavigationViewPresenter(
-			$wrapper->getNavigationFactory(),
-			$wrapper->getNavigationView()
-		);
+			return new NavigationViewPresenter(
+				$wrapper->getNavigationFactory(),
+				$wrapper->getNavigationView()
+			);
 		},
 
 	'StructuredNavigation.ParserFirstCallInitHandler'
 		=> static function ( MediaWikiServices $services ): ParserFirstCallInitHandler {
-		return new ParserFirstCallInitHandler(
-			( new Services( $services ) )->getNavigationViewPresenter()
-		);
+			return new ParserFirstCallInitHandler(
+				( new Services( $services ) )->getNavigationViewPresenter()
+			);
 		},
 
 	'StructuredNavigation.DocumentationContent'
 		=> static function ( MediaWikiServices $services ): DocumentationContent {
-		return new DocumentationContent(
-			$services->getMainConfig()->get( 'ExtensionDirectory' )
-		);
+			return new DocumentationContent(
+				$services->getMainConfig()->get( 'ExtensionDirectory' )
+			);
 		},
 
 	'StructuredNavigation.SchemaValidator'
 		=> static function ( MediaWikiServices $services ): NavigationSchemaValidator {
-		return new NavigationSchemaValidator(
-			$services->getMainConfig()->get( 'ExtensionDirectory' )
-		);
+			return new NavigationSchemaValidator(
+				$services->getMainConfig()->get( 'ExtensionDirectory' )
+			);
 		}
 ];
