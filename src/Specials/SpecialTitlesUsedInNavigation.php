@@ -53,7 +53,7 @@ final class SpecialTitlesUsedInNavigation extends FormSpecialPage {
 
 	/** @inheritDoc */
 	public function onSubmit( array $formData, $htmlForm = null ) {
-		$htmlForm->setPostText(
+		$htmlForm->setPostHtml(
 			$this->getTitleList( $formData[self::FIELD_TITLE] )
 		);
 	}
