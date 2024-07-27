@@ -9,7 +9,7 @@
  * @param {Object} config
  */
 mw.structuredNav.CopyEmbedWidget = function MwStructuredNavCopyEmbed( config ) {
-	config = $.extend( {
+	config = Object.assign( {
 		align: 'top',
 		label: mw.msg( 'structurednav-copy-label' ),
 		copyText: this.getTextToCopy()
