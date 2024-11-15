@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <ruleset>
 	<file>.</file>
-	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
-		<exclude name="MediaWiki.Usage.NullableType.ExplicitNullableTypes" />
-	</rule>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki" />
 
 	<!-- a big chunk of the comments would be redundant when the code is strongly typehinted and well named -->
 	<rule ref="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic">

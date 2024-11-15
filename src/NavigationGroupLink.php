@@ -12,7 +12,7 @@ final class NavigationGroupLink {
 	private string $title;
 	private string $label;
 
-	public function __construct( TitleValue $titleValue, string $title, string $label = null ) {
+	public function __construct( TitleValue $titleValue, string $title, ?string $label = null ) {
 		$this->titleValue = $titleValue;
 		$this->title = $title;
 		$this->label = $label ?? $this->title;
