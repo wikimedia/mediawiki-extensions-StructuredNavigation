@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Къарачайлы"
+		]
+	},
+	"structurednav-desc": "Статьялада хайырланыр ючюн этилген, машина джанындан окъуялырча навигация болдурургъа эркинлик береди.",
+	"structurednav-reserved-username": "StructuredNavigation скрипт",
+	"structurednav-nav-not-found-title": "Алкъын \"$1\" атлы темада навигация джокъду.",
+	"structurednav-nav-not-found-summary": "Бирини нек болдурмайыкъ?",
+	"structurednav-nav-not-found-button-label": "Навигация болдур",
+	"structurednav-nav-not-found-summary-not-logged-in": "Бу навигацияны болдурур ючюн киригиз неда хыйсаб къурагъыз.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Кир эмда тюзет",
+	"structurednav-copy-label": "Ичине салыннган код",
+	"structurednav-copy-state-fail": "Код алмашдырыу буферги копия этилелмеди.",
+	"structurednav-copy-state-success": "Код алмашдырыу буферге копия этилгенди.",
+	"right-structurednav-create": "Структуралашхан навигация болдур",
+	"action-structurednav-create": "структуралашхан навигация болдур",
+	"right-structurednav-edit": "Структуралашхан навигацияны тюзет",
+	"action-structurednav-edit": "структуралашхан навигацияны тюзет",
+	"specialpages-group-structurednav": "StructuredNavigation",
+	"navigationschema": "Навигацияны схемасы",
+	"titlesusedinnavigation": "Навигацияда хайырланнган башлыкъла",
+	"specials-navigationschema-subtitle": "Структуралашхан навигацияла ючюн JSON схема",
+	"specials-titlesusedinnavigation-legend": "Навигацияда хайырланнган башлыкъла",
+	"specials-titlesusedinnavigation-field-title-label": "Навигация башлыкъла",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Навигация ат аламдагъы башлыкъ, с.ю. \"Dontnod Entertainment\""
+}
