@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"TheEduGobi"
 		]
 	},
 	"apihelp-query+structurednavigationexamples-summary": "Recupera o JSON de todos os exemplos de navegação originados da extensão StructuredNavigation. Será da versão do software de extensão que a wiki instalou.",
@@ -10,13 +11,13 @@
 	"apihelp-query+structurednavigationschema-summary": "Recupera o esquema JSON usado para validar a estrutura JSON de navegações.",
 	"apihelp-query+structurednavigationschema-example": "Busque o esquema JSON de navegação",
 	"apihelp-query+structurednavigationnavigationdata-summary": "Recupera o conteúdo JSON para uma determinada navegação.",
-	"apihelp-query+structurednavigationnavigationdata-param-title": "Um título válido e existente no espaço nominal de navegação na wiki.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Um título válido e existente no espaço nominal Navigation na wiki.",
 	"apihelp-query+structurednavigationnavigationdata-example": "Busque o conteúdo JSON de uma navegação com nome de <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationnavigationhtml-summary": "Recupera a visualização de uma navegação por título como um fragmento de HTML.",
-	"apihelp-query+structurednavigationnavigationhtml-param-title": "Um título válido e existente no espaço nominal de navegação na wiki.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Um título válido e existente no espaço nominal Navigation na wiki.",
 	"apihelp-query+structurednavigationnavigationhtml-example": "Obtenha a visualização de uma navegação com nome de <kbd>Dontnod Entertainment</kbd>",
 	"apihelp-query+structurednavigationtitlesused-summary": "Recupera todos os títulos usados por uma determinada navegação.",
-	"apihelp-query+structurednavigationtitlesused-param-title": "Um título válido e existente no espaço nominal de navegação na wiki.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Um título válido e existente no espaço nominal Navigation na wiki.",
 	"apihelp-query+structurednavigationtitlesused-example": "Obter todos os títulos usados em uma navegação com nome de <kbd>Dontnod Entertainment</kbd>",
 	"structurednavigation-rest-api-not-enabled": "A API REST para StructuredNavigation é experimental e desabilitada por padrão. Isso requer a configuração de $wgStructuredNavigationEnableExperimentalAPI como true. Se você não for um administrador do site, converse com o administrador do site sobre a ativação desse recurso."
 }
