@@ -1,9 +1,9 @@
 <?php
 
-namespace StructuredNavigation\Hooks;
+namespace MediaWiki\Extension\StructuredNavigation\Hooks;
 
+use MediaWiki\Extension\StructuredNavigation\Services\Services;
 use MediaWiki\User\Hook\UserGetReservedNamesHook;
-use StructuredNavigation\Services\Services;
 
 /**
  * @license MIT

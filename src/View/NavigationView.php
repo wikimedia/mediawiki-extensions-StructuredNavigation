@@ -1,11 +1,11 @@
 <?php
 
-namespace StructuredNavigation\View;
+namespace MediaWiki\Extension\StructuredNavigation\View;
 
+use MediaWiki\Extension\StructuredNavigation\Navigation;
+use MediaWiki\Extension\StructuredNavigation\NavigationGroupLink;
 use MediaWiki\Html\TemplateParser;
 use MediaWiki\Linker\LinkRenderer;
-use StructuredNavigation\Navigation;
-use StructuredNavigation\NavigationGroupLink;
 
 class NavigationView {
 	private const TEMPLATE_NAME = 'Navigation';

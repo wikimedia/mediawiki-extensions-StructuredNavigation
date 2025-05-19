@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Libs\MediaWiki;
+namespace MediaWiki\Extension\StructuredNavigation\Libs;
 
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
@@ -8,10 +8,9 @@ use SearchEngine;
 
 /**
  * A namespace-agnostic searcher by default that allows retrieving titles
- * in a specific namespace. Intended for use in an instance of a \SpecialPage.
+ * in a specific namespace. Intended for use in an instance of a SpecialPage.
  *
  * @license MIT
- * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 final class NamespacedTitleSearcher {
 	private SearchEngine $searchEngine;

@@ -1,9 +1,9 @@
 <?php
 
-namespace StructuredNavigation\Api\Rest;
+namespace MediaWiki\Extension\StructuredNavigation\Api\Rest;
 
+use MediaWiki\Extension\StructuredNavigation\Services\Services;
 use MediaWiki\Rest\LocalizedHttpException;
-use StructuredNavigation\Services\Services;
 use Wikimedia\Message\MessageValue;
 
 /**

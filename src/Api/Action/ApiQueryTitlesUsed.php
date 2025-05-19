@@ -1,10 +1,10 @@
 <?php
 
-namespace StructuredNavigation\Api\Action;
+namespace MediaWiki\Extension\StructuredNavigation\Api\Action;
 
 use MediaWiki\Api\ApiQuery;
 use MediaWiki\Api\ApiQueryBase;
-use StructuredNavigation\NavigationFactory;
+use MediaWiki\Extension\StructuredNavigation\NavigationFactory;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**

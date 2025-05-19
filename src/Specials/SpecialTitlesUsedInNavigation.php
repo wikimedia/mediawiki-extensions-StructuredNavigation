@@ -1,13 +1,13 @@
 <?php
 
-namespace StructuredNavigation\Specials;
+namespace MediaWiki\Extension\StructuredNavigation\Specials;
 
+use MediaWiki\Extension\StructuredNavigation\Libs\NamespacedTitleSearcher;
+use MediaWiki\Extension\StructuredNavigation\Libs\OOUI\Element\UnorderedList;
+use MediaWiki\Extension\StructuredNavigation\NavigationFactory;
 use MediaWiki\HTMLForm\Field\HTMLTitleTextField;
 use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\SpecialPage\FormSpecialPage;
-use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
-use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
-use StructuredNavigation\NavigationFactory;
 
 /**
  * This special page allows looking up all the titles used for

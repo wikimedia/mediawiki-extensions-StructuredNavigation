@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation;
+namespace MediaWiki\Extension\StructuredNavigation;
 
 use MediaWiki\Title\TitleValue;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Libs\OOUI\View;
+namespace MediaWiki\Extension\StructuredNavigation\Libs\OOUI\View;
 
 use OOUI\ButtonWidget;
 use OOUI\Layout;
@@ -12,7 +12,6 @@ use OOUI\Tag;
  * a prominent CTA that the viewing user can take.
  *
  * @license MIT
- * @author Samantha Nguyen < samanthanguyen1116@gmail.com >
  */
 class EmptyStateView extends Layout {
 	private const CSS_CLASS = [
