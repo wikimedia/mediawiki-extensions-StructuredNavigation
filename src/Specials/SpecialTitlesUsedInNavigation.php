@@ -2,9 +2,9 @@
 
 namespace StructuredNavigation\Specials;
 
-use FormSpecialPage;
-use HTMLForm;
-use HTMLTitleTextField;
+use MediaWiki\HTMLForm\Field\HTMLTitleTextField;
+use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\SpecialPage\FormSpecialPage;
 use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
 use StructuredNavigation\Libs\OOUI\Element\UnorderedList;
 use StructuredNavigation\NavigationFactory;

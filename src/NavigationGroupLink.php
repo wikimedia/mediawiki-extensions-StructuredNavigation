@@ -2,7 +2,7 @@
 
 namespace StructuredNavigation;
 
-use TitleValue;
+use MediaWiki\Title\TitleValue;
 
 /**
  * @license MIT

@@ -2,7 +2,8 @@
 
 namespace StructuredNavigation\Services;
 
-use Config;
+use MediaWiki\Config\Config;
+use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
@@ -12,7 +13,6 @@ use StructuredNavigation\Schema\NavigationSchemaValidator;
 use StructuredNavigation\View\NavigationNotFoundView;
 use StructuredNavigation\View\NavigationView;
 use StructuredNavigation\View\NavigationViewPresenter;
-use TemplateParser;
 
 /**
  * @license MIT
@@ -33,7 +33,10 @@ return [
 
 	'StructuredNavigation.NamespacedTitleSearcher'
 		=> static function ( MediaWikiServices $services ): NamespacedTitleSearcher {
-			return new NamespacedTitleSearcher( $services->newSearchEngine() );
+			return new NamespacedTitleSearcher(
+				$services->newSearchEngine(),
+				$services->getTitleFactory()
+			);
 		},
 
 	'StructuredNavigation.NavigationView'

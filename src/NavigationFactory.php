@@ -2,10 +2,11 @@
 
 namespace StructuredNavigation;
 
-use FormatJson;
+use MediaWiki\Json\FormatJson;
+use MediaWiki\Revision\RevisionAccessException;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\SlotRecord;
-use TitleParser;
+use MediaWiki\Title\TitleParser;
 
 /**
  * @license MIT
@@ -61,16 +62,23 @@ final class NavigationFactory {
 			return false;
 		}
 
-		return $this->newFromSource(
-			FormatJson::decode(
-				$revisionFromTitle
-					->getContent( SlotRecord::MAIN )
-					->getText(),
-				true
-			)
-		);
+		try {
+			/** @var StructuredNavigation\Content\NavigationContent */
+			$content = $revisionFromTitle->getContent( SlotRecord::MAIN );
+			return $this->newFromSource(
+				FormatJson::decode(
+					$content->getText(),
+					true
+				)
+			);
+		} catch ( RevisionAccessException $e ) {
+			return false;
+		}
 	}
 
+	// phpcs:disable
+	// TODO throws MalformedTitleException, handle this
+	// phpcs:enable
 	private function parseNavigationLink( $stringOrArrayLink ): NavigationGroupLink {
 		if ( is_array( $stringOrArrayLink ) ) {
 			return new NavigationGroupLink(

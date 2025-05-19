@@ -2,16 +2,16 @@
 
 namespace StructuredNavigation\Content;
 
-use FormatJson;
-use JsonContent;
-use ParserOptions;
-use ParserOutput;
-use Status;
+use MediaWiki\Content\JsonContent;
+use MediaWiki\Json\FormatJson;
+use MediaWiki\Parser\ParserOptions;
+use MediaWiki\Parser\ParserOutput;
+use MediaWiki\Status\Status;
+use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use StructuredNavigation\Schema\NavigationSchemaValidationError;
 use StructuredNavigation\Schema\NavigationSchemaValidator;
 use StructuredNavigation\Services\Services;
-use Title;
-use User;
 use WikiPage;
 
 /**
@@ -34,7 +34,7 @@ final class NavigationContent extends JsonContent {
 	) {
 		if ( $generateHtml && $this->isValidStatus()->isGood() ) {
 			$navigationViewPresenter = Services::getInstance()->getNavigationViewPresenter();
-			$output->setText(
+			$output->setRawText(
 				$navigationViewPresenter->getFromSource(
 					FormatJson::decode( $this->getText(), true )
 				)
@@ -43,7 +43,7 @@ final class NavigationContent extends JsonContent {
 			$navigationViewPresenter->loadModules( $output );
 			$output->addModules( [ 'ext.structuredNav.content' ] );
 		} else {
-			$output->setText( '' );
+			$output->setRawText( '' );
 		}
 	}
 
