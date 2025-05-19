@@ -1,13 +1,13 @@
 <?php
 
-namespace StructuredNavigation\Hooks;
+namespace MediaWiki\Extension\StructuredNavigation\Hooks;
 
 use MediaWiki\Config\GlobalVarConfig;
-use StructuredNavigation\Api\Action\ApiMetaNavigationExamples;
-use StructuredNavigation\Api\Action\ApiMetaNavigationSchema;
-use StructuredNavigation\Api\Action\ApiQueryNavigationData;
-use StructuredNavigation\Api\Action\ApiQueryNavigationHtml;
-use StructuredNavigation\Api\Action\ApiQueryTitlesUsed;
+use MediaWiki\Extension\StructuredNavigation\Api\Action\ApiMetaNavigationExamples;
+use MediaWiki\Extension\StructuredNavigation\Api\Action\ApiMetaNavigationSchema;
+use MediaWiki\Extension\StructuredNavigation\Api\Action\ApiQueryNavigationData;
+use MediaWiki\Extension\StructuredNavigation\Api\Action\ApiQueryNavigationHtml;
+use MediaWiki\Extension\StructuredNavigation\Api\Action\ApiQueryTitlesUsed;
 
 /**
  * @license MIT

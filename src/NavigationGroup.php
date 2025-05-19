@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation;
+namespace MediaWiki\Extension\StructuredNavigation;
 
 /**
  * @license MIT

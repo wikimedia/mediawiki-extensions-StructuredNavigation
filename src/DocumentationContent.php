@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation;
+namespace MediaWiki\Extension\StructuredNavigation;
 
 /**
  * Represents the JSON from the extension's documentation, which includes

@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Hooks;
+namespace MediaWiki\Extension\StructuredNavigation\Hooks;
 
 use MediaWiki\Extension\CodeEditor\Hooks\CodeEditorGetPageLanguageHook;
 use MediaWiki\Title\Title;

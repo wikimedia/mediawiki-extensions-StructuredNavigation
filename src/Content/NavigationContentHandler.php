@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Content;
+namespace MediaWiki\Extension\StructuredNavigation\Content;
 
 use MediaWiki\Content\JsonContentHandler;
 use MediaWiki\Json\FormatJson;

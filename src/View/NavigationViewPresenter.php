@@ -1,10 +1,10 @@
 <?php
 
-namespace StructuredNavigation\View;
+namespace MediaWiki\Extension\StructuredNavigation\View;
 
+use MediaWiki\Extension\StructuredNavigation\NavigationFactory;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\ParserOutput;
-use StructuredNavigation\NavigationFactory;
 
 /**
  * @license MIT

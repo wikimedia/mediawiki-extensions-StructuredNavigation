@@ -14,7 +14,7 @@
 			"php": ">= 7.4"
 		}
 	},
-	"callback": "StructuredNavigation\\Hooks\\ExtensionCallback::onRegistrationCallback",
+	"callback": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\ExtensionCallback::onRegistrationCallback",
 	"MessagesDirs": {
 		"StructuredNavigation": [
 			"i18n",
@@ -29,8 +29,7 @@
 		"src/Services/ServiceWiring.php"
 	],
 	"AutoloadNamespaces": {
-		"StructuredNavigation\\": "src/",
-		"StructuredNavigation\\Libs\\": "libs/src/"
+		"MediaWiki\\Extension\\StructuredNavigation\\": "src/"
 	},
 	"Hooks": {
 		"BeforeDisplayNoArticleText": "BeforeDisplayNoArticleText",
@@ -40,31 +39,31 @@
 	},
 	"HookHandlers": {
 		"Main": {
-			"class": "StructuredNavigation\\Hooks\\HookHandler"
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\HookHandler"
 		},
 		"BeforeDisplayNoArticleText": {
-			"class": "StructuredNavigation\\Hooks\\BeforeDisplayNoArticleTextHandler"
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\BeforeDisplayNoArticleTextHandler"
 		},
 		"ParserFirstCallInit": {
-			"class": "StructuredNavigation\\Hooks\\ParserFirstCallInitHandler",
-			"factory": "StructuredNavigation\\Hooks\\ParserFirstCallInitHandler::factory",
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\ParserFirstCallInitHandler",
+			"factory": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\ParserFirstCallInitHandler::factory",
 			"services": [
 				"StructuredNavigation.NavigationViewPresenter"
 			]
 		},
 		"CodeEditor": {
-			"class": "StructuredNavigation\\Hooks\\CodeEditorHooks"
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\CodeEditorHooks"
 		}
 	},
 	"SpecialPages": {
 		"NavigationSchema": {
-			"class": "StructuredNavigation\\Specials\\SpecialNavigationSchema",
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Specials\\SpecialNavigationSchema",
 			"services": [
 				"StructuredNavigation.DocumentationContent"
 			]
 		},
 		"TitlesUsedInNavigation": {
-			"class": "StructuredNavigation\\Specials\\SpecialTitlesUsedInNavigation",
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Specials\\SpecialTitlesUsedInNavigation",
 			"services": [
 				"StructuredNavigation.NavigationFactory",
 				"StructuredNavigation.NamespacedTitleSearcher"
@@ -72,13 +71,13 @@
 		}
 	},
 	"ContentHandlers": {
-		"StructuredNavigation": "StructuredNavigation\\Content\\NavigationContentHandler"
+		"StructuredNavigation": "MediaWiki\\Extension\\StructuredNavigation\\Content\\NavigationContentHandler"
 	},
 	"RestRoutes": [
 		{
 			"path": "/structurednav/v0/examples",
 			"method": "GET",
-			"class": "StructuredNavigation\\Api\\Rest\\NavigationExamplesHandler",
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Api\\Rest\\NavigationExamplesHandler",
 			"services": [
 				"StructuredNavigation.DocumentationContent"
 			]
@@ -86,7 +85,7 @@
 		{
 			"path": "/structurednav/v0/schema",
 			"method": "GET",
-			"class": "StructuredNavigation\\Api\\Rest\\NavigationSchemaHandler",
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Api\\Rest\\NavigationSchemaHandler",
 			"services": [
 				"StructuredNavigation.DocumentationContent"
 			]
@@ -94,7 +93,7 @@
 		{
 			"path": "/structurednav/v0/{title}/data",
 			"method": "GET",
-			"class": "StructuredNavigation\\Api\\Rest\\NavigationDataHandler",
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Api\\Rest\\NavigationDataHandler",
 			"services": [
 				"StructuredNavigation.NavigationFactory"
 			]
@@ -102,7 +101,7 @@
 		{
 			"path": "/structurednav/v0/{title}/html",
 			"method": "GET",
-			"class": "StructuredNavigation\\Api\\Rest\\NavigationHtmlHandler",
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Api\\Rest\\NavigationHtmlHandler",
 			"services": [
 				"StructuredNavigation.NavigationViewPresenter"
 			]
@@ -110,14 +109,14 @@
 		{
 			"path": "/structurednav/v0/{title}/titles-used",
 			"method": "GET",
-			"class": "StructuredNavigation\\Api\\Rest\\NavigationTitlesUsedHandler",
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Api\\Rest\\NavigationTitlesUsedHandler",
 			"services": [
 				"StructuredNavigation.NavigationFactory"
 			]
 		}
 	],
 	"ConfigRegistry": {
-		"structurednavigation": "StructuredNavigation\\Hooks\\ExtensionCallback::getGlobalVarConfig"
+		"structurednavigation": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\ExtensionCallback::getGlobalVarConfig"
 	},
 	"config": {
 		"StructuredNavigationEnableExperimentalAPI": {
@@ -187,7 +186,7 @@
 		},
 		"ext.structuredNav.NavigationNotFoundView.styles": {
 			"styles": [
-				"libs/resources/ooui/EmptyStateView.less",
+				"resources/styles/ooui.EmptyStateView.less",
 				"resources/styles/ext.structuredNav.NavigationNotFoundView.less"
 			]
 		},
