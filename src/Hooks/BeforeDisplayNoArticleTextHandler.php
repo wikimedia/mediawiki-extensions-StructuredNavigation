@@ -1,10 +1,10 @@
 <?php
 
-namespace StructuredNavigation\Hooks;
+namespace MediaWiki\Extension\StructuredNavigation\Hooks;
 
 use Article;
+use MediaWiki\Extension\StructuredNavigation\Services\Services;
 use MediaWiki\Page\Hook\BeforeDisplayNoArticleTextHook;
-use StructuredNavigation\Services\Services;
 
 /**
  * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeDisplayNoArticleText

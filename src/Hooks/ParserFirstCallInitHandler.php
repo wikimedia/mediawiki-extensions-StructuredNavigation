@@ -1,12 +1,12 @@
 <?php
 
-namespace StructuredNavigation\Hooks;
+namespace MediaWiki\Extension\StructuredNavigation\Hooks;
 
+use MediaWiki\Extension\StructuredNavigation\Services\Services;
+use MediaWiki\Extension\StructuredNavigation\View\NavigationViewPresenter;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\ParserOutput;
-use StructuredNavigation\Services\Services;
-use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
  * @see https://www.mediawiki.org/wiki/Manual:Hooks/ParserFirstCallInit

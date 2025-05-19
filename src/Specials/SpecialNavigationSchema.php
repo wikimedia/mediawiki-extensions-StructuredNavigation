@@ -1,10 +1,10 @@
 <?php
 
-namespace StructuredNavigation\Specials;
+namespace MediaWiki\Extension\StructuredNavigation\Specials;
 
+use MediaWiki\Extension\StructuredNavigation\DocumentationContent;
 use MediaWiki\SpecialPage\SpecialPage;
 use OOUI\Tag;
-use StructuredNavigation\DocumentationContent;
 
 /**
  * This special page allows viewing the schema used by the extension

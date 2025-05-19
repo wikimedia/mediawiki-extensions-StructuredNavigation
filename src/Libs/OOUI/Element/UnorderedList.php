@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Libs\OOUI\Element;
+namespace MediaWiki\Extension\StructuredNavigation\Libs\OOUI\Element;
 
 use OOUI\Element;
 use OOUI\GroupElement;
@@ -11,7 +11,6 @@ use OOUI\Tag;
  * Generates HTML for making unordered lists.
  *
  * @license MIT
- * @author Sam Nguyen < sam.t.nguyenn@gmail.com >
  */
 class UnorderedList extends Element {
 	use GroupElement;

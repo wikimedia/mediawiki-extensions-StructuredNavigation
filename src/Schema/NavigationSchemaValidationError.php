@@ -1,6 +1,6 @@
 <?php
 
-namespace StructuredNavigation\Schema;
+namespace MediaWiki\Extension\StructuredNavigation\Schema;
 
 use Exception;
 

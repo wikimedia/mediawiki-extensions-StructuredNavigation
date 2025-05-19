@@ -1,17 +1,17 @@
 <?php
 
-namespace StructuredNavigation\Content;
+namespace MediaWiki\Extension\StructuredNavigation\Content;
 
 use MediaWiki\Content\JsonContent;
+use MediaWiki\Extension\StructuredNavigation\Schema\NavigationSchemaValidationError;
+use MediaWiki\Extension\StructuredNavigation\Schema\NavigationSchemaValidator;
+use MediaWiki\Extension\StructuredNavigation\Services\Services;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Status\Status;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use StructuredNavigation\Schema\NavigationSchemaValidationError;
-use StructuredNavigation\Schema\NavigationSchemaValidator;
-use StructuredNavigation\Services\Services;
 use WikiPage;
 
 /**

@@ -1,11 +1,11 @@
 <?php
 
-namespace StructuredNavigation\View;
+namespace MediaWiki\Extension\StructuredNavigation\View;
 
+use MediaWiki\Extension\StructuredNavigation\Libs\OOUI\View\EmptyStateView;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
-use StructuredNavigation\Libs\OOUI\View\EmptyStateView;
 use Wikimedia\Message\ITextFormatter;
 use Wikimedia\Message\MessageValue;
 

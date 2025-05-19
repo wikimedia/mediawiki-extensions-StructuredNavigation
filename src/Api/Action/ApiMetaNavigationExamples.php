@@ -1,10 +1,10 @@
 <?php
 
-namespace StructuredNavigation\Api\Action;
+namespace MediaWiki\Extension\StructuredNavigation\Api\Action;
 
 use MediaWiki\Api\ApiQuery;
 use MediaWiki\Api\ApiQueryBase;
-use StructuredNavigation\DocumentationContent;
+use MediaWiki\Extension\StructuredNavigation\DocumentationContent;
 
 /**
  * @license MIT

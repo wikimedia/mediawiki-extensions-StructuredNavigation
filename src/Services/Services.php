@@ -1,17 +1,17 @@
 <?php
 
-namespace StructuredNavigation\Services;
+namespace MediaWiki\Extension\StructuredNavigation\Services;
 
 use MediaWiki\Config\Config;
+use MediaWiki\Extension\StructuredNavigation\DocumentationContent;
+use MediaWiki\Extension\StructuredNavigation\Hooks\ParserFirstCallInitHandler;
+use MediaWiki\Extension\StructuredNavigation\Libs\NamespacedTitleSearcher;
+use MediaWiki\Extension\StructuredNavigation\NavigationFactory;
+use MediaWiki\Extension\StructuredNavigation\Schema\NavigationSchemaValidator;
+use MediaWiki\Extension\StructuredNavigation\View\NavigationNotFoundView;
+use MediaWiki\Extension\StructuredNavigation\View\NavigationView;
+use MediaWiki\Extension\StructuredNavigation\View\NavigationViewPresenter;
 use MediaWiki\MediaWikiServices;
-use StructuredNavigation\DocumentationContent;
-use StructuredNavigation\Hooks\ParserFirstCallInitHandler;
-use StructuredNavigation\Libs\MediaWiki\NamespacedTitleSearcher;
-use StructuredNavigation\NavigationFactory;
-use StructuredNavigation\Schema\NavigationSchemaValidator;
-use StructuredNavigation\View\NavigationNotFoundView;
-use StructuredNavigation\View\NavigationView;
-use StructuredNavigation\View\NavigationViewPresenter;
 
 /**
  * Acts as a convience wrapper around the \MediaWiki\MediaWikiServices

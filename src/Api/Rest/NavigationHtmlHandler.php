@@ -1,9 +1,9 @@
 <?php
 
-namespace StructuredNavigation\Api\Rest;
+namespace MediaWiki\Extension\StructuredNavigation\Api\Rest;
 
+use MediaWiki\Extension\StructuredNavigation\View\NavigationViewPresenter;
 use MediaWiki\Rest\SimpleHandler;
-use StructuredNavigation\View\NavigationViewPresenter;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**
