@@ -2,10 +2,10 @@
 
 namespace StructuredNavigation\View;
 
+use MediaWiki\Html\TemplateParser;
 use MediaWiki\Linker\LinkRenderer;
 use StructuredNavigation\Navigation;
 use StructuredNavigation\NavigationGroupLink;
-use TemplateParser;
 
 class NavigationView {
 	private const TEMPLATE_NAME = 'Navigation';

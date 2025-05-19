@@ -2,7 +2,7 @@
 
 namespace StructuredNavigation\Hooks;
 
-use GlobalVarConfig;
+use MediaWiki\Config\GlobalVarConfig;
 use StructuredNavigation\Api\Action\ApiMetaNavigationExamples;
 use StructuredNavigation\Api\Action\ApiMetaNavigationSchema;
 use StructuredNavigation\Api\Action\ApiQueryNavigationData;

@@ -2,8 +2,8 @@
 
 namespace StructuredNavigation\View;
 
-use OutputPage;
-use ParserOutput;
+use MediaWiki\Output\OutputPage;
+use MediaWiki\Parser\ParserOutput;
 use StructuredNavigation\NavigationFactory;
 
 /**

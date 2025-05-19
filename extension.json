@@ -33,10 +33,28 @@
 		"StructuredNavigation\\Libs\\": "libs/src/"
 	},
 	"Hooks": {
-		"BeforeDisplayNoArticleText": "StructuredNavigation\\Hooks\\BeforeDisplayNoArticleTextHandler::onBeforeDisplayNoArticleText",
-		"CodeEditorGetPageLanguage": "StructuredNavigation\\Hooks\\HookHandler::onCodeEditorGetPageLanguage",
-		"ParserFirstCallInit": "StructuredNavigation\\Hooks\\ParserFirstCallInitHandler::onParserFirstCallInit",
-		"UserGetReservedNames": "StructuredNavigation\\Hooks\\HookHandler::onUserGetReservedNames"
+		"BeforeDisplayNoArticleText": "BeforeDisplayNoArticleText",
+		"UserGetReservedNames": "Main",
+		"ParserFirstCallInit": "ParserFirstCallInit",
+		"CodeEditorGetPageLanguage": "CodeEditor"
+	},
+	"HookHandlers": {
+		"Main": {
+			"class": "StructuredNavigation\\Hooks\\HookHandler"
+		},
+		"BeforeDisplayNoArticleText": {
+			"class": "StructuredNavigation\\Hooks\\BeforeDisplayNoArticleTextHandler"
+		},
+		"ParserFirstCallInit": {
+			"class": "StructuredNavigation\\Hooks\\ParserFirstCallInitHandler",
+			"factory": "StructuredNavigation\\Hooks\\ParserFirstCallInitHandler::factory",
+			"services": [
+				"StructuredNavigation.NavigationViewPresenter"
+			]
+		},
+		"CodeEditor": {
+			"class": "StructuredNavigation\\Hooks\\CodeEditorHooks"
+		}
 	},
 	"SpecialPages": {
 		"NavigationSchema": {
@@ -147,11 +165,15 @@
 	"ResourceModules": {
 		"ext.structuredNav.wiki": {
 			"class": "MediaWiki\\ResourceLoader\\WikiModule",
-			"scripts": [ "MediaWiki:StructuredNavigation.js" ]
+			"scripts": [
+				"MediaWiki:StructuredNavigation.js"
+			]
 		},
 		"ext.structuredNav.wiki.styles": {
 			"class": "MediaWiki\\ResourceLoader\\WikiModule",
-			"styles": [ "MediaWiki:StructuredNavigation.css" ]
+			"styles": [
+				"MediaWiki:StructuredNavigation.css"
+			]
 		},
 		"ext.structuredNav.NavigationView.styles": {
 			"styles": "resources/styles/ext.structuredNav.NavigationView.less"

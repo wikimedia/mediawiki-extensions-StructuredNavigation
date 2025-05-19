@@ -2,7 +2,7 @@
 
 namespace StructuredNavigation\Services;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
 use StructuredNavigation\DocumentationContent;
 use StructuredNavigation\Hooks\ParserFirstCallInitHandler;

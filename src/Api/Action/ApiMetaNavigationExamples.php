@@ -2,8 +2,8 @@
 
 namespace StructuredNavigation\Api\Action;
 
-use ApiQuery;
-use ApiQueryBase;
+use MediaWiki\Api\ApiQuery;
+use MediaWiki\Api\ApiQueryBase;
 use StructuredNavigation\DocumentationContent;
 
 /**
