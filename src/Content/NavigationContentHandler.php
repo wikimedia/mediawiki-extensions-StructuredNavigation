@@ -2,8 +2,8 @@
 
 namespace StructuredNavigation\Content;
 
-use FormatJson;
-use JsonContentHandler;
+use MediaWiki\Content\JsonContentHandler;
+use MediaWiki\Json\FormatJson;
 
 /**
  * Content handler for a structured navigation.

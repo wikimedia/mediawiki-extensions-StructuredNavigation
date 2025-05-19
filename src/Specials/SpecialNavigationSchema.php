@@ -2,8 +2,8 @@
 
 namespace StructuredNavigation\Specials;
 
+use MediaWiki\SpecialPage\SpecialPage;
 use OOUI\Tag;
-use SpecialPage;
 use StructuredNavigation\DocumentationContent;
 
 /**

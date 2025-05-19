@@ -2,8 +2,9 @@
 
 namespace StructuredNavigation\Hooks;
 
-use Parser;
-use ParserOutput;
+use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\ParserOutput;
 use StructuredNavigation\Services\Services;
 use StructuredNavigation\View\NavigationViewPresenter;
 
@@ -11,21 +12,32 @@ use StructuredNavigation\View\NavigationViewPresenter;
  * @see https://www.mediawiki.org/wiki/Manual:Hooks/ParserFirstCallInit
  * @license MIT
  */
-final class ParserFirstCallInitHandler {
+final class ParserFirstCallInitHandler implements ParserFirstCallInitHook {
 	private const PAGE_PROPERTY = 'structurednavigation';
 	private const PARSER_TAG = 'mw-navigation';
 	private const PARSER_TAG_METHOD = 'getParserHandler';
 
 	private NavigationViewPresenter $navigationViewPresenter;
 
-	public function __construct( NavigationViewPresenter $navigationViewPresenter ) {
+	public function __construct(
+		NavigationViewPresenter $navigationViewPresenter
+	) {
 		$this->navigationViewPresenter = $navigationViewPresenter;
+	}
+
+	public static function factory(
+		NavigationViewPresenter $navigationViewPresenter
+	): self {
+		return new self(
+			$navigationViewPresenter
+		);
 	}
 
 	/**
 	 * @param Parser $parser
+	 * @return void
 	 */
-	public static function onParserFirstCallInit( Parser $parser ): void {
+	public function onParserFirstCallInit( $parser ) {
 		$parser->setHook( self::PARSER_TAG, [
 			Services::getInstance()->getParserFirstCallInitHandler(),
 			self::PARSER_TAG_METHOD
@@ -54,11 +66,6 @@ final class ParserFirstCallInitHandler {
 	}
 
 	private function setPageProperty( ParserOutput $parserOutput, string $title ): void {
-		if ( method_exists( $parserOutput, 'setPageProperty' ) ) {
-			// MW 1.38
-			$parserOutput->setPageProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
-		} else {
-			$parserOutput->setProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
-		}
+		$parserOutput->setPageProperty( self::PAGE_PROPERTY, htmlspecialchars( $title, ENT_QUOTES ) );
 	}
 }
