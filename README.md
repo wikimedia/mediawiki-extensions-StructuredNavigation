@@ -19,17 +19,7 @@ then save your edit.
 2. At a separate wikitext page, add `<mw-navigation title="Dontnod Entertainment" />` and press save.
 
 ## Install
-This extension requires MediaWiki 1.34 (or greater) and PHP 7.4 (or greater). To install:
-
-1. Git clone this repository locally on your wiki.
-2. Add this line to your `LocalSettings.php` file:
-```php
-wfLoadExtension( 'StructuredNavigation' );
-```
-3. Install PHP package dependencies using composer:
-```
-composer update
-```
+To install, read the installation guide on [MediaWiki.org](https://www.mediawiki.org/wiki/Extension:StructuredNavigation#Installation).
 
 ## Benefits
 Using this extension allows creating navigations that:
