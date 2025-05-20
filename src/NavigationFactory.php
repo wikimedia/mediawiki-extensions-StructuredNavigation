@@ -2,10 +2,12 @@
 
 namespace MediaWiki\Extension\StructuredNavigation;
 
+use MediaWiki\Extension\StructuredNavigation\Content\NavigationContent;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Revision\RevisionAccessException;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\Title\MalformedTitleException;
 use MediaWiki\Title\TitleParser;
 
 /**
@@ -15,7 +17,10 @@ final class NavigationFactory {
 	private RevisionLookup $revisionLookup;
 	private TitleParser $titleParser;
 
-	public function __construct( RevisionLookup $revisionLookup, TitleParser $titleParser ) {
+	public function __construct(
+		RevisionLookup $revisionLookup,
+		TitleParser $titleParser
+	) {
 		$this->revisionLookup = $revisionLookup;
 		$this->titleParser = $titleParser;
 	}
@@ -24,14 +29,15 @@ final class NavigationFactory {
 		$content = $source;
 		$jsonGroups = $content['groups'];
 		$objectGroups = [];
+
 		foreach ( $jsonGroups as $jsonGroup ) {
 			$links = [];
 			foreach ( $jsonGroup['content'] as $stringOrArrayLink ) {
-				if ( is_array( $stringOrArrayLink ) ) {
-					$links[] = $this->parseNavigationLink( $stringOrArrayLink );
+				$link = NavigationGroupLink::parseOrNull(
+					$this->titleParser, $stringOrArrayLink );
 
-				} else {
-					$links[] = $this->parseNavigationLink( $stringOrArrayLink );
+				if ( $link !== null ) {
+					$links[] = $link;
 				}
 			}
 
@@ -50,20 +56,24 @@ final class NavigationFactory {
 
 	/**
 	 * Attempts to make a new Navigation object from a given title.
-	 * Returns false otherwise if the title doesn't exist.
+	 * Returns false otherwise if:
+	 * - the title doesn't exist
+	 * - the title text does not match a valid title representation
+	 * - the content slot does not exist
 	 *
+	 * @todo Refactor to return Status so it's more informative
 	 * @param string $passedTitle
 	 * @return Navigation|false
 	 */
 	public function newFromTitle( string $passedTitle ) {
-		$title = $this->titleParser->parseTitle( $passedTitle, NS_NAVIGATION );
-		$revisionFromTitle = $this->revisionLookup->getRevisionByTitle( $title );
-		if ( $revisionFromTitle === null ) {
-			return false;
-		}
-
 		try {
-			/** @var StructuredNavigation\Content\NavigationContent */
+			$title = $this->titleParser->parseTitle( $passedTitle, NS_NAVIGATION );
+			$revisionFromTitle = $this->revisionLookup->getRevisionByTitle( $title );
+			if ( $revisionFromTitle === null ) {
+				return false;
+			}
+
+			/** @var NavigationContent */
 			$content = $revisionFromTitle->getContent( SlotRecord::MAIN );
 			return $this->newFromSource(
 				FormatJson::decode(
@@ -71,24 +81,8 @@ final class NavigationFactory {
 					true
 				)
 			);
-		} catch ( RevisionAccessException $e ) {
+		} catch ( MalformedTitleException | RevisionAccessException $e ) {
 			return false;
-		}
-	}
-
-	// phpcs:disable
-	// TODO throws MalformedTitleException, handle this
-	// phpcs:enable
-	private function parseNavigationLink( $stringOrArrayLink ): NavigationGroupLink {
-		if ( is_array( $stringOrArrayLink ) ) {
-			return new NavigationGroupLink(
-				$this->titleParser->parseTitle( $stringOrArrayLink[0] ),
-				$stringOrArrayLink[0],
-				$stringOrArrayLink[1]
-			);
-		} else {
-			return new NavigationGroupLink(
-				$this->titleParser->parseTitle( $stringOrArrayLink ), $stringOrArrayLink );
 		}
 	}
 }

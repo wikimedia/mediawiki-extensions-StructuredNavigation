@@ -3,16 +3,7 @@
 namespace MediaWiki\Extension\StructuredNavigation\Content;
 
 use MediaWiki\Content\JsonContent;
-use MediaWiki\Extension\StructuredNavigation\Schema\NavigationSchemaValidationError;
-use MediaWiki\Extension\StructuredNavigation\Schema\NavigationSchemaValidator;
 use MediaWiki\Extension\StructuredNavigation\Services\Services;
-use MediaWiki\Json\FormatJson;
-use MediaWiki\Parser\ParserOptions;
-use MediaWiki\Parser\ParserOutput;
-use MediaWiki\Status\Status;
-use MediaWiki\Title\Title;
-use MediaWiki\User\User;
-use WikiPage;
 
 /**
  * Content object for representing a structured navigation.
@@ -25,49 +16,14 @@ final class NavigationContent extends JsonContent {
 	}
 
 	/** @inheritDoc */
-	protected function fillParserOutput(
-		Title $title,
-		$revId,
-		ParserOptions $options,
-		$generateHtml,
-		ParserOutput &$output
-	) {
-		if ( $generateHtml && $this->isValidStatus()->isGood() ) {
-			$navigationViewPresenter = Services::getInstance()->getNavigationViewPresenter();
-			$output->setRawText(
-				$navigationViewPresenter->getFromSource(
-					FormatJson::decode( $this->getText(), true )
-				)
-			);
-
-			$navigationViewPresenter->loadModules( $output );
-			$output->addModules( [ 'ext.structuredNav.content' ] );
-		} else {
-			$output->setRawText( '' );
-		}
+	public function isValid() {
+		return $this->isValidStatus()->isGood();
 	}
 
 	public function isValidStatus() {
-		/** @var NavigationSchemaValidator */
-		$schemaValidator = Services::getInstance()->getNavigationSchemaValidator();
-		try {
-			$schemaValidator->validate( $this->getData()->getValue() );
-			return Status::newGood();
-		} catch ( NavigationSchemaValidationError $e ) {
-			return Status::newFatal(
-				'structurednav-schema-invalid',
-				implode( "\n", $e->getErrors() )
-			);
-		}
-	}
-
-	/** @inheritDoc */
-	public function prepareSave(
-		WikiPage $page,
-		$flags,
-		$parentRevId,
-		User $user
-	) {
-		return $this->isValidStatus();
+		$validator = Services::getInstance()->getNavigationValidator();
+		return $validator->validate(
+			$this->getData()->getValue()
+		);
 	}
 }

@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\StructuredNavigation\Hooks;
 
 use Article;
-use MediaWiki\Extension\StructuredNavigation\Services\Services;
+use MediaWiki\Extension\StructuredNavigation\View\NavigationNotFoundView;
 use MediaWiki\Page\Hook\BeforeDisplayNoArticleTextHook;
 
 /**
@@ -11,15 +11,21 @@ use MediaWiki\Page\Hook\BeforeDisplayNoArticleTextHook;
  * @license MIT
  */
 final class BeforeDisplayNoArticleTextHandler implements BeforeDisplayNoArticleTextHook {
+	private NavigationNotFoundView $notFoundView;
+
+	public function __construct( NavigationNotFoundView $notFoundView ) {
+		$this->notFoundView = $notFoundView;
+	}
+
+	public static function factory( NavigationNotFoundView $notFoundView ): self {
+		return new self( $notFoundView );
+	}
+
 	/**
 	 * @param Article $article
 	 * @return bool
 	 */
 	public function onBeforeDisplayNoArticleText( $article ) {
-		return ( new self() )->getHandler( $article );
-	}
-
-	public function getHandler( Article $article ): bool {
 		if (
 			$article->getPage()->getContentModel()
 			!== CONTENT_MODEL_NAVIGATION
@@ -38,9 +44,10 @@ final class BeforeDisplayNoArticleTextHandler implements BeforeDisplayNoArticleT
 		$output->enableOOUI();
 		$output->addModuleStyles( 'ext.structuredNav.NavigationNotFoundView.styles' );
 		$output->addHTML(
-			Services::getInstance()
-				->getNavigationNotFoundView()
-				->getView( $context->getTitle(), $context->getUser() )
+			$this->notFoundView->getView(
+				$context->getTitle(),
+				$context->getUser()
+			)
 		);
 	}
 }

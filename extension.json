@@ -39,10 +39,18 @@
 	},
 	"HookHandlers": {
 		"Main": {
-			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\HookHandler"
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\HookHandler",
+			"factory": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\HookHandler::factory",
+			"services": [
+				"StructuredNavigation.Config"
+			]
 		},
 		"BeforeDisplayNoArticleText": {
-			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\BeforeDisplayNoArticleTextHandler"
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\BeforeDisplayNoArticleTextHandler",
+			"factory": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\BeforeDisplayNoArticleTextHandler::factory",
+			"services": [
+				"StructuredNavigation.NavigationNotFoundView"
+			]
 		},
 		"ParserFirstCallInit": {
 			"class": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\ParserFirstCallInitHandler",
@@ -71,7 +79,12 @@
 		}
 	},
 	"ContentHandlers": {
-		"StructuredNavigation": "MediaWiki\\Extension\\StructuredNavigation\\Content\\NavigationContentHandler"
+		"StructuredNavigation": {
+			"class": "MediaWiki\\Extension\\StructuredNavigation\\Content\\NavigationContentHandler",
+			"services": [
+				"StructuredNavigation.NavigationViewPresenter"
+			]
+		}
 	},
 	"RestRoutes": [
 		{

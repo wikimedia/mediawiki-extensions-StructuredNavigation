@@ -11,7 +11,11 @@ final class Navigation {
 	/** @var NavigationGroup[] */
 	private array $groups;
 
-	public function __construct( array $content, string $titleLabel, array $groups ) {
+	public function __construct(
+		array $content,
+		string $titleLabel,
+		array $groups
+	) {
 		$this->content = $content;
 		$this->titleLabel = $titleLabel;
 		$this->groups = $groups;

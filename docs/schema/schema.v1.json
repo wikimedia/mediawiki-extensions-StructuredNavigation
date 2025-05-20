@@ -1,6 +1,5 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-
 	"definitions": {
 		"valid-wiki-title": {
 			"$id": "#valid-wiki-title",
@@ -9,7 +8,9 @@
 		},
 		"valid-nav-header": {
 			"type": "object",
-			"required": [ "label" ],
+			"required": [
+				"label"
+			],
 			"properties": {
 				"page": {
 					"$ref": "#/definitions/valid-wiki-title"
@@ -42,9 +43,11 @@
 			"minItems": 1
 		}
 	},
-
 	"type": "object",
-	"required": [ "config", "groups" ],
+	"required": [
+		"config",
+		"groups"
+	],
 	"additionalProperties": false,
 	"properties": {
 		"config": {
@@ -58,7 +61,9 @@
 					"$ref": "#/definitions/valid-nav-header"
 				}
 			},
-			"required": [ "title" ]
+			"required": [
+				"title"
+			]
 		},
 		"groups": {
 			"type": "array",
@@ -66,7 +71,10 @@
 			"items": {
 				"type": "object",
 				"additionalProperties": false,
-				"required": [ "title", "content" ],
+				"required": [
+					"title",
+					"content"
+				],
 				"properties": {
 					"title": {
 						"$ref": "#/definitions/valid-nav-header"
