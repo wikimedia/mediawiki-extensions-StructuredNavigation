@@ -7,7 +7,7 @@ use MediaWiki\Extension\StructuredNavigation\DocumentationContent;
 use MediaWiki\Extension\StructuredNavigation\Hooks\ParserFirstCallInitHandler;
 use MediaWiki\Extension\StructuredNavigation\Libs\NamespacedTitleSearcher;
 use MediaWiki\Extension\StructuredNavigation\NavigationFactory;
-use MediaWiki\Extension\StructuredNavigation\Schema\NavigationSchemaValidator;
+use MediaWiki\Extension\StructuredNavigation\Schema\NavigationValidator;
 use MediaWiki\Extension\StructuredNavigation\View\NavigationNotFoundView;
 use MediaWiki\Extension\StructuredNavigation\View\NavigationView;
 use MediaWiki\Extension\StructuredNavigation\View\NavigationViewPresenter;
@@ -64,7 +64,7 @@ final class Services {
 		return $this->services->getService( 'StructuredNavigation.DocumentationContent' );
 	}
 
-	public function getNavigationSchemaValidator(): NavigationSchemaValidator {
-		return $this->services->getService( 'StructuredNavigation.SchemaValidator' );
+	public function getNavigationValidator(): NavigationValidator {
+		return $this->services->getService( 'StructuredNavigation.NavigationValidator' );
 	}
 }

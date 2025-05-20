@@ -16,7 +16,11 @@ class DocumentationContent {
 	}
 
 	public function getSchemaContent(): string {
-		return file_get_contents( $this->makePath( 'schema/schema.v1.json' ) );
+		return file_get_contents( $this->getSchemaPath() );
+	}
+
+	public function getSchemaPath(): string {
+		return $this->makePath( 'schema/schema.v1.json' );
 	}
 
 	public function getDecodedSchemaContent(): array {
