@@ -22,16 +22,15 @@ final class NavigationViewPresenter {
 	}
 
 	/**
+	 * @todo Refactor to return Status so it's more informative
 	 * @param string $title
 	 * @return string|false
 	 */
 	public function getFromTitle( string $title ) {
 		$navigation = $this->navigationFactory->newFromTitle( $title );
-		if ( $navigation === false ) {
-			return false;
-		}
-
-		return $this->navigationView->getView( $navigation );
+		return $navigation === false
+			? false
+			: $this->navigationView->getView( $navigation );
 	}
 
 	/**

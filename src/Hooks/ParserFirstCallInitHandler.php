@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\StructuredNavigation\Hooks;
 
-use MediaWiki\Extension\StructuredNavigation\Services\Services;
 use MediaWiki\Extension\StructuredNavigation\View\NavigationViewPresenter;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Parser\Parser;
@@ -39,7 +38,7 @@ final class ParserFirstCallInitHandler implements ParserFirstCallInitHook {
 	 */
 	public function onParserFirstCallInit( $parser ) {
 		$parser->setHook( self::PARSER_TAG, [
-			Services::getInstance()->getParserFirstCallInitHandler(),
+			$this,
 			self::PARSER_TAG_METHOD
 		] );
 	}

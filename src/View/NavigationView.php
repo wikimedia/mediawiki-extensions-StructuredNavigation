@@ -3,7 +3,6 @@
 namespace MediaWiki\Extension\StructuredNavigation\View;
 
 use MediaWiki\Extension\StructuredNavigation\Navigation;
-use MediaWiki\Extension\StructuredNavigation\NavigationGroupLink;
 use MediaWiki\Html\TemplateParser;
 use MediaWiki\Linker\LinkRenderer;
 
@@ -42,7 +41,9 @@ class NavigationView {
 		foreach ( $navGroups as $group ) {
 			$links = [];
 			foreach ( $group->getLinks() as $link ) {
-				$links[] = [ self::PARAM_LINK => $this->getLink( $link ) ];
+				$links[] = [
+					self::PARAM_LINK => $link->asHtmlLink( $this->linkRenderer )
+				];
 			}
 
 			$groups[] = [
@@ -52,13 +53,5 @@ class NavigationView {
 		}
 
 		return $groups;
-	}
-
-	private function getLink( NavigationGroupLink $link ): string {
-		return $this->linkRenderer->makeLink(
-			$link->getTitleValue(),
-			$link->getLabel(),
-			[ 'class' => 'mw-structurednav-group-content-link' ]
-		);
 	}
 }
