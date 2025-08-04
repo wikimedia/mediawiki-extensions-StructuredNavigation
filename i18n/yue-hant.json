@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"JeffreyKim"
+		]
+	},
+	"structurednav-desc": "允許建立一個有結構嘅機器可讀導覽，用喺文章上面。",
+	"structurednav-reserved-username": "結構化導覽指令碼",
+	"structurednav-nav-not-found-title": "有個名為「$1」嘅主題導覽仲未存在。",
+	"structurednav-nav-not-found-summary": "點解唔創造一個？",
+	"structurednav-nav-not-found-button-label": "建立個導覽",
+	"structurednav-nav-not-found-summary-not-logged-in": "簽到或者建立帳戶嚟建立呢個導覽。",
+	"structurednav-nav-not-found-button-label-not-logged-in": "簽到同編輯",
+	"structurednav-copy-label": "嵌入代碼",
+	"structurednav-copy-state-fail": "複製唔到落剪貼簿",
+	"structurednav-copy-state-success": "複製咗落剪貼簿。",
+	"right-structurednav-create": "建立結構化導覽",
+	"action-structurednav-create": "建立一個結構化嘅導航",
+	"right-structurednav-edit": "編輯一個結構化嘅導覽",
+	"action-structurednav-edit": "建立結構化導覽",
+	"specialpages-group-structurednav": "結構化導航",
+	"navigationschema": "導航架構",
+	"titlesusedinnavigation": "導航入面用嘅標題",
+	"specials-navigationschema-subtitle": "結構化導覽嘅 JSON 架構",
+	"specials-titlesusedinnavigation-legend": "導航入面用嘅呔圖",
+	"specials-titlesusedinnavigation-field-title-label": "導航呔圖",
+	"specials-titlesusedinnavigation-field-title-placeholder": "導航命名空間入面嘅呔圖，例如「Dontnod 娛樂」"
+}
