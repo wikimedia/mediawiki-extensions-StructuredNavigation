@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"JeffreyKim"
+			"JeffreyKim",
+			"Ktchankt"
 		]
 	},
 	"structurednav-desc": "允許建立一個有結構嘅機器可讀導覽，用喺文章上面。",
@@ -22,7 +23,7 @@
 	"navigationschema": "導航架構",
 	"titlesusedinnavigation": "導航入面用嘅標題",
 	"specials-navigationschema-subtitle": "結構化導覽嘅 JSON 架構",
-	"specials-titlesusedinnavigation-legend": "導航入面用嘅呔圖",
-	"specials-titlesusedinnavigation-field-title-label": "導航呔圖",
-	"specials-titlesusedinnavigation-field-title-placeholder": "導航命名空間入面嘅呔圖，例如「Dontnod 娛樂」"
+	"specials-titlesusedinnavigation-legend": "導航入面用嘅標題",
+	"specials-titlesusedinnavigation-field-title-label": "導航標題",
+	"specials-titlesusedinnavigation-field-title-placeholder": "導航命名空間入面嘅標題，例如「Dontnod Entertainment」"
 }
