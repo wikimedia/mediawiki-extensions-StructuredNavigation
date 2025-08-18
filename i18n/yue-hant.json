@@ -5,12 +5,12 @@
 			"Ktchankt"
 		]
 	},
-	"structurednav-desc": "允許建立一個有結構嘅機器可讀導覽，用喺文章上面。",
+	"structurednav-desc": "允許建立一個有結構嘅機械可讀導覽，用喺文章上面。",
 	"structurednav-reserved-username": "結構化導覽指令碼",
 	"structurednav-nav-not-found-title": "有個名為「$1」嘅主題導覽仲未存在。",
 	"structurednav-nav-not-found-summary": "點解唔創造一個？",
 	"structurednav-nav-not-found-button-label": "建立個導覽",
-	"structurednav-nav-not-found-summary-not-logged-in": "簽到或者建立帳戶嚟建立呢個導覽。",
+	"structurednav-nav-not-found-summary-not-logged-in": "簽到或者開戶口嚟建立呢個導覽。",
 	"structurednav-nav-not-found-button-label-not-logged-in": "簽到同編輯",
 	"structurednav-copy-label": "嵌入代碼",
 	"structurednav-copy-state-fail": "複製唔到落剪貼簿",
