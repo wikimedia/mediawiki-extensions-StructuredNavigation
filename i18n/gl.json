@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"structurednav-desc": "Permite crear unha navegación estruturada e lexible por máquinas para o seu uso en artigos.",
+	"structurednav-reserved-username": "Script de navegación estruturada",
+	"structurednav-nav-not-found-title": "Aínda non existe ningunha navegación sobre o tema chamado «$1».",
+	"structurednav-nav-not-found-summary": "Por que non creas unha?",
+	"structurednav-nav-not-found-button-label": "Crear unha navegación",
+	"structurednav-nav-not-found-summary-not-logged-in": "Inicia sesión ou crea unha conta para crear a navegación.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Iniciar sesión e editar",
+	"structurednav-copy-label": "Código incrustado",
+	"structurednav-copy-state-fail": "Non se puido copiar o código no portapapeis.",
+	"structurednav-copy-state-success": "O código copiouse no portapapeis.",
+	"right-structurednav-create": "Crear unha navegación estruturada",
+	"action-structurednav-create": "crear unha navegación estruturada",
+	"right-structurednav-edit": "Editar unha navegación estruturada",
+	"action-structurednav-edit": "editar unha navegación estruturada",
+	"specialpages-group-structurednav": "Navegación estruturada",
+	"navigationschema": "Esquema de navegación",
+	"titlesusedinnavigation": "Títulos empregados na navegación",
+	"specials-navigationschema-subtitle": "Esquema JSON para as navegacións estruturadas",
+	"specials-titlesusedinnavigation-legend": "Títulos empregados na navegación",
+	"specials-titlesusedinnavigation-field-title-label": "Título de navegación",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Un título no espazo de nomes de navegación; por exemplo, «Dontnod Entertainment»"
+}

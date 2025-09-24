@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Recupera o JSON de todos os exemplos de navegación procedentes da extensión StructuredNavigation. Este JSON provirá da versión do software da extensión que ten instalada o wiki.",
+	"apihelp-query+structurednavigationexamples-example": "Obter o JSON de todos os exemplos de navegación procedentes da extensión StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Recupera o esquema JSON empregado para validar a estrutura JSON das navegacións.",
+	"apihelp-query+structurednavigationschema-example": "Obter o esquema JSON de navegación",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Recupera o contido JSON para unha navegación determinada.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Un título válido e existente no espazo de nomes «Navigation» do wiki.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Obter o contido JSON dunha navegación chamada <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Recupera a vista dunha navegación por título como un fragmento HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Un título válido e existente no espazo de nomes «Navigation» do wiki.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Obter a vista dunha navegación chamada <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Recupera todos os títulos empregados por unha navegación determinada.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Un título válido e existente no espazo de nomes «Navigation» do wiki.",
+	"apihelp-query+structurednavigationtitlesused-example": "Obter todos os títulos empregados nunha navegación chamada <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "A API REST de StructuredNavigation é experimental e está desactivada por defecto. Cómpre definir o parámetro «$wgStructuredNavigationEnableExperimentalAPI» como «true». Se non pertences á administración do sitio, pide a alguén dese grupo a activación desta funcionalidade."
+}
