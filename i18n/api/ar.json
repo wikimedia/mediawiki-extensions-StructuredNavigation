@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "يسترجع ملف JSON لجميع أمثلة التنقل المأخوذة من ملحق StructuredNavigation. سيتم ذلك من إصدار برنامج الامتداد المثبت على الويكي.",
+	"apihelp-query+structurednavigationexamples-example": "جلب ملف JSON لجميع أمثلة التنقل المأخوذة من ملحق StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "يسترجع مخطط JSON المستخدم للتحقق من صحة بنية JSON الخاصة بالتنقلات.",
+	"apihelp-query+structurednavigationschema-example": "جلب مخطط التنقل JSON",
+	"apihelp-query+structurednavigationnavigationdata-summary": "يقوم باسترجاع محتوى JSON للتنقل المحدد.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "عنوان صالح موجود في مساحة اسم التنقل على الويكي.",
+	"apihelp-query+structurednavigationnavigationdata-example": "جلب محتوى JSON من التنقل المسمى <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "استرداد عرض التنقل حسب العنوان كجزء HTML.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "عنوان صالح موجود في مساحة اسم التنقل على الويكي.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "جلب عرض التنقل المسمى <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "استرداد جميع العناوين المستخدمة بواسطة التنقل المحدد.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "عنوان صالح موجود في مساحة اسم التنقل على الويكي.",
+	"apihelp-query+structurednavigationtitlesused-example": "جلب جميع العناوين المستخدمة في التنقل المسمى <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "واجهة برمجة تطبيقات REST لـ StructuredNavigation تجريبية ومعطلة افتراضيًا. يتطلب هذا ضبط $wgStructuredNavigationEnableExperimentalAPI على \"صحيح\". إذا لم تكن مسؤول موقع، يُرجى مناقشة تفعيل هذه الميزة معه."
+}
