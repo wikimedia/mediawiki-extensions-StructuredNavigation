@@ -1,8 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
+			"Meno25",
 			"أيوب"
 		]
 	},
-	"structurednav-desc": "يسمح بإنشاء تنقل منظم وقابل للقراءة آليًا لاستخدامه في المقالات."
+	"structurednav-desc": "يسمح بإنشاء تنقل منظم وقابل للقراءة آليًا لاستخدامه في المقالات.",
+	"structurednav-reserved-username": "نص التنقل المنظم",
+	"structurednav-nav-not-found-title": "لا يوجد حتى الآن شريط تنقل حول الموضوع المسمى \" $1 \".",
+	"structurednav-nav-not-found-summary": "لماذا لا تنشئ واحدا؟",
+	"structurednav-nav-not-found-button-label": "إنشاء التنقل",
+	"structurednav-nav-not-found-summary-not-logged-in": "قم بتسجيل الدخول أو إنشاء حساب لإنشاء هذا التنقل.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "تسجيل الدخول والتعديل",
+	"structurednav-copy-label": "كود التضمين",
+	"structurednav-copy-state-fail": "فشل في نسخ الكود إلى الحافظة.",
+	"structurednav-copy-state-success": "تم نسخ الكود إلى الحافظة.",
+	"right-structurednav-create": "إنشاء نظام تنقل منظم",
+	"action-structurednav-create": "إنشاء نظام تنقل منظم",
+	"right-structurednav-edit": "تعديل التنقل المنظم",
+	"action-structurednav-edit": "تعديل التنقل المنظم",
+	"specialpages-group-structurednav": "التنقل المنظم",
+	"navigationschema": "مخطط التنقل",
+	"titlesusedinnavigation": "العناوين المستخدمة في الملاحة",
+	"specials-navigationschema-subtitle": "مخطط JSON للتنقلات المنظمة",
+	"specials-titlesusedinnavigation-legend": "العناوين المستخدمة في الملاحة",
+	"specials-titlesusedinnavigation-field-title-label": "عنوان التنقل",
+	"specials-titlesusedinnavigation-field-title-placeholder": "عنوان في مساحة اسم التنقل، على سبيل المثال \"Dontnod Entertainment\""
 }
