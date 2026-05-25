@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Meno25",
+			"Mohammed Qays",
 			"أيوب"
 		]
 	},
@@ -14,7 +15,7 @@
 	"structurednav-nav-not-found-button-label-not-logged-in": "تسجيل الدخول والتعديل",
 	"structurednav-copy-label": "كود التضمين",
 	"structurednav-copy-state-fail": "فشل في نسخ الكود إلى الحافظة.",
-	"structurednav-copy-state-success": "تم نسخ الكود إلى الحافظة.",
+	"structurednav-copy-state-success": "نُسخ الرمز إلى الحافظة.",
 	"right-structurednav-create": "إنشاء نظام تنقل منظم",
 	"action-structurednav-create": "إنشاء نظام تنقل منظم",
 	"right-structurednav-edit": "تعديل التنقل المنظم",
