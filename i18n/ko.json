@@ -1,12 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Tensama0415"
 		]
 	},
+	"structurednav-desc": "문서에서 사용할 수 있는 구조화되고 기계가 읽을 수 있는 둘러보기를 생성할 수 있습니다.",
 	"structurednav-reserved-username": "StructuredNavigation 스크립트",
+	"structurednav-nav-not-found-title": "\"$1\"(이)라는 이름의 주제에 대한 둘러보기가 아직 존재하지 않습니다.",
+	"structurednav-nav-not-found-summary": "하나 만들어 보세요!",
+	"structurednav-nav-not-found-button-label": "둘러보기 만들기",
+	"structurednav-nav-not-found-summary-not-logged-in": "이 둘러보기를 만들려면 로그인하거나 계정을 만드세요.",
 	"structurednav-nav-not-found-button-label-not-logged-in": "로그인하여 편집하기",
 	"structurednav-copy-label": "코드 넣기",
 	"structurednav-copy-state-fail": "코드를 클립보드에 복사하는데 실패했습니다.",
-	"structurednav-copy-state-success": "코드를 클립보드에 복사했습니다."
+	"structurednav-copy-state-success": "코드를 클립보드에 복사했습니다.",
+	"right-structurednav-create": "구조화된 둘러보기 만들기",
+	"action-structurednav-create": "구조화된 둘러보기 만들기",
+	"right-structurednav-edit": "구조화된 둘러보기 편집하기",
+	"action-structurednav-edit": "구조화된 둘러보기 편집하기",
+	"specialpages-group-structurednav": "구조화된 둘러보기",
+	"navigationschema": "둘러보기 스키마",
+	"titlesusedinnavigation": "둘러보기에서 사용되는 제목",
+	"specials-navigationschema-subtitle": "구조화된 둘러보기를 위한 JSON 스키마",
+	"specials-titlesusedinnavigation-legend": "둘러보기에서 사용되는 제목",
+	"specials-titlesusedinnavigation-field-title-label": "둘러보기 제목",
+	"specials-titlesusedinnavigation-field-title-placeholder": "둘러보기 이름공간의 제목, 예를 들어 \"Dontnod Entertainment\""
 }
