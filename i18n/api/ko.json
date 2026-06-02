@@ -9,13 +9,13 @@
 	"apihelp-query+structurednavigationschema-summary": "둘러보기의 JSON 구조 유효성 검사에 사용되는 JSON 스키마를 검색합니다.",
 	"apihelp-query+structurednavigationschema-example": "둘러보기 JSON 스키마를 가져옵니다",
 	"apihelp-query+structurednavigationnavigationdata-summary": "주어진 둘러보기에 대한 JSON 콘텐츠를 가져옵니다.",
-	"apihelp-query+structurednavigationnavigationdata-param-title": "위키의 둘러보기 이름공간에 있는, 유효하고 기존의 제목입니다.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "위키의 둘러보기 이름공간에 있는, 유효한 기존의 제목입니다.",
 	"apihelp-query+structurednavigationnavigationdata-example": "<kbd>Dontnod Entertainment</kbd>라는 이름의 둘러보기의 JSON 콘텐츠를 가져옵니다",
 	"apihelp-query+structurednavigationnavigationhtml-summary": "제목을 HTML 프래그먼트로써 이용한 둘러보기의 모습을 가져옵니다.",
-	"apihelp-query+structurednavigationnavigationhtml-param-title": "위키의 둘러보기 이름공간에 있는, 유효하고 기존의 제목입니다.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "위키의 둘러보기 이름공간에 있는, 유효한 기존의 제목입니다.",
 	"apihelp-query+structurednavigationnavigationhtml-example": "<kbd>Dontnod Entertainment</kbd>라는 이름의 둘러보기의 모습을 가져옵니다",
 	"apihelp-query+structurednavigationtitlesused-summary": "주어진 둘러보기에 사용되는 모든 제목들을 가져옵니다.",
-	"apihelp-query+structurednavigationtitlesused-param-title": "위키의 둘러보기 이름공간에 있는, 유효하고 기존의 제목입니다.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "위키의 둘러보기 이름공간에 있는, 유효한 기존의 제목입니다.",
 	"apihelp-query+structurednavigationtitlesused-example": "<kbd>Dontnod Entertainment</kbd>라는 이름의 둘러보기에 사용되는 모든 제목을 가져옵니다",
 	"structurednavigation-rest-api-not-enabled": "StructuredNavigation용 REST API는 실험적인 기능이며 기본적으로 비활성화되어 있습니다. 이 기능을 사용하려면 $wgStructuredNavigationEnableExperimentalAPI 값을 true로 설정해야 합니다. 사이트 관리자가 아닌 경우, 이 기능을 활성화하는 것에 대해 사이트 관리자와 상의하세요."
 }
