@@ -42,7 +42,7 @@ final class NavigationContentHandler extends JsonContentHandler {
 		}
 
 		if ( $parseParams->getGenerateHtml() && $content->isValid() ) {
-			$parserOutput->setRawText(
+			$parserOutput->setContentHolderText(
 				$this->viewPresenter->getFromSource(
 					FormatJson::decode( $content->getText(), true )
 				)
@@ -51,7 +51,7 @@ final class NavigationContentHandler extends JsonContentHandler {
 			$this->viewPresenter->loadModules( $parserOutput );
 			$parserOutput->addModules( [ 'ext.structuredNav.content' ] );
 		} else {
-			$parserOutput->setRawText( '' );
+			$parserOutput->setContentHolderText( '' );
 		}
 	}
 
