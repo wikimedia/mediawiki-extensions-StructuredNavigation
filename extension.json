@@ -9,10 +9,7 @@
 	"descriptionmsg": "structurednav-desc",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.43.0",
-		"platform": {
-			"php": ">= 7.4"
-		}
+		"MediaWiki": ">= 1.43.0"
 	},
 	"callback": "MediaWiki\\Extension\\StructuredNavigation\\Hooks\\ExtensionCallback::onRegistrationCallback",
 	"MessagesDirs": {
