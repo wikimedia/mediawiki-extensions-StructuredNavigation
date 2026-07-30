@@ -7,5 +7,17 @@
 	"structurednav-desc": "ليکنو کې د کارولو لپاره جوړښت شوې، ماشين لوست‌وړ چلند رامنځته کولو ته اجازه ورکوي.",
 	"structurednav-reserved-username": "جوړښتي‌چلند لاسي‌ليک",
 	"structurednav-nav-not-found-summary": "ولې يو نه جوړوې؟",
-	"structurednav-nav-not-found-button-label": "يو چلند جوړول"
+	"structurednav-nav-not-found-button-label": "يو چلند جوړول",
+	"structurednav-nav-not-found-button-label-not-logged-in": "ننوتل او سمول",
+	"structurednav-copy-state-fail": "کوډ ټينگدړې ته ونه لمېسل شو.",
+	"structurednav-copy-state-success": "کوډ ټينگدړې ته ولمېسل شو.",
+	"right-structurednav-create": "يو جوړښتي چلند جوړ کړئ",
+	"action-structurednav-create": "يو جوړښتي چلند جوړ کړئ",
+	"right-structurednav-edit": "يو جوړښتي چلند سم کړئ",
+	"action-structurednav-edit": "يو جوړښتي چلند سم کړئ",
+	"specialpages-group-structurednav": "جوړښتي‌چلند",
+	"navigationschema": "چلند جوړښتي‌گارليک",
+	"titlesusedinnavigation": "سرليک چې چلند کې کارېدلی",
+	"specials-titlesusedinnavigation-legend": "چلند کې کارېدلي سرليکونه",
+	"specials-titlesusedinnavigation-field-title-label": "چلند سرليک"
 }
