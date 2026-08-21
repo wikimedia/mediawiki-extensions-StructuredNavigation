@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"apihelp-query+structurednavigationexamples-summary": "Waxay soo ceshataa JSON-ka dhammaan tusaalooyinka hagitaannada ee laga soo qaatay kordhinta StructuredNavigation. Tani waxay ka iman doontaa nooca softiweerka kordhinta ee wiki-gu rakibtay.",
+	"apihelp-query+structurednavigationexamples-example": "Soo qaado JSON-ka dhammaan tusaalooyinka hagitaannada ee laga soo qaatay kordhinta StructuredNavigation",
+	"apihelp-query+structurednavigationschema-summary": "Waxay soo ceshataa qaabka JSON ee loo isticmaalo in lagu ansixiyo qaab.dhismeedka JSON ee hagitaannada.",
+	"apihelp-query+structurednavigationschema-example": "Soo qaado qaabka JSON ee hagitaanka",
+	"apihelp-query+structurednavigationnavigationdata-summary": "Waxay soo ceshataa nuxurka JSON ee hagitaan la cayimay.",
+	"apihelp-query+structurednavigationnavigationdata-param-title": "Cinwaan sax ah oo jira oo ku jira meel magaca ee wiki-ga.",
+	"apihelp-query+structurednavigationnavigationdata-example": "Soo qaado nuxurka JSON ee hagitaan lagu magacaabo <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationnavigationhtml-summary": "Waxay soo ceshataa muuqaalka hagitaan iyadoo loo marayo cinwaankiisa oo ah qayb HTML ah.",
+	"apihelp-query+structurednavigationnavigationhtml-param-title": "Cinwaan sax ah oo jira oo ku jira meel magaca ee wiki-ga.",
+	"apihelp-query+structurednavigationnavigationhtml-example": "Soo qaado muuqaalka hagitaan lagu magacaabo <kbd>Dontnod Entertainment</kbd>",
+	"apihelp-query+structurednavigationtitlesused-summary": "Waxay soo ceshataa dhammaan cinwaannada uu isticmaalo hagitaan la cayimay.",
+	"apihelp-query+structurednavigationtitlesused-param-title": "Cinwaan sax ah oo jira oo ku jira meel magaca ee wiki-ga.",
+	"apihelp-query+structurednavigationtitlesused-example": "Soo qaado dhammaan cinwaannada lagu isticmaalo hagitaan lagu magacaabo <kbd>Dontnod Entertainment</kbd>",
+	"structurednavigation-rest-api-not-enabled": "REST API-ga StructuredNavigation waa tijaabo, waxaana si caadi ah loo naafoobay. Tani waxay u baahan tahay in $wgStructuredNavigationEnableExperimentalAPI loo dejiyo true. Haddii aadan ahayn maamulaha goobta, fadlan kala hadal maamulaha goobta inuu awood u yeesho astaantan."
+}
