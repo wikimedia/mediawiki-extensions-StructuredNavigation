@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"structurednav-desc": "Waxay oggolaanaysaa abuurista hagitaan habaysan oo mashiinku akhrin karo si loogu isticmaalo maqaalada.",
+	"structurednav-reserved-username": "Qoraalka StructuredNavigation",
+	"structurednav-nav-not-found-title": "Hagitaan ku saabsan mowduuca lagu magacaabo \"$1\" weli ma jiro.",
+	"structurednav-nav-not-found-summary": "Maxaad mid u abuuri weyday?",
+	"structurednav-nav-not-found-button-label": "Abuur hagitaan",
+	"structurednav-nav-not-found-summary-not-logged-in": "Soo gal ama abuur akoon si aad u abuurto hagitaankan.",
+	"structurednav-nav-not-found-button-label-not-logged-in": "Soo gal oo wax ka beddel",
+	"structurednav-copy-label": "Koodhka dhexgelinta",
+	"structurednav-copy-state-fail": "Koodhka laguma koobiyeeyn karin sabuuradda.",
+	"structurednav-copy-state-success": "Koodhka waxaa lagu koobiyeeyay sabuuradda.",
+	"right-structurednav-create": "Abuur hagitaan habaysan",
+	"action-structurednav-create": "Abuur hagitaan habaysan",
+	"right-structurednav-edit": "Wax ka beddel hagitaan habaysan",
+	"action-structurednav-edit": "wax ka beddel hagitaan habaysan",
+	"specialpages-group-structurednav": "Hagitaan habaysan",
+	"navigationschema": "Qaabka hagitaanka",
+	"titlesusedinnavigation": "Cinwaannada lagu isticmaalo hagitaanka",
+	"specials-navigationschema-subtitle": "Qaabka JSON ee hagitaannada habaysan",
+	"specials-titlesusedinnavigation-legend": "Cinwaannada lagu isticmaalo hagitaanka",
+	"specials-titlesusedinnavigation-field-title-label": "Cinwaanka hagitaanka",
+	"specials-titlesusedinnavigation-field-title-placeholder": "Cinwaan ku jira meel magaca, tusaale ahaan \"Dontnod Entertainment\""
+}
