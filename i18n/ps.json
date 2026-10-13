@@ -6,9 +6,12 @@
 	},
 	"structurednav-desc": "ليکنو کې د کارولو لپاره جوړښت شوې، ماشين لوست‌وړ چلند رامنځته کولو ته اجازه ورکوي.",
 	"structurednav-reserved-username": "جوړښتي‌چلند لاسي‌ليک",
+	"structurednav-nav-not-found-title": "د \"$1\" په نوم سکالو باندې لاتراوسه گرځښت شتون نلري.",
 	"structurednav-nav-not-found-summary": "ولې يو نه جوړوې؟",
 	"structurednav-nav-not-found-button-label": "يو چلند جوړول",
+	"structurednav-nav-not-found-summary-not-logged-in": "د دې گرځښت جوړولو لپاره ننوځئ يا گڼون جوړ کړئ.",
 	"structurednav-nav-not-found-button-label-not-logged-in": "ننوتل او سمول",
+	"structurednav-copy-label": "کوډ ځای‌پرځای‌ کړئ",
 	"structurednav-copy-state-fail": "کوډ ټينگدړې ته ونه لمېسل شو.",
 	"structurednav-copy-state-success": "کوډ ټينگدړې ته ولمېسل شو.",
 	"right-structurednav-create": "يو جوړښتي چلند جوړ کړئ",
@@ -18,6 +21,8 @@
 	"specialpages-group-structurednav": "جوړښتي‌چلند",
 	"navigationschema": "چلند جوړښتي‌گارليک",
 	"titlesusedinnavigation": "سرليک چې چلند کې کارېدلی",
+	"specials-navigationschema-subtitle": "جوړښتي گرځښت لپاره د جی‌اېس‌او‌اېن جوړښتي‌گارليک",
 	"specials-titlesusedinnavigation-legend": "چلند کې کارېدلي سرليکونه",
-	"specials-titlesusedinnavigation-field-title-label": "چلند سرليک"
+	"specials-titlesusedinnavigation-field-title-label": "چلند سرليک",
+	"specials-titlesusedinnavigation-field-title-placeholder": "د گرځښت نوم‌تشيال کې يو سرليک، د بېلگې په توگه \"Dontnod Entertainment\""
 }
